@@ -1,0 +1,1411 @@
+fileFormatVersion: 2
+guid: 4c86bb8f76a83c440ad48acab4c697d5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6949478359714538326
+    second: slime_pickSlime_idle_spritesheet_0
+  - first:
+      213: -4176586595560208362
+    second: slime_pickSlime_idle_spritesheet_1
+  - first:
+      213: 4626454530072244424
+    second: slime_pickSlime_idle_spritesheet_2
+  - first:
+      213: -5107325513236026782
+    second: slime_pickSlime_idle_spritesheet_3
+  - first:
+      213: -5930781958582434800
+    second: slime_pickSlime_idle_spritesheet_4
+  - first:
+      213: -4628471655427550418
+    second: slime_pickSlime_idle_spritesheet_5
+  - first:
+      213: 2747685107919669836
+    second: slime_pickSlime_idle_spritesheet_6
+  - first:
+      213: -8891718530531069596
+    second: slime_pickSlime_idle_spritesheet_7
+  - first:
+      213: 9203959881096383060
+    second: slime_pickSlime_idle_spritesheet_8
+  - first:
+      213: 9168931155165858459
+    second: slime_pickSlime_idle_spritesheet_9
+  - first:
+      213: 4693165364393576113
+    second: slime_pickSlime_idle_spritesheet_10
+  - first:
+      213: 7101124038156469020
+    second: slime_pickSlime_idle_spritesheet_11
+  - first:
+      213: 23258211894790716
+    second: slime_pickSlime_idle_spritesheet_12
+  - first:
+      213: -7690659534979242853
+    second: slime_pickSlime_idle_spritesheet_13
+  - first:
+      213: 1253288960243120581
+    second: slime_pickSlime_idle_spritesheet_14
+  - first:
+      213: -3404726226667715924
+    second: slime_pickSlime_idle_spritesheet_15
+  - first:
+      213: 3372192532899989816
+    second: slime_pickSlime_idle_spritesheet_16
+  - first:
+      213: -3689686096594413992
+    second: slime_pickSlime_idle_spritesheet_17
+  - first:
+      213: -8903079480488610763
+    second: slime_pickSlime_idle_spritesheet_18
+  - first:
+      213: -6618180884218113273
+    second: slime_pickSlime_idle_spritesheet_19
+  - first:
+      213: -1854468093032549660
+    second: slime_pickSlime_idle_spritesheet_20
+  - first:
+      213: -2511939530916286888
+    second: slime_pickSlime_idle_spritesheet_21
+  - first:
+      213: -245404998123331074
+    second: slime_pickSlime_idle_spritesheet_22
+  - first:
+      213: 3830526215574630863
+    second: slime_pickSlime_idle_spritesheet_23
+  - first:
+      213: -8657116331377366673
+    second: slime_pickSlime_idle_spritesheet_24
+  - first:
+      213: -6308348622061593773
+    second: slime_pickSlime_idle_spritesheet_25
+  - first:
+      213: -924378332618712294
+    second: slime_pickSlime_idle_spritesheet_26
+  - first:
+      213: 3500251899469719360
+    second: slime_pickSlime_idle_spritesheet_27
+  - first:
+      213: 1478628052801913423
+    second: slime_pickSlime_idle_spritesheet_28
+  - first:
+      213: -7542384132265856028
+    second: slime_pickSlime_idle_spritesheet_29
+  - first:
+      213: 9066329924622662646
+    second: slime_pickSlime_idle_spritesheet_30
+  - first:
+      213: -2069457680078334045
+    second: slime_pickSlime_idle_spritesheet_31
+  - first:
+      213: -6626824257339843295
+    second: slime_pickSlime_idle_spritesheet_32
+  - first:
+      213: 1790954766566995867
+    second: slime_pickSlime_idle_spritesheet_33
+  - first:
+      213: -5361471652232067204
+    second: slime_pickSlime_idle_spritesheet_34
+  - first:
+      213: -2588894882059825026
+    second: slime_pickSlime_idle_spritesheet_35
+  - first:
+      213: 1195918760196365533
+    second: slime_pickSlime_idle_spritesheet_36
+  - first:
+      213: -1251067904324701672
+    second: slime_pickSlime_idle_spritesheet_37
+  - first:
+      213: -8096975676694243363
+    second: slime_pickSlime_idle_spritesheet_38
+  - first:
+      213: 1248365035501809108
+    second: slime_pickSlime_idle_spritesheet_39
+  - first:
+      213: -2823391583396629982
+    second: slime_pickSlime_idle_spritesheet_40
+  - first:
+      213: -9122268419840842008
+    second: slime_pickSlime_idle_spritesheet_41
+  - first:
+      213: -7392228383480025626
+    second: slime_pickSlime_idle_spritesheet_42
+  - first:
+      213: 2368595881014074843
+    second: slime_pickSlime_idle_spritesheet_43
+  - first:
+      213: -6940708302414932110
+    second: slime_pickSlime_idle_spritesheet_44
+  - first:
+      213: 1932850188721229609
+    second: slime_pickSlime_idle_spritesheet_45
+  - first:
+      213: -6657513022842832671
+    second: slime_pickSlime_idle_spritesheet_46
+  - first:
+      213: -7562045122463505200
+    second: slime_pickSlime_idle_spritesheet_47
+  - first:
+      213: 824160576981118833
+    second: slime_pickSlime_idle_spritesheet_48
+  - first:
+      213: 2712043935976922883
+    second: slime_pickSlime_idle_spritesheet_49
+  - first:
+      213: -7365238126924047944
+    second: slime_pickSlime_idle_spritesheet_50
+  - first:
+      213: 9213998266502253468
+    second: slime_pickSlime_idle_spritesheet_51
+  - first:
+      213: 6496081549344912069
+    second: slime_pickSlime_idle_spritesheet_52
+  - first:
+      213: 3748339979262037694
+    second: slime_pickSlime_idle_spritesheet_53
+  - first:
+      213: -8143085976413449668
+    second: slime_pickSlime_idle_spritesheet_54
+  - first:
+      213: 8537817791165918530
+    second: slime_pickSlime_idle_spritesheet_55
+  - first:
+      213: 798270548492589453
+    second: slime_pickSlime_idle_spritesheet_56
+  - first:
+      213: -8963138879711999315
+    second: slime_pickSlime_idle_spritesheet_57
+  - first:
+      213: -1366798381862262722
+    second: slime_pickSlime_idle_spritesheet_58
+  - first:
+      213: -8810551452524565195
+    second: slime_pickSlime_idle_spritesheet_59
+  - first:
+      213: 7670269387574589875
+    second: slime_pickSlime_idle_spritesheet_60
+  - first:
+      213: 4793960964199384989
+    second: slime_pickSlime_idle_spritesheet_61
+  - first:
+      213: -3867836935667648659
+    second: slime_pickSlime_idle_spritesheet_62
+  - first:
+      213: 1369757667616975137
+    second: slime_pickSlime_idle_spritesheet_63
+  - first:
+      213: -5522495788919397136
+    second: slime_pickSlime_idle_spritesheet_64
+  - first:
+      213: 172848359340913803
+    second: slime_pickSlime_idle_spritesheet_65
+  - first:
+      213: -1446270659561481090
+    second: slime_pickSlime_idle_spritesheet_66
+  - first:
+      213: 4770850765529544948
+    second: slime_pickSlime_idle_spritesheet_67
+  - first:
+      213: -6100223393625817878
+    second: slime_pickSlime_idle_spritesheet_68
+  - first:
+      213: -3361279355078693701
+    second: slime_pickSlime_idle_spritesheet_69
+  - first:
+      213: -8141961975847832135
+    second: slime_pickSlime_idle_spritesheet_70
+  - first:
+      213: -672010992885887775
+    second: slime_pickSlime_idle_spritesheet_71
+  - first:
+      213: -230118074327247338
+    second: slime_pickSlime_idle_spritesheet_72
+  - first:
+      213: -5708890579420142828
+    second: slime_pickSlime_idle_spritesheet_73
+  - first:
+      213: 9060326444154917619
+    second: slime_pickSlime_idle_spritesheet_74
+  - first:
+      213: -1705831274488682161
+    second: slime_pickSlime_idle_spritesheet_75
+  - first:
+      213: -5584237632981595550
+    second: slime_pickSlime_idle_spritesheet_76
+  - first:
+      213: 5639413023555563367
+    second: slime_pickSlime_idle_spritesheet_77
+  - first:
+      213: 944860949648872369
+    second: slime_pickSlime_idle_spritesheet_78
+  - first:
+      213: -2674477646797845819
+    second: slime_pickSlime_idle_spritesheet_79
+  - first:
+      213: 6710284422782462730
+    second: slime_pickSlime_idle_spritesheet_80
+  - first:
+      213: -2025982792168172106
+    second: slime_pickSlime_idle_spritesheet_81
+  - first:
+      213: -440096016176546359
+    second: slime_pickSlime_idle_spritesheet_82
+  - first:
+      213: 1724152183180273241
+    second: slime_pickSlime_idle_spritesheet_83
+  - first:
+      213: 4223370194373041841
+    second: slime_pickSlime_idle_spritesheet_84
+  - first:
+      213: -1524455585847342632
+    second: slime_pickSlime_idle_spritesheet_85
+  - first:
+      213: 6256768185594242134
+    second: slime_pickSlime_idle_spritesheet_86
+  - first:
+      213: 8366188638213801902
+    second: slime_pickSlime_idle_spritesheet_87
+  - first:
+      213: 4703688175668030202
+    second: slime_pickSlime_idle_spritesheet_88
+  - first:
+      213: 6116412074361314842
+    second: slime_pickSlime_idle_spritesheet_89
+  - first:
+      213: 171855356048007590
+    second: slime_pickSlime_idle_spritesheet_90
+  - first:
+      213: -839408551696182834
+    second: slime_pickSlime_idle_spritesheet_91
+  - first:
+      213: 4959309199840956851
+    second: slime_pickSlime_idle_spritesheet_92
+  - first:
+      213: 1252497713200699018
+    second: slime_pickSlime_idle_spritesheet_93
+  - first:
+      213: 3538655683654214103
+    second: slime_pickSlime_idle_spritesheet_94
+  - first:
+      213: -5320931678429760259
+    second: slime_pickSlime_idle_spritesheet_95
+  - first:
+      213: 7471608764901302055
+    second: slime_pickSlime_idle_spritesheet_96
+  - first:
+      213: -306727367380663241
+    second: slime_pickSlime_idle_spritesheet_97
+  - first:
+      213: -7956387976641349369
+    second: slime_pickSlime_idle_spritesheet_98
+  - first:
+      213: 8104463553754007791
+    second: slime_pickSlime_idle_spritesheet_99
+  - first:
+      213: -4783551316572822446
+    second: slime_pickSlime_idle_spritesheet_100
+  - first:
+      213: 2754146266965062373
+    second: slime_pickSlime_idle_spritesheet_101
+  - first:
+      213: -7004893613775345629
+    second: slime_pickSlime_idle_spritesheet_102
+  - first:
+      213: -8618541795224783199
+    second: slime_pickSlime_idle_spritesheet_103
+  - first:
+      213: -330487806069437543
+    second: slime_pickSlime_idle_spritesheet_104
+  - first:
+      213: -7028967024495918284
+    second: slime_pickSlime_idle_spritesheet_105
+  - first:
+      213: -9142430631780947447
+    second: slime_pickSlime_idle_spritesheet_106
+  - first:
+      213: -8705157078519413006
+    second: slime_pickSlime_idle_spritesheet_107
+  - first:
+      213: 5576415024966137187
+    second: slime_pickSlime_idle_spritesheet_108
+  - first:
+      213: -4730704981994610429
+    second: slime_pickSlime_idle_spritesheet_109
+  - first:
+      213: 6292693370827640330
+    second: slime_pickSlime_idle_spritesheet_110
+  - first:
+      213: -1126575374965356836
+    second: slime_pickSlime_idle_spritesheet_111
+  - first:
+      213: -1664793961450106935
+    second: slime_pickSlime_idle_spritesheet_112
+  - first:
+      213: -1784737077379141122
+    second: slime_pickSlime_idle_spritesheet_113
+  - first:
+      213: -1321475691281019319
+    second: slime_pickSlime_idle_spritesheet_114
+  - first:
+      213: 4923354468852138735
+    second: slime_pickSlime_idle_spritesheet_115
+  - first:
+      213: -6619232732308320960
+    second: slime_pickSlime_idle_spritesheet_116
+  - first:
+      213: 216589367891924597
+    second: slime_pickSlime_idle_spritesheet_117
+  - first:
+      213: 5225897378578422532
+    second: slime_pickSlime_idle_spritesheet_118
+  - first:
+      213: 4792380034866924718
+    second: slime_pickSlime_idle_spritesheet_119
+  - first:
+      213: 5845691225136876017
+    second: slime_pickSlime_idle_spritesheet_120
+  - first:
+      213: 3639210127136547930
+    second: slime_pickSlime_idle_spritesheet_121
+  - first:
+      213: -3955342000665285195
+    second: slime_pickSlime_idle_spritesheet_122
+  - first:
+      213: -3683624596120081039
+    second: slime_pickSlime_idle_spritesheet_123
+  - first:
+      213: 4613161697811642273
+    second: slime_pickSlime_idle_spritesheet_124
+  - first:
+      213: 6552458070974292118
+    second: slime_pickSlime_idle_spritesheet_125
+  - first:
+      213: -8704423727344403267
+    second: slime_pickSlime_idle_spritesheet_126
+  - first:
+      213: 4807813414686145941
+    second: slime_pickSlime_idle_spritesheet_127
+  - first:
+      213: 3418167386109479078
+    second: slime_pickSlime_idle_spritesheet_128
+  - first:
+      213: 5473871994142148567
+    second: slime_pickSlime_idle_spritesheet_129
+  - first:
+      213: 979105300474971037
+    second: slime_pickSlime_idle_spritesheet_130
+  - first:
+      213: -3367060176794079484
+    second: slime_pickSlime_idle_spritesheet_131
+  - first:
+      213: 5392313437280196818
+    second: slime_pickSlime_idle_spritesheet_132
+  - first:
+      213: 706146181832818902
+    second: slime_pickSlime_idle_spritesheet_133
+  - first:
+      213: 7445781181119973125
+    second: slime_pickSlime_idle_spritesheet_134
+  - first:
+      213: -4737583898558706806
+    second: slime_pickSlime_idle_spritesheet_135
+  - first:
+      213: -7446106350704853936
+    second: slime_pickSlime_idle_spritesheet_136
+  - first:
+      213: 7226373584090140005
+    second: slime_pickSlime_idle_spritesheet_137
+  - first:
+      213: -3345639614994733897
+    second: slime_pickSlime_idle_spritesheet_138
+  - first:
+      213: 2758702774507811164
+    second: slime_pickSlime_idle_spritesheet_139
+  - first:
+      213: 3438831950964860779
+    second: slime_pickSlime_idle_spritesheet_140
+  - first:
+      213: -3719871179709989556
+    second: slime_pickSlime_idle_spritesheet_141
+  - first:
+      213: -4166958430287353508
+    second: slime_pickSlime_idle_spritesheet_142
+  - first:
+      213: -1643138138805475958
+    second: slime_pickSlime_idle_spritesheet_143
+  - first:
+      213: 7605491891131249330
+    second: slime_pickSlime_idle_spritesheet_144
+  - first:
+      213: -1442257445576000609
+    second: slime_pickSlime_idle_spritesheet_145
+  - first:
+      213: 7274573587984766930
+    second: slime_pickSlime_idle_spritesheet_146
+  - first:
+      213: 9045670364988441715
+    second: slime_pickSlime_idle_spritesheet_147
+  - first:
+      213: -8302803505041955373
+    second: slime_pickSlime_idle_spritesheet_148
+  - first:
+      213: -3572429027918089740
+    second: slime_pickSlime_idle_spritesheet_149
+  - first:
+      213: -4043796500497969144
+    second: slime_pickSlime_idle_spritesheet_150
+  - first:
+      213: -2501908729834464096
+    second: slime_pickSlime_idle_spritesheet_151
+  - first:
+      213: 7246846926442656884
+    second: slime_pickSlime_idle_spritesheet_152
+  - first:
+      213: -6638779475226929718
+    second: slime_pickSlime_idle_spritesheet_153
+  - first:
+      213: 2777955666014564337
+    second: slime_pickSlime_idle_spritesheet_154
+  - first:
+      213: 4574606613281357686
+    second: slime_pickSlime_idle_spritesheet_155
+  - first:
+      213: 6592383975491476730
+    second: slime_pickSlime_idle_spritesheet_156
+  - first:
+      213: 5793391654986130312
+    second: slime_pickSlime_idle_spritesheet_157
+  - first:
+      213: 4245411005633853557
+    second: slime_pickSlime_idle_spritesheet_158
+  - first:
+      213: -3616039849502700287
+    second: slime_pickSlime_idle_spritesheet_159
+  - first:
+      213: -5679305701723178788
+    second: slime_pickSlime_idle_spritesheet_160
+  - first:
+      213: 89552664581632990
+    second: slime_pickSlime_idle_spritesheet_161
+  - first:
+      213: 4728718712396134263
+    second: slime_pickSlime_idle_spritesheet_162
+  - first:
+      213: 4010929551992734790
+    second: slime_pickSlime_idle_spritesheet_163
+  - first:
+      213: -8234317903458905965
+    second: slime_pickSlime_idle_spritesheet_164
+  - first:
+      213: 6792506714662923499
+    second: slime_pickSlime_idle_spritesheet_165
+  - first:
+      213: 3225199950088832603
+    second: slime_pickSlime_idle_spritesheet_166
+  - first:
+      213: 1948103400028527425
+    second: slime_pickSlime_idle_spritesheet_167
+  - first:
+      213: -2680904884887535844
+    second: slime_pickSlime_idle_spritesheet_168
+  - first:
+      213: 7669864282690065813
+    second: slime_pickSlime_idle_spritesheet_169
+  - first:
+      213: 8379856992568742798
+    second: slime_pickSlime_idle_spritesheet_170
+  - first:
+      213: 8646181835341693712
+    second: slime_pickSlime_idle_spritesheet_171
+  - first:
+      213: -6061402366506869355
+    second: slime_pickSlime_idle_spritesheet_172
+  - first:
+      213: 2507927258555822080
+    second: slime_pickSlime_idle_spritesheet_173
+  - first:
+      213: 536123156635142117
+    second: slime_pickSlime_idle_spritesheet_174
+  - first:
+      213: -5079526419230318566
+    second: slime_pickSlime_idle_spritesheet_175
+  - first:
+      213: 685811104533991685
+    second: slime_pickSlime_idle_spritesheet_176
+  - first:
+      213: -8628814132844737454
+    second: slime_pickSlime_idle_spritesheet_177
+  - first:
+      213: -5000110217278413777
+    second: slime_pickSlime_idle_spritesheet_178
+  - first:
+      213: -2095215720532387638
+    second: slime_pickSlime_idle_spritesheet_179
+  - first:
+      213: -7527478431755340050
+    second: slime_pickSlime_idle_spritesheet_180
+  - first:
+      213: 5516506309025102101
+    second: slime_pickSlime_idle_spritesheet_181
+  - first:
+      213: 1451667625000103875
+    second: slime_pickSlime_idle_spritesheet_182
+  - first:
+      213: 7934063038247094440
+    second: slime_pickSlime_idle_spritesheet_183
+  - first:
+      213: -27745495739785958
+    second: slime_pickSlime_idle_spritesheet_184
+  - first:
+      213: -2276210421274550457
+    second: slime_pickSlime_idle_spritesheet_185
+  - first:
+      213: -5035810463603753600
+    second: slime_pickSlime_idle_spritesheet_186
+  - first:
+      213: 8310122469453114656
+    second: slime_pickSlime_idle_spritesheet_187
+  - first:
+      213: -1089814107648771348
+    second: slime_pickSlime_idle_spritesheet_188
+  - first:
+      213: -3196201992327535897
+    second: slime_pickSlime_idle_spritesheet_189
+  - first:
+      213: 4465614797297522015
+    second: slime_pickSlime_idle_spritesheet_190
+  - first:
+      213: -917642119315535624
+    second: slime_pickSlime_idle_spritesheet_191
+  - first:
+      213: 5099694042562540878
+    second: slime_pickSlime_idle_spritesheet_192
+  - first:
+      213: -8597097401492467520
+    second: slime_pickSlime_idle_spritesheet_193
+  - first:
+      213: -179101535429648866
+    second: slime_pickSlime_idle_spritesheet_194
+  - first:
+      213: 2588881762636422457
+    second: slime_pickSlime_idle_spritesheet_195
+  - first:
+      213: 8026714689200508790
+    second: slime_pickSlime_idle_spritesheet_196
+  - first:
+      213: 1505815729852191395
+    second: slime_pickSlime_idle_spritesheet_197
+  - first:
+      213: -1837354552056841452
+    second: slime_pickSlime_idle_spritesheet_198
+  - first:
+      213: 2222608071909887451
+    second: slime_pickSlime_idle_spritesheet_199
+  - first:
+      213: -2559821992731406936
+    second: slime_pickSlime_idle_spritesheet_200
+  - first:
+      213: -8649619589985658945
+    second: slime_pickSlime_idle_spritesheet_201
+  - first:
+      213: -4041618322569058730
+    second: slime_pickSlime_idle_spritesheet_202
+  - first:
+      213: 1410898614384680696
+    second: slime_pickSlime_idle_spritesheet_203
+  - first:
+      213: 8428846493990801824
+    second: slime_pickSlime_idle_spritesheet_204
+  - first:
+      213: 4635462531708819582
+    second: slime_pickSlime_idle_spritesheet_205
+  - first:
+      213: -7600822719662182508
+    second: slime_pickSlime_idle_spritesheet_206
+  - first:
+      213: -8410939746233742070
+    second: slime_pickSlime_idle_spritesheet_207
+  - first:
+      213: -7051277261020016538
+    second: slime_pickSlime_idle_spritesheet_208
+  - first:
+      213: 7984015488640772010
+    second: slime_pickSlime_idle_spritesheet_209
+  - first:
+      213: 8995358522084705269
+    second: slime_pickSlime_idle_spritesheet_210
+  - first:
+      213: 6266017846889952943
+    second: slime_pickSlime_idle_spritesheet_211
+  - first:
+      213: -825360966511605471
+    second: slime_pickSlime_idle_spritesheet_212
+  - first:
+      213: -3717177460385214780
+    second: slime_pickSlime_idle_spritesheet_213
+  - first:
+      213: -6754417301969402983
+    second: slime_pickSlime_idle_spritesheet_214
+  - first:
+      213: -2211269951922344431
+    second: slime_pickSlime_idle_spritesheet_215
+  - first:
+      213: -6140479111212440583
+    second: slime_pickSlime_idle_spritesheet_216
+  - first:
+      213: 6513658024360477759
+    second: slime_pickSlime_idle_spritesheet_217
+  - first:
+      213: -4511457368512637798
+    second: slime_pickSlime_idle_spritesheet_218
+  - first:
+      213: -5488212368504463155
+    second: slime_pickSlime_idle_spritesheet_219
+  - first:
+      213: -287936352165748202
+    second: slime_pickSlime_idle_spritesheet_220
+  - first:
+      213: -1167997211141751881
+    second: slime_pickSlime_idle_spritesheet_221
+  - first:
+      213: 4058110261197296129
+    second: slime_pickSlime_idle_spritesheet_222
+  - first:
+      213: -4313713144349933657
+    second: slime_pickSlime_idle_spritesheet_223
+  - first:
+      213: 4156163399236895266
+    second: slime_pickSlime_idle_spritesheet_224
+  - first:
+      213: 1005260361487665137
+    second: slime_pickSlime_idle_spritesheet_225
+  - first:
+      213: -689834696933193437
+    second: slime_pickSlime_idle_spritesheet_226
+  - first:
+      213: -4771262786906293805
+    second: slime_pickSlime_idle_spritesheet_227
+  - first:
+      213: -5885392802952878202
+    second: slime_pickSlime_idle_spritesheet_228
+  - first:
+      213: 5565111718663389287
+    second: slime_pickSlime_idle_spritesheet_229
+  - first:
+      213: -5727115204913920501
+    second: slime_pickSlime_idle_spritesheet_230
+  - first:
+      213: 2016900885311631236
+    second: slime_pickSlime_idle_spritesheet_231
+  - first:
+      213: -8639222062324108054
+    second: slime_pickSlime_idle_spritesheet_232
+  - first:
+      213: 2125490601692826396
+    second: slime_pickSlime_idle_spritesheet_233
+  - first:
+      213: 1073477077158758420
+    second: slime_pickSlime_idle_spritesheet_234
+  - first:
+      213: 802342461134043079
+    second: slime_pickSlime_idle_spritesheet_235
+  - first:
+      213: -6105454863649380298
+    second: slime_pickSlime_idle_spritesheet_236
+  - first:
+      213: -3162035021121671928
+    second: slime_pickSlime_idle_spritesheet_237
+  - first:
+      213: 6363199340947010806
+    second: slime_pickSlime_idle_spritesheet_238
+  - first:
+      213: -5700189192398022439
+    second: slime_pickSlime_idle_spritesheet_239
+  - first:
+      213: 1463342030632240577
+    second: slime_pickSlime_idle_spritesheet_240
+  - first:
+      213: -1107250288525100004
+    second: slime_pickSlime_idle_spritesheet_241
+  - first:
+      213: 6240243542892185708
+    second: slime_pickSlime_idle_spritesheet_242
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 300
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: slime_pickSlime_idle_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1865
+        width: 292
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aac53f2704e7e8f90800000000000000
+      internalID: -6949478359714538326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_pickSlime_idle_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 1865
+        width: 292
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 618c9fdae98c906c0800000000000000
+      internalID: -4176586595560208362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_pickSlime_idle_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 1865
+        width: 292
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c0f37212e7743040800000000000000
+      internalID: 4626454530072244424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_pickSlime_idle_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1632
+        width: 292
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26ae64761822f19b0800000000000000
+      internalID: -5107325513236026782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_pickSlime_idle_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 1632
+        width: 292
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01406663b31a1bda0800000000000000
+      internalID: -5930781958582434800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_pickSlime_idle_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 1632
+        width: 292
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e23d6455d8d54cfb0800000000000000
+      internalID: -4628471655427550418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_pickSlime_idle_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1399
+        width: 292
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4ace2c3c0db12620800000000000000
+      internalID: 2747685107919669836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_pickSlime_idle_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 1399
+        width: 292
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 461ffe85b154a9480800000000000000
+      internalID: -8891718530531069596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_pickSlime_idle_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 1399
+        width: 292
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45a42b74fb80bbf70800000000000000
+      internalID: 9203959881096383060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_pickSlime_idle_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1166
+        width: 292
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9a4ca97e469e3f70800000000000000
+      internalID: 9168931155165858459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_pickSlime_idle_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 1166
+        width: 292
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b688d09809712140800000000000000
+      internalID: 4693165364393576113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_pickSlime_idle_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 1166
+        width: 292
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c13cd4870b24c8260800000000000000
+      internalID: 7101124038156469020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_pickSlime_idle_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 933
+        width: 292
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3a89127831a25000800000000000000
+      internalID: 23258211894790716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_pickSlime_idle_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 933
+        width: 292
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b94671956e9454590800000000000000
+      internalID: -7690659534979242853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_pickSlime_idle_spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 933
+        width: 292
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c9b53c4ba3946110800000000000000
+      internalID: 1253288960243120581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_pickSlime_idle_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 700
+        width: 292
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca2c30e298bffb0d0800000000000000
+      internalID: -3404726226667715924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_pickSlime_idle_spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 700
+        width: 292
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8398ab5fd3f6cce20800000000000000
+      internalID: 3372192532899989816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_pickSlime_idle_spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 700
+        width: 292
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 856dacf3b0a9bccc0800000000000000
+      internalID: -3689686096594413992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_pickSlime_idle_spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 467
+        width: 292
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 534386e0268e17480800000000000000
+      internalID: -8903079480488610763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_pickSlime_idle_spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 467
+        width: 292
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70316e8ec8f7724a0800000000000000
+      internalID: -6618180884218113273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_pickSlime_idle_spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 467
+        width: 292
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e2bf73481b9346e0800000000000000
+      internalID: -1854468093032549660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_pickSlime_idle_spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 234
+        width: 292
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85e29723e4cc32dd0800000000000000
+      internalID: -2511939530916286888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_pickSlime_idle_spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 234
+        width: 292
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef1e0c45475289cf0800000000000000
+      internalID: -245404998123331074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_pickSlime_idle_spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 234
+        width: 292
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc1b52e4c43c82530800000000000000
+      internalID: 3830526215574630863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_pickSlime_idle_spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 292
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f69e401609ebbd780800000000000000
+      internalID: -8657116331377366673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_pickSlime_idle_spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 1
+        width: 292
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35b91bee95e3478a0800000000000000
+      internalID: -6308348622061593773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_pickSlime_idle_spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 1
+        width: 292
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1b9136ddc2fb23f0800000000000000
+      internalID: -924378332618712294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,763 @@
+fileFormatVersion: 2
+guid: e457b74c4bf06e849bb2b461a8842e80
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8423896977694843039
+    second: slime_battle_idle_spritesheet_0
+  - first:
+      213: -1640631265876411550
+    second: slime_battle_idle_spritesheet_1
+  - first:
+      213: -4612985103584841726
+    second: slime_battle_idle_spritesheet_2
+  - first:
+      213: -2287935873553726702
+    second: slime_battle_idle_spritesheet_3
+  - first:
+      213: 5419847163911575197
+    second: slime_battle_idle_spritesheet_4
+  - first:
+      213: 8453616444478931434
+    second: slime_battle_idle_spritesheet_5
+  - first:
+      213: -3744597847199926093
+    second: slime_battle_idle_spritesheet_6
+  - first:
+      213: 6389462094030772568
+    second: slime_battle_idle_spritesheet_7
+  - first:
+      213: -5623525521407473066
+    second: slime_battle_idle_spritesheet_8
+  - first:
+      213: 8736896929398623212
+    second: slime_battle_idle_spritesheet_9
+  - first:
+      213: 2996301261783976146
+    second: slime_battle_idle_spritesheet_10
+  - first:
+      213: -4572037572263577744
+    second: slime_battle_idle_spritesheet_11
+  - first:
+      213: 6449562742139269538
+    second: slime_battle_idle_spritesheet_12
+  - first:
+      213: -8036304676327586594
+    second: slime_battle_idle_spritesheet_13
+  - first:
+      213: -827881987920682978
+    second: slime_battle_idle_spritesheet_14
+  - first:
+      213: -7680021482674315748
+    second: slime_battle_idle_spritesheet_15
+  - first:
+      213: 2462880869672616137
+    second: slime_battle_idle_spritesheet_16
+  - first:
+      213: -5033377663615894892
+    second: slime_battle_idle_spritesheet_17
+  - first:
+      213: -314156383568850790
+    second: slime_battle_idle_spritesheet_18
+  - first:
+      213: 7894840264019864556
+    second: slime_battle_idle_spritesheet_19
+  - first:
+      213: 7027780865650093093
+    second: slime_battle_idle_spritesheet_20
+  - first:
+      213: -772564021757774839
+    second: slime_battle_idle_spritesheet_21
+  - first:
+      213: 7198766222277365934
+    second: slime_battle_idle_spritesheet_22
+  - first:
+      213: -5818481682312629430
+    second: slime_battle_idle_spritesheet_23
+  - first:
+      213: -3267238087695226196
+    second: slime_battle_idle_spritesheet_24
+  - first:
+      213: -6105449306111759212
+    second: slime_battle_idle_spritesheet_25
+  - first:
+      213: 5455752637683200514
+    second: slime_battle_idle_spritesheet_26
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 94
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: slime_battle_idle_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 602
+        width: 94
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16f130c945e481b80800000000000000
+      internalID: -8423896977694843039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_battle_idle_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 602
+        width: 94
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26b790e5e8e4b39e0800000000000000
+      internalID: -1640631265876411550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_battle_idle_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 602
+        width: 94
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20038aa2d726bffb0800000000000000
+      internalID: -4612985103584841726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_battle_idle_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 527
+        width: 94
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21305fbe17e9f30e0800000000000000
+      internalID: -2287935873553726702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_battle_idle_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 527
+        width: 94
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d969bdda74a273b40800000000000000
+      internalID: 5419847163911575197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_battle_idle_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 527
+        width: 94
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae14198fd57415570800000000000000
+      internalID: 8453616444478931434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_battle_idle_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 452
+        width: 94
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b8b4f20914880cc0800000000000000
+      internalID: -3744597847199926093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_battle_idle_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 452
+        width: 94
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8591784fbedeba850800000000000000
+      internalID: 6389462094030772568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_battle_idle_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 452
+        width: 94
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65a0a2f355935f1b0800000000000000
+      internalID: -5623525521407473066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_battle_idle_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 377
+        width: 94
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceb810c9771bf3970800000000000000
+      internalID: 8736896929398623212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_battle_idle_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 377
+        width: 94
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d840bc5f10059920800000000000000
+      internalID: 2996301261783976146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_battle_idle_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 377
+        width: 94
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0777d7d3d0cdc80c0800000000000000
+      internalID: -4572037572263577744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_battle_idle_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 302
+        width: 94
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a13ec98423718950800000000000000
+      internalID: 6449562742139269538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_battle_idle_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 302
+        width: 94
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed40fac997f497090800000000000000
+      internalID: -8036304676327586594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_battle_idle_spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 302
+        width: 94
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e102b02e7b5c284f0800000000000000
+      internalID: -827881987920682978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_battle_idle_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 227
+        width: 94
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1e14d9e6251b6590800000000000000
+      internalID: -7680021482674315748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_battle_idle_spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 227
+        width: 94
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c001f02a19ed2220800000000000000
+      internalID: 2462880869672616137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_battle_idle_spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 227
+        width: 94
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49af9c3dea9d52ab0800000000000000
+      internalID: -5033377663615894892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_battle_idle_spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 152
+        width: 94
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9015710f64e3abf0800000000000000
+      internalID: -314156383568850790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_battle_idle_spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 152
+        width: 94
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cebea57346b109d60800000000000000
+      internalID: 7894840264019864556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_battle_idle_spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 152
+        width: 94
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52c6c586671b78160800000000000000
+      internalID: 7027780865650093093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_battle_idle_spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 77
+        width: 94
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90471ec8d1d4745f0800000000000000
+      internalID: -772564021757774839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_battle_idle_spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 77
+        width: 94
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea05ceb0db727e360800000000000000
+      internalID: 7198766222277365934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_battle_idle_spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 77
+        width: 94
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4373a1dcb9904fa0800000000000000
+      internalID: -5818481682312629430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_battle_idle_spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2
+        width: 94
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caaac42154078a2d0800000000000000
+      internalID: -3267238087695226196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_battle_idle_spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 2
+        width: 94
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49cad034436154ba0800000000000000
+      internalID: -6105449306111759212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slime_battle_idle_spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 2
+        width: 94
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 202f18f3e1ab6bb40800000000000000
+      internalID: 5455752637683200514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
