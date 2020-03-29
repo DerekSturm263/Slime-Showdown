@@ -16,14 +16,39 @@ public class ButtonMethods : MonoBehaviour
 
     private void Start()
     {
-        gameManager = GameObject.FindGameObjectWithTag("GameController");
+        try
+        {
+            gameManager = GameObject.FindGameObjectWithTag("GameController");
 
-        confirmationUI = GameObject.FindGameObjectWithTag("ConfirmationUI").GetComponent<CanvasGroup>();
-        promptUI = GameObject.FindGameObjectWithTag("PromptUI").GetComponent<CanvasGroup>();
-        namingUI = GameObject.FindGameObjectWithTag("NamingUI").GetComponent<CanvasGroup>();
+            confirmationUI = GameObject.FindGameObjectWithTag("ConfirmationUI").GetComponent<CanvasGroup>();
+            promptUI = GameObject.FindGameObjectWithTag("PromptUI").GetComponent<CanvasGroup>();
+            namingUI = GameObject.FindGameObjectWithTag("NamingUI").GetComponent<CanvasGroup>();
 
-        slimeNameField = GameObject.FindGameObjectWithTag("SlimeNameField").GetComponent<Text>();
+            slimeNameField = GameObject.FindGameObjectWithTag("SlimeNameField").GetComponent<Text>();
+        }
+        catch { }
     }
+
+    #region Title Scene
+
+    public void ToSlimePick()
+    {
+        SceneManager.LoadScene("PickSlime");
+    }
+
+    public void ToCredits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
+
+    #endregion
+
+    #region Slime Picking Scene
 
     // This is the method called by the "Yeah!" button when selecting your slime.
     public void PickSlime()
@@ -49,6 +74,10 @@ public class ButtonMethods : MonoBehaviour
         SceneManager.LoadScene("Ranch");
         DontDestroyOnLoad(gameManager);
     }
+
+    #endregion
+
+    #region Fade Lerps
 
     // Lerp used for fading out UI elements with CanvasGroup Components.
     public IEnumerator FadeOutLerp(CanvasGroup ui)
@@ -79,4 +108,6 @@ public class ButtonMethods : MonoBehaviour
 
         ui.alpha = 1f;
     }
+
+    #endregion
 }

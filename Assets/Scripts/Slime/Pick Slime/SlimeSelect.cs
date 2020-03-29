@@ -15,6 +15,7 @@ public class SlimeSelect : MonoBehaviour
 
     private void OnMouseDown()
     {
+        // Focuses on the slime the player clicks on.
         Camera.main.GetComponent<FocusOnSlime>().target = gameObject;
 
         if (confirmationUI.alpha == 0)
@@ -23,6 +24,8 @@ public class SlimeSelect : MonoBehaviour
             StartCoroutine(FadeOutLerp(promptUI));
         }
     }
+
+    #region Fade Lerps
 
     // Lerp used for fading out UI elements with CanvasGroup Components.
     public IEnumerator FadeOutLerp(CanvasGroup ui)
@@ -53,4 +56,6 @@ public class SlimeSelect : MonoBehaviour
 
         ui.alpha = 1f;
     }
+
+    #endregion
 }
