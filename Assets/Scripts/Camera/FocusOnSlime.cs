@@ -5,12 +5,18 @@ using UnityEngine;
 public class FocusOnSlime : MonoBehaviour
 {
     // This is the slime that the camera will focus on.
+    [HideInInspector]
     public GameObject target;
 
     private Vector3 returnPosition;
 
+    [HideInInspector]
+    public GameObject[] slimeTypes;
+
     private void Start()
     {
+        slimeTypes = GameObject.FindGameObjectsWithTag("Slime");
+
         returnPosition = transform.position;
     }
 

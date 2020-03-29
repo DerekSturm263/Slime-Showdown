@@ -55,6 +55,12 @@ public class ButtonMethods : MonoBehaviour
     {
         StartCoroutine(FadeOutLerp(confirmationUI));
         StartCoroutine(FadeInLerp(namingUI));
+        
+        foreach (GameObject slime in Camera.main.GetComponent<FocusOnSlime>().slimeTypes)
+        {
+            if (slime.name != Camera.main.GetComponent<FocusOnSlime>().target.name)
+                slime.SetActive(false);
+        }
     }
 
     // This is the method called by the "Nah..." button when selecting your slime.
@@ -65,7 +71,7 @@ public class ButtonMethods : MonoBehaviour
         StartCoroutine(FadeInLerp(promptUI));
     }
 
-    // This is the method called by the name input when hitting enter.
+    // This is the method called by the Name input when hitting enter.
     public void StartGame()
     {
         gameManager.GetComponent<GameManager>().playerSlimeType = Camera.main.GetComponent<FocusOnSlime>().target.name.ToString().Replace(" Slime", "");
