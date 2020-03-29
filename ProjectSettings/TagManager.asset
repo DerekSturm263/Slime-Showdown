@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Slime
   - ConfirmationUI
+  - PromptUI
+  - NamingUI
+  - SlimeNameField
   layers:
   - Default
   - TransparentFX
