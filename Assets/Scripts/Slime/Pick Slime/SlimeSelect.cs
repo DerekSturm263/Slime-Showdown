@@ -28,7 +28,7 @@ public class SlimeSelect : MonoBehaviour
     #region Fade Lerps
 
     // Lerp used for fading out UI elements with CanvasGroup Components.
-    public IEnumerator FadeOutLerp(CanvasGroup ui)
+    private IEnumerator FadeOutLerp(CanvasGroup ui)
     {
         ui.interactable = false;
         ui.blocksRaycasts = false;
@@ -43,7 +43,7 @@ public class SlimeSelect : MonoBehaviour
     }
 
     // Lerp used for fading in UI elements with CanvasGroup Components.
-    public IEnumerator FadeInLerp(CanvasGroup ui)
+    private IEnumerator FadeInLerp(CanvasGroup ui)
     {
         for (int i = 0; i < 10; i++)
         {

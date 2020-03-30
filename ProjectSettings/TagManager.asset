@@ -9,6 +9,8 @@ TagManager:
   - PromptUI
   - NamingUI
   - SlimeNameField
+  - GameLogo
+  - Buttons
   layers:
   - Default
   - TransparentFX

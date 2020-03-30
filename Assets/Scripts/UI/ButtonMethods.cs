@@ -8,17 +8,31 @@ public class ButtonMethods : MonoBehaviour
 {
     private GameObject gameManager;
 
+    #region Title Screen Stuff
+
+    private GameObject title;
+    private GameObject buttons;
+
+    #endregion
+
+    #region Slime Picking Stuff
+
     private CanvasGroup confirmationUI;
     private CanvasGroup promptUI;
     private CanvasGroup namingUI;
 
     private Text slimeNameField;
 
+    #endregion
+
     private void Start()
     {
         try
         {
             gameManager = GameObject.FindGameObjectWithTag("GameController");
+
+            title = GameObject.FindGameObjectWithTag("GameLogo");
+            buttons = GameObject.FindGameObjectWithTag("Buttons");
 
             confirmationUI = GameObject.FindGameObjectWithTag("ConfirmationUI").GetComponent<CanvasGroup>();
             promptUI = GameObject.FindGameObjectWithTag("PromptUI").GetComponent<CanvasGroup>();
@@ -33,12 +47,15 @@ public class ButtonMethods : MonoBehaviour
 
     public void ToSlimePick()
     {
-        SceneManager.LoadScene("PickSlime");
+        StartCoroutine(MoveLerp(buttons, 0f, -4f, 0f, 0.5f));
+        StartCoroutine(MoveLerp(title, 0f, 5.5f, 0f, 0.5f));
+
+        StartCoroutine(LoadSceneDelay("PickSlime", 0.5f));
     }
 
     public void ToCredits()
     {
-        SceneManager.LoadScene("Credits");
+        StartCoroutine(LoadSceneDelay("Credits", 0.5f));
     }
 
     public void Quit()
@@ -86,7 +103,7 @@ public class ButtonMethods : MonoBehaviour
     #region Fade Lerps
 
     // Lerp used for fading out UI elements with CanvasGroup Components.
-    public IEnumerator FadeOutLerp(CanvasGroup ui)
+    private IEnumerator FadeOutLerp(CanvasGroup ui)
     {
         ui.interactable = false;
         ui.blocksRaycasts = false;
@@ -101,7 +118,7 @@ public class ButtonMethods : MonoBehaviour
     }
 
     // Lerp used for fading in UI elements with CanvasGroup Components.
-    public IEnumerator FadeInLerp(CanvasGroup ui)
+    private IEnumerator FadeInLerp(CanvasGroup ui)
     {
         for (int i = 0; i < 10; i++)
         {
@@ -116,4 +133,36 @@ public class ButtonMethods : MonoBehaviour
     }
 
     #endregion
+
+    #region Move Lerps
+
+    // Lerp used for moving UI Elements.
+    private IEnumerator MoveLerp(GameObject gameObject, float xDist, float yDist, float zDist, float seconds)
+    {
+        float newPosX = gameObject.transform.position.x + xDist;
+        float newPosY = gameObject.transform.position.y + yDist;
+        float newPosZ = gameObject.transform.position.z + zDist;
+
+        float elapsedTime = 0;
+
+        while (elapsedTime < seconds)
+        {
+            gameObject.transform.position = new Vector3(Mathf.Lerp(gameObject.transform.position.x, newPosX, elapsedTime / seconds),
+                                                        Mathf.Lerp(gameObject.transform.position.y, newPosY, elapsedTime / seconds),
+                                                        Mathf.Lerp(gameObject.transform.position.z, newPosZ, elapsedTime / seconds));
+            elapsedTime += Time.deltaTime;
+
+            yield return new WaitForEndOfFrame();
+        }
+
+        gameObject.transform.position = new Vector3(newPosX, newPosY, newPosZ);
+    }
+
+    #endregion
+
+    private IEnumerator LoadSceneDelay(string sceneName, float time)
+    {
+        yield return new WaitForSeconds(time);
+        SceneManager.LoadScene(sceneName);
+    }
 }
