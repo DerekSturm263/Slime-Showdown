@@ -4,29 +4,25 @@ using UnityEngine;
 
 public class FocusOnSlime : MonoBehaviour
 {
-    // This is the slime that the camera will focus on.
+    // This is the gameobject that the camera will fly to when selecting a slime.
     [HideInInspector]
-    public GameObject target;
+    public GameObject cameraTarget;
 
+    // This is the position that the camera will return to when the player zooms back out.
     private Vector3 returnPosition;
-
-    [HideInInspector]
-    public GameObject[] slimeTypes;
 
     private void Start()
     {
-        slimeTypes = GameObject.FindGameObjectsWithTag("Slime");
-
+        // Sets the return position to wherever the camera started off at.
         returnPosition = transform.position;
     }
 
+    // Controls the camera movement.
     private void FixedUpdate()
     {
-        // Lerps the camera position to a new position based on the current and target positions.
-        if (target != null)
-            transform.position = Vector3.Lerp(transform.position, target.transform.position - new Vector3(0, 0, 4), 5 * Time.deltaTime);
+        if (cameraTarget != null)
+            transform.position = Vector3.Lerp(transform.position, cameraTarget.transform.position - new Vector3(0, 0, 4), 5 * Time.deltaTime);
         else
             transform.position = Vector3.Lerp(transform.position, returnPosition, 5 * Time.deltaTime);
-
     }
 }
