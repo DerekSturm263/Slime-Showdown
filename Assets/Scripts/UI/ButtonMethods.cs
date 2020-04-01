@@ -3,58 +3,68 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class ButtonMethods : MonoBehaviour
 {
-    private GameObject gameManager;
+    #region Title Variables
 
-    #region Title Screen Stuff
-
-    private GameObject title;
-    private GameObject buttons;
+    private Animation gameLogoAnim;
+    private Animation titleScreenButtonsAnim;
 
     #endregion
 
-    #region Slime Picking Stuff
+    #region Slime Picking Variables
 
-    private CanvasGroup confirmationUI;
-    private CanvasGroup promptUI;
-    private CanvasGroup namingUI;
+    private GameObject gameManager;
 
-    private Text slimeNameField;
+    private Animation promptUIAnim;
+    private Animation confirmationUIAnim;
+    private Animation confirmationButtonsAnim;
+    private Animation namingUIAnim;
+    private Animation slimeNameFieldAnim;
 
     #endregion
 
     private void Start()
     {
+        // Title scene elements.
+        try
+        {
+            gameLogoAnim = GameObject.FindGameObjectWithTag("GameLogo").GetComponent<Animation>();
+            titleScreenButtonsAnim = GameObject.FindGameObjectWithTag("Buttons").GetComponent<Animation>();
+        }
+        catch { }
+
+        // Slime Picking scene elements.
         try
         {
             gameManager = GameObject.FindGameObjectWithTag("GameController");
 
-            title = GameObject.FindGameObjectWithTag("GameLogo");
-            buttons = GameObject.FindGameObjectWithTag("Buttons");
-
-            confirmationUI = GameObject.FindGameObjectWithTag("ConfirmationUI").GetComponent<CanvasGroup>();
-            promptUI = GameObject.FindGameObjectWithTag("PromptUI").GetComponent<CanvasGroup>();
-            namingUI = GameObject.FindGameObjectWithTag("NamingUI").GetComponent<CanvasGroup>();
-
-            slimeNameField = GameObject.FindGameObjectWithTag("SlimeNameField").GetComponent<Text>();
+            promptUIAnim = GameObject.FindGameObjectWithTag("PromptUI").GetComponent<Animation>();
+            confirmationUIAnim = GameObject.FindGameObjectWithTag("ConfirmationUI").GetComponent<Animation>();
+            confirmationButtonsAnim = GameObject.FindGameObjectWithTag("ConfirmationButtons").GetComponent<Animation>();
+            namingUIAnim = GameObject.FindGameObjectWithTag("NamingUI").GetComponent<Animation>();
+            slimeNameFieldAnim = GameObject.FindGameObjectWithTag("SlimeNameField").GetComponent<Animation>();
         }
         catch { }
     }
 
-    #region Title Scene
+    #region Title Methods
 
     public void ToSlimePick()
     {
-        StartCoroutine(MoveLerp(buttons, 0f, -4f, 0f, 0.5f));
-        StartCoroutine(MoveLerp(title, 0f, 5.5f, 0f, 0.5f));
+        gameLogoAnim.Play("gameLogo_floatUp");
+        titleScreenButtonsAnim.Play("buttons_floatDown");
 
         StartCoroutine(LoadSceneDelay("PickSlime", 0.5f));
     }
 
     public void ToCredits()
     {
+        gameLogoAnim.Play("gameLogo_floatUp");
+        titleScreenButtonsAnim.Play("buttons_floatDown");
+
         StartCoroutine(LoadSceneDelay("Credits", 0.5f));
     }
 
@@ -65,14 +75,18 @@ public class ButtonMethods : MonoBehaviour
 
     #endregion
 
-    #region Slime Picking Scene
+    #region Slime Picking Methods
 
     // This is the method called by the "Yeah!" button when selecting your slime.
     public void PickSlime()
     {
-        StartCoroutine(FadeOutLerp(confirmationUI));
-        StartCoroutine(FadeInLerp(namingUI));
-        
+        confirmationUIAnim.Play("slimePickConfirmation_fadeOut");
+        confirmationButtonsAnim.Play("slimePickButtons_floatDown");
+        namingUIAnim.Play("slimeNamePrompt_fadeIn");
+        slimeNameFieldAnim.Play("slimeNameInput_floatUp");
+
+        Invoke("Select", 0.01f);
+
         foreach (GameObject slime in Camera.main.GetComponent<FocusOnSlime>().slimeTypes)
         {
             if (slime.name != Camera.main.GetComponent<FocusOnSlime>().target.name)
@@ -83,16 +97,18 @@ public class ButtonMethods : MonoBehaviour
     // This is the method called by the "Nah..." button when selecting your slime.
     public void ViewAllSlimes()
     {
+        confirmationUIAnim.Play("slimePickConfirmation_fadeOut");
+        confirmationButtonsAnim.Play("slimePickButtons_floatDown");
+        promptUIAnim.Play("pickSlimePrompt_fadeIn");
+
         Camera.main.GetComponent<FocusOnSlime>().target = null;
-        StartCoroutine(FadeOutLerp(confirmationUI));
-        StartCoroutine(FadeInLerp(promptUI));
     }
 
     // This is the method called by the Name input when hitting enter.
     public void StartGame()
     {
         gameManager.GetComponent<GameManager>().playerSlimeType = Camera.main.GetComponent<FocusOnSlime>().target.name.ToString().Replace(" Slime", "");
-        gameManager.GetComponent<GameManager>().playerSlimeName = slimeNameField.text.ToString();
+        gameManager.GetComponent<GameManager>().playerSlimeName = GameObject.FindGameObjectWithTag("SlimeName").GetComponent<Text>().text.ToString();
 
         SceneManager.LoadScene("Ranch");
         DontDestroyOnLoad(gameManager);
@@ -100,65 +116,11 @@ public class ButtonMethods : MonoBehaviour
 
     #endregion
 
-    #region Fade Lerps
-
-    // Lerp used for fading out UI elements with CanvasGroup Components.
-    private IEnumerator FadeOutLerp(CanvasGroup ui)
+    private void Select()
     {
-        ui.interactable = false;
-        ui.blocksRaycasts = false;
-
-        for (int i = 0; i < 10; i++)
-        {
-            ui.alpha -= 0.1f;
-            yield return new WaitForEndOfFrame();
-        }
-
-        ui.alpha = 0f;
+        // Selects the yeah button by default.
+        gameManager.GetComponent<GameManager>().eventSystem.SetSelectedGameObject(GameObject.FindGameObjectWithTag("SlimeNameField"));
     }
-
-    // Lerp used for fading in UI elements with CanvasGroup Components.
-    private IEnumerator FadeInLerp(CanvasGroup ui)
-    {
-        for (int i = 0; i < 10; i++)
-        {
-            ui.alpha += 0.1f;
-            yield return new WaitForEndOfFrame();
-        }
-
-        ui.interactable = true;
-        ui.blocksRaycasts = true;
-
-        ui.alpha = 1f;
-    }
-
-    #endregion
-
-    #region Move Lerps
-
-    // Lerp used for moving UI Elements.
-    private IEnumerator MoveLerp(GameObject gameObject, float xDist, float yDist, float zDist, float seconds)
-    {
-        float newPosX = gameObject.transform.position.x + xDist;
-        float newPosY = gameObject.transform.position.y + yDist;
-        float newPosZ = gameObject.transform.position.z + zDist;
-
-        float elapsedTime = 0;
-
-        while (elapsedTime < seconds)
-        {
-            gameObject.transform.position = new Vector3(Mathf.Lerp(gameObject.transform.position.x, newPosX, elapsedTime / seconds),
-                                                        Mathf.Lerp(gameObject.transform.position.y, newPosY, elapsedTime / seconds),
-                                                        Mathf.Lerp(gameObject.transform.position.z, newPosZ, elapsedTime / seconds));
-            elapsedTime += Time.deltaTime;
-
-            yield return new WaitForEndOfFrame();
-        }
-
-        gameObject.transform.position = new Vector3(newPosX, newPosY, newPosZ);
-    }
-
-    #endregion
 
     private IEnumerator LoadSceneDelay(string sceneName, float time)
     {

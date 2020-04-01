@@ -180,10 +180,10 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_HighlightedColor: {r: 0.495283, g: 0.5215452, b: 1, a: 1}
+    m_PressedColor: {r: 0, g: 0.05426359, b: 1, a: 1}
+    m_SelectedColor: {r: 0.49411768, g: 0.52156866, b: 1, a: 1}
+    m_DisabledColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -2364,7 +2364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 850299536}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &716344534
@@ -2379,7 +2379,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &716344535
 MonoBehaviour:
@@ -2452,10 +2452,10 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_HighlightedColor: {r: 0.495283, g: 0.5215452, b: 1, a: 1}
+    m_PressedColor: {r: 0, g: 0.05426359, b: 1, a: 1}
+    m_SelectedColor: {r: 0.49411768, g: 0.52156866, b: 1, a: 1}
+    m_DisabledColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -2659,7 +2659,7 @@ RectTransform:
   - {fileID: 1634622700}
   - {fileID: 1769409858}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2733,10 +2733,10 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_HighlightedColor: {r: 0.495283, g: 0.5215452, b: 1, a: 1}
+    m_PressedColor: {r: 0, g: 0.05426359, b: 1, a: 1}
+    m_SelectedColor: {r: 0.49411768, g: 0.52156866, b: 1, a: 1}
+    m_DisabledColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -2813,6 +2813,7 @@ GameObject:
   - component: {fileID: 1634622700}
   - component: {fileID: 1634622702}
   - component: {fileID: 1634622701}
+  - component: {fileID: 1634622703}
   m_Layer: 5
   m_Name: Game Logo
   m_TagString: GameLogo
@@ -2875,6 +2876,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1634622699}
   m_CullTransparentMesh: 0
+--- !u!111 &1634622703
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1634622699}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 325a91a92b7426145992f08b5ebe5509, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 325a91a92b7426145992f08b5ebe5509, type: 2}
+  - {fileID: 7400000, guid: ecf81fd8a2a4bd14da01e80bdb52fe8b, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1769409857
 GameObject:
   m_ObjectHideFlags: 0
@@ -2885,6 +2903,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1769409858}
   - component: {fileID: 1769409859}
+  - component: {fileID: 1769409860}
   m_Layer: 5
   m_Name: Button Layout
   m_TagString: Buttons
@@ -2939,3 +2958,20 @@ MonoBehaviour:
   m_ChildControlHeight: 1
   m_ChildScaleWidth: 1
   m_ChildScaleHeight: 1
+--- !u!111 &1769409860
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1769409857}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: df43e686b7303c746a27a8dd95807f40, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: df43e686b7303c746a27a8dd95807f40, type: 2}
+  - {fileID: 7400000, guid: 80b03a645bd5af94ba0dfc73dc8c20c7, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0

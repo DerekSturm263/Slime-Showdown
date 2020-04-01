@@ -22,28 +22,11 @@ public class FocusOnSlime : MonoBehaviour
 
     private void FixedUpdate()
     {
-        float currentX = transform.position.x;
-        float currentY = transform.position.y;
-        float currentZ = transform.position.z;
-
-        float targetX;
-        float targetY;
-        float targetZ;
-
-        if (target != null)
-        {
-            targetX = target.transform.position.x;
-            targetY = target.transform.position.y;
-            targetZ = target.transform.position.z - 4;
-        }
-        else
-        {
-            targetX = returnPosition.x;
-            targetY = returnPosition.y;
-            targetZ = returnPosition.z;
-        }
-
         // Lerps the camera position to a new position based on the current and target positions.
-        transform.position = new Vector3(Mathf.Lerp(currentX, targetX, 5 * Time.deltaTime), Mathf.Lerp(currentY, targetY, 5 * Time.deltaTime), Mathf.Lerp(currentZ, targetZ, 5 * Time.deltaTime));
+        if (target != null)
+            transform.position = Vector3.Lerp(transform.position, target.transform.position - new Vector3(0, 0, 4), 5 * Time.deltaTime);
+        else
+            transform.position = Vector3.Lerp(transform.position, returnPosition, 5 * Time.deltaTime);
+
     }
 }

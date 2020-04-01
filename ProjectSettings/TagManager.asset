@@ -11,6 +11,10 @@ TagManager:
   - SlimeNameField
   - GameLogo
   - Buttons
+  - ConfirmationButtons
+  - SlimeName
+  - YeahButton
+  - NahButton
   layers:
   - Default
   - TransparentFX

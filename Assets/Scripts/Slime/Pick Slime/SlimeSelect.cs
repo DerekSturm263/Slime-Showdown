@@ -4,58 +4,32 @@ using UnityEngine;
 
 public class SlimeSelect : MonoBehaviour
 {
-    private CanvasGroup confirmationUI;
-    private CanvasGroup promptUI;
+    private GameObject gameManager;
 
     private void Start()
     {
-        confirmationUI = GameObject.FindGameObjectWithTag("ConfirmationUI").GetComponent<CanvasGroup>();
-        promptUI = GameObject.FindGameObjectWithTag("PromptUI").GetComponent<CanvasGroup>();
+        gameManager = GameObject.FindGameObjectWithTag("GameController");
     }
 
     private void OnMouseDown()
     {
-        // Focuses on the slime the player clicks on.
-        Camera.main.GetComponent<FocusOnSlime>().target = gameObject;
-
-        if (confirmationUI.alpha == 0)
+        if (Camera.main.transform.position.z < -9.9f || Camera.main.transform.position.z > -4.1f)
         {
-            StartCoroutine(FadeInLerp(confirmationUI));
-            StartCoroutine(FadeOutLerp(promptUI));
+            // Moves the camera to the slime the player clicked on.
+            Camera.main.GetComponent<FocusOnSlime>().target = gameObject;
+
+            // Animate the UI Elements.
+            GameObject.FindGameObjectWithTag("PromptUI").GetComponent<Animation>().Play("pickSlimePrompt_fadeOut");
+            GameObject.FindGameObjectWithTag("ConfirmationUI").GetComponent<Animation>().Play("slimePickConfirmation_fadeIn");
+            GameObject.FindGameObjectWithTag("ConfirmationButtons").GetComponent<Animation>().Play("slimePickButtons_floatUp");
+
+            Invoke("Select", 0.01f);
         }
     }
 
-    #region Fade Lerps
-
-    // Lerp used for fading out UI elements with CanvasGroup Components.
-    private IEnumerator FadeOutLerp(CanvasGroup ui)
+    private void Select()
     {
-        ui.interactable = false;
-        ui.blocksRaycasts = false;
-
-        for (int i = 0; i < 10; i++)
-        {
-            ui.alpha -= 0.1f;
-            yield return new WaitForEndOfFrame();
-        }
-
-        ui.alpha = 0f;
+        // Selects the yeah button.
+        gameManager.GetComponent<GameManager>().eventSystem.SetSelectedGameObject(GameObject.FindGameObjectWithTag("YeahButton"));
     }
-
-    // Lerp used for fading in UI elements with CanvasGroup Components.
-    private IEnumerator FadeInLerp(CanvasGroup ui)
-    {
-        for (int i = 0; i < 10; i++)
-        {
-            ui.alpha += 0.1f;
-            yield return new WaitForEndOfFrame();
-        }
-
-        ui.interactable = true;
-        ui.blocksRaycasts = true;
-
-        ui.alpha = 1f;
-    }
-
-    #endregion
 }
