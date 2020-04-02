@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Title.unity
     guid: d45f64eb96d75044db020cb3d9cda888
   - enabled: 1
-    path: Assets/Scenes/PickSlime.unity
+    path: Assets/Scenes/ChooseSlime.unity
     guid: 1c34876da1437e542a6e6a0bd4435be3
   - enabled: 1
     path: Assets/Scenes/Ranch.unity

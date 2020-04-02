@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 152930728}
   - component: {fileID: 152930730}
   - component: {fileID: 152930729}
+  - component: {fileID: 152930731}
   m_Layer: 5
   m_Name: Game Logo Text
   m_TagString: Untagged
@@ -200,6 +201,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 152930727}
   m_CullTransparentMesh: 0
+--- !u!114 &152930731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152930727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 4, y: -4}
+  m_UseGraphicAlpha: 1
 --- !u!1 &297785736
 GameObject:
   m_ObjectHideFlags: 0
@@ -212,6 +228,7 @@ GameObject:
   - component: {fileID: 297785740}
   - component: {fileID: 297785739}
   - component: {fileID: 297785738}
+  - component: {fileID: 297785741}
   m_Layer: 5
   m_Name: Quit Button
   m_TagString: Untagged
@@ -329,6 +346,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 297785736}
   m_CullTransparentMesh: 0
+--- !u!95 &297785741
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297785736}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 08652ee8488e5c94e99ba46ca0b0504d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &308534779
 GameObject:
   m_ObjectHideFlags: 0
@@ -501,7 +537,7 @@ GameObject:
   - component: {fileID: 615780009}
   - component: {fileID: 615780008}
   m_Layer: 0
-  m_Name: Overworld Grass
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2201,7 +2237,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileSpriteIndex: 8
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2398,9 +2434,8 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: abe27ad872ce81c4c9f96dd4f1b4f71e, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 1
-    m_Data: {fileID: -1268063831000884326, guid: 44b7776e70dd2eb4daf94f5aba264226,
-      type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 18
     m_Data: {fileID: 3842295902833575822, guid: 44b7776e70dd2eb4daf94f5aba264226,
       type: 3}
@@ -2422,7 +2457,7 @@ Tilemap:
   - m_RefCount: 18
     m_Data: {fileID: 4880064410101238260, guid: 44b7776e70dd2eb4daf94f5aba264226,
       type: 3}
-  - m_RefCount: 1
+  - m_RefCount: 2
     m_Data: {fileID: 6949305515705650086, guid: 44b7776e70dd2eb4daf94f5aba264226,
       type: 3}
   m_TileMatrixArray:
@@ -2562,6 +2597,7 @@ GameObject:
   - component: {fileID: 850299540}
   - component: {fileID: 850299539}
   - component: {fileID: 850299538}
+  - component: {fileID: 850299541}
   m_Layer: 5
   m_Name: Start Button
   m_TagString: Untagged
@@ -2679,6 +2715,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 850299536}
   m_CullTransparentMesh: 0
+--- !u!95 &850299541
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850299536}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: aca373417d0e1a84e9e70a72c90b0391, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &950210012
 GameObject:
   m_ObjectHideFlags: 0
@@ -2921,6 +2976,7 @@ GameObject:
   - component: {fileID: 1525709275}
   - component: {fileID: 1525709274}
   - component: {fileID: 1525709273}
+  - component: {fileID: 1525709276}
   m_Layer: 5
   m_Name: Credits Button
   m_TagString: Untagged
@@ -3038,6 +3094,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1525709271}
   m_CullTransparentMesh: 0
+--- !u!95 &1525709276
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525709271}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0c5f0706a3c8b60478f343bd9ba5b81e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1634622699
 GameObject:
   m_ObjectHideFlags: 0
@@ -3052,7 +3127,7 @@ GameObject:
   - component: {fileID: 1634622703}
   m_Layer: 5
   m_Name: Game Logo
-  m_TagString: GameLogo
+  m_TagString: TitleGameLogo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3143,7 +3218,7 @@ GameObject:
   - component: {fileID: 1769409860}
   m_Layer: 5
   m_Name: Button Layout
-  m_TagString: Buttons
+  m_TagString: TitleButtonLayout
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

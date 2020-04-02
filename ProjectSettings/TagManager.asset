@@ -4,17 +4,16 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Slime
-  - ConfirmationUI
-  - PromptUI
-  - NamingUI
-  - SlimeNameField
-  - GameLogo
-  - Buttons
-  - ConfirmationButtons
-  - SlimeName
-  - YeahButton
-  - NahButton
+  - TitleButtonLayout
+  - TitleGameLogo
+  - ChooseSlimePickSlimeText
+  - ChooseSlimeSlimeConfirmationText
+  - ChooseSlimeSlimeConfirmationButtonLayout
+  - ChooseSlimeButtonYeah
+  - ChooseSlimeButtonNah
+  - ChooseSlimeSlimeNameText
+  - ChooseSlimeSlimeNameInputField
+  - ChooseSlimeSlime
   layers:
   - Default
   - TransparentFX
