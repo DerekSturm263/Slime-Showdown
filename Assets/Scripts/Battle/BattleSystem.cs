@@ -23,6 +23,7 @@ public class BattleSystem : MonoBehaviour
 
     Player playerUnit;
     Player enemyUnit;
+    SlimeMove sm;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,7 +35,8 @@ public class BattleSystem : MonoBehaviour
     {
        GameObject playerGO = Instantiate(playerPrefab, playSpawn);
         playerUnit = playerGO.GetComponent<Player>();
-
+        sm = playerUnit.GetComponent<SlimeMove>();
+        sm.enabled = false;
 
        GameObject enemyGO =Instantiate(enemyPrefab, EnemySpawn);
         enemyUnit = enemyGO.GetComponent<Player>();
@@ -62,6 +64,7 @@ public class BattleSystem : MonoBehaviour
         {
             state = BattleState.Win;
             EndBattle();
+            sm.enabled = true;
         }
         else
         {
@@ -84,6 +87,7 @@ public class BattleSystem : MonoBehaviour
         {
             state = BattleState.Lose;
             EndBattle();
+            sm.enabled = true;
         }
         else
         {
