@@ -10,6 +10,7 @@ public class TitleButtonMethods : MonoBehaviour
 
     private GameObject gameLogo;
     private GameObject buttonLayout;
+    private GameObject versionNumber;
 
     private void Start()
     {
@@ -17,12 +18,15 @@ public class TitleButtonMethods : MonoBehaviour
 
         gameLogo = GameObject.FindGameObjectWithTag("TitleGameLogo");
         buttonLayout = GameObject.FindGameObjectWithTag("TitleButtonLayout");
+        versionNumber = GameObject.FindGameObjectWithTag("TitleVersionNumber");
     }
 
     public void StartGame()
     {
         gameLogo.GetComponent<Animation>().Play("ui_title_gameLogo_floatOut");
         buttonLayout.GetComponent<Animation>().Play("ui_title_buttonLayout_floatOut");
+        versionNumber.GetComponent<Animation>().Play("ui_title_versionNumber_floatOut");
+
         buttonLayout.GetComponent<CanvasGroup>().interactable = false;
 
         Invoke("LoadSlimePickScene", 1f);
@@ -32,6 +36,9 @@ public class TitleButtonMethods : MonoBehaviour
     {
         gameLogo.GetComponent<Animation>().Play("ui_title_gameLogo_floatOut");
         buttonLayout.GetComponent<Animation>().Play("ui_title_buttonLayout_floatOut");
+        versionNumber.GetComponent<Animation>().Play("ui_title_versionNumber_floatOut");
+
+        buttonLayout.GetComponent<CanvasGroup>().interactable = false;
 
         Invoke("LoadCreditsScene", 1f);
     }
@@ -40,6 +47,9 @@ public class TitleButtonMethods : MonoBehaviour
     {
         gameLogo.GetComponent<Animation>().Play("ui_title_gameLogo_floatOut");
         buttonLayout.GetComponent<Animation>().Play("ui_title_buttonLayout_floatOut");
+        versionNumber.GetComponent<Animation>().Play("ui_title_versionNumber_floatOut");
+
+        buttonLayout.GetComponent<CanvasGroup>().interactable = false;
 
         Invoke("Quit", 1f);
     }

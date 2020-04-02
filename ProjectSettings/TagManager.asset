@@ -15,6 +15,7 @@ TagManager:
   - ChooseSlimeSlimeNameInputField
   - ChooseSlimeSlime
   - ChooseSlimeSlimeNameInputFieldText
+  - TitleVersionNumber
   layers:
   - Default
   - TransparentFX

@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
     #region GameData
 
-    public string version = "0.0.1";
+    public string version;
 
     #endregion
 
