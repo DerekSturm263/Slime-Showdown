@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 
 public class SlimePickButtonMethods : MonoBehaviour
 {
+    private GameObject gameManager;
     EventSystem eventSystem;
 
     private GameObject pickSlimeText;
@@ -16,6 +17,7 @@ public class SlimePickButtonMethods : MonoBehaviour
 
     private void Start()
     {
+        gameManager = GameObject.FindGameObjectWithTag("GameController");
         eventSystem = EventSystem.current;
 
         pickSlimeText = GameObject.FindGameObjectWithTag("ChooseSlimePickSlimeText");
@@ -74,5 +76,6 @@ public class SlimePickButtonMethods : MonoBehaviour
     private void LoadRanchScene()
     {
         SceneManager.LoadScene("Ranch");
+        DontDestroyOnLoad(gameManager);
     }
 }

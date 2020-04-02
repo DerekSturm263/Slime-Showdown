@@ -5,19 +5,14 @@ using UnityEngine.EventSystems;
 
 public class GameManager : MonoBehaviour
 {
-    public EventSystem eventSystem;
+    #region GameData
 
-    // The amount of gold that the player has acquired.
+    public string version = "0.0.1";
+
+    #endregion
+
     public uint goldCount;
 
-    // The color slime that the player has.
     public string playerSlimeType;
-
-    // The name that the player chose for their slime.
     public string playerSlimeName;
-
-    private void Start()
-    {
-        eventSystem = EventSystem.current;
-    }
 }

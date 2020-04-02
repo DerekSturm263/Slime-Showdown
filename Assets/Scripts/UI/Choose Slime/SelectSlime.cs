@@ -56,7 +56,7 @@ public class SelectSlime : MonoBehaviour
 
             if (Physics.Raycast(mouseRay, out mouseRayHit))
             {
-                if (mouseRayHit.collider.gameObject.tag.Equals("Slime"))
+                if (mouseRayHit.collider.gameObject.tag.Equals("ChooseSlimeSlime"))
                 {
                     highlightedSlime = mouseRayHit.collider.gameObject;
                 }

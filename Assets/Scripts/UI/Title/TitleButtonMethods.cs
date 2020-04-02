@@ -6,27 +6,32 @@ using UnityEngine.UI;
 
 public class TitleButtonMethods : MonoBehaviour
 {
-    private Animation gameLogoAnim;
-    private Animation buttonLayoutAnim;
+    private GameObject gameManager;
+
+    private GameObject gameLogo;
+    private GameObject buttonLayout;
 
     private void Start()
     {
-        gameLogoAnim = GameObject.FindGameObjectWithTag("TitleGameLogo").GetComponent<Animation>();
-        buttonLayoutAnim = GameObject.FindGameObjectWithTag("TitleButtonLayout").GetComponent<Animation>();
+        gameManager = GameObject.FindGameObjectWithTag("GameController");
+
+        gameLogo = GameObject.FindGameObjectWithTag("TitleGameLogo");
+        buttonLayout = GameObject.FindGameObjectWithTag("TitleButtonLayout");
     }
 
     public void StartGame()
     {
-        gameLogoAnim.Play("ui_title_gameLogo_floatOut");
-        buttonLayoutAnim.Play("ui_title_buttonLayout_floatOut");
+        gameLogo.GetComponent<Animation>().Play("ui_title_gameLogo_floatOut");
+        buttonLayout.GetComponent<Animation>().Play("ui_title_buttonLayout_floatOut");
+        buttonLayout.GetComponent<CanvasGroup>().interactable = false;
 
         Invoke("LoadSlimePickScene", 1f);
     }
 
     public void LoadCredits()
     {
-        gameLogoAnim.Play("ui_title_gameLogo_floatOut");
-        buttonLayoutAnim.Play("ui_title_buttonLayout_floatOut");
+        gameLogo.GetComponent<Animation>().Play("ui_title_gameLogo_floatOut");
+        buttonLayout.GetComponent<Animation>().Play("ui_title_buttonLayout_floatOut");
 
         Invoke("LoadCreditsScene", 1f);
     }
@@ -39,6 +44,7 @@ public class TitleButtonMethods : MonoBehaviour
     private void LoadSlimePickScene()
     {
         SceneManager.LoadScene("ChooseSlime");
+        DontDestroyOnLoad(gameManager);
     }
 
     private void LoadCreditsScene()
