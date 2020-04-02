@@ -38,7 +38,10 @@ public class TitleButtonMethods : MonoBehaviour
 
     public void QuitGame()
     {
-        Application.Quit();
+        gameLogo.GetComponent<Animation>().Play("ui_title_gameLogo_floatOut");
+        buttonLayout.GetComponent<Animation>().Play("ui_title_buttonLayout_floatOut");
+
+        Invoke("Quit", 1f);
     }
 
     private void LoadSlimePickScene()
@@ -50,5 +53,11 @@ public class TitleButtonMethods : MonoBehaviour
     private void LoadCreditsScene()
     {
         SceneManager.LoadScene("Credits");
+        DontDestroyOnLoad(Camera.main);
+    }
+
+    private void Quit()
+    {
+        Application.Quit();
     }
 }

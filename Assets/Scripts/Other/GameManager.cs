@@ -13,6 +13,6 @@ public class GameManager : MonoBehaviour
 
     public uint goldCount;
 
-    public string playerSlimeType;
+    public string playerSlimeColor;
     public string playerSlimeName;
 }

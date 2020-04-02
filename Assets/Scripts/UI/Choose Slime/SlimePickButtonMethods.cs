@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class SlimePickButtonMethods : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class SlimePickButtonMethods : MonoBehaviour
     private GameObject slimeConfirmationButtonLayout;
     private GameObject slimeNameText;
     private GameObject slimeNameInputField;
+    private GameObject slimeNameInputFieldText;
 
     private void Start()
     {
@@ -25,6 +27,7 @@ public class SlimePickButtonMethods : MonoBehaviour
         slimeConfirmationButtonLayout = GameObject.FindGameObjectWithTag("ChooseSlimeSlimeConfirmationButtonLayout");
         slimeNameText = GameObject.FindGameObjectWithTag("ChooseSlimeSlimeNameText");
         slimeNameInputField = GameObject.FindGameObjectWithTag("ChooseSlimeSlimeNameInputField");
+        slimeNameInputFieldText = GameObject.FindGameObjectWithTag("ChooseSlimeSlimeNameInputFieldText");
     }
 
     // Called by the yeah button.
@@ -59,6 +62,9 @@ public class SlimePickButtonMethods : MonoBehaviour
 
         slimeNameText.GetComponent<Animation>().Play("ui_chooseSlime_slimeNameText_fadeOut");
         slimeNameInputField.GetComponent<Animation>().Play("ui_chooseSlime_slimeNameInputField_floatOut");
+
+        gameManager.GetComponent<GameManager>().playerSlimeColor = Camera.main.GetComponent<FocusOnSlime>().cameraTarget.name.Replace(" Slime", "");
+        gameManager.GetComponent<GameManager>().playerSlimeName = slimeNameInputFieldText.GetComponent<Text>().text.ToString();
 
         Invoke("LoadRanchScene", 1f);
     }

@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class MoveLerp : MonoBehaviour
 {
-    public Vector3 positionNew;
+    public float lerpSpeed;
+    public float xMinMax;
+    public float yMinMax;
+
+    private Vector3 positionNew;
 
     private void Start()
     {
@@ -13,7 +17,7 @@ public class MoveLerp : MonoBehaviour
 
     private void Update()
     {
-        transform.position = Vector3.Lerp(transform.position, positionNew, Time.deltaTime * 0.25f);
+        transform.position = Vector3.Lerp(transform.position, positionNew, Time.deltaTime * lerpSpeed);
 
         if (Vector3.Distance(transform.position, positionNew) < 1f)
             GetNewPosition();
@@ -21,8 +25,8 @@ public class MoveLerp : MonoBehaviour
 
     private void GetNewPosition()
     {
-        int posX = Random.Range(-5, 5);
-        int posY = Random.Range(-3, 3);
+        float posX = Random.Range(-xMinMax, xMinMax);
+        float posY = Random.Range(-yMinMax, yMinMax);
 
         positionNew = new Vector3(posX, posY, transform.position.z);
     }
