@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public enum BattleState { Start, PlayTurn, EnTurn, Win, Lose }
 
@@ -134,6 +135,13 @@ public class BattleSystem : MonoBehaviour
         }
         StartCoroutine(PlayerHeal());
     }
-
+    public void OnFleeButton()
+    {
+        if (state != BattleState.PlayTurn)
+        {
+            return;
+        }
+        SceneManager.LoadScene("Ranch");
+    }
 
 }
