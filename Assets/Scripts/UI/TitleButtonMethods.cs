@@ -20,7 +20,7 @@ public class TitleButtonMethods : MonoBehaviour
         logoAnim.Play("gameLogo_floatUp");
         buttonsAnim.Play("buttons_floatDown");
 
-        StartCoroutine(LoadSceneDelay("PickSlime", 1f));
+        Invoke("LoadSlimePickScene", 1f);
     }
 
     public void LoadCredits()
@@ -28,7 +28,7 @@ public class TitleButtonMethods : MonoBehaviour
         logoAnim.Play("gameLogo_floatUp");
         buttonsAnim.Play("buttons_floatDown");
 
-        StartCoroutine(LoadSceneDelay("Credits", 1f));
+        Invoke("LoadCreditsScene", 1f);
     }
 
     public void QuitGame()
@@ -36,9 +36,13 @@ public class TitleButtonMethods : MonoBehaviour
         Application.Quit();
     }
 
-    private IEnumerator LoadSceneDelay(string sceneName, float time)
+    private void LoadSlimePickScene()
     {
-        yield return new WaitForSeconds(time);
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene("PickSlime");
+    }
+
+    private void LoadCreditsScene()
+    {
+        SceneManager.LoadScene("Credits");
     }
 }

@@ -132,8 +132,8 @@ GameObject:
   - component: {fileID: 199495743}
   - component: {fileID: 199495742}
   - component: {fileID: 199495744}
-  - component: {fileID: 199495745}
   - component: {fileID: 199495746}
+  - component: {fileID: 199495745}
   m_Layer: 0
   m_Name: Red Slime
   m_TagString: Slime
@@ -225,32 +225,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!61 &199495745
-BoxCollider2D:
+--- !u!65 &199495745
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 199495741}
-  m_Enabled: 1
-  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9733334, y: 0.77675664}
-    newSize: {x: 0.9733334, y: 0.77675664}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.9733334, y: 0.77675664}
-  m_EdgeRadius: 0
+  m_Size: {x: 0.9733334, y: 0.77675664, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &199495746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -411,6 +398,7 @@ GameObject:
   - component: {fileID: 481146211}
   - component: {fileID: 481146212}
   - component: {fileID: 481146213}
+  - component: {fileID: 481146214}
   m_Layer: 5
   m_Name: Button Layout
   m_TagString: ConfirmationButtons
@@ -481,6 +469,18 @@ Animation:
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!225 &481146214
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 481146210}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &526810027
 GameObject:
   m_ObjectHideFlags: 0
@@ -606,8 +606,8 @@ GameObject:
   - component: {fileID: 682049870}
   - component: {fileID: 682049869}
   - component: {fileID: 682049871}
-  - component: {fileID: 682049872}
   - component: {fileID: 682049873}
+  - component: {fileID: 682049872}
   m_Layer: 0
   m_Name: Pink Slime
   m_TagString: Slime
@@ -699,32 +699,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!61 &682049872
-BoxCollider2D:
+--- !u!65 &682049872
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 682049868}
-  m_Enabled: 1
-  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9733334, y: 0.77675664}
-    newSize: {x: 0.9733334, y: 0.77675664}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.9733334, y: 0.77675664}
-  m_EdgeRadius: 0
+  m_Size: {x: 0.9733334, y: 0.77675664, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &682049873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -848,6 +835,7 @@ GameObject:
   - component: {fileID: 877917089}
   - component: {fileID: 877917088}
   - component: {fileID: 877917091}
+  - component: {fileID: 877917092}
   m_Layer: 5
   m_Name: Input Field
   m_TagString: SlimeNameField
@@ -888,7 +876,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -928,8 +916,8 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: StartGame
+      - m_Target: {fileID: 433295746}
+        m_MethodName: FinishName
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1002,6 +990,18 @@ Animation:
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!225 &877917092
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 877917086}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &927574204
 GameObject:
   m_ObjectHideFlags: 0
@@ -1146,8 +1146,8 @@ GameObject:
   - component: {fileID: 1033490493}
   - component: {fileID: 1033490492}
   - component: {fileID: 1033490494}
-  - component: {fileID: 1033490495}
   - component: {fileID: 1033490496}
+  - component: {fileID: 1033490495}
   m_Layer: 0
   m_Name: Green Slime
   m_TagString: Slime
@@ -1238,32 +1238,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!61 &1033490495
-BoxCollider2D:
+--- !u!65 &1033490495
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1033490491}
-  m_Enabled: 1
-  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9733334, y: 0.77675664}
-    newSize: {x: 0.9733334, y: 0.77675664}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.9733334, y: 0.77675664}
-  m_EdgeRadius: 0
+  m_Size: {x: 0.9733334, y: 0.77675664, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1033490496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1362,8 +1349,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: ViewAllSlimes
+      - m_Target: {fileID: 433295746}
+        m_MethodName: Nah
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3421,8 +3408,8 @@ GameObject:
   - component: {fileID: 1132882487}
   - component: {fileID: 1132882486}
   - component: {fileID: 1132882488}
-  - component: {fileID: 1132882489}
   - component: {fileID: 1132882490}
+  - component: {fileID: 1132882489}
   m_Layer: 0
   m_Name: Purple Slime
   m_TagString: Slime
@@ -3514,32 +3501,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!61 &1132882489
-BoxCollider2D:
+--- !u!65 &1132882489
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1132882485}
-  m_Enabled: 1
-  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9733334, y: 0.77675664}
-    newSize: {x: 0.9733334, y: 0.77675664}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.9733334, y: 0.77675664}
-  m_EdgeRadius: 0
+  m_Size: {x: 0.9733334, y: 0.77675664, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1132882490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3836,8 +3810,8 @@ GameObject:
   - component: {fileID: 1407986666}
   - component: {fileID: 1407986665}
   - component: {fileID: 1407986667}
-  - component: {fileID: 1407986668}
   - component: {fileID: 1407986669}
+  - component: {fileID: 1407986668}
   m_Layer: 0
   m_Name: Blue Slime
   m_TagString: Slime
@@ -3929,32 +3903,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!61 &1407986668
-BoxCollider2D:
+--- !u!65 &1407986668
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1407986664}
-  m_Enabled: 1
-  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9733334, y: 0.77675664}
-    newSize: {x: 0.9733334, y: 0.77675664}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.9733334, y: 0.77675664}
-  m_EdgeRadius: 0
+  m_Size: {x: 0.9733334, y: 0.77675664, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1407986669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3982,8 +3943,8 @@ GameObject:
   - component: {fileID: 1429953256}
   - component: {fileID: 1429953255}
   - component: {fileID: 1429953257}
-  - component: {fileID: 1429953258}
   - component: {fileID: 1429953259}
+  - component: {fileID: 1429953258}
   m_Layer: 0
   m_Name: Magenta Slime
   m_TagString: Slime
@@ -4075,32 +4036,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!61 &1429953258
-BoxCollider2D:
+--- !u!65 &1429953258
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1429953254}
-  m_Enabled: 1
-  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9733334, y: 0.77675664}
-    newSize: {x: 0.9733334, y: 0.77675664}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.9733334, y: 0.77675664}
-  m_EdgeRadius: 0
+  m_Size: {x: 0.9733334, y: 0.77675664, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1429953259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4225,8 +4173,8 @@ GameObject:
   - component: {fileID: 1521636663}
   - component: {fileID: 1521636662}
   - component: {fileID: 1521636664}
-  - component: {fileID: 1521636665}
   - component: {fileID: 1521636666}
+  - component: {fileID: 1521636665}
   m_Layer: 0
   m_Name: Orange Slime
   m_TagString: Slime
@@ -4318,32 +4266,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!61 &1521636665
-BoxCollider2D:
+--- !u!65 &1521636665
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1521636661}
-  m_Enabled: 1
-  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9733334, y: 0.77675664}
-    newSize: {x: 0.9733334, y: 0.77675664}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.9733334, y: 0.77675664}
-  m_EdgeRadius: 0
+  m_Size: {x: 0.9733334, y: 0.77675664, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1521636666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4619,8 +4554,8 @@ GameObject:
   - component: {fileID: 1720513618}
   - component: {fileID: 1720513617}
   - component: {fileID: 1720513619}
-  - component: {fileID: 1720513620}
   - component: {fileID: 1720513621}
+  - component: {fileID: 1720513620}
   m_Layer: 0
   m_Name: Yellow Slime
   m_TagString: Slime
@@ -4712,32 +4647,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!61 &1720513620
-BoxCollider2D:
+--- !u!65 &1720513620
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1720513616}
-  m_Enabled: 1
-  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9733334, y: 0.77675664}
-    newSize: {x: 0.9733334, y: 0.77675664}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.9733334, y: 0.77675664}
-  m_EdgeRadius: 0
+  m_Size: {x: 0.9733334, y: 0.77675664, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1720513621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4765,8 +4687,8 @@ GameObject:
   - component: {fileID: 1979323802}
   - component: {fileID: 1979323801}
   - component: {fileID: 1979323803}
-  - component: {fileID: 1979323804}
   - component: {fileID: 1979323805}
+  - component: {fileID: 1979323804}
   m_Layer: 0
   m_Name: Olive Slime
   m_TagString: Slime
@@ -4858,32 +4780,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!61 &1979323804
-BoxCollider2D:
+--- !u!65 &1979323804
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1979323800}
-  m_Enabled: 1
-  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9733334, y: 0.77675664}
-    newSize: {x: 0.9733334, y: 0.77675664}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.9733334, y: 0.77675664}
-  m_EdgeRadius: 0
+  m_Size: {x: 0.9733334, y: 0.77675664, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1979323805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4982,8 +4891,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: PickSlime
+      - m_Target: {fileID: 433295746}
+        m_MethodName: Yeah
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
