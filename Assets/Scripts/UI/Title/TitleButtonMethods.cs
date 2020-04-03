@@ -32,6 +32,17 @@ public class TitleButtonMethods : MonoBehaviour
         Invoke("LoadSlimePickScene", 1f);
     }
 
+    public void LoadOptions()
+    {
+        gameLogo.GetComponent<Animation>().Play("ui_title_gameLogo_floatOut");
+        buttonLayout.GetComponent<Animation>().Play("ui_title_buttonLayout_floatOut");
+        versionNumber.GetComponent<Animation>().Play("ui_title_versionNumber_floatOut");
+
+        buttonLayout.GetComponent<CanvasGroup>().interactable = false;
+
+        Invoke("LoadOptionsScene", 1f);
+    }
+
     public void LoadCredits()
     {
         gameLogo.GetComponent<Animation>().Play("ui_title_gameLogo_floatOut");
@@ -57,6 +68,12 @@ public class TitleButtonMethods : MonoBehaviour
     private void LoadSlimePickScene()
     {
         SceneManager.LoadScene("ChooseSlime");
+        DontDestroyOnLoad(gameManager);
+    }
+
+    private void LoadOptionsScene()
+    {
+        SceneManager.LoadScene("Options");
         DontDestroyOnLoad(gameManager);
     }
 

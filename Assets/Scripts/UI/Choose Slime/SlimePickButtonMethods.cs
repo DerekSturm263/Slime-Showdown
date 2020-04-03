@@ -14,6 +14,7 @@ public class SlimePickButtonMethods : MonoBehaviour
     private GameObject slimeConfirmationText;
     private GameObject slimeConfirmationButtonLayout;
     private GameObject slimeNameText;
+    private GameObject slimeNameRedoText;
     private GameObject slimeNameInputField;
     private GameObject slimeNameInputFieldText;
 
@@ -26,6 +27,7 @@ public class SlimePickButtonMethods : MonoBehaviour
         slimeConfirmationText = GameObject.FindGameObjectWithTag("ChooseSlimeSlimeConfirmationText");
         slimeConfirmationButtonLayout = GameObject.FindGameObjectWithTag("ChooseSlimeSlimeConfirmationButtonLayout");
         slimeNameText = GameObject.FindGameObjectWithTag("ChooseSlimeSlimeNameText");
+        slimeNameRedoText = GameObject.FindGameObjectWithTag("ChooseSlimeSlimeNameRedoText");
         slimeNameInputField = GameObject.FindGameObjectWithTag("ChooseSlimeSlimeNameInputField");
         slimeNameInputFieldText = GameObject.FindGameObjectWithTag("ChooseSlimeSlimeNameInputFieldText");
     }
@@ -58,15 +60,31 @@ public class SlimePickButtonMethods : MonoBehaviour
     // Called by the naming input field when you press enter.
     public void FinishName()
     {
-        slimeNameInputField.GetComponent<CanvasGroup>().interactable = false;
+        if (slimeNameInputFieldText.GetComponent<Text>().text.Trim().Length > 0)
+        {
+            if (slimeNameText.GetComponent<CanvasGroup>().alpha == 1)
+                slimeNameText.GetComponent<Animation>().Play("ui_chooseSlime_slimeNameText_fadeOut");
+            else
+                slimeNameRedoText.GetComponent<Animation>().Play("ui_chooseSlime_slimeNameRedoText_fadeOut");
 
-        slimeNameText.GetComponent<Animation>().Play("ui_chooseSlime_slimeNameText_fadeOut");
-        slimeNameInputField.GetComponent<Animation>().Play("ui_chooseSlime_slimeNameInputField_floatOut");
 
-        gameManager.GetComponent<GameManager>().playerSlimeColor = Camera.main.GetComponent<FocusOnSlime>().cameraTarget.name.Replace(" Slime", "");
-        gameManager.GetComponent<GameManager>().playerSlimeName = slimeNameInputFieldText.GetComponent<Text>().text.ToString();
 
-        Invoke("LoadRanchScene", 1f);
+            slimeNameInputField.GetComponent<CanvasGroup>().interactable = false;
+            slimeNameInputField.GetComponent<Animation>().Play("ui_chooseSlime_slimeNameInputField_floatOut");
+
+            gameManager.GetComponent<GameManager>().playerSlimeColor = Camera.main.GetComponent<FocusOnSlime>().cameraTarget.name.Replace(" Slime", "");
+            gameManager.GetComponent<GameManager>().playerSlimeName = slimeNameInputFieldText.GetComponent<Text>().text;
+
+            Invoke("LoadRanchScene", 1f);
+        }
+        else
+        {
+            if (slimeNameRedoText.GetComponent<CanvasGroup>().alpha == 0)
+            {
+                slimeNameText.GetComponent<Animation>().Play("ui_chooseSlime_slimeNameText_fadeOut");
+                slimeNameRedoText.GetComponent<Animation>().Play("ui_chooseSlime_slimeNameRedoText_fadeIn");
+            }
+        }
     }
 
     private void SelectInputField()

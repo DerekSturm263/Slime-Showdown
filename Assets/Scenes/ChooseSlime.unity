@@ -798,7 +798,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: cb89ec3a2b75444489eab2873c8d9e57, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -958,7 +958,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 4484514b4478262448227b6c9d34fb42, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -4489,11 +4489,11 @@ GameObject:
   - component: {fileID: 1260503560}
   m_Layer: 5
   m_Name: Slime Name Redo Text
-  m_TagString: ChooseSlimeSlimeNameText
+  m_TagString: ChooseSlimeSlimeNameRedoText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1260503559
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4524,8 +4524,10 @@ Animation:
   serializedVersion: 3
   m_Animation: {fileID: 0}
   m_Animations:
-  - {fileID: 7400000, guid: cfcd3b0ab52cfcc48a462750aaa84849, type: 2}
-  - {fileID: 7400000, guid: 3822ffaf3bc8cb748abb41f7c085ea6f, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 7400000, guid: cb42892326375614cba156caf2590219, type: 2}
+  - {fileID: 7400000, guid: bed65981ce4017e4691c5da3752b17c8, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0

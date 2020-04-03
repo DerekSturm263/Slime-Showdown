@@ -16,6 +16,7 @@ TagManager:
   - ChooseSlimeSlime
   - ChooseSlimeSlimeNameInputFieldText
   - TitleVersionNumber
+  - ChooseSlimeSlimeNameRedoText
   layers:
   - Default
   - TransparentFX
