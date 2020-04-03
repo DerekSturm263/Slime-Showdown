@@ -9009,7 +9009,7 @@ GameObject:
   - component: {fileID: 628659209}
   - component: {fileID: 628659208}
   m_Layer: 5
-  m_Name: Settings Button
+  m_Name: Options Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9114,7 +9114,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d24d2c215c1c5e34aab8a5619126aaea, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c93798ed48de0ad4ba7a0d7f91c3dfbd, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -12413,8 +12413,8 @@ RectTransform:
   m_Father: {fileID: 1241995247}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.1, y: 0.075}
-  m_AnchorMax: {x: 0.9, y: 0.325}
+  m_AnchorMin: {x: 0.05, y: 0.075}
+  m_AnchorMax: {x: 0.95, y: 0.325}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.8333333}

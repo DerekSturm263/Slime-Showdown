@@ -19557,6 +19557,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraTarget: {fileID: 304522797}
   cameraSpeed: 3.5
+  cameraDistance: 6.5
 --- !u!81 &2017826908
 AudioListener:
   m_ObjectHideFlags: 0
@@ -19616,7 +19617,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2017826906}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7, y: 1, z: -5}
+  m_LocalPosition: {x: -7, y: 1, z: -6.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
