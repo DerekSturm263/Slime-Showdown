@@ -5,8 +5,9 @@ using UnityEngine;
 public class MoveLerp : MonoBehaviour
 {
     public float lerpSpeed;
-    public float xMinMax;
-    public float yMinMax;
+
+    public float xMin, xMax;
+    public float yMin, yMax;
 
     private Vector3 positionNew;
 
@@ -25,8 +26,8 @@ public class MoveLerp : MonoBehaviour
 
     private void GetNewPosition()
     {
-        float posX = Random.Range(-xMinMax, xMinMax);
-        float posY = Random.Range(-yMinMax, yMinMax);
+        float posX = Random.Range(xMin, xMax);
+        float posY = Random.Range(yMin, yMax);
 
         positionNew = new Vector3(posX, posY, transform.position.z);
     }

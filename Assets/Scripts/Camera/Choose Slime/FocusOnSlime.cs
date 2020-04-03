@@ -11,6 +11,8 @@ public class FocusOnSlime : MonoBehaviour
     // This is the position that the camera will return to when the player zooms back out.
     private Vector3 returnPosition;
 
+    public float cameraSpeed;
+
     private void Start()
     {
         // Sets the return position to wherever the camera started off at.
@@ -21,8 +23,8 @@ public class FocusOnSlime : MonoBehaviour
     private void FixedUpdate()
     {
         if (cameraTarget != null)
-            transform.position = Vector3.Lerp(transform.position, cameraTarget.transform.position - new Vector3(0, 0, 4), 5 * Time.deltaTime);
+            transform.position = Vector3.Lerp(transform.position, cameraTarget.transform.position - new Vector3(0, 0, 4), cameraSpeed * Time.deltaTime);
         else
-            transform.position = Vector3.Lerp(transform.position, returnPosition, 5 * Time.deltaTime);
+            transform.position = Vector3.Lerp(transform.position, returnPosition, cameraSpeed * Time.deltaTime);
     }
 }
