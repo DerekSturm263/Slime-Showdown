@@ -17,6 +17,13 @@ TagManager:
   - ChooseSlimeSlimeNameInputFieldText
   - TitleVersionNumber
   - ChooseSlimeSlimeNameRedoText
+  - RanchBattleSlime
+  - RanchShopTopBar
+  - RanchShopCanvas
+  - ShopMealsContent
+  - ShopSnacksContent
+  - ShopBackground
+  - ShopBackButton
   layers:
   - Default
   - TransparentFX
