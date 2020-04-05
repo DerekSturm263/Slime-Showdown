@@ -16,12 +16,12 @@ public class SelectSlime : MonoBehaviour
     public GameObject highlightedSlime;
 
     // For use with mouse selection.
-    Ray mouseRay;
-    RaycastHit mouseRayHit;
+    private Ray mouseRay;
+    private RaycastHit mouseRayHit;
 
     // For use with keyboard/controller selection.
-    bool usingAxisX = false;
-    bool usingAxisY = false;
+    private bool usingAxisX = false;
+    private bool usingAxisY = false;
 
     private GameObject pickSlimeText;
     private GameObject slimeConfirmationText;
@@ -95,13 +95,10 @@ public class SelectSlime : MonoBehaviour
             }
 
             if (Input.GetAxisRaw("Vertical") == 0)
-            {
                 usingAxisY = false;
-            }
+
             if (Input.GetAxisRaw("Horizontal") == 0)
-            {
                 usingAxisX = false;
-            }
 
             #endregion
 
