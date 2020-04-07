@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Buyable : MonoBehaviour
+public class SnackItem : MonoBehaviour
 {
     public enum FoodType
     {
@@ -12,11 +12,5 @@ public class Buyable : MonoBehaviour
     public FoodType type;
 
     public string foodName;
-    [Multiline()]
-    public string description;
     public Sprite image;
-    public uint price;
-
-    public GameObject itemUp;
-    public GameObject itemDown;
 }

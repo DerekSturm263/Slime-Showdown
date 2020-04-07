@@ -11,8 +11,10 @@ public class GameManager : MonoBehaviour
 
     #endregion
 
-    public uint goldCount;
-
     public string playerSlimeColor;
     public string playerSlimeName;
+
+    public uint goldCount;
+
+    public SnackItem[] inventory;
 }

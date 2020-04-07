@@ -1,0 +1,3070 @@
+fileFormatVersion: 2
+guid: 0bde0e0bedee57c4b9271c71bfad19da
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6196960239836186353
+    second: ranch_slimeIdle_0
+  - first:
+      213: -271995888444404704
+    second: ranch_slimeIdle_1
+  - first:
+      213: 4742332076869470087
+    second: ranch_slimeIdle_2
+  - first:
+      213: 5035860775651517652
+    second: ranch_slimeIdle_3
+  - first:
+      213: -2403482356940501260
+    second: ranch_slimeIdle_4
+  - first:
+      213: -6660154412085628615
+    second: ranch_slimeIdle_5
+  - first:
+      213: -8441782565340576874
+    second: ranch_slimeIdle_6
+  - first:
+      213: -1018124947454243091
+    second: ranch_slimeIdle_7
+  - first:
+      213: 5975119900631245858
+    second: ranch_slimeIdle_8
+  - first:
+      213: 1277628057724756451
+    second: ranch_slimeIdle_9
+  - first:
+      213: -688335781452582495
+    second: ranch_slimeIdle_10
+  - first:
+      213: 8580246952419402426
+    second: ranch_slimeIdle_11
+  - first:
+      213: -5899803149372053665
+    second: ranch_slimeIdle_12
+  - first:
+      213: 1104006187354187935
+    second: ranch_slimeIdle_13
+  - first:
+      213: -3896636385542208727
+    second: ranch_slimeIdle_14
+  - first:
+      213: -8359038064762423825
+    second: ranch_slimeIdle_15
+  - first:
+      213: -3430783428565881666
+    second: ranch_slimeIdle_16
+  - first:
+      213: -1511993661598940265
+    second: ranch_slimeIdle_17
+  - first:
+      213: -5399338697464863270
+    second: ranch_slimeIdle_18
+  - first:
+      213: 5798381169894025576
+    second: ranch_slimeIdle_19
+  - first:
+      213: -6363460876145951065
+    second: ranch_slimeIdle_20
+  - first:
+      213: -1317559509208046335
+    second: ranch_slimeIdle_21
+  - first:
+      213: 4993120260852660013
+    second: ranch_slimeIdle_22
+  - first:
+      213: 774853051406929828
+    second: ranch_slimeIdle_23
+  - first:
+      213: 8584979400966935306
+    second: ranch_slimeIdle_24
+  - first:
+      213: 6399126554518319142
+    second: ranch_slimeIdle_0
+  - first:
+      213: -2296596720641531837
+    second: ranch_slimeIdle_1
+  - first:
+      213: -3699665325298267509
+    second: ranch_slimeIdle_2
+  - first:
+      213: -1617222701231177055
+    second: ranch_slimeIdle_3
+  - first:
+      213: -8231097194072401608
+    second: ranch_slimeIdle_4
+  - first:
+      213: -7604227879665608649
+    second: ranch_slimeIdle_5
+  - first:
+      213: 5565873133733594410
+    second: ranch_slimeIdle_6
+  - first:
+      213: -8644444787755004188
+    second: ranch_slimeIdle_7
+  - first:
+      213: -5173055849056244932
+    second: ranch_slimeIdle_8
+  - first:
+      213: 5669704769715647884
+    second: ranch_slimeIdle_9
+  - first:
+      213: 6916154793960409157
+    second: ranch_slimeIdle_10
+  - first:
+      213: 3530838379238677872
+    second: ranch_slimeIdle_11
+  - first:
+      213: 3119098515351629513
+    second: ranch_slimeIdle_12
+  - first:
+      213: 287136596470976096
+    second: ranch_slimeIdle_13
+  - first:
+      213: -6108201984254827812
+    second: ranch_slimeIdle_14
+  - first:
+      213: -1310903722674468542
+    second: ranch_slimeIdle_15
+  - first:
+      213: 4301998815175703581
+    second: ranch_slimeIdle_16
+  - first:
+      213: 8958201613736769774
+    second: ranch_slimeIdle_17
+  - first:
+      213: -5223753561772850883
+    second: ranch_slimeIdle_18
+  - first:
+      213: 4691990105786444097
+    second: ranch_slimeIdle_19
+  - first:
+      213: 3846564808469556814
+    second: ranch_slimeIdle_20
+  - first:
+      213: 7065070896635993505
+    second: ranch_slimeIdle_21
+  - first:
+      213: -974507022422371128
+    second: ranch_slimeIdle_22
+  - first:
+      213: -1049800906799060106
+    second: ranch_slimeIdle_23
+  - first:
+      213: 4929657389673299424
+    second: ranch_slimeIdle_24
+  - first:
+      213: 2133016159535932715
+    second: ranch_slimeIdle_25
+  - first:
+      213: 3525008208926126227
+    second: ranch_slimeIdle_26
+  - first:
+      213: 7175159450495337902
+    second: ranch_slimeIdle_27
+  - first:
+      213: -8375660437474806074
+    second: ranch_slimeIdle_28
+  - first:
+      213: -605278844284491941
+    second: ranch_slimeIdle_29
+  - first:
+      213: -582294345665407047
+    second: ranch_slimeIdle_30
+  - first:
+      213: -923543580922295836
+    second: ranch_slimeIdle_31
+  - first:
+      213: -1613997973024858453
+    second: ranch_slimeIdle_32
+  - first:
+      213: -8742061068351516142
+    second: ranch_slimeIdle_33
+  - first:
+      213: -3638003454674685302
+    second: ranch_slimeIdle_34
+  - first:
+      213: -8940508442700454497
+    second: ranch_slimeIdle_35
+  - first:
+      213: -335849157290611233
+    second: ranch_slimeIdle_36
+  - first:
+      213: -8646423704656519769
+    second: ranch_slimeIdle_37
+  - first:
+      213: -78071176577256570
+    second: ranch_slimeIdle_38
+  - first:
+      213: 879476415334521155
+    second: ranch_slimeIdle_39
+  - first:
+      213: -1429720056903925230
+    second: ranch_slimeIdle_40
+  - first:
+      213: 3728586029164828890
+    second: ranch_slimeIdle_41
+  - first:
+      213: 9049175551877898627
+    second: ranch_slimeIdle_42
+  - first:
+      213: 3805048309540158753
+    second: ranch_slimeIdle_43
+  - first:
+      213: 6989051595476717121
+    second: ranch_slimeIdle_44
+  - first:
+      213: -7833472121430561100
+    second: ranch_slimeIdle_45
+  - first:
+      213: -6305200194467258954
+    second: ranch_slimeIdle_46
+  - first:
+      213: 2499087094054284213
+    second: ranch_slimeIdle_47
+  - first:
+      213: 7060004072237861223
+    second: ranch_slimeIdle_48
+  - first:
+      213: 5760002736471197537
+    second: ranch_slimeIdle_49
+  - first:
+      213: -1837119774564088144
+    second: ranch_slimeIdle_50
+  - first:
+      213: -6069891037974265213
+    second: ranch_slimeIdle_51
+  - first:
+      213: 5857758342271295278
+    second: ranch_slimeIdle_52
+  - first:
+      213: -1717333937434415365
+    second: ranch_slimeIdle_53
+  - first:
+      213: -3259336213022966169
+    second: ranch_slimeIdle_54
+  - first:
+      213: 3361877569082058358
+    second: ranch_slimeIdle_55
+  - first:
+      213: 8106048731595960429
+    second: ranch_slimeIdle_56
+  - first:
+      213: 7691155768472579860
+    second: ranch_slimeIdle_57
+  - first:
+      213: 5023329198044359302
+    second: ranch_slimeIdle_58
+  - first:
+      213: -2315906269867357328
+    second: ranch_slimeIdle_59
+  - first:
+      213: 8312349982379259981
+    second: ranch_slimeIdle_60
+  - first:
+      213: -284305230971031771
+    second: ranch_slimeIdle_61
+  - first:
+      213: -118986774013233748
+    second: ranch_slimeIdle_62
+  - first:
+      213: 4601371252022662341
+    second: ranch_slimeIdle_63
+  - first:
+      213: -2090943539342652036
+    second: ranch_slimeIdle_64
+  - first:
+      213: -8413163957933743565
+    second: ranch_slimeIdle_65
+  - first:
+      213: -5446355983069738402
+    second: ranch_slimeIdle_66
+  - first:
+      213: 5311305995477817785
+    second: ranch_slimeIdle_67
+  - first:
+      213: -1843494301997185520
+    second: ranch_slimeIdle_68
+  - first:
+      213: -154757890199214478
+    second: ranch_slimeIdle_69
+  - first:
+      213: -4677113396522026349
+    second: ranch_slimeIdle_70
+  - first:
+      213: -7716508084700738819
+    second: ranch_slimeIdle_71
+  - first:
+      213: 7070092819483985704
+    second: ranch_slimeIdle_72
+  - first:
+      213: -2438163786754428348
+    second: ranch_slimeIdle_73
+  - first:
+      213: 3609630063695672182
+    second: ranch_slimeIdle_74
+  - first:
+      213: 3418691171739702055
+    second: ranch_slimeIdle_75
+  - first:
+      213: 1744423784723425671
+    second: ranch_slimeIdle_76
+  - first:
+      213: 592312555285147289
+    second: ranch_slimeIdle_77
+  - first:
+      213: 2972497727564205907
+    second: ranch_slimeIdle_78
+  - first:
+      213: 2375797016342315793
+    second: ranch_slimeIdle_79
+  - first:
+      213: 6831989695831457457
+    second: ranch_slimeIdle_80
+  - first:
+      213: -2919368684391749311
+    second: ranch_slimeIdle_81
+  - first:
+      213: -575668165670240759
+    second: ranch_slimeIdle_82
+  - first:
+      213: -6451484625891874743
+    second: ranch_slimeIdle_83
+  - first:
+      213: -1209116826380711885
+    second: ranch_slimeIdle_84
+  - first:
+      213: -2307456075924105315
+    second: ranch_slimeIdle_85
+  - first:
+      213: 1146284762833298502
+    second: ranch_slimeIdle_86
+  - first:
+      213: 3845480820695154098
+    second: ranch_slimeIdle_87
+  - first:
+      213: 6271051355250940271
+    second: ranch_slimeIdle_88
+  - first:
+      213: 2441855239152907496
+    second: ranch_slimeIdle_89
+  - first:
+      213: -5087166162761448256
+    second: ranch_slimeIdle_90
+  - first:
+      213: -4558849076705362759
+    second: ranch_slimeIdle_91
+  - first:
+      213: 8523521222869794640
+    second: ranch_slimeIdle_92
+  - first:
+      213: -8940257603443304317
+    second: ranch_slimeIdle_93
+  - first:
+      213: 4296245223417902102
+    second: ranch_slimeIdle_94
+  - first:
+      213: -3175517441832308778
+    second: ranch_slimeIdle_95
+  - first:
+      213: -2938101885790681176
+    second: ranch_slimeIdle_96
+  - first:
+      213: 5716894223783434507
+    second: ranch_slimeIdle_97
+  - first:
+      213: 8120702888118197553
+    second: ranch_slimeIdle_98
+  - first:
+      213: -8306150522665851519
+    second: ranch_slimeIdle_99
+  - first:
+      213: -3077078521974330857
+    second: ranch_slimeIdle_100
+  - first:
+      213: 52739136840129269
+    second: ranch_slimeIdle_101
+  - first:
+      213: 862007336065846547
+    second: ranch_slimeIdle_102
+  - first:
+      213: 5910762107127190765
+    second: ranch_slimeIdle_103
+  - first:
+      213: -4102901307385666938
+    second: ranch_slimeIdle_104
+  - first:
+      213: -7058351582813084672
+    second: ranch_slimeIdle_105
+  - first:
+      213: 6135579324425912541
+    second: ranch_slimeIdle_106
+  - first:
+      213: -3241885324791489623
+    second: ranch_slimeIdle_107
+  - first:
+      213: 7054251740660242808
+    second: ranch_slimeIdle_108
+  - first:
+      213: -7687701053373156566
+    second: ranch_slimeIdle_109
+  - first:
+      213: 8317227931059485418
+    second: ranch_slimeIdle_110
+  - first:
+      213: 8966425250760606142
+    second: ranch_slimeIdle_111
+  - first:
+      213: -6515417181707096048
+    second: ranch_slimeIdle_112
+  - first:
+      213: 6633526091147867716
+    second: ranch_slimeIdle_113
+  - first:
+      213: -7138457548163032509
+    second: ranch_slimeIdle_114
+  - first:
+      213: 4125698341925152196
+    second: ranch_slimeIdle_115
+  - first:
+      213: -8549283885569912941
+    second: ranch_slimeIdle_116
+  - first:
+      213: -3434304451154290555
+    second: ranch_slimeIdle_117
+  - first:
+      213: 5082764169419180407
+    second: ranch_slimeIdle_118
+  - first:
+      213: 1091634158225710517
+    second: ranch_slimeIdle_119
+  - first:
+      213: -2831568189574928300
+    second: ranch_slimeIdle_120
+  - first:
+      213: -4803055995881152486
+    second: ranch_slimeIdle_25
+  - first:
+      213: -4027242831100249623
+    second: ranch_slimeIdle_26
+  - first:
+      213: 5223317786917326134
+    second: ranch_slimeIdle_27
+  - first:
+      213: -5774667203423467258
+    second: ranch_slimeIdle_28
+  - first:
+      213: 8413869916854914986
+    second: ranch_slimeIdle_29
+  - first:
+      213: 8188947749783940336
+    second: ranch_slimeIdle_30
+  - first:
+      213: -80197236447360461
+    second: ranch_slimeIdle_31
+  - first:
+      213: 8421770779138971100
+    second: ranch_slimeIdle_32
+  - first:
+      213: -3621181665370392625
+    second: ranch_slimeIdle_33
+  - first:
+      213: 1009352359453963394
+    second: ranch_slimeIdle_34
+  - first:
+      213: -477655356228775286
+    second: ranch_slimeIdle_35
+  - first:
+      213: 1598353497752344264
+    second: ranch_slimeIdle_36
+  - first:
+      213: -8797270356323387528
+    second: ranch_slimeIdle_37
+  - first:
+      213: -5623997972807206388
+    second: ranch_slimeIdle_38
+  - first:
+      213: -4052901677011838692
+    second: ranch_slimeIdle_39
+  - first:
+      213: -3958213084469834118
+    second: ranch_slimeIdle_40
+  - first:
+      213: -3642920919135333151
+    second: ranch_slimeIdle_41
+  - first:
+      213: -6162278976680022282
+    second: ranch_slimeIdle_42
+  - first:
+      213: -8233134872709348428
+    second: ranch_slimeIdle_43
+  - first:
+      213: -8007620642729655943
+    second: ranch_slimeIdle_44
+  - first:
+      213: 4932362659625999433
+    second: ranch_slimeIdle_45
+  - first:
+      213: 5159167568113411478
+    second: ranch_slimeIdle_46
+  - first:
+      213: -3033483605328259721
+    second: ranch_slimeIdle_47
+  - first:
+      213: -2531992794735989454
+    second: ranch_slimeIdle_48
+  - first:
+      213: -904527164078193941
+    second: ranch_slimeIdle_49
+  - first:
+      213: -690291751254127732
+    second: ranch_slimeIdle_50
+  - first:
+      213: 3458079935597787720
+    second: ranch_slimeIdle_51
+  - first:
+      213: -5936550148695328035
+    second: ranch_slimeIdle_52
+  - first:
+      213: -3731453821981395915
+    second: ranch_slimeIdle_53
+  - first:
+      213: -9203166735300565934
+    second: ranch_slimeIdle_54
+  - first:
+      213: 6473108285083818982
+    second: ranch_slimeIdle_55
+  - first:
+      213: -781793126049523563
+    second: ranch_slimeIdle_56
+  - first:
+      213: -3040349993267115682
+    second: ranch_slimeIdle_57
+  - first:
+      213: 1109819287527360316
+    second: ranch_slimeIdle_58
+  - first:
+      213: -8498572870294083043
+    second: ranch_slimeIdle_59
+  - first:
+      213: 5516360785207977009
+    second: ranch_slimeIdle_60
+  - first:
+      213: -8484748258220148306
+    second: ranch_slimeIdle_61
+  - first:
+      213: 5401058469210894758
+    second: ranch_slimeIdle_62
+  - first:
+      213: -4722833061603450354
+    second: ranch_slimeIdle_63
+  - first:
+      213: 8743865548057375234
+    second: ranch_slimeIdle_64
+  - first:
+      213: 392430106600897078
+    second: ranch_slimeIdle_65
+  - first:
+      213: -2282969979372460527
+    second: ranch_slimeIdle_66
+  - first:
+      213: -3129747922075757006
+    second: ranch_slimeIdle_67
+  - first:
+      213: -3205951842266941408
+    second: ranch_slimeIdle_68
+  - first:
+      213: 702139465547946624
+    second: ranch_slimeIdle_69
+  - first:
+      213: 5093532481972752417
+    second: ranch_slimeIdle_70
+  - first:
+      213: 7773738708947785008
+    second: ranch_slimeIdle_71
+  - first:
+      213: 4298731522870942102
+    second: ranch_slimeIdle_72
+  - first:
+      213: 7266403185578441815
+    second: ranch_slimeIdle_73
+  - first:
+      213: 3372451917734119314
+    second: ranch_slimeIdle_74
+  - first:
+      213: 3209929120533972126
+    second: ranch_slimeIdle_75
+  - first:
+      213: 5197584652466803914
+    second: ranch_slimeIdle_76
+  - first:
+      213: -1960914442555598501
+    second: ranch_slimeIdle_77
+  - first:
+      213: 185686034947740809
+    second: ranch_slimeIdle_78
+  - first:
+      213: 2033267601896614755
+    second: ranch_slimeIdle_79
+  - first:
+      213: 8979877456755134566
+    second: ranch_slimeIdle_80
+  - first:
+      213: 6382288676042972413
+    second: ranch_slimeIdle_81
+  - first:
+      213: -798091418378692173
+    second: ranch_slimeIdle_82
+  - first:
+      213: -2597399226555797557
+    second: ranch_slimeIdle_83
+  - first:
+      213: -6985343071530974068
+    second: ranch_slimeIdle_84
+  - first:
+      213: -2283490621333754337
+    second: ranch_slimeIdle_85
+  - first:
+      213: 380751639717072405
+    second: ranch_slimeIdle_86
+  - first:
+      213: -4286523984049366136
+    second: ranch_slimeIdle_87
+  - first:
+      213: 8415755788161376891
+    second: ranch_slimeIdle_88
+  - first:
+      213: -2894836452412790108
+    second: ranch_slimeIdle_89
+  - first:
+      213: -71031313322339590
+    second: ranch_slimeIdle_90
+  - first:
+      213: 1201854058346160502
+    second: ranch_slimeIdle_91
+  - first:
+      213: 1283164043820533415
+    second: ranch_slimeIdle_92
+  - first:
+      213: -3149689461822861920
+    second: ranch_slimeIdle_93
+  - first:
+      213: 8130959178901034592
+    second: ranch_slimeIdle_94
+  - first:
+      213: -6262038008172230228
+    second: ranch_slimeIdle_95
+  - first:
+      213: -8406421930745874847
+    second: ranch_slimeIdle_96
+  - first:
+      213: 5505319731936726179
+    second: ranch_slimeIdle_97
+  - first:
+      213: 56046351610879572
+    second: ranch_slimeIdle_98
+  - first:
+      213: 2230231802356007632
+    second: ranch_slimeIdle_99
+  - first:
+      213: 7879236182517440706
+    second: ranch_slimeIdle_100
+  - first:
+      213: -1321578714180421827
+    second: ranch_slimeIdle_101
+  - first:
+      213: -4632936938578809427
+    second: ranch_slimeIdle_102
+  - first:
+      213: 2634638948388425694
+    second: ranch_slimeIdle_103
+  - first:
+      213: 6894781479837546848
+    second: ranch_slimeIdle_104
+  - first:
+      213: 1590295564931228719
+    second: ranch_slimeIdle_105
+  - first:
+      213: 3924458857414241209
+    second: ranch_slimeIdle_106
+  - first:
+      213: -2970340614016472593
+    second: ranch_slimeIdle_107
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ranch_slimeIdle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62075d282b34ec850800000000000000
+      internalID: 6399126554518319142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 340a5d15379d020e0800000000000000
+      internalID: -2296596720641531837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8a44c10df528acc0800000000000000
+      internalID: -3699665325298267509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a20b6a85887e89e0800000000000000
+      internalID: -1617222701231177055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 839999356b445cd80800000000000000
+      internalID: -8231097194072401608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 738d869480b587690800000000000000
+      internalID: -7604227879665608649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a25c4193024fd3d40800000000000000
+      internalID: 5565873133733594410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eec2690443c80880800000000000000
+      internalID: -8644444787755004188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3beeb10d1d9538b0800000000000000
+      internalID: -5173055849056244932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c853d3cd276deae40800000000000000
+      internalID: 5669704769715647884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_10
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54800a9442e1bff50800000000000000
+      internalID: 6916154793960409157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_11
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07d56d97cce000130800000000000000
+      internalID: 3530838379238677872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_12
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ce6bf2f293494b20800000000000000
+      internalID: 3119098515351629513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_13
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06ecaa2963d1cf300800000000000000
+      internalID: 287136596470976096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_14
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd2a72078ae4b3ba0800000000000000
+      internalID: -6108201984254827812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_15
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 249404b720cbecde0800000000000000
+      internalID: -1310903722674468542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_16
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1cf2b22125c3bb30800000000000000
+      internalID: 4301998815175703581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_17
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee87c15b7ece15c70800000000000000
+      internalID: 8958201613736769774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d31095cefcf7187b0800000000000000
+      internalID: -5223753561772850883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_19
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1496c09542c4d1140800000000000000
+      internalID: 4691990105786444097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_20
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4ea856305eb16530800000000000000
+      internalID: 3846564808469556814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_21
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ad50f25c8c2c0260800000000000000
+      internalID: 7065070896635993505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_22
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c41469b60bd972f0800000000000000
+      internalID: -974507022422371128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_23
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67beb5923ab5e61f0800000000000000
+      internalID: -1049800906799060106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_24
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ed3bd70749a96440800000000000000
+      internalID: 4929657389673299424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_25
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a10a139f40e185db0800000000000000
+      internalID: -4803055995881152486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_26
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e9f70c7bfb5c18c0800000000000000
+      internalID: -4027242831100249623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63dcf265ad3fc7840800000000000000
+      internalID: 5223317786917326134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_28
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60988d326c24cdfa0800000000000000
+      internalID: -5774667203423467258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_29
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaf8b7c5c1214c470800000000000000
+      internalID: 8413869916854914986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_30
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fc2b1e679cf4a170800000000000000
+      internalID: 8188947749783940336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_31
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33a4691d90513eef0800000000000000
+      internalID: -80197236447360461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_32
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd5d75637e320e470800000000000000
+      internalID: 8421770779138971100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_33
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc7b070167afebdc0800000000000000
+      internalID: -3621181665370392625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_34
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 284b4768f90f10e00800000000000000
+      internalID: 1009352359453963394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_35
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a82dbe6fbf60f59f0800000000000000
+      internalID: -477655356228775286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c6180ba90e7e2610800000000000000
+      internalID: 1598353497752344264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_37
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 877354a8831d9e580800000000000000
+      internalID: -8797270356323387528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_38
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0a3f4514ab83f1b0800000000000000
+      internalID: -5623997972807206388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_39
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c19df10e56331c7c0800000000000000
+      internalID: -4052901677011838692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_40
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7e4fd2db2a9119c0800000000000000
+      internalID: -3958213084469834118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_41
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e4591e99beb17dc0800000000000000
+      internalID: -3642920919135333151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_42
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fe212c7bef2b7aa0800000000000000
+      internalID: -6162278976680022282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_43
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b3474c44770ebd80800000000000000
+      internalID: -8233134872709348428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_44
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 971830e93773fd090800000000000000
+      internalID: -8007620642729655943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94c9866c4b5437440800000000000000
+      internalID: 4932362659625999433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_46
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 695ad1a919b099740800000000000000
+      internalID: 5159167568113411478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_47
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7751078abb6e6e5d0800000000000000
+      internalID: -3033483605328259721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_48
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23da9efd7fd8cdcd0800000000000000
+      internalID: -2531992794735989454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_49
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be28d6f26597273f0800000000000000
+      internalID: -904527164078193941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_50
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8b8d1f3f479b66f0800000000000000
+      internalID: -690291751254127732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_51
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84a363631619dff20800000000000000
+      internalID: 3458079935597787720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_52
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddaf8bbc7132d9da0800000000000000
+      internalID: -5936550148695328035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_53
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 534760dd486373cc0800000000000000
+      internalID: -3731453821981395915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 254e7bd5d98c74080800000000000000
+      internalID: -9203166735300565934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_55
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eb1f0570b915d950800000000000000
+      internalID: 6473108285083818982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_56
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 598d9f14b438625f0800000000000000
+      internalID: -781793126049523563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_57
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e59c3722ac18ec5d0800000000000000
+      internalID: -3040349993267115682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_58
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3702fd03ced66f00800000000000000
+      internalID: 1109819287527360316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_59
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1a695870010f0a80800000000000000
+      internalID: -8498572870294083043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_60
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 134673f38ec0e8c40800000000000000
+      internalID: 5516360785207977009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_61
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea97c2cc96e104a80800000000000000
+      internalID: -8484748258220148306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_62
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a13e6ccf0a64fa40800000000000000
+      internalID: 5401058469210894758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e02e7a56a50257eb0800000000000000
+      internalID: -4722833061603450354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_64
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2027cb39363785970800000000000000
+      internalID: 8743865548057375234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_65
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63a7d1f4a11327500800000000000000
+      internalID: 392430106600897078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_66
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 116af9246e24150e0800000000000000
+      internalID: -2282969979372460527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_67
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2365824d8d6e094d0800000000000000
+      internalID: -3129747922075757006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_68
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0287baa09cb2283d0800000000000000
+      internalID: -3205951842266941408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_69
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08a94c2bf108eb900800000000000000
+      internalID: 702139465547946624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_70
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12056ef3eccdfa640800000000000000
+      internalID: 5093532481972752417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_71
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03559833b2ed1eb60800000000000000
+      internalID: 7773738708947785008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6991f7d5b8928ab30800000000000000
+      internalID: 4298731522870942102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_73
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75c7b2fb23377d460800000000000000
+      internalID: 7266403185578441815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_74
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29780a2b62b5dce20800000000000000
+      internalID: 3372451917734119314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_75
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e940c973785fb8c20800000000000000
+      internalID: 3209929120533972126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_76
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac45e4414b7812840800000000000000
+      internalID: 5197584652466803914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_77
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b595a8034be69c4e0800000000000000
+      internalID: -1960914442555598501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_78
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9849fc80770b39200800000000000000
+      internalID: 185686034947740809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_79
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36bab587c1e973c10800000000000000
+      internalID: 2033267601896614755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_80
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6609d6038feee9c70800000000000000
+      internalID: 8979877456755134566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_81
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfc1a8d6cb1729850800000000000000
+      internalID: 6382288676042972413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_82
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b9104d551c9ce4f0800000000000000
+      internalID: -798091418378692173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_83
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcf64414a2f24fbd0800000000000000
+      internalID: -2597399226555797557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_84
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8409238c731f0f90800000000000000
+      internalID: -6985343071530974068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_85
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1e277bd0696f40e0800000000000000
+      internalID: -2283490621333754337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_86
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51ecbf85993b84500800000000000000
+      internalID: 380751639717072405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_87
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88b9b81c5253384c0800000000000000
+      internalID: -4286523984049366136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_88
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b72ebcdfc45cac470800000000000000
+      internalID: 8415755788161376891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_89
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aa6513859973d7d0800000000000000
+      internalID: -2894836452412790108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_90
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af21e799565a30ff0800000000000000
+      internalID: -71031313322339590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_91
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 671a59bf5e7dda010800000000000000
+      internalID: 1201854058346160502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_92
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a60a7c36e6bec110800000000000000
+      internalID: 1283164043820533415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_93
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0adc14b4f1e0a44d0800000000000000
+      internalID: -3149689461822861920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_94
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06619952b48f6d070800000000000000
+      internalID: 8130959178901034592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_95
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca946e8fb95c819a0800000000000000
+      internalID: -6262038008172230228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_96
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 166b6d90bc3665b80800000000000000
+      internalID: -8406421930745874847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_97
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ac8905b023d66c40800000000000000
+      internalID: 5505319731936726179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_98
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45e19be1cdd17c000800000000000000
+      internalID: 56046351610879572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_99
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d2853a020063fe10800000000000000
+      internalID: 2230231802356007632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_100
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c06b50ef8ba85d60800000000000000
+      internalID: 7879236182517440706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_101
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d37fe86592fc8ade0800000000000000
+      internalID: -1321578714180421827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_102
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dad6935966084bfb0800000000000000
+      internalID: -4632936938578809427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_103
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edfc9162a2e109420800000000000000
+      internalID: 2634638948388425694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_104
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 069b8adc93f2faf50800000000000000
+      internalID: 6894781479837546848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_105
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f24ea9bf36dd11610800000000000000
+      internalID: 1590295564931228719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_106
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bbafc3c98a767630800000000000000
+      internalID: 3924458857414241209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeIdle_107
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe9e1a7f2fa37c6d0800000000000000
+      internalID: -2970340614016472593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

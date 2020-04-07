@@ -26,6 +26,12 @@ TagManager:
   - ShopBackButton
   - RanchShopkeeperSlime
   - RanchShopSelector
+  - FoodTemplate
+  - Food
+  - FoodIcon
+  - FoodPriceText
+  - FoodName
+  - FoodDescription
   layers:
   - Default
   - TransparentFX

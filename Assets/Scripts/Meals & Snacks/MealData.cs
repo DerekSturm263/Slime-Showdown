@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class MealData : Buyable
 {
-    
+    public float affinityIncrease;
 }
