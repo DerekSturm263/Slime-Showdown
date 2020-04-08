@@ -16,5 +16,5 @@ public class GameManager : MonoBehaviour
 
     public uint goldCount;
 
-    public SnackItem[] inventory;
+    public GameObject[] inventory = new GameObject[27];
 }

@@ -4,5 +4,6 @@ using UnityEngine;
 
 public class MealData : Buyable
 {
+    [HideInInspector] public uint mealShopPos;
     public float affinityIncrease;
 }

@@ -32,6 +32,12 @@ public class SlimePickButtonMethods : MonoBehaviour
         slimeNameInputFieldText = GameObject.FindGameObjectWithTag("ChooseSlimeSlimeNameInputFieldText");
     }
 
+    private void Update()
+    {
+        if (Input.GetButtonDown("Cancel") && slimeConfirmationButtonLayout.GetComponent<CanvasGroup>().interactable)
+            Nah();
+    }
+
     // Called by the yeah button.
     public void Yeah()
     {

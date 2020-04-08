@@ -4,5 +4,9 @@ using UnityEngine;
 
 public class SnackData : Buyable
 {
-    public float hungerIncrease;   
+    [HideInInspector] public uint snackShopPos;
+
+    public float hungerIncrease;
+
+    public GameObject inventoryVersion;
 }

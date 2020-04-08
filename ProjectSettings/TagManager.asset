@@ -32,6 +32,7 @@ TagManager:
   - FoodPriceText
   - FoodName
   - FoodDescription
+  - ShopScrollView
   layers:
   - Default
   - TransparentFX

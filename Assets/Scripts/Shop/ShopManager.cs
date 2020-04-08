@@ -6,16 +6,39 @@ using UnityEngine.UI;
 
 public class ShopManager : MonoBehaviour
 {
+    private enum Tabs
+    {
+        Meals, Snacks
+    }
+    private Tabs openTab = Tabs.Meals;
+
     private GameObject gameManager;
 
     private GameObject food;
     private GameObject foodTemplate;
+    private GameObject shopScrollView;
     private GameObject shopMealsContent;
     private GameObject shopSnacksContent;
+    private GameObject shopCanvas;
+    private GameObject shopTopBarLayout;
+    private GameObject shopBackground;
+    private GameObject shopBackButton;
+    private GameObject shopSelector;
 
+    public List<GameObject> meals;
+    public List<GameObject> snacks;
+
+    private uint shopMealPos = 0;
+    private uint shopSnackPos = 0;
+
+    private GameObject playerSlime;
+
+    public GameObject firstSelectedItem;
     public GameObject selectedItem;
 
+    private bool usingAxisX = false;
     private bool usingAxisY = false;
+
     public bool isShopOpen = false;
 
     private void Start()
@@ -24,8 +47,16 @@ public class ShopManager : MonoBehaviour
 
         food = GameObject.FindGameObjectWithTag("Food");
         foodTemplate = GameObject.FindGameObjectWithTag("FoodTemplate");
+        shopScrollView = GameObject.FindGameObjectWithTag("ShopScrollView");
         shopMealsContent = GameObject.FindGameObjectWithTag("ShopMealsContent");
         shopSnacksContent = GameObject.FindGameObjectWithTag("ShopSnacksContent");
+        shopCanvas = GameObject.FindGameObjectWithTag("RanchShopCanvas");
+        shopTopBarLayout = GameObject.FindGameObjectWithTag("RanchShopTopBar");
+        shopBackground = GameObject.FindGameObjectWithTag("ShopBackground");
+        shopBackButton = GameObject.FindGameObjectWithTag("ShopBackButton");
+        shopSelector = GameObject.FindGameObjectWithTag("RanchShopSelector");
+
+        playerSlime = GameObject.FindGameObjectWithTag("RanchBattleSlime");
 
         GenerateItems();
     }
@@ -34,6 +65,30 @@ public class ShopManager : MonoBehaviour
     {
         if (isShopOpen)
         {
+            if (!usingAxisX)
+            {
+                if (Input.GetAxisRaw("Horizontal") > 0 && openTab == Tabs.Meals && shopMealsContent.GetComponent<CanvasGroup>().alpha == 1f)
+                {
+                    usingAxisX = true;
+                    openTab = Tabs.Snacks;
+
+                    selectedItem = snacks[0];
+
+                    shopMealsContent.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeOut");
+                    shopSnacksContent.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeIn");
+                }
+                else if (Input.GetAxisRaw("Horizontal") < 0 && openTab == Tabs.Snacks && shopSnacksContent.GetComponent<CanvasGroup>().alpha == 1f)
+                {
+                    usingAxisX = true;
+                    openTab = Tabs.Meals;
+
+                    selectedItem = meals[0];
+
+                    shopMealsContent.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeIn");
+                    shopSnacksContent.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeOut");
+                }
+            }
+
             if (!usingAxisY)
             {
                 if (Input.GetAxisRaw("Vertical") > 0 && selectedItem.GetComponent<Buyable>().itemUp != null)
@@ -49,34 +104,93 @@ public class ShopManager : MonoBehaviour
             }
 
             if (Input.GetButtonDown("Submit"))
+                BuyItem();
+
+            if (Input.GetAxisRaw("Horizontal") == 0)
+                usingAxisX = false;
+
+            if (Input.GetAxisRaw("Vertical") == 0)
+                usingAxisY = false;
+
+            if (Input.GetButtonDown("Cancel"))
+                CloseShop();
+        }
+    }
+
+    public void BuyItem()
+    {
+        if (gameManager.GetComponent<GameManager>().goldCount >= selectedItem.GetComponent<Buyable>().price)
+        {
+            if (selectedItem.GetComponent<Buyable>() is MealData)
             {
-                if (gameManager.goldCount >= selectedItem.GetComponent<Buybable>().price)
+                // Automatically activate the meal.
+                gameManager.GetComponent<GameManager>().goldCount -= selectedItem.GetComponent<Buyable>().price;
+                Debug.Log("You bought a " + selectedItem.GetComponent<Buyable>().name + " and ate it!");
+            }
+            else
+            {
+                if (gameManager.GetComponent<GameManager>().inventory[gameManager.GetComponent<GameManager>().inventory.Length - 1] == null)
                 {
-                    gameManager.goldCount -= selectedItem.GetComponent<Buybable>().price;
-                    Debug.Log("You bought a " + selectedItem.GetComponent<Buybable>().name);
+                    gameManager.GetComponent<GameManager>().goldCount -= selectedItem.GetComponent<Buyable>().price;
+                    Debug.Log("You bought a " + selectedItem.GetComponent<Buyable>().name + " and added it to your inventory!");
 
-                    if (selectedItem.GetComponent<Buyable>() is MealData)
+                    for (int i = 0; i < gameManager.GetComponent<GameManager>().inventory.Length; i++)
                     {
-                        // Automatically activate the meal.
-                    }
-                    else
-                    {
-                        foreach (SnackItem item in gameManager.inventory)
+                        if (gameManager.GetComponent<GameManager>().inventory[i] == null)
                         {
-                            if (Array[item] == null)
-                            {
-                                gameManager.inventory[Array.IndexOf(gameManager.inventory, item)] = selectedItem.GetComponent<SnackItem>();
+                            gameManager.GetComponent<GameManager>().inventory[i] = selectedItem.GetComponent<SnackData>().inventoryVersion;
 
-                                break;
-                            }
+                            break;
                         }
                     }
                 }
             }
-
-            if (Input.GetAxisRaw("Vertical") == 0)
-                usingAxisY = false;
         }
+        else
+        {
+            Debug.Log("You don't have enough money for that!");
+        }
+    }
+
+    // Method called by the shopkeeper slime when the player touches it.
+    public void OpenShop()
+    {
+        openTab = Tabs.Meals;
+        shopCanvas.GetComponent<CanvasGroup>().interactable = true;
+        shopCanvas.GetComponent<CanvasGroup>().blocksRaycasts = true;
+        isShopOpen = true;
+
+        GetComponent<ShopManager>().enabled = true;
+        shopSelector.GetComponent<MoveToSelectedItem>().enabled = true;
+        GetComponent<ShopManager>().selectedItem = firstSelectedItem;
+
+        playerSlime.GetComponent<SlimeMove>().enabled = false;
+        playerSlime.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+
+        shopTopBarLayout.GetComponent<Animation>().Play("ui_ranch_shopTopBar_floatIn");
+        shopScrollView.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeIn");
+        shopMealsContent.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeIn");
+        shopBackground.GetComponent<Animation>().Play("ui_ranch_shopBackground_fadeIn");
+        shopBackButton.GetComponent<Animation>().Play("ui_ranch_shopBackButton_floatIn");
+    }
+
+    // Method called by the back button in the shop or the escape button in the shop.
+    public void CloseShop()
+    {
+        isShopOpen = false;
+        shopCanvas.GetComponent<CanvasGroup>().interactable = false;
+        shopCanvas.GetComponent<CanvasGroup>().blocksRaycasts = false;
+
+        GetComponent<ShopManager>().enabled = false;
+        shopSelector.GetComponent<MoveToSelectedItem>().enabled = false;
+
+        playerSlime.GetComponent<SlimeMove>().enabled = true;
+
+        shopTopBarLayout.GetComponent<Animation>().Play("ui_ranch_shopTopBar_floatOut");
+        shopScrollView.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeOut");
+        shopMealsContent.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeOut");
+        shopBackground.GetComponent<Animation>().Play("ui_ranch_shopBackground_fadeOut");
+        shopBackButton.GetComponent<Animation>().Play("ui_ranch_shopBackButton_floatOut");
     }
 
     private void GenerateItems()
@@ -88,6 +202,8 @@ public class ShopManager : MonoBehaviour
             GenerateInShop(scripts[i] as Buyable);
         }
 
+        GenerateAllRelations();
+
         foodTemplate.SetActive(false);
         food.SetActive(false);
     }
@@ -95,6 +211,8 @@ public class ShopManager : MonoBehaviour
     private void GenerateInShop(Buyable item)
     {
         GameObject newItem = Instantiate(foodTemplate);
+
+        if (firstSelectedItem == null) firstSelectedItem = newItem;
 
         newItem.name = item.foodName;
 
@@ -107,8 +225,11 @@ public class ShopManager : MonoBehaviour
             mealScript.description = item.GetComponent<MealData>().description;
             mealScript.price = item.GetComponent<MealData>().price;
             mealScript.affinityIncrease = item.GetComponent<MealData>().affinityIncrease;
+            mealScript.mealShopPos = shopMealPos++;
 
             newItem.transform.SetParent(shopMealsContent.transform);
+
+            meals.Add(newItem);
         }
         else
         {
@@ -119,13 +240,73 @@ public class ShopManager : MonoBehaviour
             snackScript.description = item.GetComponent<SnackData>().description;
             snackScript.price = item.GetComponent<SnackData>().price;
             snackScript.hungerIncrease = item.GetComponent<SnackData>().price;
+            snackScript.snackShopPos = shopSnackPos++;
 
             newItem.transform.SetParent(shopSnacksContent.transform);
+
+            snacks.Add(newItem);
         }
 
         newItem.transform.GetChild(0).GetComponent<Image>().sprite = item.image;
-        newItem.transform.GetChild(0).GetChild(0).GetChild(0).GetComponent<Text>().text = item.price.ToString();
+        newItem.transform.GetChild(0).GetChild(0).GetChild(0).GetComponent<Text>().text = "$" + item.price.ToString();
         newItem.transform.GetChild(1).GetChild(0).GetComponent<Text>().text = item.foodName;
         newItem.transform.GetChild(1).GetChild(1).GetComponent<Text>().text = item.description;
+    }
+
+    private void GenerateAllRelations()
+    {
+        foreach (GameObject meal in meals)
+        {
+            if (meal.GetComponent<MealData>().mealShopPos > 0)
+            {
+                foreach (GameObject meal2 in meals)
+                {
+                    if (meal2.GetComponent<MealData>().mealShopPos == meal.GetComponent<MealData>().mealShopPos - 1)
+                    {
+                        meal.GetComponent<MealData>().itemUp = meal2;
+                        break;
+                    }
+                }
+            }
+
+            if (meal.GetComponent<MealData>().mealShopPos < meals.Count - 1)
+            {
+                foreach (GameObject meal2 in meals)
+                {
+                    if (meal2.GetComponent<MealData>().mealShopPos == meal.GetComponent<MealData>().mealShopPos + 1)
+                    {
+                        meal.GetComponent<MealData>().itemDown = meal2;
+                        break;
+                    }
+                }
+            }
+        }
+
+        foreach (GameObject snack in snacks)
+        {
+            if (snack.GetComponent<SnackData>().snackShopPos > 0)
+            {
+                foreach (GameObject snack2 in snacks)
+                {
+                    if (snack2.GetComponent<SnackData>().snackShopPos == snack.GetComponent<SnackData>().snackShopPos - 1)
+                    {
+                        snack.GetComponent<SnackData>().itemUp = snack2;
+                        break;
+                    }
+                }
+            }
+
+            if (snack.GetComponent<SnackData>().snackShopPos < snacks.Count - 1)
+            {
+                foreach (GameObject snack2 in snacks)
+                {
+                    if (snack2.GetComponent<SnackData>().snackShopPos == snack.GetComponent<SnackData>().snackShopPos + 1)
+                    {
+                        snack.GetComponent<SnackData>().itemDown = snack2;
+                        break;
+                    }
+                }
+            }
+        }
     }
 }

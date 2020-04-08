@@ -12,11 +12,10 @@ public class Buyable : MonoBehaviour
     public FoodType type;
 
     public string foodName;
-    [Multiline()]
-    public string description;
+    [Multiline()] public string description;
     public Sprite image;
     public uint price;
 
-    public GameObject itemUp;
-    public GameObject itemDown;
+    [HideInInspector] public GameObject itemUp;
+    [HideInInspector] public GameObject itemDown;
 }
