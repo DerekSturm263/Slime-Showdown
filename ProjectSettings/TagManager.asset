@@ -71,3 +71,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Tilemap 1
+    uniqueID: 939321911
+    locked: 0
+  - name: Tilemap 2
+    uniqueID: 2538436969
+    locked: 0
+  - name: Tilemap 3
+    uniqueID: 1593414311
+    locked: 0
+  - name: Tilemap 4
+    uniqueID: 668969721
+    locked: 0
+  - name: Tilemap 5
+    uniqueID: 2504130949
+    locked: 0
