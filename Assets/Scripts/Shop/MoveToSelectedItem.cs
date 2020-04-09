@@ -5,7 +5,7 @@ using UnityEngine;
 public class MoveToSelectedItem : MonoBehaviour
 {
     private ShopManager shopManager;
-    public float zOffset;
+    public Vector3 offset;
 
     private void Start()
     {
@@ -14,6 +14,6 @@ public class MoveToSelectedItem : MonoBehaviour
 
     private void Update()
     {
-        transform.position = new Vector3(transform.position.x, shopManager.selectedItem.gameObject.transform.position.y + 0.49f, zOffset);
+        transform.position = shopManager.selectedItem.transform.position + offset;
     }
 }

@@ -19877,7 +19877,7 @@ MonoBehaviour:
   version: 0.3.2
   playerSlimeColor: 
   playerSlimeName: 
-  goldCount: 100000
+  goldCount: 1000
   inventory:
   - {fileID: 0}
   - {fileID: 0}

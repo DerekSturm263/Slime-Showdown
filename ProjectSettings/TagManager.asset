@@ -33,6 +33,7 @@ TagManager:
   - FoodName
   - FoodDescription
   - ShopScrollView
+  - RanchShopScrollBar
   layers:
   - Default
   - TransparentFX

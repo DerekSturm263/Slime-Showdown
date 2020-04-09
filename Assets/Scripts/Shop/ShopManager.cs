@@ -25,6 +25,9 @@ public class ShopManager : MonoBehaviour
     private GameObject shopBackButton;
     private GameObject shopSelector;
 
+    private Scrollbar shopScrollBar;
+    private float scrollAmount;
+
     public List<GameObject> meals;
     public List<GameObject> snacks;
 
@@ -55,6 +58,7 @@ public class ShopManager : MonoBehaviour
         shopBackground = GameObject.FindGameObjectWithTag("ShopBackground");
         shopBackButton = GameObject.FindGameObjectWithTag("ShopBackButton");
         shopSelector = GameObject.FindGameObjectWithTag("RanchShopSelector");
+        shopScrollBar = GameObject.FindGameObjectWithTag("RanchShopScrollBar").GetComponent<Scrollbar>();
 
         playerSlime = GameObject.FindGameObjectWithTag("RanchBattleSlime");
 
@@ -71,6 +75,8 @@ public class ShopManager : MonoBehaviour
                 {
                     usingAxisX = true;
                     openTab = Tabs.Snacks;
+                    shopScrollView.GetComponent<ScrollRect>().content = shopSnacksContent.GetComponent<RectTransform>();
+                    shopScrollBar.value = 1f;
 
                     selectedItem = snacks[0];
 
@@ -81,6 +87,8 @@ public class ShopManager : MonoBehaviour
                 {
                     usingAxisX = true;
                     openTab = Tabs.Meals;
+                    shopScrollView.GetComponent<ScrollRect>().content = shopMealsContent.GetComponent<RectTransform>();
+                    shopScrollBar.value = 1f;
 
                     selectedItem = meals[0];
 
@@ -89,17 +97,21 @@ public class ShopManager : MonoBehaviour
                 }
             }
 
+            scrollAmount = ( openTab == Tabs.Meals ) ? 0.2f : 0.0718f;
+
             if (!usingAxisY)
             {
                 if (Input.GetAxisRaw("Vertical") > 0 && selectedItem.GetComponent<Buyable>().itemUp != null)
                 {
                     usingAxisY = true;
                     selectedItem = selectedItem.GetComponent<Buyable>().itemUp;
+                    shopScrollBar.value += scrollAmount;
                 }
                 else if (Input.GetAxisRaw("Vertical") < 0 && selectedItem.GetComponent<Buyable>().itemDown != null)
                 {
                     usingAxisY = true;
                     selectedItem = selectedItem.GetComponent<Buyable>().itemDown;
+                    shopScrollBar.value -= scrollAmount;
                 }
             }
 
@@ -123,7 +135,6 @@ public class ShopManager : MonoBehaviour
         {
             if (selectedItem.GetComponent<Buyable>() is MealData)
             {
-                // Automatically activate the meal.
                 gameManager.GetComponent<GameManager>().goldCount -= selectedItem.GetComponent<Buyable>().price;
                 Debug.Log("You bought a " + selectedItem.GetComponent<Buyable>().name + " and ate it!");
             }
@@ -156,9 +167,10 @@ public class ShopManager : MonoBehaviour
     public void OpenShop()
     {
         openTab = Tabs.Meals;
+        isShopOpen = true;
+
         shopCanvas.GetComponent<CanvasGroup>().interactable = true;
         shopCanvas.GetComponent<CanvasGroup>().blocksRaycasts = true;
-        isShopOpen = true;
 
         GetComponent<ShopManager>().enabled = true;
         shopSelector.GetComponent<MoveToSelectedItem>().enabled = true;
@@ -178,6 +190,8 @@ public class ShopManager : MonoBehaviour
     public void CloseShop()
     {
         isShopOpen = false;
+        shopScrollBar.value = 1f;
+
         shopCanvas.GetComponent<CanvasGroup>().interactable = false;
         shopCanvas.GetComponent<CanvasGroup>().blocksRaycasts = false;
 
@@ -188,9 +202,17 @@ public class ShopManager : MonoBehaviour
 
         shopTopBarLayout.GetComponent<Animation>().Play("ui_ranch_shopTopBar_floatOut");
         shopScrollView.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeOut");
-        shopMealsContent.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeOut");
         shopBackground.GetComponent<Animation>().Play("ui_ranch_shopBackground_fadeOut");
         shopBackButton.GetComponent<Animation>().Play("ui_ranch_shopBackButton_floatOut");
+
+        if (openTab == Tabs.Meals)
+        {
+            shopMealsContent.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeOut");
+        }
+        else
+        {
+            shopSnacksContent.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeOut");
+        }
     }
 
     private void GenerateItems()
@@ -204,8 +226,8 @@ public class ShopManager : MonoBehaviour
 
         GenerateAllRelations();
 
-        foodTemplate.SetActive(false);
-        food.SetActive(false);
+        Destroy(foodTemplate);
+        Destroy(food);
     }
 
     private void GenerateInShop(Buyable item)
