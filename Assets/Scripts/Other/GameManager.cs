@@ -13,6 +13,11 @@ public class GameManager : MonoBehaviour
 
     public string playerSlimeColor;
     public string playerSlimeName;
+    public int playSourAff;
+    public int playSpicyAff;
+    public int playSeafoodAff;
+    public int playCandyAff;
+    public int payVeggieAff;
 
     public uint goldCount;
 
