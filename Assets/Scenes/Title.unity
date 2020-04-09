@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -19883,7 +19883,7 @@ MonoBehaviour:
   playCandyAff: 0
   payVeggieAff: 0
   goldCount: 1000
-  sunRotSpeed: 1
+  sunRotSpeed: 0.5
   sunRot: 0
   inventory:
   - {fileID: 0}

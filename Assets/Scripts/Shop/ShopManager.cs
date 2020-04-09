@@ -137,18 +137,23 @@ public class ShopManager : MonoBehaviour
             {
                 gameManager.GetComponent<GameManager>().goldCount -= selectedItem.GetComponent<Buyable>().price;
                 Debug.Log("You bought a " + selectedItem.GetComponent<Buyable>().name + " and ate it!");
+
+                EatMeal(selectedItem.GetComponent<Buyable>());
             }
             else
             {
                 if (gameManager.GetComponent<GameManager>().inventory[gameManager.GetComponent<GameManager>().inventory.Length - 1] == null)
                 {
                     gameManager.GetComponent<GameManager>().goldCount -= selectedItem.GetComponent<Buyable>().price;
-                    Debug.Log("You bought a " + selectedItem.GetComponent<Buyable>().name + " and added it to your inventory!");
 
                     for (int i = 0; i < gameManager.GetComponent<GameManager>().inventory.Length; i++)
                     {
+                        Debug.Log(gameManager.GetComponent<GameManager>().inventory[i]);
+
                         if (gameManager.GetComponent<GameManager>().inventory[i] == null)
                         {
+                            Debug.Log(gameManager.GetComponent<GameManager>().inventory[i] + " is empty.");
+
                             gameManager.GetComponent<GameManager>().inventory[i] = selectedItem.GetComponent<SnackData>().inventoryVersion;
 
                             break;
@@ -161,6 +166,11 @@ public class ShopManager : MonoBehaviour
         {
             Debug.Log("You don't have enough money for that!");
         }
+    }
+
+    private void EatMeal(Buyable food)
+    {
+
     }
 
     // Method called by the shopkeeper slime when the player touches it.
