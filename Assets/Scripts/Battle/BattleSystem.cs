@@ -26,6 +26,8 @@ public class BattleSystem : MonoBehaviour
     Player playerUnit;
     Player enemyUnit;
     SlimeMove sm;
+
+    public GameObject optionButtons;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +40,7 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator SetupBattle()
     {
+        optionButtons.SetActive(false);
        GameObject playerGO = Instantiate(playerPrefab, playSpawn);
         playerUnit = playerGO.GetComponent<Player>();
         sm = playerUnit.GetComponent<SlimeMove>();
@@ -93,6 +96,7 @@ public class BattleSystem : MonoBehaviour
             state = BattleState.Lose;
             EndBattle();
             sm.enabled = true;
+            SceneManager.LoadScene("Ranch");
         }
         else
         {
@@ -125,7 +129,10 @@ public class BattleSystem : MonoBehaviour
     }
     void PlayerTurn()
     {
+        
         dialogueText.text = "Choose an action: ";
+        dialogueText.enabled = false;
+        optionButtons.SetActive(true);
     }
 
     public void OnAttackButton()
@@ -134,7 +141,10 @@ public class BattleSystem : MonoBehaviour
         {
             return;
         }
+        optionButtons.SetActive(false);
+        dialogueText.enabled = true;
         StartCoroutine(PlayerAttack());
+        
     }
     public void OnSnackButton()
     {
@@ -142,7 +152,10 @@ public class BattleSystem : MonoBehaviour
         {
             return;
         }
+        optionButtons.SetActive(false);
+        dialogueText.enabled = true;
         StartCoroutine(PlayerHeal());
+        
     }
     public void OnFleeButton()
     {

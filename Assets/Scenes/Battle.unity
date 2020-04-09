@@ -554,6 +554,7 @@ MonoBehaviour:
   playerHUD: {fileID: 2023315205}
   enemyHUD: {fileID: 1516343396}
   dialogueText: {fileID: 1186855092}
+  optionButtons: {fileID: 1049683113}
 --- !u!1 &265962774
 GameObject:
   m_ObjectHideFlags: 0
