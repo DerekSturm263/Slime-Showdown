@@ -12,6 +12,13 @@ public class Player : MonoBehaviour
     public int currentHP;
     public int dmg;
 
+    //affinity typing
+    public int sourAff;
+    public int spicyAff;
+    public int seafoodAff;
+    public int candyAff;
+    public int veggieAff;
+
     public bool TakeDamage(int dmg)
     {
         currentHP -= dmg;
