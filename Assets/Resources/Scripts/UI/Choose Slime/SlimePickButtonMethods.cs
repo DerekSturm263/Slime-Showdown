@@ -105,7 +105,9 @@ public class SlimePickButtonMethods : MonoBehaviour
 
     private void LoadRanchScene()
     {
+        Camera.main.GetComponent<FocusOnSlime>().enabled = false;
+        Camera.main.GetComponent<CameraFollow>().enabled = true;
+
         SceneManager.LoadScene("Ranch");
-        DontDestroyOnLoad(gameManager);
     }
 }

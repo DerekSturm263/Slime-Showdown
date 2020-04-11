@@ -8,6 +8,9 @@ public class SlimeMain : MonoBehaviour
     private void Start()
     {
         if (SceneManager.GetActiveScene().name.Equals("Ranch"))
+        {
+            Camera.main.GetComponent<CameraFollow>().cameraTarget = GameObject.FindGameObjectWithTag("RanchBattleSlime");
             GetComponent<SlimeMove>().enabled = true;
+        }
     }
 }

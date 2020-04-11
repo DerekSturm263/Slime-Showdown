@@ -19,6 +19,9 @@ public class TitleButtonMethods : MonoBehaviour
         gameLogo = GameObject.FindGameObjectWithTag("TitleGameLogo");
         buttonLayout = GameObject.FindGameObjectWithTag("TitleButtonLayout");
         versionNumber = GameObject.FindGameObjectWithTag("TitleVersionNumber");
+
+        DontDestroyOnLoad(gameManager);
+        DontDestroyOnLoad(Camera.main);
     }
 
     public void StartGame()
@@ -67,23 +70,22 @@ public class TitleButtonMethods : MonoBehaviour
 
     private void LoadSlimePickScene()
     {
-        SceneManager.LoadScene("ChooseSlime");
-        DontDestroyOnLoad(gameManager);
-        DontDestroyOnLoad(Camera.main);
         Camera.main.GetComponent<MoveLerp>().enabled = false;
         Camera.main.GetComponent<FocusOnSlime>().enabled = true;
+
+        SceneManager.LoadScene("ChooseSlime");
     }
 
     private void LoadOptionsScene()
     {
         SceneManager.LoadScene("Options");
-        DontDestroyOnLoad(gameManager);
     }
 
     private void LoadCreditsScene()
     {
+        Camera.main.GetComponent<MoveLerp>().enabled = false;
+        Camera.main.GetComponent<FocusOnSlime>().enabled = true;
         SceneManager.LoadScene("Credits");
-        DontDestroyOnLoad(Camera.main);
     }
 
     private void Quit()
