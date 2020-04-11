@@ -48,7 +48,7 @@ public class SelectSlime : MonoBehaviour
 
     private void Update()
     {
-        if (Camera.main.transform.position.z < -9.9f)
+        if (Camera.main.transform.position.z < Camera.main.GetComponent<FocusOnSlime>().returnPosition.z + 0.1f)
         {
             #region Mouse Selection
 

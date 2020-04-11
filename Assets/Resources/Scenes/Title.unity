@@ -1545,7 +1545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6750dc75f6d6a74f9ae307c0edb753f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  version: 0.5.0
+  version: 0.5.2
   playerSlimeColor: 
   playerSlimeName: 
   playSourAff: 0
