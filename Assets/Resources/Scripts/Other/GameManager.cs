@@ -24,13 +24,5 @@ public class GameManager : MonoBehaviour
     [Header("Ranch Stuff")]
     public uint goldCount;
 
-    public float sunRotSpeed;
-    public float sunRot;
-
     public GameObject[] inventory = new GameObject[27];
-
-    private void FixedUpdate()
-    {
-        sunRot += sunRotSpeed * Time.deltaTime;
-    }
 }

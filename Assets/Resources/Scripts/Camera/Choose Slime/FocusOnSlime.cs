@@ -9,15 +9,9 @@ public class FocusOnSlime : MonoBehaviour
     public GameObject cameraTarget;
 
     // This is the position that the camera will return to when the player zooms back out.
-    private Vector3 returnPosition;
+    public Vector3 returnPosition;
 
     public float cameraSpeed;
-
-    private void Start()
-    {
-        // Sets the return position to wherever the camera started off at.
-        returnPosition = transform.position;
-    }
 
     // Controls the camera movement.
     private void FixedUpdate()

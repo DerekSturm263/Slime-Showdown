@@ -69,6 +69,9 @@ public class TitleButtonMethods : MonoBehaviour
     {
         SceneManager.LoadScene("ChooseSlime");
         DontDestroyOnLoad(gameManager);
+        DontDestroyOnLoad(Camera.main);
+        Camera.main.GetComponent<MoveLerp>().enabled = false;
+        Camera.main.GetComponent<FocusOnSlime>().enabled = true;
     }
 
     private void LoadOptionsScene()

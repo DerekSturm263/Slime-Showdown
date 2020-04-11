@@ -86,6 +86,15 @@ TagManager:
   - name: Tilemap 5
     uniqueID: 2504130949
     locked: 0
+  - name: Tilemap 6
+    uniqueID: 2552475325
+    locked: 0
+  - name: Tilemap 7
+    uniqueID: 4061573993
+    locked: 0
+  - name: Tilemap 8
+    uniqueID: 3705747969
+    locked: 0
   - name: UI
     uniqueID: 3179007529
     locked: 0
