@@ -11,15 +11,20 @@ public class GameManager : MonoBehaviour
 
     #endregion
 
+    public enum FoodType
+    {
+        Water, Air, Fire, Earth, Electric
+    }
+
     [Header("Slime Stuff")]
     public string playerSlimeColor;
     public string playerSlimeName;
 
-    public int playSourAff;
-    public int playSpicyAff;
-    public int playSeafoodAff;
-    public int playCandyAff;
-    public int playVeggieAff;
+    public float playSeafoodAff;
+    public float playCandyAff;
+    public float playSpicyAff;
+    public float playVeggieAff;
+    public float playSourAff;
 
     [Header("Ranch Stuff")]
     public uint goldCount;

@@ -156,15 +156,22 @@ public class ShopManager : MonoBehaviour
                 }
             }
         }
-        else
-        {
-            Debug.Log("You don't have enough money for that!");
-        }
     }
 
     private void EatMeal(Buyable food)
     {
+        float increase = food.GetComponent<MealData>().affinityIncrease;
 
+        if ((int) food.type == 1)
+            gameManager.GetComponent<GameManager>().playSeafoodAff += increase;
+        else if ((int) food.type == 2)
+            gameManager.GetComponent<GameManager>().playCandyAff += increase;
+        else if ((int) food.type == 3)
+            gameManager.GetComponent<GameManager>().playSpicyAff += increase;
+        else if ((int) food.type == 4)
+            gameManager.GetComponent<GameManager>().playVeggieAff += increase;
+        else if ((int) food.type == 5)
+            gameManager.GetComponent<GameManager>().playSourAff += increase;
     }
 
     // Method called by the shopkeeper slime when the player touches it.
@@ -210,13 +217,9 @@ public class ShopManager : MonoBehaviour
         shopBackButton.GetComponent<Animation>().Play("ui_ranch_shopBackButton_floatOut");
 
         if (openTab == Tabs.Meals)
-        {
             shopMealsContent.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeOut");
-        }
         else
-        {
             shopSnacksContent.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeOut");
-        }
     }
 
     private void GenerateItems()
