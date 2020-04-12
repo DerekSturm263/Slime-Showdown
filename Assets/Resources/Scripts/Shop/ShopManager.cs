@@ -228,6 +228,7 @@ public class ShopManager : MonoBehaviour
 
         for (int i = 0; i < scripts.Length; i++)
         {
+            Debug.Log((scripts[i] as Buyable).foodName + " has been added.");
             GenerateInShop(scripts[i] as Buyable);
         }
 
@@ -249,11 +250,11 @@ public class ShopManager : MonoBehaviour
         {
             MealData mealScript = newItem.AddComponent<MealData>();
 
-            mealScript.type = item.GetComponent<MealData>().type;
-            mealScript.foodName = item.GetComponent<MealData>().foodName;
-            mealScript.description = item.GetComponent<MealData>().description;
-            mealScript.price = item.GetComponent<MealData>().price;
-            mealScript.affinityIncrease = item.GetComponent<MealData>().affinityIncrease;
+            mealScript.type = (item as MealData).type;
+            mealScript.foodName = (item as MealData).foodName;
+            mealScript.description = (item as MealData).description;
+            mealScript.price = (item as MealData).price;
+            mealScript.affinityIncrease = (item as MealData).affinityIncrease;
             mealScript.mealShopPos = shopMealPos++;
 
             newItem.transform.SetParent(shopMealsContent.transform);
@@ -264,12 +265,12 @@ public class ShopManager : MonoBehaviour
         {
             SnackData snackScript = newItem.AddComponent<SnackData>();
 
-            snackScript.type = item.GetComponent<SnackData>().type;
-            snackScript.foodName = item.GetComponent<SnackData>().foodName;
-            snackScript.description = item.GetComponent<SnackData>().description;
-            snackScript.price = item.GetComponent<SnackData>().price;
-            snackScript.hungerIncrease = item.GetComponent<SnackData>().price;
-            snackScript.inventoryVersion = item.GetComponent<SnackData>().inventoryVersion;
+            snackScript.type = (item as SnackData).type;
+            snackScript.foodName = (item as SnackData).foodName;
+            snackScript.description = (item as SnackData).description;
+            snackScript.price = (item as SnackData).price;
+            snackScript.hungerIncrease = (item as SnackData).price;
+            snackScript.inventoryVersion = (item as SnackData).inventoryVersion;
             snackScript.snackShopPos = shopSnackPos++;
 
             newItem.transform.SetParent(shopSnacksContent.transform);
