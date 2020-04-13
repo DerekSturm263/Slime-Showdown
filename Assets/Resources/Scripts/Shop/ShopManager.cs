@@ -42,7 +42,9 @@ public class ShopManager : MonoBehaviour
     private bool usingAxisX = false;
     private bool usingAxisY = false;
 
-    public bool isShopOpen = false;
+    [HideInInspector] private bool isShopOpen = false;
+
+    public float selectSpeed;
 
     private void Start()
     {
@@ -105,24 +107,28 @@ public class ShopManager : MonoBehaviour
                 {
                     usingAxisY = true;
                     selectedItem = selectedItem.GetComponent<Buyable>().itemUp;
-                    shopScrollBar.value += scrollAmount;
                 }
                 else if (Input.GetAxisRaw("Vertical") < 0 && selectedItem.GetComponent<Buyable>().itemDown != null)
                 {
                     usingAxisY = true;
                     selectedItem = selectedItem.GetComponent<Buyable>().itemDown;
-                    shopScrollBar.value -= scrollAmount;
                 }
             }
 
-            if (Input.GetButtonDown("Submit"))
-                BuyItem();
+            if (shopSelector.transform.position.y < 0 || shopSelector.transform.position.y > Screen.height * 0.75f)
+            {
+                GameObject shopContent = (openTab == Tabs.Meals) ? shopMealsContent : shopSnacksContent;
+                shopContent.transform.position = new Vector2(shopContent.transform.position.x, Mathf.Lerp(shopContent.transform.position.y, shopContent.transform.position.y - shopSelector.transform.position.y + 180, Time.deltaTime * selectSpeed));
+            }
 
             if (Input.GetAxisRaw("Horizontal") == 0)
                 usingAxisX = false;
 
             if (Input.GetAxisRaw("Vertical") == 0)
                 usingAxisY = false;
+
+            if (Input.GetButtonDown("Submit"))
+                BuyItem();
 
             if (Input.GetButtonDown("Cancel"))
                 CloseShop();
@@ -228,7 +234,6 @@ public class ShopManager : MonoBehaviour
 
         for (int i = 0; i < scripts.Length; i++)
         {
-            Debug.Log((scripts[i] as Buyable).foodName + " has been added.");
             GenerateInShop(scripts[i] as Buyable);
         }
 

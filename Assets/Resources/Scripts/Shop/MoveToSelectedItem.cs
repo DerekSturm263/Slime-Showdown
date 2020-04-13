@@ -5,7 +5,7 @@ using UnityEngine;
 public class MoveToSelectedItem : MonoBehaviour
 {
     private ShopManager shopManager;
-    public Vector3 offset;
+    public float selectSpeed;
 
     private void Start()
     {
@@ -14,6 +14,6 @@ public class MoveToSelectedItem : MonoBehaviour
 
     private void Update()
     {
-        transform.position = shopManager.selectedItem.transform.position + offset;
+        transform.position = Vector2.Lerp(transform.position, shopManager.selectedItem.transform.position, Time.deltaTime * selectSpeed);
     }
 }
