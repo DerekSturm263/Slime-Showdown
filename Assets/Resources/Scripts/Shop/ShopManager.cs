@@ -26,7 +26,6 @@ public class ShopManager : MonoBehaviour
     private GameObject shopSelector;
 
     private Scrollbar shopScrollBar;
-    private float scrollAmount;
 
     public List<GameObject> meals;
     public List<GameObject> snacks;
@@ -73,7 +72,7 @@ public class ShopManager : MonoBehaviour
         {
             if (!usingAxisX)
             {
-                if (Input.GetAxisRaw("Horizontal") > 0 && openTab == Tabs.Meals && shopMealsContent.GetComponent<CanvasGroup>().alpha == 1f)
+                if ((Input.GetAxisRaw("Horizontal") > 0 || Input.GetButtonDown("R")) && openTab == Tabs.Meals && shopMealsContent.GetComponent<CanvasGroup>().alpha == 1f)
                 {
                     usingAxisX = true;
                     openTab = Tabs.Snacks;
@@ -85,7 +84,7 @@ public class ShopManager : MonoBehaviour
                     shopMealsContent.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeOut");
                     shopSnacksContent.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeIn");
                 }
-                else if (Input.GetAxisRaw("Horizontal") < 0 && openTab == Tabs.Snacks && shopSnacksContent.GetComponent<CanvasGroup>().alpha == 1f)
+                else if ((Input.GetAxisRaw("Horizontal") < 0 || Input.GetButtonDown("L")) && openTab == Tabs.Snacks && shopSnacksContent.GetComponent<CanvasGroup>().alpha == 1f)
                 {
                     usingAxisX = true;
                     openTab = Tabs.Meals;
@@ -99,26 +98,30 @@ public class ShopManager : MonoBehaviour
                 }
             }
 
-            scrollAmount = ( openTab == Tabs.Meals ) ? 0.2f : 0.0718f;
-
             if (!usingAxisY)
             {
                 if (Input.GetAxisRaw("Vertical") > 0 && selectedItem.GetComponent<Buyable>().itemUp != null)
                 {
                     usingAxisY = true;
                     selectedItem = selectedItem.GetComponent<Buyable>().itemUp;
+
+                    if (shopSelector.transform.position.y > Screen.height / 3f)
+                    {
+                        GameObject shopContent = (openTab == Tabs.Meals) ? shopMealsContent : shopSnacksContent;
+                        shopContent.transform.position -= new Vector3(0, 253, 0);
+                    }
                 }
                 else if (Input.GetAxisRaw("Vertical") < 0 && selectedItem.GetComponent<Buyable>().itemDown != null)
                 {
                     usingAxisY = true;
                     selectedItem = selectedItem.GetComponent<Buyable>().itemDown;
-                }
-            }
 
-            if (shopSelector.transform.position.y < 0 || shopSelector.transform.position.y > Screen.height * 0.75f)
-            {
-                GameObject shopContent = (openTab == Tabs.Meals) ? shopMealsContent : shopSnacksContent;
-                shopContent.transform.position = new Vector2(shopContent.transform.position.x, Mathf.Lerp(shopContent.transform.position.y, shopContent.transform.position.y - shopSelector.transform.position.y + 180, Time.deltaTime * selectSpeed));
+                    if (shopSelector.transform.position.y < Screen.height / 2f)
+                    {
+                        GameObject shopContent = (openTab == Tabs.Meals) ? shopMealsContent : shopSnacksContent;
+                        shopContent.transform.position += new Vector3(0, 253, 0);
+                    }
+                }
             }
 
             if (Input.GetAxisRaw("Horizontal") == 0)
