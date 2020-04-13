@@ -42,7 +42,7 @@ public class ShopManager : MonoBehaviour
     private bool usingAxisX = false;
     private bool usingAxisY = false;
 
-    [HideInInspector] private bool isShopOpen = false;
+    public bool isShopOpen = false;
 
     public float selectSpeed;
 

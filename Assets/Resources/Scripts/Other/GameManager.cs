@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     public string playerSlimeColor;
     public string playerSlimeName;
 
+    [Header("Affinities")]
     public float playSeafoodAff;
     public float playCandyAff;
     public float playSpicyAff;
