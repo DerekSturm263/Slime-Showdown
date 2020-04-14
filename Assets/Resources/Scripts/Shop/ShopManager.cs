@@ -25,6 +25,9 @@ public class ShopManager : MonoBehaviour
     private GameObject shopBackButton;
     private GameObject shopSelector;
 
+    private GameObject slimeEating;
+    private GameObject affinityText;
+
     private Scrollbar shopScrollBar;
 
     public List<GameObject> meals;
@@ -38,12 +41,18 @@ public class ShopManager : MonoBehaviour
     public GameObject firstSelectedItem;
     public GameObject selectedItem;
 
+    private Animator animController;
+
     private bool usingAxisX = false;
     private bool usingAxisY = false;
 
     public bool isShopOpen = false;
 
-    public float selectSpeed;
+    [SerializeField] private float selectSpeed;
+
+    private bool isEating = false;
+
+    private string animName;
 
     private void Start()
     {
@@ -61,7 +70,14 @@ public class ShopManager : MonoBehaviour
         shopSelector = GameObject.FindGameObjectWithTag("RanchShopSelector");
         shopScrollBar = GameObject.FindGameObjectWithTag("RanchShopScrollBar").GetComponent<Scrollbar>();
 
+        slimeEating = GameObject.FindGameObjectWithTag("SlimeEatingAnimation");
+        affinityText = GameObject.FindGameObjectWithTag("AffinityTextUp");
+
         playerSlime = GameObject.FindGameObjectWithTag("RanchBattleSlime");
+
+        animController = slimeEating.GetComponent<Animator>();
+        animName = "Animations/Slime/Ranch/" + gameManager.GetComponent<GameManager>().playerSlimeColor + " Slime/Eating/slime_" + gameManager.GetComponent<GameManager>().playerSlimeColor.ToLower() + "_ranch_eatingController";
+        animController.runtimeAnimatorController = Resources.Load(animName) as RuntimeAnimatorController;
 
         GenerateItems();
     }
@@ -70,7 +86,7 @@ public class ShopManager : MonoBehaviour
     {
         if (isShopOpen)
         {
-            if (!usingAxisX)
+            if (!usingAxisX && !isEating)
             {
                 if ((Input.GetAxisRaw("Horizontal") > 0 || Input.GetButtonDown("R")) && openTab == Tabs.Meals && shopMealsContent.GetComponent<CanvasGroup>().alpha == 1f)
                 {
@@ -98,7 +114,7 @@ public class ShopManager : MonoBehaviour
                 }
             }
 
-            if (!usingAxisY)
+            if (!usingAxisY && !isEating)
             {
                 if (Input.GetAxisRaw("Vertical") > 0 && selectedItem.GetComponent<Buyable>().itemUp != null)
                 {
@@ -124,23 +140,27 @@ public class ShopManager : MonoBehaviour
                 }
             }
 
+            #region Axis Resetting and Buttons
+
             if (Input.GetAxisRaw("Horizontal") == 0)
                 usingAxisX = false;
 
             if (Input.GetAxisRaw("Vertical") == 0)
                 usingAxisY = false;
 
-            if (Input.GetButtonDown("Submit"))
+            if (Input.GetButtonDown("Submit") && !isEating)
                 BuyItem();
 
-            if (Input.GetButtonDown("Cancel"))
+            if (Input.GetButtonDown("Cancel") && !isEating)
                 CloseShop();
+
+            #endregion
         }
     }
 
     public void BuyItem()
     {
-        if (gameManager.GetComponent<GameManager>().goldCount >= selectedItem.GetComponent<Buyable>().price)
+        if (gameManager.GetComponent<GameManager>().goldCount >= selectedItem.GetComponent<Buyable>().price && !isEating)
         {
             if (selectedItem.GetComponent<Buyable>() is MealData)
             {
@@ -169,18 +189,79 @@ public class ShopManager : MonoBehaviour
 
     private void EatMeal(Buyable food)
     {
+        isEating = true;
+
+        #region Increase Value
+
         float increase = food.GetComponent<MealData>().affinityIncrease;
 
-        if ((int) food.type == 1)
-            gameManager.GetComponent<GameManager>().playSeafoodAff += increase;
-        else if ((int) food.type == 2)
-            gameManager.GetComponent<GameManager>().playCandyAff += increase;
-        else if ((int) food.type == 3)
-            gameManager.GetComponent<GameManager>().playSpicyAff += increase;
-        else if ((int) food.type == 4)
-            gameManager.GetComponent<GameManager>().playVeggieAff += increase;
-        else if ((int) food.type == 5)
-            gameManager.GetComponent<GameManager>().playSourAff += increase;
+        switch ((int) food.type)
+        {
+            case 1:
+                gameManager.GetComponent<GameManager>().playSeafoodAff += increase;
+                break;
+            case 2:
+                gameManager.GetComponent<GameManager>().playCandyAff += increase;
+                break;
+            case 3:
+                gameManager.GetComponent<GameManager>().playSpicyAff += increase;
+                break;
+            case 4:
+                gameManager.GetComponent<GameManager>().playVeggieAff += increase;
+                break;
+            case 5:
+                gameManager.GetComponent<GameManager>().playSourAff += increase;
+                break;
+        }
+        
+        #endregion
+
+        StartCoroutine(EatAnimation((int) food.type));
+    }
+
+    private IEnumerator EatAnimation(int type)
+    {
+        animController.SetBool("isEating", true);
+
+        shopTopBarLayout.GetComponent<Animation>().Play("ui_ranch_shopTopBar_floatOut");
+        shopScrollView.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeOut");
+        shopBackButton.GetComponent<Animation>().Play("ui_ranch_shopBackButton_floatOut");
+        shopMealsContent.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeOut");
+
+        switch (type)
+        {
+            case 1:
+                affinityText.GetComponent<Text>().text = "Water Affinity Up!";
+                break;
+            case 2:
+                affinityText.GetComponent<Text>().text = "Air Affinity Up!";
+                break;
+            case 3:
+                affinityText.GetComponent<Text>().text = "Fire Affinity Up!";
+                break;
+            case 4:
+                affinityText.GetComponent<Text>().text = "Earth Affinity Up!";
+                break;
+            case 5:
+                affinityText.GetComponent<Text>().text = "Electric Affinity Up!";
+                break;
+        }
+
+        slimeEating.GetComponent<Animation>().Play("ui_ranch_slimeEatingAnim_floatIn");
+        affinityText.GetComponent<Animation>().Play("ui_ranch_affinityText_floatIn");
+
+        yield return new WaitForSeconds(3.5f);
+
+        slimeEating.GetComponent<Animation>().Play("ui_ranch_slimeEatingAnim_floatOut");
+        affinityText.GetComponent<Animation>().Play("ui_ranch_affinityText_floatOut");
+
+        shopTopBarLayout.GetComponent<Animation>().Play("ui_ranch_shopTopBar_floatIn");
+        shopScrollView.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeIn");
+        shopMealsContent.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeIn");
+        shopBackButton.GetComponent<Animation>().Play("ui_ranch_shopBackButton_floatIn");
+
+        animController.SetBool("isEating", false);
+        isEating = false;
     }
 
     // Method called by the shopkeeper slime when the player touches it.

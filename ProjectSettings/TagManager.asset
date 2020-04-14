@@ -41,6 +41,9 @@ TagManager:
   - ElectricBar
   - SlimeIcon
   - StatsLayout
+  - SlimeEatingAnimation
+  - AffinityTextUp
+  - SlimeEatingAnimationReference
   layers:
   - Default
   - TransparentFX

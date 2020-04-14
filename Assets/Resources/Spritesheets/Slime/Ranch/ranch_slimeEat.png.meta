@@ -1,0 +1,2275 @@
+fileFormatVersion: 2
+guid: 60553ccb0c89d314f9ebbd56b70ec430
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2272851013505921079
+    second: ranch_slimeEat_0
+  - first:
+      213: 1526280628262410662
+    second: ranch_slimeEat_1
+  - first:
+      213: 1013126050584142233
+    second: ranch_slimeEat_2
+  - first:
+      213: -5932959890619418704
+    second: ranch_slimeEat_3
+  - first:
+      213: 7633549006448481429
+    second: ranch_slimeEat_4
+  - first:
+      213: 3812094973846983921
+    second: ranch_slimeEat_5
+  - first:
+      213: 2326609022547498101
+    second: ranch_slimeEat_6
+  - first:
+      213: -7765750155735765904
+    second: ranch_slimeEat_7
+  - first:
+      213: -6665818127066158326
+    second: ranch_slimeEat_8
+  - first:
+      213: -6171668240230273165
+    second: ranch_slimeEat_9
+  - first:
+      213: -3352028994804455143
+    second: ranch_slimeEat_10
+  - first:
+      213: -6911110683442068405
+    second: ranch_slimeEat_11
+  - first:
+      213: -3738848017171916488
+    second: ranch_slimeEat_12
+  - first:
+      213: -8373951985295319087
+    second: ranch_slimeEat_13
+  - first:
+      213: -4324038032141722964
+    second: ranch_slimeEat_14
+  - first:
+      213: 350145456654593679
+    second: ranch_slimeEat_15
+  - first:
+      213: 968383700137794871
+    second: ranch_slimeEat_16
+  - first:
+      213: -8158306063876008850
+    second: ranch_slimeEat_17
+  - first:
+      213: 3686182872949948574
+    second: ranch_slimeEat_18
+  - first:
+      213: 6086260881450752329
+    second: ranch_slimeEat_19
+  - first:
+      213: -2714417097969074258
+    second: ranch_slimeEat_20
+  - first:
+      213: -8991350464212327541
+    second: ranch_slimeEat_21
+  - first:
+      213: 4665124766835845771
+    second: ranch_slimeEat_22
+  - first:
+      213: -8753308999395158965
+    second: ranch_slimeEat_23
+  - first:
+      213: -4792387853854511772
+    second: ranch_slimeEat_24
+  - first:
+      213: 7001136593439788588
+    second: ranch_slimeEat_25
+  - first:
+      213: 7800898814537765494
+    second: ranch_slimeEat_26
+  - first:
+      213: -4829851693992995217
+    second: ranch_slimeEat_27
+  - first:
+      213: 7967184331947501147
+    second: ranch_slimeEat_28
+  - first:
+      213: -7064343378767936677
+    second: ranch_slimeEat_29
+  - first:
+      213: -635126935519341083
+    second: ranch_slimeEat_30
+  - first:
+      213: -4074102277796716301
+    second: ranch_slimeEat_31
+  - first:
+      213: -3921667643842990489
+    second: ranch_slimeEat_32
+  - first:
+      213: -8170211537999471017
+    second: ranch_slimeEat_33
+  - first:
+      213: 6727655923500143846
+    second: ranch_slimeEat_34
+  - first:
+      213: 110293928905955715
+    second: ranch_slimeEat_35
+  - first:
+      213: 8062626201858175036
+    second: ranch_slimeEat_36
+  - first:
+      213: -79910944656306030
+    second: ranch_slimeEat_37
+  - first:
+      213: -1821061079594945528
+    second: ranch_slimeEat_38
+  - first:
+      213: -1252087759738147534
+    second: ranch_slimeEat_39
+  - first:
+      213: -1387656754745403389
+    second: ranch_slimeEat_40
+  - first:
+      213: 386366812638683684
+    second: ranch_slimeEat_41
+  - first:
+      213: -5901122789460287784
+    second: ranch_slimeEat_42
+  - first:
+      213: 1742288845738809375
+    second: ranch_slimeEat_43
+  - first:
+      213: 5907090690866893913
+    second: ranch_slimeEat_44
+  - first:
+      213: -1374284713358521073
+    second: ranch_slimeEat_45
+  - first:
+      213: 3953911631260815914
+    second: ranch_slimeEat_46
+  - first:
+      213: -3252829473845593743
+    second: ranch_slimeEat_47
+  - first:
+      213: 6449444513761075794
+    second: ranch_slimeEat_48
+  - first:
+      213: 7615681553660090999
+    second: ranch_slimeEat_49
+  - first:
+      213: 865919610946383623
+    second: ranch_slimeEat_50
+  - first:
+      213: 5066291501504922793
+    second: ranch_slimeEat_51
+  - first:
+      213: -3976471260035704799
+    second: ranch_slimeEat_52
+  - first:
+      213: 4353135829605849476
+    second: ranch_slimeEat_53
+  - first:
+      213: 1337733519908843304
+    second: ranch_slimeEat_54
+  - first:
+      213: -4522363349886266009
+    second: ranch_slimeEat_55
+  - first:
+      213: -7692048307000419146
+    second: ranch_slimeEat_56
+  - first:
+      213: 2443973345469880062
+    second: ranch_slimeEat_57
+  - first:
+      213: 171546604815514002
+    second: ranch_slimeEat_58
+  - first:
+      213: -2573889203528077553
+    second: ranch_slimeEat_59
+  - first:
+      213: -2902429656509630800
+    second: ranch_slimeEat_60
+  - first:
+      213: -1449903044081831179
+    second: ranch_slimeEat_61
+  - first:
+      213: 1913283254939240296
+    second: ranch_slimeEat_62
+  - first:
+      213: 4332894941840064988
+    second: ranch_slimeEat_63
+  - first:
+      213: -8131354028540258618
+    second: ranch_slimeEat_64
+  - first:
+      213: 3609217090977732547
+    second: ranch_slimeEat_65
+  - first:
+      213: 3701603766785457214
+    second: ranch_slimeEat_66
+  - first:
+      213: 4166324592623632518
+    second: ranch_slimeEat_67
+  - first:
+      213: 7188343344310686351
+    second: ranch_slimeEat_68
+  - first:
+      213: -8728439835089555627
+    second: ranch_slimeEat_69
+  - first:
+      213: 2929574194524025277
+    second: ranch_slimeEat_70
+  - first:
+      213: -8737038480630816839
+    second: ranch_slimeEat_71
+  - first:
+      213: -494086724036451730
+    second: ranch_slimeEat_72
+  - first:
+      213: 6565776977732323168
+    second: ranch_slimeEat_73
+  - first:
+      213: 750477701108249510
+    second: ranch_slimeEat_74
+  - first:
+      213: 2711236390260065547
+    second: ranch_slimeEat_75
+  - first:
+      213: -427708420401435626
+    second: ranch_slimeEat_76
+  - first:
+      213: 7933514886659589816
+    second: ranch_slimeEat_77
+  - first:
+      213: 5929557571549550080
+    second: ranch_slimeEat_78
+  - first:
+      213: 8699756774669279684
+    second: ranch_slimeEat_79
+  - first:
+      213: 7507335170129247139
+    second: ranch_slimeEat_80
+  - first:
+      213: -1970968942467891659
+    second: ranch_slimeEat_81
+  - first:
+      213: 3739054621810104550
+    second: ranch_slimeEat_82
+  - first:
+      213: 1092147158420803168
+    second: ranch_slimeEat_83
+  - first:
+      213: 8089395197531052357
+    second: ranch_slimeEat_84
+  - first:
+      213: 6368606624196833239
+    second: ranch_slimeEat_85
+  - first:
+      213: -4597058260319844284
+    second: ranch_slimeEat_86
+  - first:
+      213: 7746965675330571819
+    second: ranch_slimeEat_87
+  - first:
+      213: 1593095467085012393
+    second: ranch_slimeEat_88
+  - first:
+      213: 2281346108266703192
+    second: ranch_slimeEat_89
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ranch_slimeEat_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 361
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 730386764f9ca8f10800000000000000
+      internalID: 2272851013505921079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_1
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 361
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a9142315207e2510800000000000000
+      internalID: 1526280628262410662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_2
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 361
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99123c576c85f0e00800000000000000
+      internalID: 1013126050584142233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_3
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 361
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b73df4e964e9ada0800000000000000
+      internalID: -5932959890619418704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_4
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 361
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 594d5e88060dfe960800000000000000
+      internalID: 7633549006448481429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_5
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 361
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f4933e6e2847e430800000000000000
+      internalID: 3812094973846983921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_6
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 361
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57499204496c94020800000000000000
+      internalID: 2326609022547498101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_7
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 361
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07c6fe8c0638a3490800000000000000
+      internalID: -7765750155735765904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_8
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 361
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0bacdefab14e73a0800000000000000
+      internalID: -6665818127066158326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_9
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 361
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37fa3853f64d95aa0800000000000000
+      internalID: -6171668240230273165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 316
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 919eed793633b71d0800000000000000
+      internalID: -3352028994804455143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_11
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 316
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b444706337dc610a0800000000000000
+      internalID: -6911110683442068405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_12
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 316
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8395b43a981fc1cc0800000000000000
+      internalID: -3738848017171916488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_13
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 316
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1df9b46590fb9cb80800000000000000
+      internalID: -8373951985295319087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_14
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 316
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caad9eac15eedf3c0800000000000000
+      internalID: -4324038032141722964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_15
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 316
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8e2d9b0077fbd400800000000000000
+      internalID: 350145456654593679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_16
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 316
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73dddf438d3607d00800000000000000
+      internalID: 968383700137794871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_17
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 316
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6451c50cdfd7ce80800000000000000
+      internalID: -8158306063876008850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_18
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 316
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e908f4feac3f72330800000000000000
+      internalID: 3686182872949948574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_19
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 316
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9495a39760eb67450800000000000000
+      internalID: 6086260881450752329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 271
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaf7e4fe704745ad0800000000000000
+      internalID: -2714417097969074258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_21
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 271
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b83a499146e483380800000000000000
+      internalID: -8991350464212327541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_22
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 271
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8aa020324addb040800000000000000
+      internalID: 4665124766835845771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_23
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 271
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4452d197dff58680800000000000000
+      internalID: -8753308999395158965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_24
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 271
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46dea1953a40e7db0800000000000000
+      internalID: -4792387853854511772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_25
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 271
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2e87fb53a8092160800000000000000
+      internalID: 7001136593439788588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_26
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 271
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6721a41142c524c60800000000000000
+      internalID: 7800898814537765494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_27
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 271
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f669ab5597be8fcb0800000000000000
+      internalID: -4829851693992995217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_28
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 271
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b56e9cd10ff119e60800000000000000
+      internalID: 7967184331947501147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_29
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 271
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b538721202966fd90800000000000000
+      internalID: -7064343378767936677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 226
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e5561dca639f27f0800000000000000
+      internalID: -635126935519341083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_31
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 226
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f021595091e577c0800000000000000
+      internalID: -4074102277796716301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_32
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 226
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76e68994e007399c0800000000000000
+      internalID: -3921667643842990489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_33
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 226
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75e5eb1d4e39d9e80800000000000000
+      internalID: -8170211537999471017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_34
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 226
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e45743fa6f6d5d50800000000000000
+      internalID: 6727655923500143846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_35
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 226
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38952557eb7d78100800000000000000
+      internalID: 110293928905955715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_36
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 226
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c30738e10d334ef60800000000000000
+      internalID: 8062626201858175036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_37
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 226
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29058125b6914eef0800000000000000
+      internalID: -79910944656306030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_38
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 226
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8043474b89a4ab6e0800000000000000
+      internalID: -1821061079594945528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_39
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 226
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23d613df0d0bf9ee0800000000000000
+      internalID: -1252087759738147534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 181
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3089a3f988d0ebce0800000000000000
+      internalID: -1387656754745403389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_41
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 181
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 422245ca196ac5500800000000000000
+      internalID: 386366812638683684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_42
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 181
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ded146a6100b1ea0800000000000000
+      internalID: -5901122789460287784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_43
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 181
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f181362697add2810800000000000000
+      internalID: 1742288845738809375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_44
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 181
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 954532dafa33af150800000000000000
+      internalID: 5907090690866893913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_45
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 181
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0d0400a55f8dece0800000000000000
+      internalID: -1374284713358521073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_46
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 181
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a22169e0ead1fd630800000000000000
+      internalID: 3953911631260815914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_47
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 181
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1793388e3d0abd2d0800000000000000
+      internalID: -3252829473845593743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_48
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 181
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25222595d97018950800000000000000
+      internalID: 6449444513761075794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_49
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 181
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77a9760060650b960800000000000000
+      internalID: 7615681553660090999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 136
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70fe08e5c4d540c00800000000000000
+      internalID: 865919610946383623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_51
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 136
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a408cb37451f4640800000000000000
+      internalID: 5066291501504922793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_52
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 136
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 128950e057cb0d8c0800000000000000
+      internalID: -3976471260035704799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_53
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 136
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4899eae19f1796c30800000000000000
+      internalID: 4353135829605849476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_54
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 136
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82fac4a7c85909210800000000000000
+      internalID: 1337733519908843304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_55
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 136
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76598c86e765d31c0800000000000000
+      internalID: -4522363349886266009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_56
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 136
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bc581aa1da504590800000000000000
+      internalID: -7692048307000419146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_57
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 136
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef651491fccbae120800000000000000
+      internalID: 2443973345469880062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_58
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 136
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 299f37a6ab4716200800000000000000
+      internalID: 171546604815514002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_59
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 136
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0fee7c0865b74cd0800000000000000
+      internalID: -2573889203528077553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 91
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b63f2aea9f78b7d0800000000000000
+      internalID: -2902429656509630800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_61
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 91
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f2beb20dd8e0ebe0800000000000000
+      internalID: -1449903044081831179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_62
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 91
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8674b5dbbf85d8a10800000000000000
+      internalID: 1913283254939240296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_63
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 91
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd1c6713ef8812c30800000000000000
+      internalID: 4332894941840064988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_64
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 91
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c69ae1c790a72f80800000000000000
+      internalID: -8131354028540258618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_65
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 91
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c71ff062d3861230800000000000000
+      internalID: 3609217090977732547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_66
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 91
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3cbe72930dbe5330800000000000000
+      internalID: 3701603766785457214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_67
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 91
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6804e429422c1d930800000000000000
+      internalID: 4166324592623632518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_68
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 91
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f829e29af2022c360800000000000000
+      internalID: 7188343344310686351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_69
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 91
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55f2e1a173a5ed680800000000000000
+      internalID: -8728439835089555627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 46
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db171c75530f7a820800000000000000
+      internalID: 2929574194524025277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_71
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 46
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bfd41deacdcfb680800000000000000
+      internalID: -8737038480630816839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_72
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 46
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6222950eb6a429f0800000000000000
+      internalID: -494086724036451730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_73
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 46
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0674c20df535e1b50800000000000000
+      internalID: 6565776977732323168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_74
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 46
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a3b8623e7b3a6a00800000000000000
+      internalID: 750477701108249510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_75
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 46
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b054097d12f30a520800000000000000
+      internalID: 2711236390260065547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_76
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 46
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61c678e2579701af0800000000000000
+      internalID: -427708420401435626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_77
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 46
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b64e9f71c1891e60800000000000000
+      internalID: 7933514886659589816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_78
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 46
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0065077f1350a4250800000000000000
+      internalID: 5929557571549550080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_79
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 46
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c1e57a71bebbb870800000000000000
+      internalID: 8699756774669279684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3abb959cf896f2860800000000000000
+      internalID: 7507335170129247139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_81
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 1
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53ebfd08036b5a4e0800000000000000
+      internalID: -1970968942467891659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_82
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 1
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e816c04e5ac3e330800000000000000
+      internalID: 3739054621810104550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_83
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 1
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06ecf1cdd06182f00800000000000000
+      internalID: 1092147158420803168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_84
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 1
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 549d69c921e434070800000000000000
+      internalID: 8089395197531052357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_85
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 1
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dfa37d7bf5d16850800000000000000
+      internalID: 6368606624196833239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_86
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 1
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4484cd55ed7f330c0800000000000000
+      internalID: -4597058260319844284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_87
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 1
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2e093d8c30c28b60800000000000000
+      internalID: 7746965675330571819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_88
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 1
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ad13e003efcb1610800000000000000
+      internalID: 1593095467085012393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranch_slimeEat_89
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 1
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 859e4f8c238f8af10800000000000000
+      internalID: 2281346108266703192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
