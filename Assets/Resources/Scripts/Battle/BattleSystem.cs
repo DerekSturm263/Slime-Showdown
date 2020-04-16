@@ -33,6 +33,7 @@ public class BattleSystem : MonoBehaviour
     {
         gameManager = GameObject.FindGameObjectWithTag("GameController");
         playerPrefab.GetComponent<Player>().name = gameManager.GetComponent<GameManager>().playerSlimeName;
+        playerPrefab.GetComponent<Player>().candyAff = (int)gameManager.GetComponent<GameManager>().playCandyAff;
 
         state = BattleState.Start;
        StartCoroutine(SetupBattle());

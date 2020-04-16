@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8170967862402327117}
   - component: {fileID: 8170967862402327118}
   m_Layer: 0
-  m_Name: StandinSlimeEnemy
+  m_Name: Enemy Slime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,8 +71,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b6aa3b9829f894e8ab0a7bebe91d5a46, type: 3}
-  m_Color: {r: 0, g: 0.10349059, b: 1, a: 1}
+  m_Sprite: {fileID: -8423896977694843039, guid: e457b74c4bf06e849bb2b461a8842e80,
+    type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -100,3 +101,9 @@ MonoBehaviour:
   hunger: 100
   currentHP: 100
   dmg: 20
+  VicGold: 0
+  sourAff: 0
+  spicyAff: 0
+  seafoodAff: 0
+  candyAff: 0
+  veggieAff: 0

@@ -12,6 +12,9 @@ public class Player : MonoBehaviour
     public int currentHP;
     public int dmg;
 
+    //This determines how much money the player wins or loses while in battle
+    public int VicGold;
+
     //affinity typing
     public int sourAff;
     public int spicyAff;

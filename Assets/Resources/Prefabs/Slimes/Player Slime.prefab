@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4885325385075290373}
   - component: {fileID: 5124274107502160176}
   m_Layer: 0
-  m_Name: SlimePlayerRanch
+  m_Name: Player Slime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,7 +72,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: cb89ec3a2b75444489eab2873c8d9e57, type: 3}
+  m_Sprite: {fileID: -3267238087695226196, guid: e457b74c4bf06e849bb2b461a8842e80,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -95,6 +96,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f31e93c67bbe4bb483bbc3891bf4311, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  walkSpeed: 0
+  runSpeed: 0
 --- !u!114 &5124274107502160176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,3 +116,9 @@ MonoBehaviour:
   hunger: 100
   currentHP: 100
   dmg: 30
+  VicGold: 0
+  sourAff: 0
+  spicyAff: 0
+  seafoodAff: 0
+  candyAff: 0
+  veggieAff: 0
