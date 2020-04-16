@@ -96,14 +96,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Enemy
-  type: Type:Water
-  health: 100
+  type: Type:Spicy
+  health: 106
   hunger: 100
   currentHP: 100
   dmg: 20
-  VicGold: 0
-  sourAff: 0
-  spicyAff: 0
-  seafoodAff: 0
-  candyAff: 0
-  veggieAff: 0
+  VicGold: 80
+  sourAff: 3
+  spicyAff: 6
+  seafoodAff: 2
+  candyAff: 1
+  veggieAff: 2
