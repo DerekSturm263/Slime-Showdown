@@ -34,7 +34,7 @@ public class SlimeMove : MonoBehaviour
         animController = GetComponent<Animator>();
         rb2D = GetComponent<Rigidbody2D>();
 
-        string animName = "Animations/Slime/Ranch/" + gameManager.GetComponent<GameManager>().playerSlimeColor + " Slime/slime_" + gameManager.GetComponent<GameManager>().playerSlimeColor.ToLower() + "_ranch";
+        string animName = "Animations/Slime/Ranch/" + gameManager.GetComponent<GameManager>().playerSlimeColor + " Slime/Idle/slime_" + gameManager.GetComponent<GameManager>().playerSlimeColor.ToLower() + "_ranch";
         animController.runtimeAnimatorController = Resources.Load(animName) as RuntimeAnimatorController;
     }
 
