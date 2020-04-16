@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class OpenCloseStatsPage : MonoBehaviour
 {
     private GameManager gameManager;
     private ShopManager shopManager;
+    private PauseButtonMethods pauseManager;
 
     private GameObject slimeIcon;
     private GameObject statsLayout;
@@ -26,6 +28,7 @@ public class OpenCloseStatsPage : MonoBehaviour
     {
         gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
         shopManager = GameObject.FindGameObjectWithTag("RanchShopkeeperSlime").GetComponent<ShopManager>();
+        pauseManager = EventSystem.current.GetComponent<PauseButtonMethods>();
 
         slimeIcon = GameObject.FindGameObjectWithTag("SlimeIcon");
         statsLayout = GameObject.FindGameObjectWithTag("StatsLayout");
@@ -42,7 +45,7 @@ public class OpenCloseStatsPage : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("StatsPage") && !shopManager.isShopOpen)
+        if (Input.GetButtonDown("StatsPage") && !shopManager.isShopOpen && !pauseManager.isPauseOpen)
         {
             if (!isStatsPageOpen)
                 OpenStatsPage();

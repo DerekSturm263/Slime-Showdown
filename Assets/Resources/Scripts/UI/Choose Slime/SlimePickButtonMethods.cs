@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class SlimePickButtonMethods : MonoBehaviour
 {
     private GameObject gameManager;
-    EventSystem eventSystem;
+    private EventSystem eventSystem;
 
     private GameObject pickSlimeText;
     private GameObject slimeConfirmationText;

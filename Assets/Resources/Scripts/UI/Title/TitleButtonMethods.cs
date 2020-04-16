@@ -19,9 +19,6 @@ public class TitleButtonMethods : MonoBehaviour
         gameLogo = GameObject.FindGameObjectWithTag("TitleGameLogo");
         buttonLayout = GameObject.FindGameObjectWithTag("TitleButtonLayout");
         versionNumber = GameObject.FindGameObjectWithTag("TitleVersionNumber");
-
-        DontDestroyOnLoad(gameManager);
-        DontDestroyOnLoad(Camera.main);
     }
 
     public void StartGame()

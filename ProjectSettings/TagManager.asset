@@ -44,6 +44,9 @@ TagManager:
   - SlimeEatingAnimation
   - AffinityTextUp
   - SlimeEatingAnimationReference
+  - PauseButtons
+  - Stats
+  - ResumeButton
   layers:
   - Default
   - TransparentFX
