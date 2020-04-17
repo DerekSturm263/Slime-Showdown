@@ -47,6 +47,9 @@ TagManager:
   - PauseButtons
   - Stats
   - ResumeButton
+  - TabSwitcherBackground
+  - SnacksButton
+  - MealsButton
   layers:
   - Default
   - TransparentFX

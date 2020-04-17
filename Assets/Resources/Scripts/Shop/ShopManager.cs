@@ -25,6 +25,10 @@ public class ShopManager : MonoBehaviour
     private GameObject shopBackButton;
     private GameObject shopSelector;
 
+    private GameObject tabSwitcherBackground;
+    private GameObject snacksButton;
+    private GameObject mealsButton;
+
     private GameObject slimeEating;
     private GameObject affinityText;
 
@@ -70,6 +74,10 @@ public class ShopManager : MonoBehaviour
         shopSelector = GameObject.FindGameObjectWithTag("RanchShopSelector");
         shopScrollBar = GameObject.FindGameObjectWithTag("RanchShopScrollBar").GetComponent<Scrollbar>();
 
+        tabSwitcherBackground = GameObject.FindGameObjectWithTag("TabSwitcherBackground");
+        snacksButton = GameObject.FindGameObjectWithTag("SnacksButton");
+        mealsButton = GameObject.FindGameObjectWithTag("MealsButton");
+
         slimeEating = GameObject.FindGameObjectWithTag("SlimeEatingAnimation");
         affinityText = GameObject.FindGameObjectWithTag("AffinityTextUp");
 
@@ -91,26 +99,12 @@ public class ShopManager : MonoBehaviour
                 if ((Input.GetAxisRaw("Horizontal") > 0 || Input.GetButtonDown("R")) && openTab == Tabs.Meals && shopMealsContent.GetComponent<CanvasGroup>().alpha == 1f)
                 {
                     usingAxisX = true;
-                    openTab = Tabs.Snacks;
-                    shopScrollView.GetComponent<ScrollRect>().content = shopSnacksContent.GetComponent<RectTransform>();
-                    shopScrollBar.value = 1f;
-
-                    selectedItem = snacks[0];
-
-                    shopMealsContent.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeOut");
-                    shopSnacksContent.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeIn");
+                    SwitchToSnacksTab();
                 }
                 else if ((Input.GetAxisRaw("Horizontal") < 0 || Input.GetButtonDown("L")) && openTab == Tabs.Snacks && shopSnacksContent.GetComponent<CanvasGroup>().alpha == 1f)
                 {
                     usingAxisX = true;
-                    openTab = Tabs.Meals;
-                    shopScrollView.GetComponent<ScrollRect>().content = shopMealsContent.GetComponent<RectTransform>();
-                    shopScrollBar.value = 1f;
-
-                    selectedItem = meals[0];
-
-                    shopMealsContent.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeIn");
-                    shopSnacksContent.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeOut");
+                    SwitchToMealsTab();
                 }
             }
 
@@ -157,6 +151,42 @@ public class ShopManager : MonoBehaviour
                 CloseShop();
 
             #endregion
+        }
+    }
+
+    public void SwitchToMealsTab()
+    {
+        if (openTab != Tabs.Meals)
+        {
+            openTab = Tabs.Meals;
+            shopScrollView.GetComponent<ScrollRect>().content = shopMealsContent.GetComponent<RectTransform>();
+            shopScrollBar.value = 1f;
+
+            selectedItem = meals[0];
+
+            shopMealsContent.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeIn");
+            shopSnacksContent.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeOut");
+            snacksButton.GetComponent<Animation>().Play("ui_ranch_shopSnacksButtonShrink");
+            mealsButton.GetComponent<Animation>().Play("ui_ranch_shopSnacksButtonGrow");
+            tabSwitcherBackground.GetComponent<Animation>().Play("ui_ranch_shopTopBar_spinMeals");
+        }
+    }
+
+    public void SwitchToSnacksTab()
+    {
+        if (openTab != Tabs.Snacks)
+        {
+            openTab = Tabs.Snacks;
+            shopScrollView.GetComponent<ScrollRect>().content = shopSnacksContent.GetComponent<RectTransform>();
+            shopScrollBar.value = 1f;
+
+            selectedItem = snacks[0];
+
+            shopMealsContent.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeOut");
+            shopSnacksContent.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeIn");
+            snacksButton.GetComponent<Animation>().Play("ui_ranch_shopSnacksButtonGrow");
+            mealsButton.GetComponent<Animation>().Play("ui_ranch_shopSnacksButtonShrink");
+            tabSwitcherBackground.GetComponent<Animation>().Play("ui_ranch_shopTopBar_spinSnacks");
         }
     }
 
@@ -269,7 +299,7 @@ public class ShopManager : MonoBehaviour
     // Method called by the shopkeeper slime when the player touches it.
     public void OpenShop()
     {
-        openTab = Tabs.Meals;
+        SwitchToMealsTab();
         isShopOpen = true;
 
         shopCanvas.GetComponent<CanvasGroup>().interactable = true;
