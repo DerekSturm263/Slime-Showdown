@@ -31,11 +31,9 @@ public class PauseButtonMethods : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Cancel") && !shopManager.isShopOpen && !statsManager.isStatsPageOpen)
+        if (Input.GetButtonDown("Pause") && !shopManager.isShopOpen && !statsManager.isStatsPageOpen)
         {
-            isPauseOpen = !isPauseOpen;
-
-            if (isPauseOpen)
+            if (!isPauseOpen)
                 OpenSettings();
             else
                 CloseSettings();
@@ -44,6 +42,8 @@ public class PauseButtonMethods : MonoBehaviour
     
     private void OpenSettings()
     {
+        isPauseOpen = true;
+
         playerSlime.GetComponent<SlimeMove>().enabled = false;
         pauseButtons.GetComponent<CanvasGroup>().interactable = true;
         EventSystem.current.SetSelectedGameObject(resumeButton);
@@ -54,6 +54,8 @@ public class PauseButtonMethods : MonoBehaviour
 
     private void CloseSettings()
     {
+        isPauseOpen = false;
+
         playerSlime.GetComponent<SlimeMove>().enabled = true;
         pauseButtons.GetComponent<CanvasGroup>().interactable = false;
 

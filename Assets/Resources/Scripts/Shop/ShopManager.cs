@@ -124,7 +124,7 @@ public class ShopManager : MonoBehaviour
                     if (shopSelector.transform.position.y > Screen.height / 3f)
                     {
                         GameObject shopContent = (openTab == Tabs.Meals) ? shopMealsContent : shopSnacksContent;
-                        shopContent.transform.position -= new Vector3(0, 253, 0);
+                        shopContent.transform.position -= new Vector3(0, 253, 0) * Time.deltaTime;
                     }
                 }
                 else if (Input.GetAxisRaw("Vertical") < 0 && selectedItem.GetComponent<Buyable>().itemDown != null)
@@ -135,10 +135,12 @@ public class ShopManager : MonoBehaviour
                     if (shopSelector.transform.position.y < Screen.height / 2f)
                     {
                         GameObject shopContent = (openTab == Tabs.Meals) ? shopMealsContent : shopSnacksContent;
-                        shopContent.transform.position += new Vector3(0, 253, 0);
+                        shopContent.transform.position += new Vector3(0, 253, 0) * Time.deltaTime;
                     }
                 }
             }
+
+            shopScrollBar.value += Input.GetAxis("Vertical 2") / 10 * Time.deltaTime;
 
             #region Axis Resetting and Buttons
 
