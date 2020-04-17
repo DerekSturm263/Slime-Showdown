@@ -69,6 +69,7 @@ public class OpenCloseStatsPage : MonoBehaviour
     {
         isStatsPageOpen = true;
         playerSlime.GetComponent<SlimeMove>().enabled = false;
+        playerSlime.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
 
         slimeIcon.GetComponent<Animation>().Play("ui_ranchStats_slimeIcon_floatIn");
         statsLayout.GetComponent<Animation>().Play("ui_ranchStats_statsLayout_floatIn");

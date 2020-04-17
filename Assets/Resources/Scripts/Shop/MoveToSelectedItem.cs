@@ -14,6 +14,6 @@ public class MoveToSelectedItem : MonoBehaviour
 
     private void Update()
     {
-        transform.position = Vector2.Lerp(transform.position, shopManager.selectedItem.transform.position, Time.deltaTime * selectSpeed);
+        transform.position = new Vector2(transform.position.x, Mathf.Lerp(transform.position.y, shopManager.selectedItem.transform.position.y, Time.deltaTime * selectSpeed));
     }
 }

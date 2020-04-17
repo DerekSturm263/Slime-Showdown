@@ -45,6 +45,7 @@ public class PauseButtonMethods : MonoBehaviour
         isPauseOpen = true;
 
         playerSlime.GetComponent<SlimeMove>().enabled = false;
+        playerSlime.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
         pauseButtons.GetComponent<CanvasGroup>().interactable = true;
         EventSystem.current.SetSelectedGameObject(resumeButton);
 
