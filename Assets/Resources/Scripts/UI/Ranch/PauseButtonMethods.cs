@@ -38,6 +38,11 @@ public class PauseButtonMethods : MonoBehaviour
             else
                 CloseSettings();
         }
+
+        if (Input.GetButtonDown("Cancel") && isPauseOpen)
+        {
+            CloseSettings();
+        }
     }
     
     private void OpenSettings()
