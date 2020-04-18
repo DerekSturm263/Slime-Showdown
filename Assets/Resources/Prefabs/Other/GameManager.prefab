@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6750dc75f6d6a74f9ae307c0edb753f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  version: 0.7.0
+  version: 0.7.2
   playerSlimeColor: 
   playerSlimeName: 
   playSeafoodAff: 0
@@ -53,21 +53,6 @@ MonoBehaviour:
   playSourAff: 0
   goldCount: 1000000
   inventory:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

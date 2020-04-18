@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class ShopManager : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class ShopManager : MonoBehaviour
     private Tabs openTab = Tabs.Meals;
 
     private GameObject gameManager;
+    private InventoryManager inventoryManager;
 
     private GameObject food;
     private GameObject foodTemplate;
@@ -52,8 +54,6 @@ public class ShopManager : MonoBehaviour
 
     public bool isShopOpen = false;
 
-    [SerializeField] private float selectSpeed;
-
     private bool isEating = false;
 
     private string animName;
@@ -61,6 +61,7 @@ public class ShopManager : MonoBehaviour
     private void Start()
     {
         gameManager = GameObject.FindGameObjectWithTag("GameController");
+        inventoryManager = EventSystem.current.GetComponent<InventoryManager>();
 
         food = GameObject.FindGameObjectWithTag("Food");
         foodTemplate = GameObject.FindGameObjectWithTag("FoodTemplate");
@@ -159,9 +160,10 @@ public class ShopManager : MonoBehaviour
         if (openTab != Tabs.Meals)
         {
             openTab = Tabs.Meals;
-            shopScrollView.GetComponent<ScrollRect>().content = shopMealsContent.GetComponent<RectTransform>();
-            shopScrollBar.value = 1f;
 
+            shopScrollView.GetComponent<ScrollRect>().content = shopMealsContent.GetComponent<RectTransform>();
+
+            shopScrollBar.value = 1f;
             selectedItem = meals[0];
 
             shopMealsContent.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeIn");
@@ -177,9 +179,10 @@ public class ShopManager : MonoBehaviour
         if (openTab != Tabs.Snacks)
         {
             openTab = Tabs.Snacks;
-            shopScrollView.GetComponent<ScrollRect>().content = shopSnacksContent.GetComponent<RectTransform>();
-            shopScrollBar.value = 1f;
 
+            shopScrollView.GetComponent<ScrollRect>().content = shopSnacksContent.GetComponent<RectTransform>();
+
+            shopScrollBar.value = 1f;
             selectedItem = snacks[0];
 
             shopMealsContent.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeOut");
@@ -204,16 +207,7 @@ public class ShopManager : MonoBehaviour
                 if (gameManager.GetComponent<GameManager>().inventory[gameManager.GetComponent<GameManager>().inventory.Length - 1] == null)
                 {
                     gameManager.GetComponent<GameManager>().goldCount -= selectedItem.GetComponent<Buyable>().price;
-
-                    for (int i = 0; i < gameManager.GetComponent<GameManager>().inventory.Length; i++)
-                    {
-                        if (gameManager.GetComponent<GameManager>().inventory[i] == null)
-                        {
-                            gameManager.GetComponent<GameManager>().inventory[i] = selectedItem.GetComponent<SnackData>().inventoryVersion;
-
-                            break;
-                        }
-                    }
+                    AddSnackToInventory(selectedItem.GetComponent<Buyable>());
                 }
             }
         }
@@ -249,6 +243,20 @@ public class ShopManager : MonoBehaviour
         #endregion
 
         StartCoroutine(EatAnimation((int) food.type));
+    }
+
+    private void AddSnackToInventory(Buyable food)
+    {
+        for (int i = 0; i < gameManager.GetComponent<GameManager>().inventory.Length; i++)
+        {
+            if (gameManager.GetComponent<GameManager>().inventory[i] == null)
+            {
+                gameManager.GetComponent<GameManager>().inventory[i] = (food as SnackData).inventoryVersion;
+                inventoryManager.inventorySlots[i].GetComponent<Image>().sprite = (food as SnackData).image;
+
+                break;
+            }
+        }
     }
 
     private IEnumerator EatAnimation(int type)
@@ -375,6 +383,7 @@ public class ShopManager : MonoBehaviour
             mealScript.foodName = (item as MealData).foodName;
             mealScript.description = (item as MealData).description;
             mealScript.price = (item as MealData).price;
+            mealScript.image = (item as MealData).image;
             mealScript.affinityIncrease = (item as MealData).affinityIncrease;
             mealScript.mealShopPos = shopMealPos++;
 
@@ -390,6 +399,7 @@ public class ShopManager : MonoBehaviour
             snackScript.foodName = (item as SnackData).foodName;
             snackScript.description = (item as SnackData).description;
             snackScript.price = (item as SnackData).price;
+            snackScript.image = (item as SnackData).image;
             snackScript.hungerIncrease = (item as SnackData).price;
             snackScript.inventoryVersion = (item as SnackData).inventoryVersion;
             snackScript.snackShopPos = shopSnackPos++;

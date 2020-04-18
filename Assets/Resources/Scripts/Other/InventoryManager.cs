@@ -1,0 +1,13 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class InventoryManager : MonoBehaviour
+{
+    public GameObject[] inventorySlots = new GameObject[11];
+
+    private void Start()
+    {
+        inventorySlots = GameObject.FindGameObjectsWithTag("InventorySlot");
+    }
+}

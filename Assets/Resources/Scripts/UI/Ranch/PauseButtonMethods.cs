@@ -31,17 +31,15 @@ public class PauseButtonMethods : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Pause") && !shopManager.isShopOpen && !statsManager.isStatsPageOpen)
+        if (isPauseOpen)
         {
-            if (!isPauseOpen)
-                OpenSettings();
-            else
+            if (Input.GetButtonDown("Cancel") || Input.GetButtonDown("Pause"))
                 CloseSettings();
         }
-
-        if (Input.GetButtonDown("Cancel") && isPauseOpen)
+        else if (!shopManager.isShopOpen && !statsManager.isStatsPageOpen)
         {
-            CloseSettings();
+            if (Input.GetButtonDown("Pause"))
+                OpenSettings();
         }
     }
     

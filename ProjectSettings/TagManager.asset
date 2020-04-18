@@ -50,6 +50,13 @@ TagManager:
   - TabSwitcherBackground
   - SnacksButton
   - MealsButton
+  - InventorySlot
+  - StatsPage
+  - InventoryPage
+  - StatsPageTopBarLayout
+  - TabSwitcherBackgroundStats
+  - InventoryButton
+  - StatsButton
   layers:
   - Default
   - TransparentFX
