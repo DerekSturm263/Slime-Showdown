@@ -6,6 +6,7 @@ public class OpenCloseShop : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D col)
     {
-        GetComponent<ShopManager>().OpenShop();
+        if (col.CompareTag("RanchBattleSlime"))
+            GetComponent<ShopManager>().OpenShop();
     }
 }

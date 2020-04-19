@@ -15,7 +15,7 @@ public class SpawnEnemies : MonoBehaviour
     }
 
     public GameObject enemy;
-    [HideInInspector] public static List<GameObject> enemies = new List<GameObject>();
+    public static List<GameObject> enemies = new List<GameObject>();
 
     public Vector3 playerPosition;
     private List<Transform> spawnPositions = new List<Transform>();
@@ -31,6 +31,7 @@ public class SpawnEnemies : MonoBehaviour
 
     private void Start()
     {
+        enemies.Clear();
         listPos = 0;
 
         playerPosition = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().lastPlayerPos;
