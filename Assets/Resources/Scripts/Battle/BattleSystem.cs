@@ -8,7 +8,7 @@ public enum BattleState { Start, PlayTurn, EnTurn, Win, Lose }
 
 public class BattleSystem : MonoBehaviour
 {
-    private GameObject gameManager;
+    public GameObject gameManager;
 
     public GameObject playerPrefab;
     public GameObject enemyPrefab;
