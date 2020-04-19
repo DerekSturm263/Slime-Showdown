@@ -15,8 +15,9 @@ public class SpawnEnemies : MonoBehaviour
     }
 
     public GameObject enemy;
-    private List<GameObject> enemies = new List<GameObject>();
+    [HideInInspector] public static List<GameObject> enemies = new List<GameObject>();
 
+    public Vector3 playerPosition;
     private List<Transform> spawnPositions = new List<Transform>();
     private static int listPos = 0;
 
@@ -32,9 +33,12 @@ public class SpawnEnemies : MonoBehaviour
     {
         listPos = 0;
 
-        foreach (GameObject g in GameObject.FindGameObjectsWithTag("SpawnLocation"))
+        playerPosition = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().lastPlayerPos;
+
+        foreach (GameObject pos in GameObject.FindGameObjectsWithTag("SpawnLocation"))
         {
-            spawnPositions.Add(g.transform);
+            if (Vector3.Distance(pos.transform.position, playerPosition) > 10f)
+                spawnPositions.Add(pos.transform);
         }
         spawnPositions.Sort(0, spawnPositions.Count, new ShuffleComparer<Transform>());
 
@@ -92,6 +96,7 @@ public class SpawnEnemies : MonoBehaviour
         affinities.Add(electricAff);
 
         affinities.Sort();
+        affinities.Reverse();
         string typeString;
 
         if (affinities[0] == electricAff)

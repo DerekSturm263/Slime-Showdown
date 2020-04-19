@@ -49,6 +49,13 @@ public class PauseButtonMethods : MonoBehaviour
 
         playerSlime.GetComponent<SlimeMove>().enabled = false;
         playerSlime.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+
+        foreach (GameObject enemy in SpawnEnemies.enemies)
+        {
+            enemy.GetComponent<EnemySlimeMove>().enabled = false;
+            enemy.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+        }
+
         pauseButtons.GetComponent<CanvasGroup>().interactable = true;
         EventSystem.current.SetSelectedGameObject(resumeButton);
 
@@ -61,6 +68,12 @@ public class PauseButtonMethods : MonoBehaviour
         isPauseOpen = false;
 
         playerSlime.GetComponent<SlimeMove>().enabled = true;
+
+        foreach (GameObject enemy in SpawnEnemies.enemies)
+        {
+            enemy.GetComponent<EnemySlimeMove>().enabled = true;
+        }
+
         pauseButtons.GetComponent<CanvasGroup>().interactable = false;
 
         pauseButtons.GetComponent<Animation>().Play("ui_title_buttonLayout_floatOut");

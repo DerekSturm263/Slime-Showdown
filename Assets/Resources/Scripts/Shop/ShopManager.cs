@@ -320,6 +320,12 @@ public class ShopManager : MonoBehaviour
         playerSlime.GetComponent<SlimeMove>().enabled = false;
         playerSlime.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
 
+        foreach (GameObject enemy in SpawnEnemies.enemies)
+        {
+            enemy.GetComponent<EnemySlimeMove>().enabled = false;
+            enemy.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+        }
+
         shopTopBarLayout.GetComponent<Animation>().Play("ui_ranch_shopTopBar_floatIn");
         shopScrollView.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeIn");
         shopMealsContent.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeIn");
@@ -340,6 +346,11 @@ public class ShopManager : MonoBehaviour
         shopSelector.GetComponent<MoveToSelectedItem>().enabled = false;
 
         playerSlime.GetComponent<SlimeMove>().enabled = true;
+
+        foreach (GameObject enemy in SpawnEnemies.enemies)
+        {
+            enemy.GetComponent<EnemySlimeMove>().enabled = true;
+        }
 
         shopTopBarLayout.GetComponent<Animation>().Play("ui_ranch_shopTopBar_floatOut");
         shopScrollView.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeOut");

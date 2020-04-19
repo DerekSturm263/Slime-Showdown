@@ -58,6 +58,7 @@ TagManager:
   - InventoryButton
   - StatsButton
   - SpawnLocation
+  - Enemy
   layers:
   - Default
   - TransparentFX

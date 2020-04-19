@@ -36,6 +36,8 @@ public class MoveToBattle : MonoBehaviour
 
             gameManager.lastPlayerPos = player.transform.position;
 
+            Camera.main.GetComponent<CameraFollow>().enabled = false;
+            Camera.main.GetComponent<AudioListener>().enabled = false; // Need to reenable after a battle.
             SceneManager.LoadScene("Battle");
         }
     }

@@ -150,6 +150,12 @@ public class OpenCloseStatsPage : MonoBehaviour
         playerSlime.GetComponent<SlimeMove>().enabled = false;
         playerSlime.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
 
+        foreach (GameObject enemy in SpawnEnemies.enemies)
+        {
+            enemy.GetComponent<EnemySlimeMove>().enabled = false;
+            enemy.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+        }
+
         statsPageTopBarLayout.GetComponent<Animation>().Play("ui_ranch_shopTopBar_floatIn");
         statsPage.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeIn");
         uiBackground.GetComponent<Animation>().Play("ui_ranch_shopBackground_fadeIn");
@@ -163,6 +169,11 @@ public class OpenCloseStatsPage : MonoBehaviour
         isStatsPageOpen = false;
 
         playerSlime.GetComponent<SlimeMove>().enabled = true;
+
+        foreach (GameObject enemy in SpawnEnemies.enemies)
+        {
+            enemy.GetComponent<EnemySlimeMove>().enabled = true;
+        }
 
         statsPageTopBarLayout.GetComponent<Animation>().Play("ui_ranch_shopTopBar_floatOut");
         uiBackground.GetComponent<Animation>().Play("ui_ranch_shopBackground_fadeOut");
