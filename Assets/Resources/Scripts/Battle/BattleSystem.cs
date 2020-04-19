@@ -23,6 +23,7 @@ public class BattleSystem : MonoBehaviour
 
     public Text dialogueText;
     public int playerTypeHigh;
+    public int enemyTypeHigh;
 
     Player playerUnit;
     Player enemyUnit;
@@ -32,7 +33,7 @@ public class BattleSystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        #region pulling from gm
+        #region pulling from gm player
         //note from afterwards, I should've assigned them all to variables for shorter calls during the check
         gameManager = GameObject.FindGameObjectWithTag("GameController");
         playerPrefab.GetComponent<Player>().name = gameManager.GetComponent<GameManager>().playerSlimeName;
@@ -41,30 +42,30 @@ public class BattleSystem : MonoBehaviour
         playerPrefab.GetComponent<Player>().spicyAff = (int)gameManager.GetComponent<GameManager>().playSpicyAff;
         playerPrefab.GetComponent<Player>().veggieAff = (int)gameManager.GetComponent<GameManager>().playVeggieAff;
         playerPrefab.GetComponent<Player>().seafoodAff = (int)gameManager.GetComponent<GameManager>().playSeafoodAff;
-        playerPrefab.GetComponent<Player>().VicGold = enemyPrefab.GetComponent<Player>().VicGold;
+        playerPrefab.GetComponent<Player>().VicGold = gameManager.GetComponent<Player>().VicGold;
        if( playerPrefab.GetComponent<Player>().candyAff> playerPrefab.GetComponent<Player>().sourAff && playerPrefab.GetComponent<Player>().candyAff > playerPrefab.GetComponent<Player>().spicyAff && playerPrefab.GetComponent<Player>().candyAff > playerPrefab.GetComponent<Player>().veggieAff && playerPrefab.GetComponent<Player>().candyAff > playerPrefab.GetComponent<Player>().seafoodAff)
         {
-            playerPrefab.GetComponent<Player>().type = "Type:Candy";
+            playerPrefab.GetComponent<Player>().type = "Type:Air";
             playerTypeHigh = playerPrefab.GetComponent<Player>().candyAff;
         }
         else if(playerPrefab.GetComponent<Player>().sourAff > playerPrefab.GetComponent<Player>().candyAff && playerPrefab.GetComponent<Player>().sourAff > playerPrefab.GetComponent<Player>().spicyAff && playerPrefab.GetComponent<Player>().sourAff > playerPrefab.GetComponent<Player>().veggieAff && playerPrefab.GetComponent<Player>().sourAff > playerPrefab.GetComponent<Player>().seafoodAff)
         {
-            playerPrefab.GetComponent<Player>().type = "Type:Sour";
+            playerPrefab.GetComponent<Player>().type = "Type:Electric";
             playerTypeHigh = playerPrefab.GetComponent<Player>().sourAff;
         }
         else if (playerPrefab.GetComponent<Player>().spicyAff > playerPrefab.GetComponent<Player>().candyAff && playerPrefab.GetComponent<Player>().spicyAff > playerPrefab.GetComponent<Player>().sourAff && playerPrefab.GetComponent<Player>().spicyAff > playerPrefab.GetComponent<Player>().veggieAff && playerPrefab.GetComponent<Player>().spicyAff > playerPrefab.GetComponent<Player>().seafoodAff)
         {
-            playerPrefab.GetComponent<Player>().type = "Type:Spicy";
+            playerPrefab.GetComponent<Player>().type = "Type:Fire";
             playerTypeHigh = playerPrefab.GetComponent<Player>().spicyAff;
         }
         else if (playerPrefab.GetComponent<Player>().veggieAff > playerPrefab.GetComponent<Player>().candyAff && playerPrefab.GetComponent<Player>().veggieAff > playerPrefab.GetComponent<Player>().sourAff && playerPrefab.GetComponent<Player>().veggieAff > playerPrefab.GetComponent<Player>().spicyAff && playerPrefab.GetComponent<Player>().veggieAff > playerPrefab.GetComponent<Player>().seafoodAff)
         {
-            playerPrefab.GetComponent<Player>().type = "Type:Veggie";
+            playerPrefab.GetComponent<Player>().type = "Type:Earth";
             playerTypeHigh = playerPrefab.GetComponent<Player>().veggieAff;
         }
         else if (playerPrefab.GetComponent<Player>().seafoodAff > playerPrefab.GetComponent<Player>().candyAff && playerPrefab.GetComponent<Player>().seafoodAff > playerPrefab.GetComponent<Player>().sourAff && playerPrefab.GetComponent<Player>().seafoodAff > playerPrefab.GetComponent<Player>().spicyAff && playerPrefab.GetComponent<Player>().seafoodAff > playerPrefab.GetComponent<Player>().veggieAff)
         {
-            playerPrefab.GetComponent<Player>().type = "Type:Seafood";
+            playerPrefab.GetComponent<Player>().type = "Type:Water";
             playerTypeHigh = playerPrefab.GetComponent<Player>().seafoodAff;
         }
         else
@@ -73,6 +74,48 @@ public class BattleSystem : MonoBehaviour
             playerTypeHigh = (playerPrefab.GetComponent<Player>().seafoodAff + playerPrefab.GetComponent<Player>().veggieAff + playerPrefab.GetComponent<Player>().spicyAff + playerPrefab.GetComponent<Player>().sourAff + playerPrefab.GetComponent<Player>().candyAff) / 5;
         }
         playerPrefab.GetComponent<Player>().health = 100 + playerTypeHigh;
+        playerPrefab.GetComponent<Player>().currentHP = playerPrefab.GetComponent<Player>().health;
+        #endregion
+        #region pulling from gm enemy
+        enemyPrefab.GetComponent<Player>().name = gameManager.GetComponent<GameManager>().enemySlimeName;
+        enemyPrefab.GetComponent<Player>().candyAff = (int)gameManager.GetComponent<GameManager>().enemyCandyAff;
+        enemyPrefab.GetComponent<Player>().sourAff = (int)gameManager.GetComponent<GameManager>().enemySourAff;
+        enemyPrefab.GetComponent<Player>().spicyAff = (int)gameManager.GetComponent<GameManager>().enemySpicyAff;
+        enemyPrefab.GetComponent<Player>().veggieAff = (int)gameManager.GetComponent<GameManager>().enemyVeggieAff;
+        enemyPrefab.GetComponent<Player>().seafoodAff = (int)gameManager.GetComponent<GameManager>().enemySeafoodAff;
+        enemyPrefab.GetComponent<Player>().VicGold = gameManager.GetComponent<Player>().VicGold;
+        if (enemyPrefab.GetComponent<Player>().candyAff > enemyPrefab.GetComponent<Player>().sourAff && enemyPrefab.GetComponent<Player>().candyAff > enemyPrefab.GetComponent<Player>().spicyAff && enemyPrefab.GetComponent<Player>().candyAff > enemyPrefab.GetComponent<Player>().veggieAff && enemyPrefab.GetComponent<Player>().candyAff > enemyPrefab.GetComponent<Player>().seafoodAff)
+        {
+            enemyPrefab.GetComponent<Player>().type = "Type:Air";
+            enemyTypeHigh = enemyPrefab.GetComponent<Player>().candyAff;
+        }
+        else if (enemyPrefab.GetComponent<Player>().sourAff > enemyPrefab.GetComponent<Player>().candyAff && enemyPrefab.GetComponent<Player>().sourAff > enemyPrefab.GetComponent<Player>().spicyAff && enemyPrefab.GetComponent<Player>().sourAff > enemyPrefab.GetComponent<Player>().veggieAff && enemyPrefab.GetComponent<Player>().sourAff > enemyPrefab.GetComponent<Player>().seafoodAff)
+        {
+            enemyPrefab.GetComponent<Player>().type = "Type:Electric";
+            enemyTypeHigh = enemyPrefab.GetComponent<Player>().sourAff;
+        }
+        else if (enemyPrefab.GetComponent<Player>().spicyAff > enemyPrefab.GetComponent<Player>().candyAff && enemyPrefab.GetComponent<Player>().spicyAff > enemyPrefab.GetComponent<Player>().sourAff && enemyPrefab.GetComponent<Player>().spicyAff > enemyPrefab.GetComponent<Player>().veggieAff && enemyPrefab.GetComponent<Player>().spicyAff > enemyPrefab.GetComponent<Player>().seafoodAff)
+        {
+            enemyPrefab.GetComponent<Player>().type = "Type:Fire";
+            enemyTypeHigh = enemyPrefab.GetComponent<Player>().spicyAff;
+        }
+        else if (enemyPrefab.GetComponent<Player>().veggieAff > enemyPrefab.GetComponent<Player>().candyAff && enemyPrefab.GetComponent<Player>().veggieAff > enemyPrefab.GetComponent<Player>().sourAff && enemyPrefab.GetComponent<Player>().veggieAff > enemyPrefab.GetComponent<Player>().spicyAff && enemyPrefab.GetComponent<Player>().veggieAff > enemyPrefab.GetComponent<Player>().seafoodAff)
+        {
+            enemyPrefab.GetComponent<Player>().type = "Type:Earth";
+            enemyTypeHigh = enemyPrefab.GetComponent<Player>().veggieAff;
+        }
+        else if (enemyPrefab.GetComponent<Player>().seafoodAff > enemyPrefab.GetComponent<Player>().candyAff && enemyPrefab.GetComponent<Player>().seafoodAff > enemyPrefab.GetComponent<Player>().sourAff && enemyPrefab.GetComponent<Player>().seafoodAff > enemyPrefab.GetComponent<Player>().spicyAff && enemyPrefab.GetComponent<Player>().seafoodAff > enemyPrefab.GetComponent<Player>().veggieAff)
+        {
+            enemyPrefab.GetComponent<Player>().type = "Type:Water";
+            enemyTypeHigh = enemyPrefab.GetComponent<Player>().seafoodAff;
+        }
+        else
+        {
+            enemyPrefab.GetComponent<Player>().type = "Type:Normal";
+            enemyTypeHigh = (enemyPrefab.GetComponent<Player>().seafoodAff + enemyPrefab.GetComponent<Player>().veggieAff + enemyPrefab.GetComponent<Player>().spicyAff + enemyPrefab.GetComponent<Player>().sourAff + enemyPrefab.GetComponent<Player>().candyAff) / 5;
+        }
+        enemyPrefab.GetComponent<Player>().health = 100 + playerTypeHigh;
+        enemyPrefab.GetComponent<Player>().currentHP = enemyPrefab.GetComponent<Player>().health;
         #endregion
         state = BattleState.Start;
        StartCoroutine(SetupBattle());
