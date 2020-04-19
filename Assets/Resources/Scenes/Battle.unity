@@ -544,6 +544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9626a23a40bc4c329d4e24e7277c890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   playerPrefab: {fileID: 4885325385075290372, guid: eb4141817e52a47ac8c6f4e5fae190f6,
     type: 3}
   enemyPrefab: {fileID: 8170967862402327119, guid: 574de21741fe04333b00fe9f146c9c75,
@@ -555,6 +556,9 @@ MonoBehaviour:
   enemyHUD: {fileID: 1516343396}
   dialogueText: {fileID: 1186855092}
   playerTypeHigh: 0
+  enemyTypeHigh: 0
+  enemHealthBarFill: {fileID: 670710548}
+  playHealthBarFill: {fileID: 1831484659}
   optionButtons: {fileID: 1049683113}
 --- !u!1 &265962774
 GameObject:
@@ -1481,7 +1485,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -5.42, y: -0.31}
+  m_AnchoredPosition: {x: -5.419998, y: -0.31000042}
   m_SizeDelta: {x: -10.82, y: 0.34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1055321252
@@ -1952,8 +1956,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -4.790001, y: 0.19999981}
-  m_SizeDelta: {x: -9.55, y: -0.34}
+  m_AnchoredPosition: {x: -5.1800003, y: -0.069999695}
+  m_SizeDelta: {x: -10.22, y: -0.56}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1657839449
 MonoBehaviour:

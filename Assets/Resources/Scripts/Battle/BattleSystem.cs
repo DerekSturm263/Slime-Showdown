@@ -29,10 +29,14 @@ public class BattleSystem : MonoBehaviour
     Player enemyUnit;
     SlimeMove sm;
 
+    public GameObject enemHealthBarFill;
+    public GameObject playHealthBarFill;
     public GameObject optionButtons;
     // Start is called before the first frame update
     void Start()
     {
+        playHealthBarFill.SetActive(true);
+        enemHealthBarFill.SetActive(true);
         #region pulling from gm player
         //note from afterwards, I should've assigned them all to variables for shorter calls during the check
         gameManager = GameObject.FindGameObjectWithTag("GameController");
@@ -153,6 +157,7 @@ public class BattleSystem : MonoBehaviour
        /* this stops stuff for 2 seconds for read time*/ yield return new WaitForSeconds(2f);
         if (isDead)
         {
+            enemHealthBarFill.SetActive(false);
             state = BattleState.Win;
             EndBattle();
             sm.enabled = true;
@@ -176,6 +181,7 @@ public class BattleSystem : MonoBehaviour
 
         if (isDead)
         {
+            playHealthBarFill.SetActive(false);
             state = BattleState.Lose;
             EndBattle();
             sm.enabled = true;
