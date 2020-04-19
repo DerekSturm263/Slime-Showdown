@@ -59,6 +59,7 @@ TagManager:
   - StatsButton
   - SpawnLocation
   - Enemy
+  - BattleCamera
   layers:
   - Default
   - TransparentFX

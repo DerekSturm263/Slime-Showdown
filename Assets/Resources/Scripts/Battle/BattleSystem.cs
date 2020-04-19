@@ -212,10 +212,15 @@ public class BattleSystem : MonoBehaviour
         {
             dialogueText.text = "You have won the battle! you earn " + (uint)enemyPrefab.GetComponent<Player>().VicGold + "Gold";
             gameManager.GetComponent<GameManager>().goldCount += (uint)enemyPrefab.GetComponent<Player>().VicGold;
+            Camera.main.GetComponent<CameraFollow>().enabled = true;
+            Camera.main.GetComponent<AudioListener>().enabled = true;
+
             SceneManager.LoadScene("Ranch");
         } else if (state == BattleState.Lose)
         {
             dialogueText.text = "You have lost...";
+            Camera.main.GetComponent<CameraFollow>().enabled = true;
+            Camera.main.GetComponent<AudioListener>().enabled = true;
             SceneManager.LoadScene("Ranch");
         }
     }
@@ -255,6 +260,8 @@ public class BattleSystem : MonoBehaviour
         {
             return;
         }
+        Camera.main.GetComponent<CameraFollow>().enabled = true;
+        Camera.main.GetComponent<AudioListener>().enabled = true;
         SceneManager.LoadScene("Ranch");
     }
 
