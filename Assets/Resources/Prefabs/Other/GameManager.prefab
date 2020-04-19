@@ -44,14 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 0.7.2
-  playerSlimeColor: 
-  playerSlimeName: 
-  playSeafoodAff: 0
-  playCandyAff: 0
-  playSpicyAff: 0
-  playVeggieAff: 0
-  playSourAff: 0
-  goldCount: 1000000
+  goldCount: 0
   inventory:
   - {fileID: 0}
   - {fileID: 0}
@@ -65,3 +58,26 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  lastPlayerPos: {x: -6.5, y: 2, z: 0}
+  playerSlimeColor: 
+  playerSlimeName: 
+  playerSlimeSize: 
+  playSeafoodAff: 0
+  playCandyAff: 0
+  playSpicyAff: 0
+  playVeggieAff: 0
+  playSourAff: 0
+  enemySlimeColor: 
+  enemySlimeName: 
+  enemySlimeType: 
+  enemyHealth: 0
+  enemyHunger: 0
+  enemyCurrentHP: 0
+  enemyDmg: 0
+  enemyVicGold: 0
+  enemySourAff: 0
+  enemySpicyAff: 0
+  enemySeafoodAff: 0
+  enemyCandyAff: 0
+  enemyVeggieAff: 0
+  enemySize: 0

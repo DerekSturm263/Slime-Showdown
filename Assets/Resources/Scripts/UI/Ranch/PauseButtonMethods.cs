@@ -105,6 +105,8 @@ public class PauseButtonMethods : MonoBehaviour
         Camera.main.GetComponent<CameraFollow>().enabled = false;
         Camera.main.GetComponent<MoveLerp>().enabled = true;
 
+        GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().lastPlayerPos = playerSlime.transform.position;
+
         Invoke("LoadTitle", 0.5f);
     }
 

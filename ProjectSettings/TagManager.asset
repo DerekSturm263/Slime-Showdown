@@ -57,6 +57,7 @@ TagManager:
   - TabSwitcherBackgroundStats
   - InventoryButton
   - StatsButton
+  - SpawnLocation
   layers:
   - Default
   - TransparentFX

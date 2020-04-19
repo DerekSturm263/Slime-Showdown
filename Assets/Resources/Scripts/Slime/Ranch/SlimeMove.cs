@@ -30,6 +30,7 @@ public class SlimeMove : MonoBehaviour
     private void Start()
     {
         gameManager = GameObject.FindGameObjectWithTag("GameController");
+        transform.position = gameManager.GetComponent<GameManager>().lastPlayerPos;
 
         animController = GetComponent<Animator>();
         rb2D = GetComponent<Rigidbody2D>();
