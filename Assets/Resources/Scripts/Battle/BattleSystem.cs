@@ -46,7 +46,7 @@ public class BattleSystem : MonoBehaviour
         playerPrefab.GetComponent<Player>().spicyAff = (int)gameManager.GetComponent<GameManager>().playSpicyAff;
         playerPrefab.GetComponent<Player>().veggieAff = (int)gameManager.GetComponent<GameManager>().playVeggieAff;
         playerPrefab.GetComponent<Player>().seafoodAff = (int)gameManager.GetComponent<GameManager>().playSeafoodAff;
-        playerPrefab.GetComponent<Player>().VicGold = gameManager.GetComponent<Player>().VicGold;
+        playerPrefab.GetComponent<Player>().VicGold = gameManager.GetComponent<GameManager>().enemyVicGold;
        if( playerPrefab.GetComponent<Player>().candyAff> playerPrefab.GetComponent<Player>().sourAff && playerPrefab.GetComponent<Player>().candyAff > playerPrefab.GetComponent<Player>().spicyAff && playerPrefab.GetComponent<Player>().candyAff > playerPrefab.GetComponent<Player>().veggieAff && playerPrefab.GetComponent<Player>().candyAff > playerPrefab.GetComponent<Player>().seafoodAff)
         {
             playerPrefab.GetComponent<Player>().type = "Type:Air";
@@ -87,7 +87,7 @@ public class BattleSystem : MonoBehaviour
         enemyPrefab.GetComponent<Player>().spicyAff = (int)gameManager.GetComponent<GameManager>().enemySpicyAff;
         enemyPrefab.GetComponent<Player>().veggieAff = (int)gameManager.GetComponent<GameManager>().enemyVeggieAff;
         enemyPrefab.GetComponent<Player>().seafoodAff = (int)gameManager.GetComponent<GameManager>().enemySeafoodAff;
-        enemyPrefab.GetComponent<Player>().VicGold = gameManager.GetComponent<Player>().VicGold;
+        enemyPrefab.GetComponent<Player>().VicGold = gameManager.GetComponent<GameManager>().enemyVicGold;
         if (enemyPrefab.GetComponent<Player>().candyAff > enemyPrefab.GetComponent<Player>().sourAff && enemyPrefab.GetComponent<Player>().candyAff > enemyPrefab.GetComponent<Player>().spicyAff && enemyPrefab.GetComponent<Player>().candyAff > enemyPrefab.GetComponent<Player>().veggieAff && enemyPrefab.GetComponent<Player>().candyAff > enemyPrefab.GetComponent<Player>().seafoodAff)
         {
             enemyPrefab.GetComponent<Player>().type = "Type:Air";
