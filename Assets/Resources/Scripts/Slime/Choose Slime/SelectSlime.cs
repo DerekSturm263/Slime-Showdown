@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class SelectSlime : MonoBehaviour
 {
@@ -111,12 +112,26 @@ public class SelectSlime : MonoBehaviour
     private void FocusOnSlime()
     {
         Camera.main.GetComponent<FocusOnSlime>().cameraTarget = highlightedSlime;
-        slimeConfirmationButtonLayout.GetComponent<CanvasGroup>().interactable = true;
-        Invoke("SelectYeahButton", 0.5f);
+        
+        if (SceneManager.GetActiveScene().name.Equals("ChooseSlime"))
+        {
+            slimeConfirmationButtonLayout.GetComponent<CanvasGroup>().interactable = true;
+            Invoke("SelectYeahButton", 0.5f);
 
-        pickSlimeText.GetComponent<Animation>().Play("ui_chooseSlime_pickSlimeText_fadeOut");
-        slimeConfirmationText.GetComponent<Animation>().Play("ui_chooseSlime_slimeConfirmationText_fadeIn");
-        slimeConfirmationButtonLayout.GetComponent<Animation>().Play("ui_chooseSlime_slimeConfirmationButtonLayout_floatIn");
+            pickSlimeText.GetComponent<Animation>().Play("ui_chooseSlime_pickSlimeText_fadeOut");
+            slimeConfirmationText.GetComponent<Animation>().Play("ui_chooseSlime_slimeConfirmationText_fadeIn");
+            slimeConfirmationButtonLayout.GetComponent<Animation>().Play("ui_chooseSlime_slimeConfirmationButtonLayout_floatIn");
+        }
+        else
+        {
+            foreach (GameObject g in GameObject.FindGameObjectsWithTag(highlightedSlime.name))
+            {
+                if ((int) g.GetComponent<CreditsUIElement>().thisUI == 0)
+                    g.GetComponent<CreditsUIElement>().FadeOut();
+                else
+                    g.GetComponent<CreditsUIElement>().FadeIn();
+            }
+        }
     }
 
     private void SelectYeahButton()
