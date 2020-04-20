@@ -152,6 +152,8 @@ public class ShopManager : MonoBehaviour
                 CloseShop();
 
             #endregion
+
+            Debug.Log(shopSnacksContent.transform.position.y);
         }
     }
 
@@ -165,6 +167,7 @@ public class ShopManager : MonoBehaviour
 
             shopScrollBar.value = 1f;
             selectedItem = meals[0];
+            shopMealsContent.transform.position = new Vector2(shopMealsContent.transform.position.x, 0f);
 
             shopMealsContent.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeIn");
             shopSnacksContent.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeOut");
@@ -184,6 +187,7 @@ public class ShopManager : MonoBehaviour
 
             shopScrollBar.value = 1f;
             selectedItem = snacks[0];
+            shopSnacksContent.transform.position = new Vector2(shopSnacksContent.transform.position.x, -915.3f);
 
             shopMealsContent.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeOut");
             shopSnacksContent.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeIn");

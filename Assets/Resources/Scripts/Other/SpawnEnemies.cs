@@ -11,7 +11,7 @@ public class SpawnEnemies : MonoBehaviour
 
     private enum Name
     {
-        Bluey, Jerald, Happy
+        Bluey, Jerald, Happy, Gareth, Acorn
     }
 
     public GameObject enemy;
@@ -126,7 +126,7 @@ public class SpawnEnemies : MonoBehaviour
 
     private string RandomName()
     {
-        int nameCount = 2;
+        int nameCount = 4;
         int randomName = Random.Range(0, nameCount);
 
         return ((Name) randomName).ToString();
