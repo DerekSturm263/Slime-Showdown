@@ -50,6 +50,6 @@ public class GameManager : MonoBehaviour
     public float enemySize;
 
     [Header("Player Moves")]
-    public MoveClass[] PlayerMoves = new MoveClass[3];
-    public List<MoveClass> PossibleMoves = new List<MoveClass>();
+    [SerializeField] public MoveClass[] PlayerMoves = new MoveClass[3];
+    [SerializeField] public List<MoveClass> PossibleMoves = new List<MoveClass>();
 }
