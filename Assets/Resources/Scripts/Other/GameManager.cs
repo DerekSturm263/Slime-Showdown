@@ -49,9 +49,7 @@ public class GameManager : MonoBehaviour
     public int enemyVeggieAff;
     public float enemySize;
 
-
     [Header("Player Moves")]
-    public MoveClass[] PlayerMoves= new MoveClass[3];
-    public List<MoveClass> PossibleMoves =  new List<MoveClass>();
-    
+    public MoveClass[] PlayerMoves = new MoveClass[3];
+    public List<MoveClass> PossibleMoves = new List<MoveClass>();
 }

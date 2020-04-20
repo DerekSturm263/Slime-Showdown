@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveClass : MonoBehaviour
+public class MoveClass
 {
     //basics for moves
     public string Name { get; set; }
