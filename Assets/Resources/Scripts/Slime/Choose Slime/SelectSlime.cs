@@ -14,6 +14,7 @@ public class SelectSlime : MonoBehaviour
     // This is the slime that the player has selected.
     [HideInInspector]
     public GameObject highlightedSlime;
+    public int firstSlime;
 
     // For use with mouse selection.
     private Ray mouseRay;
@@ -36,7 +37,7 @@ public class SelectSlime : MonoBehaviour
 
         // Generates a list of every slime type and selects the pink slime by default.
         slimeTypes = GameObject.FindGameObjectsWithTag("ChooseSlimeSlime");
-        highlightedSlime = slimeTypes[8];
+        highlightedSlime = slimeTypes[firstSlime];
 
         pickSlimeText = GameObject.FindGameObjectWithTag("ChooseSlimePickSlimeText");
         slimeConfirmationText = GameObject.FindGameObjectWithTag("ChooseSlimeSlimeConfirmationText");

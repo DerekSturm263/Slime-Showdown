@@ -387,6 +387,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slimeTypes: []
   highlightedSlime: {fileID: 0}
+  firstSlime: 8
 --- !u!1 &481146210
 GameObject:
   m_ObjectHideFlags: 0
