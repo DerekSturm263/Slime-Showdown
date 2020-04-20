@@ -17,5 +17,8 @@ public class SetupGame : MonoBehaviour
             DontDestroyOnLoad(newMainCamera);
             DontDestroyOnLoad(newGameManager);
         }
+        MoveClass punch = new MoveClass("Punch", "Normal", "NONE", "None", 1);
+        gameManager.GetComponent<GameManager>().PossibleMoves.Add(punch);
+        gameManager.GetComponent<GameManager>().PlayerMoves[0] = gameManager.GetComponent<GameManager>().PossibleMoves[0];
     }
 }

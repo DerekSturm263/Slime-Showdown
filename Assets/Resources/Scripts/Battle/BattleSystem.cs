@@ -32,6 +32,7 @@ public class BattleSystem : MonoBehaviour
     public GameObject enemHealthBarFill;
     public GameObject playHealthBarFill;
     public GameObject optionButtons;
+    public GameObject moveSelect;
     // Start is called before the first frame update
     void Start()
     {
@@ -127,6 +128,7 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator SetupBattle()
     {
+        moveSelect.SetActive(false);
         optionButtons.SetActive(false);
         GameObject playerGO = Instantiate(playerPrefab, playSpawn);
         playerUnit = playerGO.GetComponent<Player>();
@@ -239,9 +241,27 @@ public class BattleSystem : MonoBehaviour
             return;
         }
         optionButtons.SetActive(false);
-        dialogueText.enabled = true;
-        StartCoroutine(PlayerAttack());
+        moveSelect.SetActive(true);
         
+        
+    }
+    public void OnMoveOne()
+    {
+
+    }
+    public void OnMoveTwo()
+    {
+
+    }
+    public void OnMoveThree()
+    {
+
+    }
+    public void OnReturnButton()
+    {
+        //this method will be reused for the snack select
+        moveSelect.SetActive(false);
+        optionButtons.SetActive(false);
     }
     public void OnSnackButton()
     {
