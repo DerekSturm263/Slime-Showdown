@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -859,7 +859,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bd5c4c3d4cfbd75418382c05118e3502, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2d7e0fd86cd6d8c4ba228b23aebebe93, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
