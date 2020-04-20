@@ -81,5 +81,37 @@ MonoBehaviour:
   enemyCandyAff: 0
   enemyVeggieAff: 0
   enemySize: 0
-  PossibleMoves: []
-  PlayerMoves: []
+  MoveRoll: {fileID: 3816923909784041561, guid: e18cebbd895e94c86872ca71e0a344c0,
+    type: 3}
+  MovePepperSpray: {fileID: 8044989558668116434, guid: 5d840a2e98717419381328b769763552,
+    type: 3}
+  MoveFlameShot: {fileID: 6729850472680597699, guid: 72175119ccea6456b9198452c13e337f,
+    type: 3}
+  MoveFireBall: {fileID: 629085416808872819, guid: 547481ce70a9e44708dab9ca0e8be5bd,
+    type: 3}
+  MoveSplash: {fileID: 8819190291636303413, guid: 256c49d4f5c48473a93323b5edf73eff,
+    type: 3}
+  MoveWaterBall: {fileID: 3114058522299408681, guid: 47667f4b4c00f44a5aabdfaa8058266a,
+    type: 3}
+  MoveWaterHose: {fileID: 2990787995505585995, guid: 429ea46e2f1aa41199c157fac09c4adc,
+    type: 3}
+  MoveBlow: {fileID: 234129673610137185, guid: 8b92355ebe38b47f58edbf8c3b18c666, type: 3}
+  MoveAirCutter: {fileID: 4096222141619185292, guid: dd9be003668a642feb636e7d5fa4449a,
+    type: 3}
+  MoveWindBlade: {fileID: 8753280392983293658, guid: 6aefdc80790db429da9c317163a4487a,
+    type: 3}
+  MovePebbleSpit: {fileID: 4170553297627380640, guid: 8f4173ec310654cd58f0198106e4cece,
+    type: 3}
+  MoveRockToss: {fileID: 1869159303339953820, guid: 177f939632be94b669613efbfd8e672c,
+    type: 3}
+  MoveSeismicSmash: {fileID: 9023854939471652292, guid: 9b3989e6c0b0d482f965d0b86b618b25,
+    type: 3}
+  MoveZap: {fileID: 9077333201343680527, guid: 7d49966b017224e3697b4939e21923da, type: 3}
+  MoveShock: {fileID: 3652119181589188374, guid: af45c0625ae3741dd965c4cbc9208fc6,
+    type: 3}
+  MoveThunderShock: {fileID: 5798758174444967727, guid: 08f83e8e04aa344c68d5ba548d30bc66,
+    type: 3}
+  PlayerMoves:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
