@@ -50,6 +50,9 @@ public class GameManager : MonoBehaviour
     public float enemySize;
 
     [Header("Player Moves")]
-    [SerializeField] public MoveClass[] PlayerMoves = new MoveClass[3];
+    // Possible moves the slime can learn.
     [SerializeField] public List<MoveClass> PossibleMoves = new List<MoveClass>();
+
+    // Current moves the slime knows.
+    [SerializeField] public MoveClass[] PlayerMoves = new MoveClass[3];
 }

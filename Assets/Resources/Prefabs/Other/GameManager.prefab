@@ -81,24 +81,5 @@ MonoBehaviour:
   enemyCandyAff: 0
   enemyVeggieAff: 0
   enemySize: 0
-  PlayerMoves:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  PossibleMoves:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  PossibleMoves: []
+  PlayerMoves: []
