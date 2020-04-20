@@ -49,10 +49,28 @@ public class GameManager : MonoBehaviour
     public int enemyVeggieAff;
     public float enemySize;
 
-    [Header("Player Moves")]
+    [Header("MoveList")]
     // Possible moves the slime can learn.
-    [SerializeField] public List<MoveClass> PossibleMoves = new List<MoveClass>();
-
+    //public List<MoveClass> PossibleMoves = new List<MoveClass>(16);
+    public MoveClass MoveRoll;
+    public MoveClass MovePepperSpray;
+    public MoveClass MoveFlameShot;
+    public MoveClass MoveFireBall;
+    public MoveClass MoveSplash;
+    public MoveClass MoveWaterBall;
+    public MoveClass MoveWaterHose;
+    public MoveClass MoveBlow;
+    public MoveClass MoveAirCutter;
+    public MoveClass MoveWindBlade;
+    public MoveClass MovePebbleSpit;
+    public MoveClass MoveRockToss;
+    public MoveClass MoveSeismicSmash;
+    public MoveClass MoveZap;
+    public MoveClass MoveShock;
+    public MoveClass MoveThunderShock;
+    [Header("Player Moves")]
     // Current moves the slime knows.
-    [SerializeField] public MoveClass[] PlayerMoves = new MoveClass[3];
+    //for now using lists till we figure out how to get arrays to work
+    public List<MoveClass> PlayerMoves = new List<MoveClass>(3);
+
 }
