@@ -45,8 +45,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 0.8.0
   isFullscreen: 0
-  musicVolume: 1
-  soundVolume: 1
+  musicVolume: 0.5
+  soundVolume: 0.5
   playerSlimeColor: 
   playerSlimeName: 
   playerSlimeSize: 

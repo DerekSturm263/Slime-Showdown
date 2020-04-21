@@ -6,6 +6,7 @@ public class MusicPlayer : MonoBehaviour
 {
     public static AudioSource audioSource;
     public static List<AudioClip> trackList = new List<AudioClip>();
+    public static float volume;
 
     // Used to set up the music player.
     public static void Initialize()
@@ -18,10 +19,23 @@ public class MusicPlayer : MonoBehaviour
         }
 
         audioSource = new GameObject("Music Player").AddComponent<AudioSource>();
-
+        audioSource.loop = true;
     }
 
     #region PlayTrack Methods
+
+    // Plays the current AudioClip.
+    public static void Play()
+    {
+        try
+        {
+            audioSource.Play();
+        }
+        catch
+        {
+            Debug.LogError("The Music Player is not playing any AudioClips.\nPerhaps you intended to use another Play method?");
+        }
+    }
 
     // Plays an AudioClip based on an AudioClip.
     public static void Play(AudioClip c)
@@ -119,5 +133,38 @@ public class MusicPlayer : MonoBehaviour
     public static bool isPlaying()
     {
         return audioSource.isPlaying;
+    }
+
+    // Changes the volume of the MusicPlayer.
+    public static void ChangeVolume(float f)
+    {
+        volume = f;
+        audioSource.volume = volume;
+    }
+
+    public static void Mute()
+    {
+        volume = 0f;
+        audioSource.volume = volume;
+    }
+
+    // Stops the music playback and removes the current AudioClip.
+    public static void Pause()
+    {
+        audioSource.Stop();
+    }
+
+    // Stops the music playback and removes the current AudioClip.
+    public static void Stop()
+    {
+        audioSource.Stop();
+        audioSource.clip = null;
+    }
+
+    // Restarts the current track.
+    public static void Restart()
+    {
+        audioSource.Stop();
+        audioSource.Play();
     }
 }

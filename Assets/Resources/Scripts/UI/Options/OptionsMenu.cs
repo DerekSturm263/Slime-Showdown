@@ -29,16 +29,20 @@ public class OptionsMenu : MonoBehaviour
         soundSlider = GameObject.FindGameObjectWithTag("SoundSlider").GetComponent<Slider>();
 
         ListenForEvents(fullscreenToggle.onValueChanged, false);
-        fullscreenToggle.isOn = gameManager.isFullscreen;
-        ListenForEvents(fullscreenToggle.onValueChanged, true);
+        ListenForEvents(musicSlider.onValueChanged, false);
+        ListenForEvents(soundSlider.onValueChanged, false);
 
+        fullscreenToggle.isOn = gameManager.isFullscreen;
         musicSlider.value = gameManager.musicVolume;
         soundSlider.value = gameManager.soundVolume;
+
+        ListenForEvents(fullscreenToggle.onValueChanged, true);
+        ListenForEvents(musicSlider.onValueChanged, true);
+        ListenForEvents(soundSlider.onValueChanged, true);
     }
 
     private void Update()
     {
-        gameManager.musicVolume = musicSlider.value;
         gameManager.soundVolume = soundSlider.value;
     }
 
@@ -47,6 +51,13 @@ public class OptionsMenu : MonoBehaviour
     {
         gameManager.isFullscreen = !gameManager.isFullscreen;
         Screen.fullScreen = gameManager.isFullscreen;
+    }
+
+    // Called by the music slider on value change.
+    public void ChangeMusicVolume()
+    {
+        gameManager.musicVolume = musicSlider.value;
+        MusicPlayer.ChangeVolume(musicSlider.value);
     }
 
     // Called by the control remapping button.

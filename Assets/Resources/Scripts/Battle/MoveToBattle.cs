@@ -19,6 +19,8 @@ public class MoveToBattle : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("RanchBattleSlime"))
         {
+            MusicPlayer.Play("music_battleTheme");
+
             gameManager.enemySlimeColor = stats.color;
             gameManager.enemySlimeName = stats.name;
             gameManager.enemySlimeType = stats.type;

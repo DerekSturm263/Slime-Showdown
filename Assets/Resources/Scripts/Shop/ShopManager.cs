@@ -60,6 +60,8 @@ public class ShopManager : MonoBehaviour
 
     private void Start()
     {
+        MusicPlayer.Play("music_mainTheme");
+
         gameManager = GameObject.FindGameObjectWithTag("GameController");
         inventoryManager = EventSystem.current.GetComponent<InventoryManager>();
 
@@ -311,6 +313,7 @@ public class ShopManager : MonoBehaviour
     {
         SwitchToMealsTab();
         isShopOpen = true;
+        MusicPlayer.Play("music_shopTheme");
 
         shopCanvas.GetComponent<CanvasGroup>().interactable = true;
         shopCanvas.GetComponent<CanvasGroup>().blocksRaycasts = true;
@@ -340,6 +343,7 @@ public class ShopManager : MonoBehaviour
     {
         isShopOpen = false;
         shopScrollBar.value = 1f;
+        MusicPlayer.Play("music_mainTheme");
 
         shopCanvas.GetComponent<CanvasGroup>().interactable = false;
         shopCanvas.GetComponent<CanvasGroup>().blocksRaycasts = false;
