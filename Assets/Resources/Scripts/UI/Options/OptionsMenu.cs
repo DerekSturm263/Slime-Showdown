@@ -28,7 +28,10 @@ public class OptionsMenu : MonoBehaviour
         musicSlider = GameObject.FindGameObjectWithTag("MusicSlider").GetComponent<Slider>();
         soundSlider = GameObject.FindGameObjectWithTag("SoundSlider").GetComponent<Slider>();
 
+        ListenForEvents(fullscreenToggle.onValueChanged, false);
         fullscreenToggle.isOn = gameManager.isFullscreen;
+        ListenForEvents(fullscreenToggle.onValueChanged, true);
+
         musicSlider.value = gameManager.musicVolume;
         soundSlider.value = gameManager.soundVolume;
     }
@@ -39,17 +42,20 @@ public class OptionsMenu : MonoBehaviour
         gameManager.soundVolume = soundSlider.value;
     }
 
+    // Called by the toggle button on value change.
     public void ToggleFullscreen()
     {
-        Screen.fullScreen = !Screen.fullScreen;
-        gameManager.isFullscreen = Screen.fullScreen;
+        gameManager.isFullscreen = !gameManager.isFullscreen;
+        Screen.fullScreen = gameManager.isFullscreen;
     }
 
+    // Called by the control remapping button.
     public void GoToButtonRemap()
     {
 
     }
 
+    // Called by the back button if you came from the title screen.
     public void BackToTitle()
     {
         backButton.GetComponent<Animation>().Play("ui_ranch_shopBackButton_floatOut");
@@ -59,6 +65,7 @@ public class OptionsMenu : MonoBehaviour
         Invoke("LoadTitle", 0.5f);
     }
 
+    // Called by the back button if you came from the ranch scene.
     public void CloseSettingsInRanch()
     {
 
@@ -67,5 +74,15 @@ public class OptionsMenu : MonoBehaviour
     private void LoadTitle()
     {
         SceneManager.LoadScene("Title");
+    }
+
+    // Used to "mute" or "unmute" an eventListener for a UI element.
+    public void ListenForEvents(UnityEngine.Events.UnityEventBase ev, bool isMute)
+    {
+        for (int i = 0; i < ev.GetPersistentEventCount(); i++)
+        {
+            if (!isMute)    ev.SetPersistentListenerState(i, UnityEngine.Events.UnityEventCallState.Off);
+            else           ev.SetPersistentListenerState(i, UnityEngine.Events.UnityEventCallState.RuntimeOnly);
+        }
     }
 }
