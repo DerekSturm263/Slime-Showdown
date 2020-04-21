@@ -54,7 +54,7 @@ public class EnemySlimeMove : MonoBehaviour
         else
             moveAmount = new Vector3(playerSlime.transform.position.x - transform.position.x, playerSlime.transform.position.y - transform.position.y, 0).normalized * 1.75f;
 
-        rb2D.velocity = moveAmount;
+        rb2D.velocity = moveAmount * moveSpeed;
 
         #endregion
 
