@@ -115,6 +115,6 @@ MonoBehaviour:
   MoveThunderShock: {fileID: 5798758174444967727, guid: 08f83e8e04aa344c68d5ba548d30bc66,
     type: 3}
   PlayerMoves:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 3816923909784041561, guid: e18cebbd895e94c86872ca71e0a344c0, type: 3}
+  - {fileID: 3816923909784041561, guid: e18cebbd895e94c86872ca71e0a344c0, type: 3}
+  - {fileID: 3816923909784041561, guid: e18cebbd895e94c86872ca71e0a344c0, type: 3}

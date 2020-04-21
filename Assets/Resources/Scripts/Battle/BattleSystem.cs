@@ -186,8 +186,16 @@ public class BattleSystem : MonoBehaviour
             //damage enemy and check if dead
             isDead = enemyUnit.TakeDamage(attack.MoveUse(attack, playerUnit.GetComponent<Player>().spicyAff, enemyTypeHigh, enemyAffType));
             //updates enemy stats
-            enemyHUD.SetHealth(enemyUnit.currentHP);
-            dialogueText.text = "The attack hit!";
+            if (isDead)
+            {
+                enemHealthBarFill.SetActive(false);
+
+            }
+            else
+            {
+                enemyHUD.SetHealth(enemyUnit.currentHP);
+            }
+            dialogueText.text = "The " + attack.Name + " hit!";
             //playerUnit.GetComponent<Player>().spicyAff;
         }
         else if (attack.AffType == "Water")
@@ -195,8 +203,16 @@ public class BattleSystem : MonoBehaviour
             //damage enemy and check if dead
             isDead = enemyUnit.TakeDamage(attack.MoveUse(attack, playerUnit.GetComponent<Player>().seafoodAff, enemyTypeHigh, enemyAffType));
             //updates enemy stats
-            enemyHUD.SetHealth(enemyUnit.currentHP);
-            dialogueText.text = "The attack hit!";
+            if (isDead)
+            {
+                enemHealthBarFill.SetActive(false);
+
+            }
+            else
+            {
+                enemyHUD.SetHealth(enemyUnit.currentHP);
+            }
+            dialogueText.text = "The " + attack.Name +  " hit!";
             // playerUnit.GetComponent<Player>().seafoodAff;
         }
         else if (attack.AffType == "Earth")
@@ -204,8 +220,16 @@ public class BattleSystem : MonoBehaviour
             //damage enemy and check if dead
             isDead = enemyUnit.TakeDamage(attack.MoveUse(attack, playerUnit.GetComponent<Player>().veggieAff, enemyTypeHigh, enemyAffType));
             //updates enemy stats
-            enemyHUD.SetHealth(enemyUnit.currentHP);
-            dialogueText.text = "The attack hit!";
+            if (isDead)
+            {
+                enemHealthBarFill.SetActive(false);
+
+            }
+            else
+            {
+                enemyHUD.SetHealth(enemyUnit.currentHP);
+            }
+            dialogueText.text = "The " + attack.Name + " hit!";
             //playerUnit.GetComponent<Player>().veggieAff;
         }
         else if (attack.AffType == "Air")
@@ -213,8 +237,16 @@ public class BattleSystem : MonoBehaviour
             //damage enemy and check if dead
             isDead = enemyUnit.TakeDamage(attack.MoveUse(attack, playerUnit.GetComponent<Player>().candyAff, enemyTypeHigh, enemyAffType));
             //updates enemy stats
-            enemyHUD.SetHealth(enemyUnit.currentHP);
-            dialogueText.text = "The attack hit!";
+            if (isDead)
+            {
+                enemHealthBarFill.SetActive(false);
+
+            }
+            else
+            {
+                enemyHUD.SetHealth(enemyUnit.currentHP);
+            }
+            dialogueText.text = "The " + attack.Name + " hit!";
             // playerUnit.GetComponent<Player>().candyAff;
         }
         else if (attack.AffType == "Electric")
@@ -222,17 +254,33 @@ public class BattleSystem : MonoBehaviour
             //damage enemy and check if dead
             isDead = enemyUnit.TakeDamage(attack.MoveUse(attack, playerUnit.GetComponent<Player>().sourAff, enemyTypeHigh, enemyAffType));
             //updates enemy stats
-            enemyHUD.SetHealth(enemyUnit.currentHP);
-            dialogueText.text = "The attack hit!";
+            if (isDead)
+            {
+                enemHealthBarFill.SetActive(false);
+
+            }
+            else
+            {
+                enemyHUD.SetHealth(enemyUnit.currentHP);
+            }
+            dialogueText.text = "The " + attack.Name + " hit!";
             // playerUnit.GetComponent<Player>().sourAff;
         }
         else if(attack.AffType == "Normal")
         {
             //damage enemy and check if dead
             isDead = enemyUnit.TakeDamage(attack.MoveUse(attack , playerTypeHigh, enemyTypeHigh, enemyAffType));
+            if (isDead)
+            {
+                enemHealthBarFill.SetActive(false);
+
+            }
             //updates enemy stats
-            enemyHUD.SetHealth(enemyUnit.currentHP);
-            dialogueText.text = "The attack hit!";
+            else
+            {
+                enemyHUD.SetHealth(enemyUnit.currentHP);
+            }
+            dialogueText.text = "The " + attack.Name + " hit!";
         }
         else
         {
@@ -241,7 +289,7 @@ public class BattleSystem : MonoBehaviour
        /* this stops stuff for 2 seconds for read time*/ yield return new WaitForSeconds(2f);
         if (isDead)
         {
-            enemHealthBarFill.SetActive(false);
+           
             state = BattleState.Win;
             EndBattle();
             sm.enabled = true;
