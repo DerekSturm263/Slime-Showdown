@@ -142,11 +142,14 @@ public class MusicPlayer : MonoBehaviour
         audioSource.volume = volume;
     }
 
+    // Mutes the audio playback.
     public static void Mute()
     {
         volume = 0f;
         audioSource.volume = volume;
     }
+
+    #region Playback Controls
 
     // Stops the music playback and removes the current AudioClip.
     public static void Pause()
@@ -167,4 +170,34 @@ public class MusicPlayer : MonoBehaviour
         audioSource.Stop();
         audioSource.Play();
     }
+
+    // Goes to the next track.
+    public static void Next()
+    {
+        try
+        {
+            audioSource.clip = trackList[trackList.IndexOf(audioSource.clip) + 1];
+            audioSource.Play();
+        }
+        catch
+        {
+            Debug.LogError("There is no track after " + audioSource.clip.name + " in the Track List.");
+        }
+    }
+
+    // Goes to the previous track.
+    public static void Previous()
+    {
+        try
+        {
+            audioSource.clip = trackList[trackList.IndexOf(audioSource.clip) - 1];
+            audioSource.Play();
+        }
+        catch
+        {
+            Debug.LogError("There is no track before " + audioSource.clip.name + " in the Track List.");
+        }
+    }
+
+    #endregion
 }
