@@ -16,15 +16,21 @@ public class GameManager : MonoBehaviour
         Water, Air, Fire, Earth, Electric
     }
 
-    [Header("Ranch Stuff")]
-    public uint goldCount;
-    public GameObject[] inventory = new GameObject[27];
-    public Vector3 lastPlayerPos = new Vector3(-6.5f, 2, 0);
+    [Header("Options")]
+    public bool isFullscreen = false;
+    public float musicVolume = 1f;
+    public float soundVolume = 1f;
 
-    [Header("Player Slime Stuff")]
+    [Header("Player Info")]
     public string playerSlimeColor;
     public string playerSlimeName;
     public string playerSlimeSize;
+
+    [Space(10)]
+
+    public uint goldCount;
+    public GameObject[] inventory = new GameObject[27];
+    public Vector3 lastPlayerPos = new Vector3(-6.5f, 2, 0);
 
     [Header("Player Affinities")]
     public float playSeafoodAff;
@@ -72,5 +78,4 @@ public class GameManager : MonoBehaviour
     // Current moves the slime knows.
     //for now using lists till we figure out how to get arrays to work
     public List<MoveClass> PlayerMoves = new List<MoveClass>(3);
-
 }

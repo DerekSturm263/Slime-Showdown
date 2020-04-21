@@ -65,6 +65,10 @@ TagManager:
   - Joe
   - Kai
   - Rowan
+  - FullscreenToggle
+  - MusicSlider
+  - SoundSlider
+  - Options
   layers:
   - Default
   - TransparentFX

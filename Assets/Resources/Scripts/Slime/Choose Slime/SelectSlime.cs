@@ -61,6 +61,9 @@ public class SelectSlime : MonoBehaviour
                 if (mouseRayHit.collider.gameObject.tag.Equals("ChooseSlimeSlime"))
                 {
                     highlightedSlime = mouseRayHit.collider.gameObject;
+
+                    if (Input.GetButtonDown("Fire1"))
+                        FocusOnSlime();
                 }
             }
 
@@ -104,7 +107,7 @@ public class SelectSlime : MonoBehaviour
 
             #endregion
 
-            if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("Submit"))
+            if (Input.GetButtonDown("Submit"))
                 FocusOnSlime();
         }
     }

@@ -43,7 +43,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6750dc75f6d6a74f9ae307c0edb753f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  version: 0.7.2
+  version: 0.8.0
+  isFullscreen: 0
+  musicVolume: 1
+  soundVolume: 1
+  playerSlimeColor: 
+  playerSlimeName: 
+  playerSlimeSize: 
   goldCount: 0
   inventory:
   - {fileID: 0}
@@ -59,9 +65,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   lastPlayerPos: {x: -6.5, y: 2, z: 0}
-  playerSlimeColor: 
-  playerSlimeName: 
-  playerSlimeSize: 
   playSeafoodAff: 0
   playCandyAff: 0
   playSpicyAff: 0
