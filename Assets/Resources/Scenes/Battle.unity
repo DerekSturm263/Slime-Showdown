@@ -557,7 +557,12 @@ MonoBehaviour:
   enemyHUD: {fileID: 1516343396}
   dialogueText: {fileID: 1186855092}
   playerTypeHigh: 0
+  playerAffTypeString: 
   enemyTypeHigh: 0
+  enemyAffType: 
+  enemyResType: 
+  enemyCritType: 
+  enemyPowerLevel: 1
   enemHealthBarFill: {fileID: 670710548}
   playHealthBarFill: {fileID: 1831484659}
   optionButtons: {fileID: 1049683113}
@@ -1593,7 +1598,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 979117134}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 260734764}
+        m_MethodName: OnMoveThree
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &979117134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2594,7 +2610,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1487046612}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 260734764}
+        m_MethodName: OnMoveOne
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1487046612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2848,7 +2875,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1725379443}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 260734764}
+        m_MethodName: OnMoveTwo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1725379443
 MonoBehaviour:
   m_ObjectHideFlags: 0

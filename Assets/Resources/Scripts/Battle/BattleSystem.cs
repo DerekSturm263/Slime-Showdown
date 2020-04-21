@@ -23,16 +23,22 @@ public class BattleSystem : MonoBehaviour
 
     public Text dialogueText;
     public int playerTypeHigh;
+    public string playerAffTypeString; //for enemy damage
     public int enemyTypeHigh;
+    public string enemyAffType;
+    public string enemyResType;
+    public string enemyCritType;
+    public int enemyPowerLevel = 1;//this will be how we make the enemy stronger overtime
 
     Player playerUnit;
     Player enemyUnit;
     SlimeMove sm;
-
+    bool isDead;
     public GameObject enemHealthBarFill;
     public GameObject playHealthBarFill;
     public GameObject optionButtons;
     public GameObject moveSelect;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -51,26 +57,31 @@ public class BattleSystem : MonoBehaviour
        if( playerPrefab.GetComponent<Player>().candyAff> playerPrefab.GetComponent<Player>().sourAff && playerPrefab.GetComponent<Player>().candyAff > playerPrefab.GetComponent<Player>().spicyAff && playerPrefab.GetComponent<Player>().candyAff > playerPrefab.GetComponent<Player>().veggieAff && playerPrefab.GetComponent<Player>().candyAff > playerPrefab.GetComponent<Player>().seafoodAff)
         {
             playerPrefab.GetComponent<Player>().type = "Type:Air";
+            playerAffTypeString = "Air";
             playerTypeHigh = playerPrefab.GetComponent<Player>().candyAff;
         }
         else if(playerPrefab.GetComponent<Player>().sourAff > playerPrefab.GetComponent<Player>().candyAff && playerPrefab.GetComponent<Player>().sourAff > playerPrefab.GetComponent<Player>().spicyAff && playerPrefab.GetComponent<Player>().sourAff > playerPrefab.GetComponent<Player>().veggieAff && playerPrefab.GetComponent<Player>().sourAff > playerPrefab.GetComponent<Player>().seafoodAff)
         {
             playerPrefab.GetComponent<Player>().type = "Type:Electric";
+            playerAffTypeString = "Electric";
             playerTypeHigh = playerPrefab.GetComponent<Player>().sourAff;
         }
         else if (playerPrefab.GetComponent<Player>().spicyAff > playerPrefab.GetComponent<Player>().candyAff && playerPrefab.GetComponent<Player>().spicyAff > playerPrefab.GetComponent<Player>().sourAff && playerPrefab.GetComponent<Player>().spicyAff > playerPrefab.GetComponent<Player>().veggieAff && playerPrefab.GetComponent<Player>().spicyAff > playerPrefab.GetComponent<Player>().seafoodAff)
         {
             playerPrefab.GetComponent<Player>().type = "Type:Fire";
+            playerAffTypeString = "Fire";
             playerTypeHigh = playerPrefab.GetComponent<Player>().spicyAff;
         }
         else if (playerPrefab.GetComponent<Player>().veggieAff > playerPrefab.GetComponent<Player>().candyAff && playerPrefab.GetComponent<Player>().veggieAff > playerPrefab.GetComponent<Player>().sourAff && playerPrefab.GetComponent<Player>().veggieAff > playerPrefab.GetComponent<Player>().spicyAff && playerPrefab.GetComponent<Player>().veggieAff > playerPrefab.GetComponent<Player>().seafoodAff)
         {
             playerPrefab.GetComponent<Player>().type = "Type:Earth";
+            playerAffTypeString = "Earth";
             playerTypeHigh = playerPrefab.GetComponent<Player>().veggieAff;
         }
         else if (playerPrefab.GetComponent<Player>().seafoodAff > playerPrefab.GetComponent<Player>().candyAff && playerPrefab.GetComponent<Player>().seafoodAff > playerPrefab.GetComponent<Player>().sourAff && playerPrefab.GetComponent<Player>().seafoodAff > playerPrefab.GetComponent<Player>().spicyAff && playerPrefab.GetComponent<Player>().seafoodAff > playerPrefab.GetComponent<Player>().veggieAff)
         {
             playerPrefab.GetComponent<Player>().type = "Type:Water";
+            playerAffTypeString = "Water";
             playerTypeHigh = playerPrefab.GetComponent<Player>().seafoodAff;
         }
         else
@@ -78,7 +89,7 @@ public class BattleSystem : MonoBehaviour
             playerPrefab.GetComponent<Player>().type = "Type:Normal";
             playerTypeHigh = (playerPrefab.GetComponent<Player>().seafoodAff + playerPrefab.GetComponent<Player>().veggieAff + playerPrefab.GetComponent<Player>().spicyAff + playerPrefab.GetComponent<Player>().sourAff + playerPrefab.GetComponent<Player>().candyAff) / 5;
         }
-        playerPrefab.GetComponent<Player>().health = 100 + playerTypeHigh;
+        playerPrefab.GetComponent<Player>().health = 50 + playerTypeHigh;
         playerPrefab.GetComponent<Player>().currentHP = playerPrefab.GetComponent<Player>().health;
         #endregion
         #region pulling from gm enemy
@@ -91,35 +102,53 @@ public class BattleSystem : MonoBehaviour
         enemyPrefab.GetComponent<Player>().VicGold = gameManager.GetComponent<GameManager>().enemyVicGold;
         if (enemyPrefab.GetComponent<Player>().candyAff > enemyPrefab.GetComponent<Player>().sourAff && enemyPrefab.GetComponent<Player>().candyAff > enemyPrefab.GetComponent<Player>().spicyAff && enemyPrefab.GetComponent<Player>().candyAff > enemyPrefab.GetComponent<Player>().veggieAff && enemyPrefab.GetComponent<Player>().candyAff > enemyPrefab.GetComponent<Player>().seafoodAff)
         {
+            //move table reference Electric>Water>Fire>Air>Earth>Electric example on how it works, Electric crits against water and electric res when hit by water
             enemyPrefab.GetComponent<Player>().type = "Type:Air";
+            enemyAffType = "Air";
+            enemyCritType = "Earth";
+            enemyResType = "Fire";
             enemyTypeHigh = enemyPrefab.GetComponent<Player>().candyAff;
         }
         else if (enemyPrefab.GetComponent<Player>().sourAff > enemyPrefab.GetComponent<Player>().candyAff && enemyPrefab.GetComponent<Player>().sourAff > enemyPrefab.GetComponent<Player>().spicyAff && enemyPrefab.GetComponent<Player>().sourAff > enemyPrefab.GetComponent<Player>().veggieAff && enemyPrefab.GetComponent<Player>().sourAff > enemyPrefab.GetComponent<Player>().seafoodAff)
         {
             enemyPrefab.GetComponent<Player>().type = "Type:Electric";
+            enemyAffType = "Electric";
+            enemyCritType = "Water";
+            enemyResType = "Earth";
             enemyTypeHigh = enemyPrefab.GetComponent<Player>().sourAff;
         }
         else if (enemyPrefab.GetComponent<Player>().spicyAff > enemyPrefab.GetComponent<Player>().candyAff && enemyPrefab.GetComponent<Player>().spicyAff > enemyPrefab.GetComponent<Player>().sourAff && enemyPrefab.GetComponent<Player>().spicyAff > enemyPrefab.GetComponent<Player>().veggieAff && enemyPrefab.GetComponent<Player>().spicyAff > enemyPrefab.GetComponent<Player>().seafoodAff)
         {
             enemyPrefab.GetComponent<Player>().type = "Type:Fire";
+            enemyAffType = "Fire";
+            enemyCritType = "Air";
+            enemyResType = "Water";
             enemyTypeHigh = enemyPrefab.GetComponent<Player>().spicyAff;
         }
         else if (enemyPrefab.GetComponent<Player>().veggieAff > enemyPrefab.GetComponent<Player>().candyAff && enemyPrefab.GetComponent<Player>().veggieAff > enemyPrefab.GetComponent<Player>().sourAff && enemyPrefab.GetComponent<Player>().veggieAff > enemyPrefab.GetComponent<Player>().spicyAff && enemyPrefab.GetComponent<Player>().veggieAff > enemyPrefab.GetComponent<Player>().seafoodAff)
         {
             enemyPrefab.GetComponent<Player>().type = "Type:Earth";
+            enemyAffType = "Earth";
+            enemyCritType = "Electric";
+            enemyResType = "Air";
             enemyTypeHigh = enemyPrefab.GetComponent<Player>().veggieAff;
         }
         else if (enemyPrefab.GetComponent<Player>().seafoodAff > enemyPrefab.GetComponent<Player>().candyAff && enemyPrefab.GetComponent<Player>().seafoodAff > enemyPrefab.GetComponent<Player>().sourAff && enemyPrefab.GetComponent<Player>().seafoodAff > enemyPrefab.GetComponent<Player>().spicyAff && enemyPrefab.GetComponent<Player>().seafoodAff > enemyPrefab.GetComponent<Player>().veggieAff)
         {
             enemyPrefab.GetComponent<Player>().type = "Type:Water";
+            enemyAffType = "Water";
+            enemyCritType = "Fire";
+            enemyResType = "Electric";
             enemyTypeHigh = enemyPrefab.GetComponent<Player>().seafoodAff;
         }
         else
         {
             enemyPrefab.GetComponent<Player>().type = "Type:Normal";
+            enemyCritType = "NONE";
+            enemyResType = "NONE";
             enemyTypeHigh = (enemyPrefab.GetComponent<Player>().seafoodAff + enemyPrefab.GetComponent<Player>().veggieAff + enemyPrefab.GetComponent<Player>().spicyAff + enemyPrefab.GetComponent<Player>().sourAff + enemyPrefab.GetComponent<Player>().candyAff) / 5;
         }
-        enemyPrefab.GetComponent<Player>().health = 100 + playerTypeHigh;
+        enemyPrefab.GetComponent<Player>().health = 30 + playerTypeHigh;
         enemyPrefab.GetComponent<Player>().currentHP = enemyPrefab.GetComponent<Player>().health;
         #endregion
         state = BattleState.Start;
@@ -149,13 +178,66 @@ public class BattleSystem : MonoBehaviour
         state = BattleState.PlayTurn;
         PlayerTurn();
     }
-    IEnumerator PlayerAttack()
+    IEnumerator PlayerAttack(MoveClass attack)
     {
-        //damage enemy and check if dead
-        bool isDead = enemyUnit.TakeDamage(playerUnit.dmg);
-        //updates enemy stats
-        enemyHUD.SetHealth(enemyUnit.currentHP);
-        dialogueText.text = "The attack hit!";
+
+        if (attack.AffType == "Fire")
+        {
+            //damage enemy and check if dead
+            isDead = enemyUnit.TakeDamage(attack.MoveUse(attack, playerUnit.GetComponent<Player>().spicyAff, enemyTypeHigh, enemyAffType));
+            //updates enemy stats
+            enemyHUD.SetHealth(enemyUnit.currentHP);
+            dialogueText.text = "The attack hit!";
+            //playerUnit.GetComponent<Player>().spicyAff;
+        }
+        else if (attack.AffType == "Water")
+        {
+            //damage enemy and check if dead
+            isDead = enemyUnit.TakeDamage(attack.MoveUse(attack, playerUnit.GetComponent<Player>().seafoodAff, enemyTypeHigh, enemyAffType));
+            //updates enemy stats
+            enemyHUD.SetHealth(enemyUnit.currentHP);
+            dialogueText.text = "The attack hit!";
+            // playerUnit.GetComponent<Player>().seafoodAff;
+        }
+        else if (attack.AffType == "Earth")
+        {
+            //damage enemy and check if dead
+            isDead = enemyUnit.TakeDamage(attack.MoveUse(attack, playerUnit.GetComponent<Player>().veggieAff, enemyTypeHigh, enemyAffType));
+            //updates enemy stats
+            enemyHUD.SetHealth(enemyUnit.currentHP);
+            dialogueText.text = "The attack hit!";
+            //playerUnit.GetComponent<Player>().veggieAff;
+        }
+        else if (attack.AffType == "Air")
+        {
+            //damage enemy and check if dead
+            isDead = enemyUnit.TakeDamage(attack.MoveUse(attack, playerUnit.GetComponent<Player>().candyAff, enemyTypeHigh, enemyAffType));
+            //updates enemy stats
+            enemyHUD.SetHealth(enemyUnit.currentHP);
+            dialogueText.text = "The attack hit!";
+            // playerUnit.GetComponent<Player>().candyAff;
+        }
+        else if (attack.AffType == "Electric")
+        {
+            //damage enemy and check if dead
+            isDead = enemyUnit.TakeDamage(attack.MoveUse(attack, playerUnit.GetComponent<Player>().sourAff, enemyTypeHigh, enemyAffType));
+            //updates enemy stats
+            enemyHUD.SetHealth(enemyUnit.currentHP);
+            dialogueText.text = "The attack hit!";
+            // playerUnit.GetComponent<Player>().sourAff;
+        }
+        else if(attack.AffType == "Normal")
+        {
+            //damage enemy and check if dead
+            isDead = enemyUnit.TakeDamage(attack.MoveUse(attack , playerTypeHigh, enemyTypeHigh, enemyAffType));
+            //updates enemy stats
+            enemyHUD.SetHealth(enemyUnit.currentHP);
+            dialogueText.text = "The attack hit!";
+        }
+        else
+        {
+            Debug.Log("You named something wrong Joe");
+        }
        /* this stops stuff for 2 seconds for read time*/ yield return new WaitForSeconds(2f);
         if (isDead)
         {
@@ -177,7 +259,7 @@ public class BattleSystem : MonoBehaviour
         dialogueText.text = enemyUnit.name + " attacks!";
         yield return new WaitForSeconds(1f);
 
-        bool isDead = playerUnit.TakeDamage(enemyUnit.dmg);
+        isDead = playerUnit.TakeDamage(gameManager.GetComponent<GameManager>().MoveRoll.MoveUse(enemyResType,enemyCritType,enemyPowerLevel, enemyTypeHigh, playerTypeHigh, playerAffTypeString));
         playerHUD.SetHealth(playerUnit.currentHP);
         yield return new WaitForSeconds(1f);
 
@@ -247,21 +329,30 @@ public class BattleSystem : MonoBehaviour
     }
     public void OnMoveOne()
     {
-
+        moveSelect.SetActive(false);
+        dialogueText.enabled = true;
+        StartCoroutine(PlayerAttack(gameManager.GetComponent<GameManager>().PlayerMoves[0]));
+        
     }
     public void OnMoveTwo()
     {
-
+        moveSelect.SetActive(false);
+        dialogueText.enabled = true;
+        StartCoroutine(PlayerAttack(gameManager.GetComponent<GameManager>().PlayerMoves[1]));
+        
     }
     public void OnMoveThree()
     {
-
+        moveSelect.SetActive(false);
+        dialogueText.enabled = true;
+        StartCoroutine(PlayerAttack(gameManager.GetComponent<GameManager>().PlayerMoves[2]));
+        
     }
     public void OnReturnButton()
     {
         //this method will be reused for the snack select
         moveSelect.SetActive(false);
-        optionButtons.SetActive(false);
+        optionButtons.SetActive(true);
     }
     public void OnSnackButton()
     {

@@ -43,8 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6facd66adb17474b99cf453c8725ad3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: NULL
-  AffType: NULL
-  ResAff: NULL
-  CritAff: NULL
+  Name: None
+  AffType: None
+  ResAff: None
+  CritAff: None
   PowerLV: -1
