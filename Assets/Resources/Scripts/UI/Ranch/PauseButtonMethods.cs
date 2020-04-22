@@ -62,6 +62,8 @@ public class PauseButtonMethods : MonoBehaviour
     
     private void OpenSettings()
     {
+        SoundPlayer.Play("sound_ui_select");
+
         isPauseOpen = true;
 
         playerSlime.GetComponent<SlimeMove>().enabled = false;
@@ -82,6 +84,8 @@ public class PauseButtonMethods : MonoBehaviour
 
     private void CloseSettings()
     {
+        SoundPlayer.Play("sound_ui_select");
+
         isPauseOpen = false;
 
         playerSlime.GetComponent<SlimeMove>().enabled = true;
@@ -104,6 +108,8 @@ public class PauseButtonMethods : MonoBehaviour
 
     public void OpenOptions()
     {
+        SoundPlayer.Play("sound_ui_select");
+
         isOptionsOpen = true;
         EventSystem.current.SetSelectedGameObject(fullscreenToggle.gameObject);
 
@@ -117,6 +123,8 @@ public class PauseButtonMethods : MonoBehaviour
 
     public void CloseOptions()
     {
+        SoundPlayer.Play("sound_ui_select");
+
         isOptionsOpen = false;
         EventSystem.current.SetSelectedGameObject(optionsButton);
 
@@ -130,6 +138,8 @@ public class PauseButtonMethods : MonoBehaviour
 
     public void CreditsButton()
     {
+        SoundPlayer.Play("sound_ui_select");
+
         pauseButtons.GetComponent<Animation>().Play("ui_title_buttonLayout_floatOut");
         uiBackground.GetComponent<Animation>().Play("ui_ranch_shopBackground_fadeOut");
 
@@ -143,6 +153,8 @@ public class PauseButtonMethods : MonoBehaviour
 
     public void TitleButton()
     {
+        SoundPlayer.Play("sound_ui_select");
+
         pauseButtons.GetComponent<Animation>().Play("ui_title_buttonLayout_floatOut");
         uiBackground.GetComponent<Animation>().Play("ui_ranch_shopBackground_fadeOut");
 

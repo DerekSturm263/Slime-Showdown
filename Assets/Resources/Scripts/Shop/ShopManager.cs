@@ -161,6 +161,8 @@ public class ShopManager : MonoBehaviour
     {
         if (openTab != Tabs.Meals)
         {
+            SoundPlayer.Play("sound_ui_select");
+
             openTab = Tabs.Meals;
 
             shopScrollView.GetComponent<ScrollRect>().content = shopMealsContent.GetComponent<RectTransform>();
@@ -181,6 +183,8 @@ public class ShopManager : MonoBehaviour
     {
         if (openTab != Tabs.Snacks)
         {
+            SoundPlayer.Play("sound_ui_select");
+
             openTab = Tabs.Snacks;
 
             shopScrollView.GetComponent<ScrollRect>().content = shopSnacksContent.GetComponent<RectTransform>();
@@ -201,6 +205,8 @@ public class ShopManager : MonoBehaviour
     {
         if (gameManager.GetComponent<GameManager>().goldCount >= selectedItem.GetComponent<Buyable>().price && !isEating)
         {
+            SoundPlayer.Play("sound_ui_select");
+
             if (selectedItem.GetComponent<Buyable>() is MealData)
             {
                 gameManager.GetComponent<GameManager>().goldCount -= selectedItem.GetComponent<Buyable>().price;
@@ -251,6 +257,8 @@ public class ShopManager : MonoBehaviour
 
     private void AddSnackToInventory(Buyable food)
     {
+        SoundPlayer.Play("sound_ui_select");
+
         for (int i = 0; i < gameManager.GetComponent<GameManager>().inventory.Length; i++)
         {
             if (gameManager.GetComponent<GameManager>().inventory[i] == null)
@@ -311,6 +319,8 @@ public class ShopManager : MonoBehaviour
     // Method called by the shopkeeper slime when the player touches it.
     public void OpenShop()
     {
+        SoundPlayer.Play("sound_ui_select");
+
         SwitchToMealsTab();
         isShopOpen = true;
         MusicPlayer.Play("music_shopTheme");
@@ -341,6 +351,8 @@ public class ShopManager : MonoBehaviour
     // Method called by the back button in the shop or the escape button in the shop.
     public void CloseShop()
     {
+        SoundPlayer.Play("sound_ui_select");
+
         isShopOpen = false;
         shopScrollBar.value = 1f;
         MusicPlayer.Play("music_mainTheme");

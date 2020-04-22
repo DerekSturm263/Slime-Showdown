@@ -15,12 +15,17 @@ public class SetupGame : MonoBehaviour
             MusicPlayer.Initialize();
             MusicPlayer.ChangeVolume(0.5f);
 
+            SoundPlayer.Initialize();
+            SoundPlayer.ChangeVolume(0.5f);
+
             GameObject newMainCamera = Instantiate(mainCamera);
             GameObject newGameManager = Instantiate(gameManager);
 
             DontDestroyOnLoad(newMainCamera);
             DontDestroyOnLoad(newGameManager);
+
             DontDestroyOnLoad(MusicPlayer.audioSource.gameObject);
+            DontDestroyOnLoad(SoundPlayer.audioSource.gameObject);
 
             // Gives the player the move Roll.
             gameManager.GetComponent<GameManager>().PlayerMoves[0] = (gameManager.GetComponent<GameManager>().MoveRoll);

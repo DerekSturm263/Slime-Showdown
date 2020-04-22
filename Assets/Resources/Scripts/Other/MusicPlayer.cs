@@ -14,7 +14,7 @@ public class MusicPlayer : MonoBehaviour
         Object[] trackListArray = Resources.LoadAll("Music", typeof(AudioClip));
         foreach (var c in trackListArray)
         {
-            Debug.Log("Added " + c.name + " to the Track List.");
+            Debug.Log("Music Player: Added " + c.name + " to the Track List.");
             trackList.Add(c as AudioClip);
         }
 
@@ -118,8 +118,6 @@ public class MusicPlayer : MonoBehaviour
         return null;
     }
 
-    #endregion
-
     // Returns the AudioClip that's playing.
     public static AudioClip CurrentTrack()
     {
@@ -128,6 +126,8 @@ public class MusicPlayer : MonoBehaviour
 
         return null;
     }
+
+    #endregion
 
     // Returns whether there's anything playing.
     public static bool isPlaying()

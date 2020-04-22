@@ -44,6 +44,8 @@ public class OptionsMenu : MonoBehaviour
     // Called by the toggle button on value change.
     public void ToggleFullscreen()
     {
+        SoundPlayer.Play("sound_ui_select");
+
         gameManager.isFullscreen = !gameManager.isFullscreen;
         Screen.fullScreen = gameManager.isFullscreen;
     }
@@ -51,6 +53,8 @@ public class OptionsMenu : MonoBehaviour
     // Called by the music slider on value change.
     public void ChangeMusicVolume()
     {
+        SoundPlayer.Play("sound_ui_select");
+
         gameManager.musicVolume = musicSlider.value;
         MusicPlayer.ChangeVolume(musicSlider.value);
     }
@@ -58,18 +62,25 @@ public class OptionsMenu : MonoBehaviour
     // Called by the sound slider on value change.
     public void ChangeSoundVolume()
     {
+        SoundPlayer.Play("sound_ui_select");
+
         gameManager.soundVolume = soundSlider.value;
+        SoundPlayer.ChangeVolume(soundSlider.value);
     }
 
     // Called by the control remapping button.
     public void GoToButtonRemap()
     {
+        SoundPlayer.Play("sound_ui_select");
+
         // Code to open control remap screen.
     }
 
     // Called by the back button if you came from the title screen.
     public void BackToTitle()
     {
+        SoundPlayer.Play("sound_ui_select");
+
         background.GetComponent<Animation>().Play("ui_ranch_shopBackground_fadeOut");
         backButton.GetComponent<Animation>().Play("ui_ranch_shopBackButton_floatOut");
         optionsElements.GetComponent<Animation>().Play("ui_ranch_shopBackground_fadeOut");

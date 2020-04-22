@@ -41,6 +41,8 @@ public class SlimePickButtonMethods : MonoBehaviour
     // Called by the yeah button.
     public void Yeah()
     {
+        SoundPlayer.Play("sound_ui_select");
+
         slimeConfirmationButtonLayout.GetComponent<CanvasGroup>().interactable = false;
         Invoke("SelectInputField", 0.5f);
 
@@ -53,6 +55,8 @@ public class SlimePickButtonMethods : MonoBehaviour
     // Called by the nah button.
     public void Nah()
     {
+        SoundPlayer.Play("sound_ui_select");
+
         slimeConfirmationButtonLayout.GetComponent<CanvasGroup>().interactable = false;
         Deselect();
 
@@ -68,6 +72,8 @@ public class SlimePickButtonMethods : MonoBehaviour
     {
         if (slimeNameInputFieldText.GetComponent<Text>().text.Trim().Length > 0)
         {
+            SoundPlayer.Play("sound_ui_select");
+
             if (slimeNameText.GetComponent<CanvasGroup>().alpha == 1)
                 slimeNameText.GetComponent<Animation>().Play("ui_chooseSlime_slimeNameText_fadeOut");
             else

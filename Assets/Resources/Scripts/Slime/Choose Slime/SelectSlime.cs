@@ -114,6 +114,8 @@ public class SelectSlime : MonoBehaviour
 
     private void FocusOnSlime()
     {
+        SoundPlayer.Play("sound_ui_select");
+
         Camera.main.GetComponent<FocusOnSlime>().cameraTarget = highlightedSlime;
         
         if (SceneManager.GetActiveScene().name.Equals("ChooseSlime"))

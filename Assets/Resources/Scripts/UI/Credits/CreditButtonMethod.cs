@@ -16,13 +16,13 @@ public class CreditButtonMethod : MonoBehaviour
     private void Update()
     {
         if (Input.GetButtonDown("Cancel"))
-        {
             TitleButton();
-        }
     }
 
     public void TitleButton()
     {
+        SoundPlayer.Play("sound_ui_select");
+
         if (Camera.main.GetComponent<FocusOnSlime>().cameraTarget == null)
         {
             backButton.GetComponent<Animation>().Play("ui_ranch_shopBackButton_floatOut");

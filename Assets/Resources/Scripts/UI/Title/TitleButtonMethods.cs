@@ -23,6 +23,8 @@ public class TitleButtonMethods : MonoBehaviour
 
     public void StartGame()
     {
+        SoundPlayer.Play("sound_ui_select");
+
         gameLogo.GetComponent<Animation>().Play("ui_title_gameLogo_floatOut");
         buttonLayout.GetComponent<Animation>().Play("ui_title_buttonLayout_floatOut");
         versionNumber.GetComponent<Animation>().Play("ui_title_versionNumber_floatOut");
@@ -34,6 +36,8 @@ public class TitleButtonMethods : MonoBehaviour
 
     public void LoadOptions()
     {
+        SoundPlayer.Play("sound_ui_select");
+
         gameLogo.GetComponent<Animation>().Play("ui_title_gameLogo_floatOut");
         buttonLayout.GetComponent<Animation>().Play("ui_title_buttonLayout_floatOut");
         versionNumber.GetComponent<Animation>().Play("ui_title_versionNumber_floatOut");
@@ -45,6 +49,8 @@ public class TitleButtonMethods : MonoBehaviour
 
     public void LoadCredits()
     {
+        SoundPlayer.Play("sound_ui_select");
+
         gameLogo.GetComponent<Animation>().Play("ui_title_gameLogo_floatOut");
         buttonLayout.GetComponent<Animation>().Play("ui_title_buttonLayout_floatOut");
         versionNumber.GetComponent<Animation>().Play("ui_title_versionNumber_floatOut");
@@ -56,6 +62,8 @@ public class TitleButtonMethods : MonoBehaviour
 
     public void QuitGame()
     {
+        SoundPlayer.Play("sound_ui_select");
+
         gameLogo.GetComponent<Animation>().Play("ui_title_gameLogo_floatOut");
         buttonLayout.GetComponent<Animation>().Play("ui_title_buttonLayout_floatOut");
         versionNumber.GetComponent<Animation>().Play("ui_title_versionNumber_floatOut");

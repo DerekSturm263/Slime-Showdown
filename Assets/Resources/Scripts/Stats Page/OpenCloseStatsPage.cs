@@ -76,9 +76,7 @@ public class OpenCloseStatsPage : MonoBehaviour
         }
 
         if (Input.GetButtonDown("Cancel") && isStatsPageOpen)
-        {
             CloseStatsPage();
-        }
 
         // Sets the bars to reflect the player's current stats.
         waterBar.value = gameManager.playSeafoodAff;
@@ -118,6 +116,8 @@ public class OpenCloseStatsPage : MonoBehaviour
     {
         if (openTab != Tabs.Stats)
         {
+            SoundPlayer.Play("sound_ui_select");
+
             openTab = Tabs.Stats;
 
             statsPage.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeIn");
@@ -132,6 +132,8 @@ public class OpenCloseStatsPage : MonoBehaviour
     {
         if (openTab != Tabs.Items)
         {
+            SoundPlayer.Play("sound_ui_select");
+
             openTab = Tabs.Items;
 
             statsPage.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeOut");
@@ -144,6 +146,8 @@ public class OpenCloseStatsPage : MonoBehaviour
 
     private void OpenStatsPage()
     {
+        SoundPlayer.Play("sound_ui_select");
+
         SwitchToStatsPage();
         isStatsPageOpen = true;
 
@@ -166,6 +170,8 @@ public class OpenCloseStatsPage : MonoBehaviour
 
     private void CloseStatsPage()
     {
+        SoundPlayer.Play("sound_ui_select");
+
         isStatsPageOpen = false;
 
         playerSlime.GetComponent<SlimeMove>().enabled = true;
