@@ -41,11 +41,6 @@ public class OptionsMenu : MonoBehaviour
         ListenForEvents(soundSlider.onValueChanged, true);
     }
 
-    private void Update()
-    {
-        gameManager.soundVolume = soundSlider.value;
-    }
-
     // Called by the toggle button on value change.
     public void ToggleFullscreen()
     {
@@ -60,26 +55,26 @@ public class OptionsMenu : MonoBehaviour
         MusicPlayer.ChangeVolume(musicSlider.value);
     }
 
+    // Called by the sound slider on value change.
+    public void ChangeSoundVolume()
+    {
+        gameManager.soundVolume = soundSlider.value;
+    }
+
     // Called by the control remapping button.
     public void GoToButtonRemap()
     {
-
+        // Code to open control remap screen.
     }
 
     // Called by the back button if you came from the title screen.
     public void BackToTitle()
     {
-        backButton.GetComponent<Animation>().Play("ui_ranch_shopBackButton_floatOut");
         background.GetComponent<Animation>().Play("ui_ranch_shopBackground_fadeOut");
+        backButton.GetComponent<Animation>().Play("ui_ranch_shopBackButton_floatOut");
         optionsElements.GetComponent<Animation>().Play("ui_ranch_shopBackground_fadeOut");
 
         Invoke("LoadTitle", 0.5f);
-    }
-
-    // Called by the back button if you came from the ranch scene.
-    public void CloseSettingsInRanch()
-    {
-
     }
 
     private void LoadTitle()

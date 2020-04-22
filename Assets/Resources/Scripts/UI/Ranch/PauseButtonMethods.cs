@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class PauseButtonMethods : MonoBehaviour
 {
@@ -12,10 +13,15 @@ public class PauseButtonMethods : MonoBehaviour
     private GameObject uiBackground;
     private GameObject pauseButtons;
     private GameObject resumeButton;
+    private GameObject backButtonOptions;
+    private GameObject optionsElements;
+    private GameObject options;
 
+    private Toggle fullscreenToggle;
     private GameObject playerSlime;
 
     public bool isPauseOpen = false;
+    private bool isOptionsOpen = false;
 
     private void Start()
     {
@@ -25,7 +31,11 @@ public class PauseButtonMethods : MonoBehaviour
         uiBackground = GameObject.FindGameObjectWithTag("ShopBackground");
         pauseButtons = GameObject.FindGameObjectWithTag("PauseButtons");
         resumeButton = GameObject.FindGameObjectWithTag("ResumeButton");
+        backButtonOptions = GameObject.FindGameObjectWithTag("OptionsBackButton");
+        optionsElements = GameObject.FindGameObjectWithTag("Options");
+        options = GameObject.FindGameObjectWithTag("AllOptions");
 
+        fullscreenToggle = GameObject.FindGameObjectWithTag("FullscreenToggle").GetComponent<Toggle>();
         playerSlime = GameObject.FindGameObjectWithTag("RanchBattleSlime");
     }
 
@@ -34,7 +44,12 @@ public class PauseButtonMethods : MonoBehaviour
         if (isPauseOpen)
         {
             if (Input.GetButtonDown("Cancel") || Input.GetButtonDown("Pause"))
-                CloseSettings();
+            {
+                if (!isOptionsOpen)
+                    CloseSettings();
+                else
+                    CloseOptions();
+            }
         }
         else if (!shopManager.isShopOpen && !statsManager.isStatsPageOpen)
         {
@@ -85,14 +100,29 @@ public class PauseButtonMethods : MonoBehaviour
         CloseSettings();
     }
 
-    public void OptionsButton()
+    public void OpenOptions()
     {
+        isOptionsOpen = true;
+        EventSystem.current.SetSelectedGameObject(fullscreenToggle.gameObject);
+
         pauseButtons.GetComponent<Animation>().Play("ui_title_buttonLayout_floatOut");
-        uiBackground.GetComponent<Animation>().Play("ui_ranch_shopBackground_fadeOut");
+        backButtonOptions.GetComponent<Animation>().Play("ui_ranch_shopBackButton_floatIn");
+        optionsElements.GetComponent<Animation>().Play("ui_ranch_shopBackground_fadeIn");
 
+        options.GetComponent<CanvasGroup>().interactable = true;
         pauseButtons.GetComponent<CanvasGroup>().interactable = false;
+    }
 
-        Invoke("LoadOptionsScene", 0.5f);
+    public void CloseOptions()
+    {
+        isOptionsOpen = false;
+
+        pauseButtons.GetComponent<Animation>().Play("ui_title_buttonLayout_floatIn");
+        backButtonOptions.GetComponent<Animation>().Play("ui_ranch_shopBackButton_floatOut");
+        optionsElements.GetComponent<Animation>().Play("ui_ranch_shopBackground_fadeOut");
+
+        options.GetComponent<CanvasGroup>().interactable = true;
+        pauseButtons.GetComponent<CanvasGroup>().interactable = true;
     }
 
     public void CreditsButton()
@@ -121,11 +151,6 @@ public class PauseButtonMethods : MonoBehaviour
         GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().lastPlayerPos = playerSlime.transform.position;
 
         Invoke("LoadTitle", 0.5f);
-    }
-
-    private void LoadOptionsScene()
-    {
-        SceneManager.LoadScene("Options");
     }
 
     private void LoadCreditsScene()

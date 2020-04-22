@@ -69,6 +69,8 @@ TagManager:
   - MusicSlider
   - SoundSlider
   - Options
+  - AllOptions
+  - OptionsBackButton
   layers:
   - Default
   - TransparentFX
