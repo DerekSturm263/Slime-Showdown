@@ -11,7 +11,16 @@ public class SpawnEnemies : MonoBehaviour
 
     private enum Name
     {
-        Bluey, Jerald, Happy, Gareth, Acorn
+        // Water Names
+        Bluey, Bubbles, Gills, Iris, Pearl,
+        // Fire Names
+        Ashes, Bandit, Blaze, Gareth, Toast,
+        // Air Names
+        Candy, Cece, Cosmo, Cupcake, Pixie,
+        // Earth Names
+        Acorn, Coco, Jerald, Peanut, Rango,
+        // Electric Names
+        Amp, Happy, Lightning, Spark, Stormy
     }
 
     public GameObject enemy;
@@ -45,7 +54,6 @@ public class SpawnEnemies : MonoBehaviour
 
         for (int i = 0; i < 6; i++)
         {
-            string enemyName = RandomName();
             Color enemyColor = RandomColor();
             Vector3 position = RandomPosition();
             int enemyHP = Random.Range(100, 150);
@@ -58,11 +66,11 @@ public class SpawnEnemies : MonoBehaviour
             int candyAff = Random.Range(1, 5);
             int veggieAff = Random.Range(1, 5);
 
-            SpawnEnemy(enemyName, position, enemyColor, enemyHP, hunger, enemyHP, damage, gold, seafoodAff, spicyAff, candyAff, veggieAff, sourAff);
+            SpawnEnemy(position, enemyColor, enemyHP, hunger, enemyHP, damage, gold, seafoodAff, spicyAff, candyAff, veggieAff, sourAff);
         }
     }
 
-    private void SpawnEnemy(string name, Vector3 position, Color color, int maxHP, int hunger, int currentHP, int dmg, int goldReward, int waterAff, int fireAff, int airAff, int earthAff, int electricAff)
+    private void SpawnEnemy(Vector3 position, Color color, int maxHP, int hunger, int currentHP, int dmg, int goldReward, int waterAff, int fireAff, int airAff, int earthAff, int electricAff)
     {
         // Sets components.
         GameObject newEnemy = Instantiate(enemy, position, Quaternion.identity);
@@ -70,7 +78,6 @@ public class SpawnEnemies : MonoBehaviour
         Transform enemyTrans = newEnemy.GetComponent<Transform>();
 
         // Sets stats based on arguments.
-        stats.name = name;
         stats.color = color.ToString();
         stats.health = maxHP;
         stats.hunger = hunger;
@@ -113,6 +120,8 @@ public class SpawnEnemies : MonoBehaviour
 
         stats.type = typeString + " Type";
 
+        // Sets a random name based on type.
+        stats.name = RandomName(typeString);
         enemies.Add(newEnemy);
     }
 
@@ -124,10 +133,30 @@ public class SpawnEnemies : MonoBehaviour
         return (Color) randomColor;
     }
 
-    private string RandomName()
+    private string RandomName(string type)
     {
-        int nameCount = 4;
-        int randomName = Random.Range(0, nameCount);
+        int randomName;
+        switch (type)
+        {
+            case "Water Type":
+                randomName = Random.Range(0, 5);
+                break;
+            case "Fire Type":
+                randomName = Random.Range(5, 10);
+                break;
+            case "Air Type":
+                randomName = Random.Range(10, 15);
+                break;
+            case "Earth Type":
+                randomName = Random.Range(15, 20);
+                break;
+            case "Electric Type":
+                randomName = Random.Range(20, 25);
+                break;
+            default:
+                randomName = Random.Range(0,25);
+                break;
+        }
 
         return ((Name) randomName).ToString();
     }

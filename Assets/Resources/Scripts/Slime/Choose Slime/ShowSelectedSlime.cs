@@ -15,6 +15,6 @@ public class ShowSelectedSlime : MonoBehaviour
     private void Update()
     {
         // Goes to the position of the slime that you are highlighting.
-        transform.position = eventSystem.GetComponent<SelectSlime>().highlightedSlime.GetComponent<Transform>().position + new Vector3(0, 0, 0.1f);
+        transform.position = eventSystem.GetComponent<SelectSlime>().highlightedSlime.GetComponent<Transform>().position + new Vector3(0, 0, transform.position.z);
     }
 }
