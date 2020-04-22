@@ -71,6 +71,7 @@ TagManager:
   - Options
   - AllOptions
   - OptionsBackButton
+  - OptionsButton
   layers:
   - Default
   - TransparentFX

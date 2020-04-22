@@ -74,8 +74,14 @@ public class GameManager : MonoBehaviour
     public MoveClass MoveZap;
     public MoveClass MoveShock;
     public MoveClass MoveThunderShock;
+
     [Header("Player Moves")]
     // Current moves the slime knows.
     //for now using lists till we figure out how to get arrays to work
     public List<MoveClass> PlayerMoves = new List<MoveClass>(3);
+
+    private void Start()
+    {
+        isFullscreen = Screen.fullScreen;
+    }
 }

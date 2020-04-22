@@ -16,6 +16,7 @@ public class PauseButtonMethods : MonoBehaviour
     private GameObject backButtonOptions;
     private GameObject optionsElements;
     private GameObject options;
+    private GameObject optionsButton;
 
     private Toggle fullscreenToggle;
     private GameObject playerSlime;
@@ -34,6 +35,7 @@ public class PauseButtonMethods : MonoBehaviour
         backButtonOptions = GameObject.FindGameObjectWithTag("OptionsBackButton");
         optionsElements = GameObject.FindGameObjectWithTag("Options");
         options = GameObject.FindGameObjectWithTag("AllOptions");
+        optionsButton = GameObject.FindGameObjectWithTag("OptionsButton");
 
         fullscreenToggle = GameObject.FindGameObjectWithTag("FullscreenToggle").GetComponent<Toggle>();
         playerSlime = GameObject.FindGameObjectWithTag("RanchBattleSlime");
@@ -116,6 +118,7 @@ public class PauseButtonMethods : MonoBehaviour
     public void CloseOptions()
     {
         isOptionsOpen = false;
+        EventSystem.current.SetSelectedGameObject(optionsButton);
 
         pauseButtons.GetComponent<Animation>().Play("ui_title_buttonLayout_floatIn");
         backButtonOptions.GetComponent<Animation>().Play("ui_ranch_shopBackButton_floatOut");
