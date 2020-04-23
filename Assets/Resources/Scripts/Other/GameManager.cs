@@ -80,6 +80,12 @@ public class GameManager : MonoBehaviour
     //for now using lists till we figure out how to get arrays to work
     public List<MoveClass> PlayerMoves = new List<MoveClass>(3);
 
+    [Header("PlayerEvoCount")]
+    public int SeaCount;
+    public int CandyCount;
+    public int SpicyCount;
+    public int VeggieCount;
+    public int SourCount;
     private void Start()
     {
         isFullscreen = Screen.fullScreen;

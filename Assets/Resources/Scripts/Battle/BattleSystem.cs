@@ -110,7 +110,7 @@ public class BattleSystem : MonoBehaviour
         }
         playerPrefab.GetComponent<Player>().health = 50 + playerTypeHigh;
         playerPrefab.GetComponent<Player>().currentHP = playerPrefab.GetComponent<Player>().health;
-        playerPrefab.GetComponent<Player>().hunger = 20 + playerTypeHigh;
+        playerPrefab.GetComponent<Player>().hunger = 50 + playerTypeHigh;
         #endregion
         #region pulling from gm enemy
         enemyPrefab.GetComponent<Player>().name = gameManager.GetComponent<GameManager>().enemySlimeName;
@@ -354,6 +354,7 @@ public class BattleSystem : MonoBehaviour
         {
            
             state = BattleState.Win;
+            MusicPlayer.Play("music_victoryTheme");
             EndBattle();
         }
         else

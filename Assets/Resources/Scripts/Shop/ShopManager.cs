@@ -58,6 +58,12 @@ public class ShopManager : MonoBehaviour
 
     private string animName;
 
+    //affinity stuff
+    public int affThresOne;
+    public int affThresTwo;
+    public int affThresThree;
+    public AffinityCollector affMethods;
+
     private void Start()
     {
         MusicPlayer.Play("music_mainTheme");
@@ -306,7 +312,8 @@ public class ShopManager : MonoBehaviour
 
         slimeEating.GetComponent<Animation>().Play("ui_ranch_slimeEatingAnim_floatOut");
         affinityText.GetComponent<Animation>().Play("ui_ranch_affinityText_floatOut");
-
+        //check here for an affinity threshold
+        affMethods.AffinityCheck(type, affThresOne,affThresTwo,affThresThree);
         shopTopBarLayout.GetComponent<Animation>().Play("ui_ranch_shopTopBar_floatIn");
         shopScrollView.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeIn");
         shopMealsContent.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeIn");
