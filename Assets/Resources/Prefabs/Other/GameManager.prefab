@@ -49,7 +49,7 @@ MonoBehaviour:
   soundVolume: 0.5
   playerSlimeColor: 
   playerSlimeName: 
-  playerSlimeSize: 
+  playerSize: 1
   goldCount: 0
   inventory:
   - {fileID: 0}
