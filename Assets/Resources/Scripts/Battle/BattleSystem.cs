@@ -419,6 +419,9 @@ public class BattleSystem : MonoBehaviour
         else if (state == BattleState.Lose)
         {
             dialogueText.text = "You lost against " + enemyUnit.name + "...";
+
+            yield return new WaitForSeconds(2.5f);
+
             Camera.main.GetComponent<CameraFollow>().enabled = true;
             Camera.main.GetComponent<AudioListener>().enabled = true;
             SceneManager.LoadScene("Ranch");
