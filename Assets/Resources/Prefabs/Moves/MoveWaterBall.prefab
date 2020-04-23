@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6facd66adb17474b99cf453c8725ad3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: WaterBall
+  Name: Waterball
   AffType: Water
   ResAff: Electric
   CritAff: Fire

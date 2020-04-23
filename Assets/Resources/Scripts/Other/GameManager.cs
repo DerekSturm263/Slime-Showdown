@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     [Header("Player Info")]
     public string playerSlimeColor;
     public string playerSlimeName;
-    public string playerSlimeSize;
+    public float playerSize;
 
     [Space(10)]
 

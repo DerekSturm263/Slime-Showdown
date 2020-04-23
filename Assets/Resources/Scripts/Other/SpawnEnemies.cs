@@ -118,7 +118,7 @@ public class SpawnEnemies : MonoBehaviour
         else
             typeString = "Earth";
 
-        stats.type = typeString + " Type";
+        stats.type = typeString;
 
         // Sets a random name based on type.
         stats.name = RandomName(typeString);

@@ -72,6 +72,10 @@ TagManager:
   - AllOptions
   - OptionsBackButton
   - OptionsButton
+  - Move1
+  - Move2
+  - Move3
+  - AttackButton
   layers:
   - Default
   - TransparentFX

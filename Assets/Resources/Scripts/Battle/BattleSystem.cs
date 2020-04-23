@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public enum BattleState { Start, PlayTurn, EnTurn, Win, Lose }
 
@@ -32,7 +33,7 @@ public class BattleSystem : MonoBehaviour
 
     Player playerUnit;
     Player enemyUnit;
-    SlimeMove sm;
+
     bool isDead;
     public GameObject enemHealthBarFill;
     public GameObject playHealthBarFill;
@@ -56,37 +57,37 @@ public class BattleSystem : MonoBehaviour
         playerPrefab.GetComponent<Player>().VicGold = gameManager.GetComponent<GameManager>().enemyVicGold;
        if( playerPrefab.GetComponent<Player>().candyAff> playerPrefab.GetComponent<Player>().sourAff && playerPrefab.GetComponent<Player>().candyAff > playerPrefab.GetComponent<Player>().spicyAff && playerPrefab.GetComponent<Player>().candyAff > playerPrefab.GetComponent<Player>().veggieAff && playerPrefab.GetComponent<Player>().candyAff > playerPrefab.GetComponent<Player>().seafoodAff)
         {
-            playerPrefab.GetComponent<Player>().type = "Type:Air";
+            playerPrefab.GetComponent<Player>().type = "Type: Air";
             playerAffTypeString = "Air";
             playerTypeHigh = playerPrefab.GetComponent<Player>().candyAff;
         }
         else if(playerPrefab.GetComponent<Player>().sourAff > playerPrefab.GetComponent<Player>().candyAff && playerPrefab.GetComponent<Player>().sourAff > playerPrefab.GetComponent<Player>().spicyAff && playerPrefab.GetComponent<Player>().sourAff > playerPrefab.GetComponent<Player>().veggieAff && playerPrefab.GetComponent<Player>().sourAff > playerPrefab.GetComponent<Player>().seafoodAff)
         {
-            playerPrefab.GetComponent<Player>().type = "Type:Electric";
+            playerPrefab.GetComponent<Player>().type = "Type: Electric";
             playerAffTypeString = "Electric";
             playerTypeHigh = playerPrefab.GetComponent<Player>().sourAff;
         }
         else if (playerPrefab.GetComponent<Player>().spicyAff > playerPrefab.GetComponent<Player>().candyAff && playerPrefab.GetComponent<Player>().spicyAff > playerPrefab.GetComponent<Player>().sourAff && playerPrefab.GetComponent<Player>().spicyAff > playerPrefab.GetComponent<Player>().veggieAff && playerPrefab.GetComponent<Player>().spicyAff > playerPrefab.GetComponent<Player>().seafoodAff)
         {
-            playerPrefab.GetComponent<Player>().type = "Type:Fire";
+            playerPrefab.GetComponent<Player>().type = "Type: Fire";
             playerAffTypeString = "Fire";
             playerTypeHigh = playerPrefab.GetComponent<Player>().spicyAff;
         }
         else if (playerPrefab.GetComponent<Player>().veggieAff > playerPrefab.GetComponent<Player>().candyAff && playerPrefab.GetComponent<Player>().veggieAff > playerPrefab.GetComponent<Player>().sourAff && playerPrefab.GetComponent<Player>().veggieAff > playerPrefab.GetComponent<Player>().spicyAff && playerPrefab.GetComponent<Player>().veggieAff > playerPrefab.GetComponent<Player>().seafoodAff)
         {
-            playerPrefab.GetComponent<Player>().type = "Type:Earth";
+            playerPrefab.GetComponent<Player>().type = "Type: Earth";
             playerAffTypeString = "Earth";
             playerTypeHigh = playerPrefab.GetComponent<Player>().veggieAff;
         }
         else if (playerPrefab.GetComponent<Player>().seafoodAff > playerPrefab.GetComponent<Player>().candyAff && playerPrefab.GetComponent<Player>().seafoodAff > playerPrefab.GetComponent<Player>().sourAff && playerPrefab.GetComponent<Player>().seafoodAff > playerPrefab.GetComponent<Player>().spicyAff && playerPrefab.GetComponent<Player>().seafoodAff > playerPrefab.GetComponent<Player>().veggieAff)
         {
-            playerPrefab.GetComponent<Player>().type = "Type:Water";
+            playerPrefab.GetComponent<Player>().type = "Type: Water";
             playerAffTypeString = "Water";
             playerTypeHigh = playerPrefab.GetComponent<Player>().seafoodAff;
         }
         else
         {
-            playerPrefab.GetComponent<Player>().type = "Type:Normal";
+            playerPrefab.GetComponent<Player>().type = "Type: Normal";
             playerTypeHigh = (playerPrefab.GetComponent<Player>().seafoodAff + playerPrefab.GetComponent<Player>().veggieAff + playerPrefab.GetComponent<Player>().spicyAff + playerPrefab.GetComponent<Player>().sourAff + playerPrefab.GetComponent<Player>().candyAff) / 5;
         }
         playerPrefab.GetComponent<Player>().health = 50 + playerTypeHigh;
@@ -104,7 +105,7 @@ public class BattleSystem : MonoBehaviour
         if (enemyPrefab.GetComponent<Player>().candyAff > enemyPrefab.GetComponent<Player>().sourAff && enemyPrefab.GetComponent<Player>().candyAff > enemyPrefab.GetComponent<Player>().spicyAff && enemyPrefab.GetComponent<Player>().candyAff > enemyPrefab.GetComponent<Player>().veggieAff && enemyPrefab.GetComponent<Player>().candyAff > enemyPrefab.GetComponent<Player>().seafoodAff)
         {
             //move table reference Electric>Water>Fire>Air>Earth>Electric example on how it works, Electric crits against water and electric res when hit by water
-            enemyPrefab.GetComponent<Player>().type = "Type:Air";
+            enemyPrefab.GetComponent<Player>().type = "Type: Air";
             enemyAffType = "Air";
             enemyCritType = "Earth";
             enemyResType = "Fire";
@@ -112,7 +113,7 @@ public class BattleSystem : MonoBehaviour
         }
         else if (enemyPrefab.GetComponent<Player>().sourAff > enemyPrefab.GetComponent<Player>().candyAff && enemyPrefab.GetComponent<Player>().sourAff > enemyPrefab.GetComponent<Player>().spicyAff && enemyPrefab.GetComponent<Player>().sourAff > enemyPrefab.GetComponent<Player>().veggieAff && enemyPrefab.GetComponent<Player>().sourAff > enemyPrefab.GetComponent<Player>().seafoodAff)
         {
-            enemyPrefab.GetComponent<Player>().type = "Type:Electric";
+            enemyPrefab.GetComponent<Player>().type = "Type: Electric";
             enemyAffType = "Electric";
             enemyCritType = "Water";
             enemyResType = "Earth";
@@ -120,7 +121,7 @@ public class BattleSystem : MonoBehaviour
         }
         else if (enemyPrefab.GetComponent<Player>().spicyAff > enemyPrefab.GetComponent<Player>().candyAff && enemyPrefab.GetComponent<Player>().spicyAff > enemyPrefab.GetComponent<Player>().sourAff && enemyPrefab.GetComponent<Player>().spicyAff > enemyPrefab.GetComponent<Player>().veggieAff && enemyPrefab.GetComponent<Player>().spicyAff > enemyPrefab.GetComponent<Player>().seafoodAff)
         {
-            enemyPrefab.GetComponent<Player>().type = "Type:Fire";
+            enemyPrefab.GetComponent<Player>().type = "Type: Fire";
             enemyAffType = "Fire";
             enemyCritType = "Air";
             enemyResType = "Water";
@@ -128,7 +129,7 @@ public class BattleSystem : MonoBehaviour
         }
         else if (enemyPrefab.GetComponent<Player>().veggieAff > enemyPrefab.GetComponent<Player>().candyAff && enemyPrefab.GetComponent<Player>().veggieAff > enemyPrefab.GetComponent<Player>().sourAff && enemyPrefab.GetComponent<Player>().veggieAff > enemyPrefab.GetComponent<Player>().spicyAff && enemyPrefab.GetComponent<Player>().veggieAff > enemyPrefab.GetComponent<Player>().seafoodAff)
         {
-            enemyPrefab.GetComponent<Player>().type = "Type:Earth";
+            enemyPrefab.GetComponent<Player>().type = "Type: Earth";
             enemyAffType = "Earth";
             enemyCritType = "Electric";
             enemyResType = "Air";
@@ -136,7 +137,7 @@ public class BattleSystem : MonoBehaviour
         }
         else if (enemyPrefab.GetComponent<Player>().seafoodAff > enemyPrefab.GetComponent<Player>().candyAff && enemyPrefab.GetComponent<Player>().seafoodAff > enemyPrefab.GetComponent<Player>().sourAff && enemyPrefab.GetComponent<Player>().seafoodAff > enemyPrefab.GetComponent<Player>().spicyAff && enemyPrefab.GetComponent<Player>().seafoodAff > enemyPrefab.GetComponent<Player>().veggieAff)
         {
-            enemyPrefab.GetComponent<Player>().type = "Type:Water";
+            enemyPrefab.GetComponent<Player>().type = "Type: Water";
             enemyAffType = "Water";
             enemyCritType = "Fire";
             enemyResType = "Electric";
@@ -144,7 +145,7 @@ public class BattleSystem : MonoBehaviour
         }
         else
         {
-            enemyPrefab.GetComponent<Player>().type = "Type:Normal";
+            enemyPrefab.GetComponent<Player>().type = "Type: Normal";
             enemyCritType = "NONE";
             enemyResType = "NONE";
             enemyTypeHigh = (enemyPrefab.GetComponent<Player>().seafoodAff + enemyPrefab.GetComponent<Player>().veggieAff + enemyPrefab.GetComponent<Player>().spicyAff + enemyPrefab.GetComponent<Player>().sourAff + enemyPrefab.GetComponent<Player>().candyAff) / 5;
@@ -158,23 +159,28 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator SetupBattle()
     {
-        moveSelect.SetActive(false);
-        optionButtons.SetActive(false);
         GameObject playerGO = Instantiate(playerPrefab, playSpawn);
         playerUnit = playerGO.GetComponent<Player>();
-        sm = playerUnit.GetComponent<SlimeMove>();
-        sm.enabled = false;
 
-       GameObject enemyGO =Instantiate(enemyPrefab, EnemySpawn);
+        string playerAnimName = "Animations/Slime/Battle/" + gameManager.GetComponent<GameManager>().playerSlimeColor + " Slime/slime_" + gameManager.GetComponent<GameManager>().playerSlimeColor.ToLower() + "_battle";
+        Debug.Log(playerAnimName);
+        playerGO.GetComponent<Animator>().runtimeAnimatorController = Resources.Load(playerAnimName) as RuntimeAnimatorController;
+        playerGO.transform.localScale = new Vector2(gameManager.GetComponent<GameManager>().playerSize * 2f, gameManager.GetComponent<GameManager>().playerSize * 2f);
+
+        GameObject enemyGO =Instantiate(enemyPrefab, EnemySpawn);
         enemyUnit = enemyGO.GetComponent<Player>();
 
-        dialogueText.text = "An enemy slime approaches....";
+        string enemyAnimName = "Animations/Slime/Battle/" + gameManager.GetComponent<GameManager>().enemySlimeColor + " Slime/slime_" + gameManager.GetComponent<GameManager>().enemySlimeColor.ToLower() + "_battle";
+        Debug.Log(enemyAnimName);
+        enemyGO.GetComponent<Animator>().runtimeAnimatorController = Resources.Load(enemyAnimName) as RuntimeAnimatorController;
+        enemyGO.transform.localScale = new Vector2(gameManager.GetComponent<GameManager>().enemySize * 2f, gameManager.GetComponent<GameManager>().enemySize * 2f);
+
+        dialogueText.text = "An enemy slime approaches.....";
 
         playerHUD.SetHUD(playerUnit);
         enemyHUD.SetHUD(enemyUnit);
 
-
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(2.5f);
 
         state = BattleState.PlayTurn;
         PlayerTurn();
@@ -285,15 +291,14 @@ public class BattleSystem : MonoBehaviour
         }
         else
         {
-            Debug.Log("You named something wrong Joe");
+            Debug.Log("You named something wrong Joe.");
         }
-       /* this stops stuff for 2 seconds for read time*/ yield return new WaitForSeconds(2f);
+       /* this stops stuff for 2 seconds for read time*/ yield return new WaitForSeconds(2.5f);
         if (isDead)
         {
            
             state = BattleState.Win;
             EndBattle();
-            sm.enabled = true;
         }
         else
         {
@@ -306,18 +311,17 @@ public class BattleSystem : MonoBehaviour
     IEnumerator EnemyTurn()
     {
         dialogueText.text = enemyUnit.name + " attacks!";
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2.5f);
 
         isDead = playerUnit.TakeDamage(gameManager.GetComponent<GameManager>().MoveRoll.MoveUse(enemyResType,enemyCritType,enemyPowerLevel, enemyTypeHigh, playerTypeHigh, playerAffTypeString));
         playerHUD.SetHealth(playerUnit.currentHP);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2.5f);
 
         if (isDead)
         {
             playHealthBarFill.SetActive(false);
             state = BattleState.Lose;
             EndBattle();
-            sm.enabled = true;
             SceneManager.LoadScene("Ranch");
         }
         else
@@ -331,9 +335,9 @@ public class BattleSystem : MonoBehaviour
         playerUnit.Heal(5);
 
         playerHUD.SetHealth(playerUnit.currentHP);
-        dialogueText.text = "You feel better after your snack";
+        dialogueText.text = "You feel better after your snack.";
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(2.5f);
 
         state = BattleState.EnTurn;
         StartCoroutine(EnemyTurn());
@@ -343,7 +347,7 @@ public class BattleSystem : MonoBehaviour
     {
         if (state == BattleState.Win)
         {
-            dialogueText.text = "You have won the battle! you earn " + (uint)enemyPrefab.GetComponent<Player>().VicGold + "Gold";
+            dialogueText.text = "You have won the battle! you earn " + (uint)enemyPrefab.GetComponent<Player>().VicGold + "Gold.";
             gameManager.GetComponent<GameManager>().goldCount += (uint)enemyPrefab.GetComponent<Player>().VicGold;
             Camera.main.GetComponent<CameraFollow>().enabled = true;
             Camera.main.GetComponent<AudioListener>().enabled = true;
@@ -359,38 +363,39 @@ public class BattleSystem : MonoBehaviour
     }
     void PlayerTurn()
     {
-        
-        dialogueText.text = "Choose an action: ";
-        dialogueText.enabled = false;
-        optionButtons.SetActive(true);
-    }
+        dialogueText.GetComponent<Animation>().Play("ui_button_floatOut");
+        optionButtons.GetComponent<Animation>().Play("ui_button_floatIn");
 
+        EventSystem.current.SetSelectedGameObject(GameObject.FindGameObjectWithTag("AttackButton"));
+    }
+    
     public void OnAttackButton()
     {
         if(state != BattleState.PlayTurn)
         {
             return;
         }
-        optionButtons.SetActive(false);
-        moveSelect.SetActive(true);
-        
-        
+        optionButtons.GetComponent<Animation>().Play("ui_button_floatOut");
+        moveSelect.GetComponent<Animation>().Play("ui_button_floatIn");
+
+        EventSystem.current.SetSelectedGameObject(GameObject.FindGameObjectWithTag("Move1"));
     }
     public void OnMoveOne()
     {
         if (playerUnit.hunger > gameManager.GetComponent<GameManager>().PlayerMoves[0].HungerCost)
         {
-            moveSelect.SetActive(false);
-            dialogueText.enabled = true;
+            moveSelect.GetComponent<Animation>().Play("ui_button_floatOut");
+            dialogueText.GetComponent<Animation>().Play("ui_button_floatIn");
             dialogueText.text = "You're too hungry for this move try another or eat a snack!";
-            dialogueText.enabled = false;
-            moveSelect.SetActive(true);
-            
+            dialogueText.GetComponent<Animation>().Play("ui_button_floatOut");
+            moveSelect.GetComponent<Animation>().Play("ui_button_floatIn");
+            EventSystem.current.SetSelectedGameObject(GameObject.FindGameObjectWithTag("Move1"));
+
         }
         else
         {
-            moveSelect.SetActive(false);
-            dialogueText.enabled = true;
+            moveSelect.GetComponent<Animation>().Play("ui_button_floatOut");
+            dialogueText.GetComponent<Animation>().Play("ui_button_floatIn");
             StartCoroutine(PlayerAttack(gameManager.GetComponent<GameManager>().PlayerMoves[0]));
             playerUnit.hunger -= gameManager.GetComponent<GameManager>().PlayerMoves[0].HungerCost;
         }
@@ -400,17 +405,18 @@ public class BattleSystem : MonoBehaviour
     {
         if (playerUnit.hunger > gameManager.GetComponent<GameManager>().PlayerMoves[1].HungerCost)
         {
-            moveSelect.SetActive(false);
-            dialogueText.enabled = true;
+            moveSelect.GetComponent<Animation>().Play("ui_button_floatOut");
+            dialogueText.GetComponent<Animation>().Play("ui_button_floatIn");
             dialogueText.text = "You're too hungry for this move try another or eat a snack!";
-            dialogueText.enabled = false;
-            moveSelect.SetActive(true);
+            dialogueText.GetComponent<Animation>().Play("ui_button_floatOut");
+            moveSelect.GetComponent<Animation>().Play("ui_button_floatIn");
+            EventSystem.current.SetSelectedGameObject(GameObject.FindGameObjectWithTag("Move2"));
 
         }
         else
         {
-            moveSelect.SetActive(false);
-            dialogueText.enabled = true;
+            moveSelect.GetComponent<Animation>().Play("ui_button_floatOut");
+            dialogueText.GetComponent<Animation>().Play("ui_button_floatIn");
             StartCoroutine(PlayerAttack(gameManager.GetComponent<GameManager>().PlayerMoves[1]));
             playerUnit.hunger -= gameManager.GetComponent<GameManager>().PlayerMoves[1].HungerCost;
         }
@@ -420,17 +426,18 @@ public class BattleSystem : MonoBehaviour
     {
         if (playerUnit.hunger > gameManager.GetComponent<GameManager>().PlayerMoves[2].HungerCost)
         {
-            moveSelect.SetActive(false);
-            dialogueText.enabled = true;
+            moveSelect.GetComponent<Animation>().Play("ui_button_floatOut");
+            dialogueText.GetComponent<Animation>().Play("ui_button_floatIn");
             dialogueText.text = "You're too hungry for this move try another or eat a snack!";
-            dialogueText.enabled = false;
-            moveSelect.SetActive(true);
+            dialogueText.GetComponent<Animation>().Play("ui_button_floatOut");
+            moveSelect.GetComponent<Animation>().Play("ui_button_floatIn");
+            EventSystem.current.SetSelectedGameObject(GameObject.FindGameObjectWithTag("Move3"));
 
         }
         else
         {
-            moveSelect.SetActive(false);
-            dialogueText.enabled = true;
+            moveSelect.GetComponent<Animation>().Play("ui_button_floatOut");
+            dialogueText.GetComponent<Animation>().Play("ui_button_floatIn");
             StartCoroutine(PlayerAttack(gameManager.GetComponent<GameManager>().PlayerMoves[2]));
             playerUnit.hunger -= gameManager.GetComponent<GameManager>().PlayerMoves[2].HungerCost;
         }
@@ -439,8 +446,9 @@ public class BattleSystem : MonoBehaviour
     public void OnReturnButton()
     {
         //this method will be reused for the snack select
-        moveSelect.SetActive(false);
-        optionButtons.SetActive(true);
+        moveSelect.GetComponent<Animation>().Play("ui_button_floatOut");
+        optionButtons.GetComponent<Animation>().Play("ui_button_floatIn");
+        EventSystem.current.SetSelectedGameObject(GameObject.FindGameObjectWithTag("AttackButton"));
     }
     public void OnSnackButton()
     {
@@ -448,8 +456,8 @@ public class BattleSystem : MonoBehaviour
         {
             return;
         }
-        optionButtons.SetActive(false);
-        dialogueText.enabled = true;
+        optionButtons.GetComponent<Animation>().Play("ui_button_floatOut");
+        dialogueText.GetComponent<Animation>().Play("ui_button_floatIn");
         StartCoroutine(PlayerHeal());
         
     }
@@ -463,5 +471,4 @@ public class BattleSystem : MonoBehaviour
         Camera.main.GetComponent<AudioListener>().enabled = true;
         SceneManager.LoadScene("Ranch");
     }
-
 }

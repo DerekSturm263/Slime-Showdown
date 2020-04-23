@@ -100,19 +100,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfa57aaaef4ac461a8f0d1c06ffd1a17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Enemy
+  name: Lightning
   color: 
-  type: Type:Spicy
-  health: 106
+  type: 'Type: Normal'
+  health: 30
   hunger: 100
-  currentHP: 100
+  currentHP: 30
   dmg: 20
-  VicGold: 80
+  VicGold: 22
   sourAff: 3
-  spicyAff: 6
-  seafoodAff: 2
-  candyAff: 1
-  veggieAff: 2
+  spicyAff: 3
+  seafoodAff: 4
+  candyAff: 4
+  veggieAff: 4
   size: 0
 --- !u!114 &696864578031005693
 MonoBehaviour:
