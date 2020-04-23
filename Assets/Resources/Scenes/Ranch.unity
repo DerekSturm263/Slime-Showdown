@@ -5222,8 +5222,8 @@ RectTransform:
   m_Father: {fileID: 1527568259}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -5}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.08646515, y: 0.321}
+  m_AnchorMax: {x: 0.9134652, y: 0.6787901}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -5250,15 +5250,15 @@ MonoBehaviour:
     m_FontSize: 75
     m_FontStyle: 1
     m_BestFit: 1
-    m_MinSize: 4
+    m_MinSize: 5
     m_MaxSize: 75
     m_Alignment: 4
-    m_AlignByGeometry: 0
+    m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Roll
 --- !u!222 &869987573
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9418,8 +9418,8 @@ RectTransform:
   m_Father: {fileID: 18236319}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -5}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.08646515, y: 0.321}
+  m_AnchorMax: {x: 0.9134652, y: 0.6787901}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -9446,15 +9446,15 @@ MonoBehaviour:
     m_FontSize: 75
     m_FontStyle: 1
     m_BestFit: 1
-    m_MinSize: 0
+    m_MinSize: 5
     m_MaxSize: 75
     m_Alignment: 4
-    m_AlignByGeometry: 0
+    m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Roll
 --- !u!222 &1471228592
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12832,8 +12832,8 @@ RectTransform:
   m_Father: {fileID: 2069496317}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -5}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.08646515, y: 0.321}
+  m_AnchorMax: {x: 0.9134652, y: 0.6787901}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -12860,15 +12860,15 @@ MonoBehaviour:
     m_FontSize: 75
     m_FontStyle: 1
     m_BestFit: 1
-    m_MinSize: 4
+    m_MinSize: 5
     m_MaxSize: 75
     m_Alignment: 4
-    m_AlignByGeometry: 0
+    m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Roll
 --- !u!222 &1994170466
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -59,7 +59,7 @@ public class SpawnEnemies : MonoBehaviour
             int enemyHP = Random.Range(100, 150);
             int hunger = Random.Range(100, 125);
             int damage = Random.Range(15, 35);
-            int gold = Random.Range(20, 40);
+            int gold = Random.Range(35, 55);
             int sourAff = Random.Range(1, 5);
             int spicyAff = Random.Range(1, 5);
             int seafoodAff = Random.Range(1, 5);
