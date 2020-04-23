@@ -587,6 +587,18 @@ MonoBehaviour:
   playHealthBarFill: {fileID: 1831484659}
   optionButtons: {fileID: 1049683113}
   moveSelect: {fileID: 331172992}
+  move1: {fileID: 1487046609}
+  move2: {fileID: 1725379440}
+  move3: {fileID: 979117131}
+  move1Text: {fileID: 735630858}
+  move2Text: {fileID: 1043491451}
+  move3Text: {fileID: 1183386615}
+  waterColor: {r: 0.09000002, g: 0.6299999, b: 0.9, a: 1}
+  fireColor: {r: 0.9, g: 0.29250002, b: 0.09000002, a: 1}
+  airColor: {r: 0.9, g: 0.67499995, b: 0.67499995, a: 1}
+  earthColor: {r: 0.48, g: 0.8, b: 0.16, a: 1}
+  electricColor: {r: 0.86070806, g: 0.9, b: 0.09000002, a: 1}
+  normalColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
 --- !u!1 &265962774
 GameObject:
   m_ObjectHideFlags: 0
@@ -2904,15 +2916,6 @@ MonoBehaviour:
   nameText: {fileID: 1168812}
   typeText: {fileID: 1400541104}
   hpSlider: {fileID: 1449645205}
-  move1Text: {fileID: 0}
-  move2Text: {fileID: 0}
-  move3Text: {fileID: 0}
-  waterColor: {r: 0, g: 0, b: 0, a: 0}
-  fireColor: {r: 0, g: 0, b: 0, a: 0}
-  airColor: {r: 0, g: 0, b: 0, a: 0}
-  earthColor: {r: 0, g: 0, b: 0, a: 0}
-  electricColor: {r: 0, g: 0, b: 0, a: 0}
-  normalColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1657839447
 GameObject:
   m_ObjectHideFlags: 0
@@ -3234,15 +3237,6 @@ MonoBehaviour:
   nameText: {fileID: 2123839198}
   typeText: {fileID: 1235766485}
   hpSlider: {fileID: 265962776}
-  move1Text: {fileID: 735630858}
-  move2Text: {fileID: 1043491451}
-  move3Text: {fileID: 1183386615}
-  waterColor: {r: 0, g: 0.6666665, b: 1, a: 1}
-  fireColor: {r: 1, g: 0.19999999, b: 0.19999999, a: 1}
-  airColor: {r: 1, g: 0.6, b: 0.6, a: 1}
-  earthColor: {r: 0.75, g: 0.75, b: 0.375, a: 1}
-  electricColor: {r: 0.85, g: 0.84219813, b: 0.04250001, a: 1}
-  normalColor: {r: 0.75, g: 0.75, b: 0.75, a: 1}
 --- !u!1 &2123839196
 GameObject:
   m_ObjectHideFlags: 0

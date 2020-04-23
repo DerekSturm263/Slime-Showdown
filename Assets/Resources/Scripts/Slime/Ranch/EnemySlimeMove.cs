@@ -29,9 +29,6 @@ public class EnemySlimeMove : MonoBehaviour
 
     private void Start()
     {
-        if (!SceneManager.GetActiveScene().name.Equals("Ranch"))
-            this.enabled = false;
-
         gameManager = GameObject.FindGameObjectWithTag("GameController");
         playerSlime = GameObject.FindGameObjectWithTag("RanchBattleSlime");
 

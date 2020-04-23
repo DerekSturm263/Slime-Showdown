@@ -163,5 +163,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraTarget: {fileID: 0}
-  cameraSpeed: 2
+  cameraSpeed: 5
   cameraDistance: 5.5

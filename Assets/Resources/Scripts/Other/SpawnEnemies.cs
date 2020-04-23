@@ -76,6 +76,7 @@ public class SpawnEnemies : MonoBehaviour
         GameObject newEnemy = Instantiate(enemy, position, Quaternion.identity);
         Player stats = newEnemy.GetComponent<Player>();
         Transform enemyTrans = newEnemy.GetComponent<Transform>();
+        newEnemy.GetComponent<EnemySlimeMove>().enabled = true;
 
         // Sets stats based on arguments.
         stats.color = color.ToString();

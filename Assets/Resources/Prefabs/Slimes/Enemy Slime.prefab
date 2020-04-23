@@ -100,19 +100,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfa57aaaef4ac461a8f0d1c06ffd1a17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Lightning
+  name: Acorn
   color: 
   type: 'Type: Normal'
   health: 30
   hunger: 100
   currentHP: 30
   dmg: 20
-  VicGold: 22
-  sourAff: 3
-  spicyAff: 3
-  seafoodAff: 4
-  candyAff: 4
-  veggieAff: 4
+  VicGold: 38
+  sourAff: 1
+  spicyAff: 1
+  seafoodAff: 1
+  candyAff: 1
+  veggieAff: 1
   size: 0
 --- !u!114 &696864578031005693
 MonoBehaviour:
@@ -159,7 +159,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8170967862402327119}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fc36c2218e0ddfa41abf65d0c28efcea, type: 3}
   m_Name: 
