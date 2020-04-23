@@ -231,8 +231,8 @@ public class BattleSystem : MonoBehaviour
         playerGO.GetComponent<Animator>().runtimeAnimatorController = Resources.Load(playerAnimName) as RuntimeAnimatorController;
         enemyGO.GetComponent<Animator>().runtimeAnimatorController = Resources.Load(enemyAnimName) as RuntimeAnimatorController;
 
-        playerGO.transform.localScale = new Vector2(gameManager.GetComponent<GameManager>().playerSize * 1.5f, gameManager.GetComponent<GameManager>().playerSize * 1.5f);
-        enemyGO.transform.localScale = new Vector2(gameManager.GetComponent<GameManager>().enemySize * 1.5f, gameManager.GetComponent<GameManager>().enemySize * 1.5f);
+        playerGO.transform.localScale = new Vector2(gameManager.GetComponent<GameManager>().playerSize * 2f, gameManager.GetComponent<GameManager>().playerSize * 2f);
+        enemyGO.transform.localScale = new Vector2(gameManager.GetComponent<GameManager>().enemySize * 2f, gameManager.GetComponent<GameManager>().enemySize * 2f);
 
         enemyGO.GetComponent<SpriteRenderer>().flipX = true;
 
@@ -354,8 +354,8 @@ public class BattleSystem : MonoBehaviour
         {
            
             state = BattleState.Win;
-            MusicPlayer.Play("music_victoryTheme");
-            EndBattle();
+            
+            StartCoroutine(EndBattle());
         }
         else
         {
@@ -378,7 +378,7 @@ public class BattleSystem : MonoBehaviour
         {
             playHealthBarFill.SetActive(false);
             state = BattleState.Lose;
-            EndBattle();
+            StartCoroutine(EndBattle());
             SceneManager.LoadScene("Ranch");
         }
         else
@@ -400,17 +400,23 @@ public class BattleSystem : MonoBehaviour
         StartCoroutine(EnemyTurn());
 
     }
-    void EndBattle()
+    private IEnumerator EndBattle()
     {
         if (state == BattleState.Win)
         {
             dialogueText.text = "You beat " + enemyUnit.name + " and earned " + (uint)enemyPrefab.GetComponent<Player>().VicGold + " gold!";
             gameManager.GetComponent<GameManager>().goldCount += (uint)enemyPrefab.GetComponent<Player>().VicGold;
+
+            MusicPlayer.Stop();
+            SoundPlayer.Play("music_victoryTheme");
+
+            yield return new WaitForSeconds(2.5f);
+
             Camera.main.GetComponent<CameraFollow>().enabled = true;
             Camera.main.GetComponent<AudioListener>().enabled = true;
-
             SceneManager.LoadScene("Ranch");
-        } else if (state == BattleState.Lose)
+        }
+        else if (state == BattleState.Lose)
         {
             dialogueText.text = "You lost against " + enemyUnit.name + "...";
             Camera.main.GetComponent<CameraFollow>().enabled = true;
@@ -550,7 +556,7 @@ public class BattleSystem : MonoBehaviour
 
     private IEnumerator Leave()
     {
-        if (Random.Range(-1, 2) > 0)
+        if (Random.Range(-1, 2) >= 0)
         {
             dialogueText.text = "You got away!";
             yield return new WaitForSeconds(2.5f);

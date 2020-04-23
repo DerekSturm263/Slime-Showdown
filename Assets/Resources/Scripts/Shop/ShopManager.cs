@@ -215,8 +215,40 @@ public class ShopManager : MonoBehaviour
 
             if (selectedItem.GetComponent<Buyable>() is MealData)
             {
-                gameManager.GetComponent<GameManager>().goldCount -= selectedItem.GetComponent<Buyable>().price;
-                EatMeal(selectedItem.GetComponent<Buyable>());
+                string affType = selectedItem.GetComponent<MealData>().type.ToString();
+                bool canBuy = false;
+
+                if (affType == "Water")
+                {
+                    if (gameManager.GetComponent<GameManager>().playSeafoodAff < 10)
+                        canBuy = true;
+                }
+                else if (affType == "Air")
+                {
+                    if (gameManager.GetComponent<GameManager>().playCandyAff < 10)
+                        canBuy = true;
+                }
+                else if (affType == "Fire")
+                {
+                    if (gameManager.GetComponent<GameManager>().playSpicyAff < 10)
+                        canBuy = true;
+                }
+                else if (affType == "Earth")
+                {
+                    if (gameManager.GetComponent<GameManager>().playVeggieAff < 10)
+                        canBuy = true;
+                }
+                else
+                {
+                    if (gameManager.GetComponent<GameManager>().playSourAff < 10)
+                        canBuy = true;
+                }
+
+                if (canBuy)
+                {
+                    gameManager.GetComponent<GameManager>().goldCount -= selectedItem.GetComponent<Buyable>().price;
+                    EatMeal(selectedItem.GetComponent<Buyable>());
+                }
             }
             else
             {
@@ -305,6 +337,8 @@ public class ShopManager : MonoBehaviour
                 break;
         }
 
+        affMethods.done = false;
+
         slimeEating.GetComponent<Animation>().Play("ui_ranch_slimeEatingAnim_floatIn");
         affinityText.GetComponent<Animation>().Play("ui_ranch_affinityText_floatIn");
 
@@ -315,8 +349,6 @@ public class ShopManager : MonoBehaviour
 
         // Check here for an affinity threshold
         affMethods.AffinityCheck(type, affThresOne,affThresTwo,affThresThree);
-
-        affMethods.done = false;
 
         yield return new WaitUntil(() => affMethods.done == true);
 

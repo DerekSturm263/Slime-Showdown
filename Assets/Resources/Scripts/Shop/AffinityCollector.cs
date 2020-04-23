@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.EventSystems;
 
 public class AffinityCollector : MonoBehaviour
 {
@@ -20,6 +20,8 @@ public class AffinityCollector : MonoBehaviour
     public Text M1Name;
     public Text M2Name;
 
+    public GameObject move1;
+
     public bool done = false;
 
     public MoveClass NewMove;
@@ -31,8 +33,6 @@ public class AffinityCollector : MonoBehaviour
 
     public void AffinityCheck(int type, int thresholdOne, int thresholdTwo, int thresholdThree)
     {
-        done = false;
-
         switch (type)
         {
             case 1:
@@ -51,6 +51,10 @@ public class AffinityCollector : MonoBehaviour
                 {
                     ReplaceMove(type, gameManager.GetComponent<GameManager>().SeaCount);
                     gameManager.GetComponent<GameManager>().SeaCount++;
+                }
+                else
+                {
+                    done = true;
                 }
 
                 break;
@@ -71,6 +75,10 @@ public class AffinityCollector : MonoBehaviour
                     ReplaceMove(type, gameManager.GetComponent<GameManager>().CandyCount);
                     gameManager.GetComponent<GameManager>().CandyCount++;
                 }
+                else
+                {
+                    done = true;
+                }
 
                 break;
             case 3:
@@ -89,6 +97,10 @@ public class AffinityCollector : MonoBehaviour
                 {
                     ReplaceMove(type, gameManager.GetComponent<GameManager>().SpicyCount);
                     gameManager.GetComponent<GameManager>().SpicyCount++;
+                }
+                else
+                {
+                    done = true;
                 }
 
                 break;
@@ -109,6 +121,10 @@ public class AffinityCollector : MonoBehaviour
                     ReplaceMove(type, gameManager.GetComponent<GameManager>().VeggieCount);
                     gameManager.GetComponent<GameManager>().VeggieCount++;
                 }
+                else
+                {
+                    done = true;
+                }
 
                 break;
             case 5:
@@ -128,49 +144,51 @@ public class AffinityCollector : MonoBehaviour
                     ReplaceMove(type, gameManager.GetComponent<GameManager>().SourCount);
                     gameManager.GetComponent<GameManager>().SourCount++;
                 }
+                else
+                {
+                    done = true;
+                }
 
                 break;
 
             default:
-
                 done = true;
-
                 break;
         }
-
-
     } // Aff check
 
     public void ReplaceMove(int type, int typeCount)
     {
-        M0Name.text = gameManager.GetComponent<GameManager>().PlayerMoves[0].name;
-        M1Name.text = gameManager.GetComponent<GameManager>().PlayerMoves[1].name;
-        M2Name.text = gameManager.GetComponent<GameManager>().PlayerMoves[2].name;
+        M0Name.text = gameManager.GetComponent<GameManager>().PlayerMoves[0].Name;
+        M1Name.text = gameManager.GetComponent<GameManager>().PlayerMoves[1].Name;
+        M2Name.text = gameManager.GetComponent<GameManager>().PlayerMoves[2].Name;
 
         topArea.GetComponent<Animation>().Play("ui_ranch_shopTop_floatIn");
         moveInfo.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeIn");
         moves.GetComponent<Animation>().Play("ui_button_floatIn");
+
+        EventSystem.current.SetSelectedGameObject(move1);
 
         switch (type)
         {
             case 1:
                 if (typeCount < 1)
                 {
-                    NewMoveName.text = gameManager.GetComponent<GameManager>().MoveSplash.name;
+                    NewMoveName.text = gameManager.GetComponent<GameManager>().MoveSplash.Name;
                     NewMoveType.text = "Type: " + gameManager.GetComponent<GameManager>().MoveSplash.AffType;
                     NewMovePwr.text = "Power Level: 1";
                     NewMove = gameManager.GetComponent<GameManager>().MoveSplash;
                 }
                 else if (typeCount < 2)
                 {
-                    NewMoveName.text = gameManager.GetComponent<GameManager>().MoveWaterBall.name;
+                    NewMoveName.text = gameManager.GetComponent<GameManager>().MoveWaterBall.Name;
                     NewMoveType.text = "Type: " + gameManager.GetComponent<GameManager>().MoveWaterBall.AffType;
                     NewMovePwr.text = "Power Level: 2";
                     NewMove = gameManager.GetComponent<GameManager>().MoveWaterBall;
                 }
                 else
                 {
-                    NewMoveName.text = gameManager.GetComponent<GameManager>().MoveWaterHose.name;
+                    NewMoveName.text = gameManager.GetComponent<GameManager>().MoveWaterHose.Name;
                     NewMoveType.text = "Type: " + gameManager.GetComponent<GameManager>().MoveWaterHose.AffType;
                     NewMovePwr.text = "Power Level: 3";
                     NewMove = gameManager.GetComponent<GameManager>().MoveWaterHose;
@@ -180,21 +198,21 @@ public class AffinityCollector : MonoBehaviour
             case 2:
                 if (typeCount < 1)
                 {
-                    NewMoveName.text = gameManager.GetComponent<GameManager>().MoveBlow.name;
+                    NewMoveName.text = gameManager.GetComponent<GameManager>().MoveBlow.Name;
                     NewMoveType.text = "Type: " + gameManager.GetComponent<GameManager>().MoveBlow.AffType;
                     NewMovePwr.text = "Power Level: 1";
                     NewMove = gameManager.GetComponent<GameManager>().MoveBlow;
                 }
                 else if (typeCount < 2)
                 {
-                    NewMoveName.text = gameManager.GetComponent<GameManager>().MoveAirCutter.name;
+                    NewMoveName.text = gameManager.GetComponent<GameManager>().MoveAirCutter.Name;
                     NewMoveType.text = "Type: " + gameManager.GetComponent<GameManager>().MoveAirCutter.AffType;
                     NewMovePwr.text = "Power Level: 2";
                     NewMove = gameManager.GetComponent<GameManager>().MoveAirCutter;
                 }
                 else
                 {
-                    NewMoveName.text = gameManager.GetComponent<GameManager>().MoveWindBlade.name;
+                    NewMoveName.text = gameManager.GetComponent<GameManager>().MoveWindBlade.Name;
                     NewMoveType.text = "Type: " + gameManager.GetComponent<GameManager>().MoveWindBlade.AffType;
                     NewMovePwr.text = "Power Level: 3";
                     NewMove = gameManager.GetComponent<GameManager>().MoveWindBlade;
@@ -204,21 +222,21 @@ public class AffinityCollector : MonoBehaviour
             case 3:
                 if (typeCount < 1)
                 {
-                    NewMoveName.text = gameManager.GetComponent<GameManager>().MovePepperSpray.name;
+                    NewMoveName.text = gameManager.GetComponent<GameManager>().MovePepperSpray.Name;
                     NewMoveType.text = "Type: " + gameManager.GetComponent<GameManager>().MovePepperSpray.AffType;
                     NewMovePwr.text = "Power Level: 1";
                     NewMove = gameManager.GetComponent<GameManager>().MovePepperSpray;
                 }
                 else if (typeCount < 2)
                 {
-                    NewMoveName.text = gameManager.GetComponent<GameManager>().MoveFlameShot.name;
+                    NewMoveName.text = gameManager.GetComponent<GameManager>().MoveFlameShot.Name;
                     NewMoveType.text = "Type: " + gameManager.GetComponent<GameManager>().MoveFlameShot.AffType;
                     NewMovePwr.text = "Power Level: 2";
                     NewMove = gameManager.GetComponent<GameManager>().MoveFlameShot;
                 }
                 else
                 {
-                    NewMoveName.text = gameManager.GetComponent<GameManager>().MoveFireBall.name;
+                    NewMoveName.text = gameManager.GetComponent<GameManager>().MoveFireBall.Name;
                     NewMoveType.text = "Type: " + gameManager.GetComponent<GameManager>().MoveFireBall.AffType;
                     NewMovePwr.text = "Power Level: 3";
                     NewMove = gameManager.GetComponent<GameManager>().MoveFireBall;
@@ -228,21 +246,21 @@ public class AffinityCollector : MonoBehaviour
             case 4:
                 if (typeCount < 1)
                 {
-                    NewMoveName.text = gameManager.GetComponent<GameManager>().MovePebbleSpit.name;
+                    NewMoveName.text = gameManager.GetComponent<GameManager>().MovePebbleSpit.Name;
                     NewMoveType.text = "Type: " + gameManager.GetComponent<GameManager>().MovePebbleSpit.AffType;
                     NewMovePwr.text = "Power Level: 1";
                     NewMove = gameManager.GetComponent<GameManager>().MovePebbleSpit;
                 }
                 else if (typeCount < 2)
                 {
-                    NewMoveName.text = gameManager.GetComponent<GameManager>().MoveRockToss.name;
+                    NewMoveName.text = gameManager.GetComponent<GameManager>().MoveRockToss.Name;
                     NewMoveType.text = "Type: " + gameManager.GetComponent<GameManager>().MoveRockToss.AffType;
                     NewMovePwr.text = "Power Level: 2";
                     NewMove = gameManager.GetComponent<GameManager>().MoveRockToss;
                 }
                 else
                 {
-                    NewMoveName.text = gameManager.GetComponent<GameManager>().MoveSeismicSmash.name;
+                    NewMoveName.text = gameManager.GetComponent<GameManager>().MoveSeismicSmash.Name;
                     NewMoveType.text = "Type: " + gameManager.GetComponent<GameManager>().MoveSeismicSmash.AffType;
                     NewMovePwr.text = "Power Level: 3";
                     NewMove = gameManager.GetComponent<GameManager>().MoveSeismicSmash;
@@ -252,21 +270,21 @@ public class AffinityCollector : MonoBehaviour
             case 5:
                 if (typeCount < 1)
                 {
-                    NewMoveName.text = gameManager.GetComponent<GameManager>().MoveZap.name;
+                    NewMoveName.text = gameManager.GetComponent<GameManager>().MoveZap.Name;
                     NewMoveType.text = "Type: " + gameManager.GetComponent<GameManager>().MoveZap.AffType;
                     NewMovePwr.text = "Power Level: 1";
                     NewMove = gameManager.GetComponent<GameManager>().MoveZap;
                 }
                 else if (typeCount < 2)
                 {
-                    NewMoveName.text = gameManager.GetComponent<GameManager>().MoveShock.name;
+                    NewMoveName.text = gameManager.GetComponent<GameManager>().MoveShock.Name;
                     NewMoveType.text = "Type: " + gameManager.GetComponent<GameManager>().MoveShock.AffType;
                     NewMovePwr.text = "Power Level: 2";
                     NewMove = gameManager.GetComponent<GameManager>().MoveShock;
                 }
                 else
                 {
-                    NewMoveName.text = gameManager.GetComponent<GameManager>().MoveThunderShock.name;
+                    NewMoveName.text = gameManager.GetComponent<GameManager>().MoveThunderShock.Name;
                     NewMoveType.text = "Type: " + gameManager.GetComponent<GameManager>().MoveThunderShock.AffType;
                     NewMovePwr.text = "Power Level: 3";
                     NewMove = gameManager.GetComponent<GameManager>().MoveThunderShock;
@@ -304,10 +322,10 @@ public class AffinityCollector : MonoBehaviour
 
     private void GoAway()
     {
+        done = true;
+
         topArea.GetComponent<Animation>().Play("ui_ranch_shopTop_floatOut");
         moveInfo.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeOut");
         moves.GetComponent<Animation>().Play("ui_button_floatOut");
-
-        done = true;
     }
 }
