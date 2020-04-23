@@ -48,3 +48,4 @@ MonoBehaviour:
   ResAff: Air
   CritAff: Electric
   PowerLV: 3
+  HungerCost: 15

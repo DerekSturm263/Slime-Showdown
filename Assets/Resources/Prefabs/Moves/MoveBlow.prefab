@@ -48,3 +48,4 @@ MonoBehaviour:
   ResAff: Fire
   CritAff: Earth
   PowerLV: 1
+  HungerCost: 5

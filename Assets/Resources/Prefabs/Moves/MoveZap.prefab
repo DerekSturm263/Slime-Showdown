@@ -48,3 +48,4 @@ MonoBehaviour:
   ResAff: Earth
   CritAff: Water
   PowerLV: 1
+  HungerCost: 5

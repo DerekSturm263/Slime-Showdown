@@ -91,6 +91,7 @@ public class BattleSystem : MonoBehaviour
         }
         playerPrefab.GetComponent<Player>().health = 50 + playerTypeHigh;
         playerPrefab.GetComponent<Player>().currentHP = playerPrefab.GetComponent<Player>().health;
+        playerPrefab.GetComponent<Player>().hunger = 20 + playerTypeHigh;
         #endregion
         #region pulling from gm enemy
         enemyPrefab.GetComponent<Player>().name = gameManager.GetComponent<GameManager>().enemySlimeName;
@@ -377,23 +378,62 @@ public class BattleSystem : MonoBehaviour
     }
     public void OnMoveOne()
     {
-        moveSelect.SetActive(false);
-        dialogueText.enabled = true;
-        StartCoroutine(PlayerAttack(gameManager.GetComponent<GameManager>().PlayerMoves[0]));
+        if (playerUnit.hunger > gameManager.GetComponent<GameManager>().PlayerMoves[0].HungerCost)
+        {
+            moveSelect.SetActive(false);
+            dialogueText.enabled = true;
+            dialogueText.text = "You're too hungry for this move try another or eat a snack!";
+            dialogueText.enabled = false;
+            moveSelect.SetActive(true);
+            
+        }
+        else
+        {
+            moveSelect.SetActive(false);
+            dialogueText.enabled = true;
+            StartCoroutine(PlayerAttack(gameManager.GetComponent<GameManager>().PlayerMoves[0]));
+            playerUnit.hunger -= gameManager.GetComponent<GameManager>().PlayerMoves[0].HungerCost;
+        }
         
     }
     public void OnMoveTwo()
     {
-        moveSelect.SetActive(false);
-        dialogueText.enabled = true;
-        StartCoroutine(PlayerAttack(gameManager.GetComponent<GameManager>().PlayerMoves[1]));
+        if (playerUnit.hunger > gameManager.GetComponent<GameManager>().PlayerMoves[1].HungerCost)
+        {
+            moveSelect.SetActive(false);
+            dialogueText.enabled = true;
+            dialogueText.text = "You're too hungry for this move try another or eat a snack!";
+            dialogueText.enabled = false;
+            moveSelect.SetActive(true);
+
+        }
+        else
+        {
+            moveSelect.SetActive(false);
+            dialogueText.enabled = true;
+            StartCoroutine(PlayerAttack(gameManager.GetComponent<GameManager>().PlayerMoves[1]));
+            playerUnit.hunger -= gameManager.GetComponent<GameManager>().PlayerMoves[1].HungerCost;
+        }
         
     }
     public void OnMoveThree()
     {
-        moveSelect.SetActive(false);
-        dialogueText.enabled = true;
-        StartCoroutine(PlayerAttack(gameManager.GetComponent<GameManager>().PlayerMoves[2]));
+        if (playerUnit.hunger > gameManager.GetComponent<GameManager>().PlayerMoves[2].HungerCost)
+        {
+            moveSelect.SetActive(false);
+            dialogueText.enabled = true;
+            dialogueText.text = "You're too hungry for this move try another or eat a snack!";
+            dialogueText.enabled = false;
+            moveSelect.SetActive(true);
+
+        }
+        else
+        {
+            moveSelect.SetActive(false);
+            dialogueText.enabled = true;
+            StartCoroutine(PlayerAttack(gameManager.GetComponent<GameManager>().PlayerMoves[2]));
+            playerUnit.hunger -= gameManager.GetComponent<GameManager>().PlayerMoves[2].HungerCost;
+        }
         
     }
     public void OnReturnButton()

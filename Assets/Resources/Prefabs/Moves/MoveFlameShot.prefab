@@ -48,3 +48,4 @@ MonoBehaviour:
   ResAff: Water
   CritAff: Air
   PowerLV: 2
+  HungerCost: 10

@@ -48,3 +48,4 @@ MonoBehaviour:
   ResAff: None
   CritAff: None
   PowerLV: -1
+  HungerCost: 0

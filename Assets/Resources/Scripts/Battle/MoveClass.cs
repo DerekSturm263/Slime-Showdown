@@ -11,6 +11,7 @@ public class MoveClass : MonoBehaviour
     public string ResAff;
     public string CritAff;
     public int PowerLV;//this will range from 1-3 for the 3 stages of affinity type
+    public int HungerCost;
 
     //the constructor will let us compile the moves into a list of type MoveClass
     public MoveClass(string name, string affType, string resAff, string critAff, int powerLV)
