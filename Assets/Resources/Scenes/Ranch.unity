@@ -11653,8 +11653,8 @@ GameObject:
   - component: {fileID: 1778596102}
   - component: {fileID: 1778596106}
   - component: {fileID: 1778596105}
-  - component: {fileID: 1778596104}
   - component: {fileID: 1778596103}
+  - component: {fileID: 1778596104}
   m_Layer: 5
   m_Name: Eating Animation
   m_TagString: SlimeEatingAnimation
@@ -11699,7 +11699,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 7507335170129247139, guid: 60553ccb0c89d314f9ebbd56b70ec430,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
