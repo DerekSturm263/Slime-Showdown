@@ -58,8 +58,7 @@ public class BattleSystem : MonoBehaviour
     public Color electricColor;
     public Color normalColor;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         playHealthBarFill.SetActive(true);
         enemHealthBarFill.SetActive(true);
@@ -481,6 +480,7 @@ public class BattleSystem : MonoBehaviour
             dialogueText.GetComponent<Animation>().Play("ui_button_floatIn");
             StartCoroutine(PlayerAttack(gameManager.GetComponent<GameManager>().PlayerMoves[0]));
             playerUnit.hunger -= gameManager.GetComponent<GameManager>().PlayerMoves[0].HungerCost;
+            playerHUD.SetHunger(playerUnit.hunger);
         }
     }
 
@@ -503,6 +503,7 @@ public class BattleSystem : MonoBehaviour
             dialogueText.GetComponent<Animation>().Play("ui_button_floatIn");
             StartCoroutine(PlayerAttack(gameManager.GetComponent<GameManager>().PlayerMoves[1]));
             playerUnit.hunger -= gameManager.GetComponent<GameManager>().PlayerMoves[1].HungerCost;
+            playerHUD.SetHunger(playerUnit.hunger);
         }
     }
 
@@ -525,6 +526,7 @@ public class BattleSystem : MonoBehaviour
             dialogueText.GetComponent<Animation>().Play("ui_button_floatIn");
             StartCoroutine(PlayerAttack(gameManager.GetComponent<GameManager>().PlayerMoves[2]));
             playerUnit.hunger -= gameManager.GetComponent<GameManager>().PlayerMoves[2].HungerCost;
+            playerHUD.SetHunger(playerUnit.hunger);
         }
     }
 
