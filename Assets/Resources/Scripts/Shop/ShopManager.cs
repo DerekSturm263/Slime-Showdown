@@ -312,8 +312,14 @@ public class ShopManager : MonoBehaviour
 
         slimeEating.GetComponent<Animation>().Play("ui_ranch_slimeEatingAnim_floatOut");
         affinityText.GetComponent<Animation>().Play("ui_ranch_affinityText_floatOut");
-        //check here for an affinity threshold
+
+        // Check here for an affinity threshold
         affMethods.AffinityCheck(type, affThresOne,affThresTwo,affThresThree);
+
+        affMethods.done = false;
+
+        yield return new WaitUntil(() => affMethods.done == true);
+
         shopTopBarLayout.GetComponent<Animation>().Play("ui_ranch_shopTopBar_floatIn");
         shopScrollView.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeIn");
         shopMealsContent.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeIn");
