@@ -31,6 +31,7 @@ public class SlimeMove : MonoBehaviour
     {
         gameManager = GameObject.FindGameObjectWithTag("GameController");
         transform.position = gameManager.GetComponent<GameManager>().lastPlayerPos;
+        transform.localScale = new Vector2(gameManager.GetComponent<GameManager>().playerSize, gameManager.GetComponent<GameManager>().playerSize);
 
         animController = GetComponent<Animator>();
         rb2D = GetComponent<Rigidbody2D>();

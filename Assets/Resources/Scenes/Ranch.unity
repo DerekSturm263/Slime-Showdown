@@ -1821,7 +1821,7 @@ GameObject:
   - component: {fileID: 358230122}
   - component: {fileID: 358230121}
   m_Layer: 5
-  m_Name: Inventory Slot (7)
+  m_Name: Inventory Slot 7
   m_TagString: InventorySlot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1987,7 +1987,7 @@ GameObject:
   - component: {fileID: 363494891}
   - component: {fileID: 363494890}
   m_Layer: 5
-  m_Name: Inventory Slot (11)
+  m_Name: Inventory Slot 92
   m_TagString: InventorySlot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2593,7 +2593,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 197048650}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.66666657
+  m_Size: 0.6666667
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2719,7 +2719,7 @@ GameObject:
   - component: {fileID: 424871058}
   - component: {fileID: 424871057}
   m_Layer: 5
-  m_Name: Inventory Slot (3)
+  m_Name: Inventory Slot 3
   m_TagString: InventorySlot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4158,8 +4158,17 @@ MonoBehaviour:
   M1Name: {fileID: 1994170465}
   M2Name: {fileID: 869987572}
   move1: {fileID: 18236318}
+  move2: {fileID: 2069496316}
+  move3: {fileID: 1527568258}
   done: 0
   NewMove: {fileID: 0}
+  enemyPowerCount: 0
+  waterColor: {r: 0.09000002, g: 0.6299999, b: 0.9, a: 1}
+  fireColor: {r: 0.9, g: 0.29250002, b: 0.09000002, a: 1}
+  airColor: {r: 0.9, g: 0.67499995, b: 0.67499995, a: 1}
+  earthColor: {r: 0.48, g: 0.8, b: 0.16, a: 1}
+  electricColor: {r: 0.8595, g: 0.9, b: 0.09000002, a: 1}
+  normalColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
 --- !u!1 &570498952
 GameObject:
   m_ObjectHideFlags: 0
@@ -5007,7 +5016,7 @@ GameObject:
   - component: {fileID: 850069764}
   - component: {fileID: 850069763}
   m_Layer: 5
-  m_Name: Inventory Slot (1)
+  m_Name: Inventory Slot 1
   m_TagString: InventorySlot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5668,7 +5677,7 @@ GameObject:
   - component: {fileID: 898727529}
   - component: {fileID: 898727528}
   m_Layer: 5
-  m_Name: Inventory Slot (4)
+  m_Name: Inventory Slot 4
   m_TagString: InventorySlot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6248,7 +6257,7 @@ GameObject:
   - component: {fileID: 1022397475}
   - component: {fileID: 1022397474}
   m_Layer: 5
-  m_Name: Inventory Slot (5)
+  m_Name: Inventory Slot 5
   m_TagString: InventorySlot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6339,6 +6348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 8170967862402327119, guid: 574de21741fe04333b00fe9f146c9c75, type: 3}
+  gameManager: {fileID: 0}
   playerPosition: {x: 0, y: 0, z: 0}
 --- !u!4 &1033061117
 Transform:
@@ -6746,7 +6756,7 @@ GameObject:
   - component: {fileID: 1111389122}
   - component: {fileID: 1111389121}
   m_Layer: 5
-  m_Name: Inventory Slot (2)
+  m_Name: Inventory Slot 2
   m_TagString: InventorySlot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7565,7 +7575,7 @@ GameObject:
   - component: {fileID: 1214528570}
   - component: {fileID: 1214528569}
   m_Layer: 5
-  m_Name: Inventory Slot (8)
+  m_Name: Inventory Slot 8
   m_TagString: InventorySlot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9158,7 +9168,7 @@ GameObject:
   - component: {fileID: 1441212189}
   - component: {fileID: 1441212188}
   m_Layer: 5
-  m_Name: Inventory Slot (10)
+  m_Name: Inventory Slot 91
   m_TagString: InventorySlot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10651,7 +10661,7 @@ GameObject:
   - component: {fileID: 1622974075}
   - component: {fileID: 1622974074}
   m_Layer: 5
-  m_Name: Inventory Slot (9)
+  m_Name: Inventory Slot 9
   m_TagString: InventorySlot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10724,7 +10734,7 @@ GameObject:
   - component: {fileID: 1627389712}
   - component: {fileID: 1627389711}
   m_Layer: 5
-  m_Name: Inventory Slot (6)
+  m_Name: Inventory Slot 6
   m_TagString: InventorySlot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12099,7 +12109,7 @@ GameObject:
   - component: {fileID: 1832207994}
   - component: {fileID: 1832207993}
   m_Layer: 5
-  m_Name: Inventory Slot
+  m_Name: Inventory Slot 0
   m_TagString: InventorySlot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

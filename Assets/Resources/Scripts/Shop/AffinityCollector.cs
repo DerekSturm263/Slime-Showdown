@@ -21,6 +21,8 @@ public class AffinityCollector : MonoBehaviour
     public Text M2Name;
 
     public GameObject move1;
+    public GameObject move2;
+    public GameObject move3;
 
     public bool done = false;
 
@@ -31,6 +33,13 @@ public class AffinityCollector : MonoBehaviour
     {
         gameManager = GameObject.FindGameObjectWithTag("GameController");
     }
+
+    public Color waterColor;
+    public Color fireColor;
+    public Color airColor;
+    public Color earthColor;
+    public Color electricColor;
+    public Color normalColor;
 
     public void AffinityCheck(int type, int thresholdOne, int thresholdTwo, int thresholdThree)
     {
@@ -175,6 +184,45 @@ public class AffinityCollector : MonoBehaviour
 
     public void ReplaceMove(int type, int typeCount)
     {
+        if (gameManager.GetComponent<GameManager>().PlayerMoves[0].AffType == "Water")
+            move1.GetComponent<Image>().color = waterColor;
+        else if (gameManager.GetComponent<GameManager>().PlayerMoves[0].AffType == "Fire")
+            move1.GetComponent<Image>().color = fireColor;
+        else if (gameManager.GetComponent<GameManager>().PlayerMoves[0].AffType == "Air")
+            move1.GetComponent<Image>().color = airColor;
+        else if (gameManager.GetComponent<GameManager>().PlayerMoves[0].AffType == "Earth")
+            move1.GetComponent<Image>().color = earthColor;
+        else if (gameManager.GetComponent<GameManager>().PlayerMoves[0].AffType == "Electric")
+            move1.GetComponent<Image>().color = electricColor;
+        else
+            move1.GetComponent<Image>().color = normalColor;
+
+        if (gameManager.GetComponent<GameManager>().PlayerMoves[1].AffType == "Water")
+            move2.GetComponent<Image>().color = waterColor;
+        else if (gameManager.GetComponent<GameManager>().PlayerMoves[1].AffType == "Fire")
+            move2.GetComponent<Image>().color = fireColor;
+        else if (gameManager.GetComponent<GameManager>().PlayerMoves[1].AffType == "Air")
+            move2.GetComponent<Image>().color = airColor;
+        else if (gameManager.GetComponent<GameManager>().PlayerMoves[1].AffType == "Earth")
+            move2.GetComponent<Image>().color = earthColor;
+        else if (gameManager.GetComponent<GameManager>().PlayerMoves[1].AffType == "Electric")
+            move2.GetComponent<Image>().color = electricColor;
+        else
+            move2.GetComponent<Image>().color = normalColor;
+
+        if (gameManager.GetComponent<GameManager>().PlayerMoves[2].AffType == "Water")
+            move3.GetComponent<Image>().color = waterColor;
+        else if (gameManager.GetComponent<GameManager>().PlayerMoves[2].AffType == "Fire")
+            move3.GetComponent<Image>().color = fireColor;
+        else if (gameManager.GetComponent<GameManager>().PlayerMoves[2].AffType == "Air")
+            move3.GetComponent<Image>().color = airColor;
+        else if (gameManager.GetComponent<GameManager>().PlayerMoves[2].AffType == "Earth")
+            move3.GetComponent<Image>().color = earthColor;
+        else if (gameManager.GetComponent<GameManager>().PlayerMoves[2].AffType == "Electric")
+            move3.GetComponent<Image>().color = electricColor;
+        else
+            move3.GetComponent<Image>().color = normalColor;
+
         M0Name.text = gameManager.GetComponent<GameManager>().PlayerMoves[0].Name;
         M1Name.text = gameManager.GetComponent<GameManager>().PlayerMoves[1].Name;
         M2Name.text = gameManager.GetComponent<GameManager>().PlayerMoves[2].Name;

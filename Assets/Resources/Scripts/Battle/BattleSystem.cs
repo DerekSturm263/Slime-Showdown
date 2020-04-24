@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
+using System;
 
 public enum BattleState { Start, PlayTurn, EnTurn, Win, Lose }
 
@@ -218,9 +219,16 @@ public class BattleSystem : MonoBehaviour
                 inventorySlots[i].GetComponent<Image>().sprite = gameManager.GetComponent<GameManager>().inventory[i].GetComponent<SpriteRenderer>().sprite;
             }
         }
+
+        Array.Sort(inventorySlots, delegate (GameObject x, GameObject y)
+        {
+            return x.name.CompareTo(y.name);
+        });
+
         selectedInventoryNumber = 0;
 
         #endregion
+
         for (int i = 0; i <= 2; i++)
         {
             if (gameManager.GetComponent<GameManager>().PlayerMoves[i].AffType == "Water")
@@ -673,7 +681,7 @@ public class BattleSystem : MonoBehaviour
 
     private IEnumerator Leave()
     {
-        if (Random.Range(-1, 2) >= 0)
+        if (UnityEngine.Random.Range(-1, 2) >= 0)
         {
             dialogueText.text = "You got away!";
             yield return new WaitForSeconds(2.5f);

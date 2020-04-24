@@ -226,7 +226,7 @@ GameObject:
   - component: {fileID: 27108815}
   - component: {fileID: 27108814}
   m_Layer: 5
-  m_Name: Inventory Slot (11)
+  m_Name: Inventory Slot 92
   m_TagString: InventorySlot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1328,7 +1328,7 @@ GameObject:
   - component: {fileID: 462466931}
   - component: {fileID: 462466930}
   m_Layer: 5
-  m_Name: Inventory Slot (10)
+  m_Name: Inventory Slot 91
   m_TagString: InventorySlot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1401,7 +1401,7 @@ GameObject:
   - component: {fileID: 483749311}
   - component: {fileID: 483749310}
   m_Layer: 5
-  m_Name: Inventory Slot (6)
+  m_Name: Inventory Slot 6
   m_TagString: InventorySlot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1610,7 +1610,7 @@ GameObject:
   - component: {fileID: 611576139}
   - component: {fileID: 611576138}
   m_Layer: 5
-  m_Name: Inventory Slot (1)
+  m_Name: Inventory Slot 1
   m_TagString: InventorySlot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1792,7 +1792,7 @@ GameObject:
   - component: {fileID: 729508851}
   - component: {fileID: 729508850}
   m_Layer: 5
-  m_Name: Inventory Slot (3)
+  m_Name: Inventory Slot 3
   m_TagString: InventorySlot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1958,7 +1958,7 @@ GameObject:
   - component: {fileID: 739738990}
   - component: {fileID: 739738989}
   m_Layer: 5
-  m_Name: Inventory Slot (7)
+  m_Name: Inventory Slot 7
   m_TagString: InventorySlot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2369,7 +2369,7 @@ GameObject:
   - component: {fileID: 995869217}
   - component: {fileID: 995869216}
   m_Layer: 5
-  m_Name: Inventory Slot (8)
+  m_Name: Inventory Slot 8
   m_TagString: InventorySlot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3280,7 +3280,7 @@ GameObject:
   - component: {fileID: 1249896072}
   - component: {fileID: 1249896071}
   m_Layer: 5
-  m_Name: Inventory Slot (5)
+  m_Name: Inventory Slot 5
   m_TagString: InventorySlot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4025,7 +4025,7 @@ GameObject:
   - component: {fileID: 1484062775}
   - component: {fileID: 1484062774}
   m_Layer: 5
-  m_Name: Inventory Slot (9)
+  m_Name: Inventory Slot 9
   m_TagString: InventorySlot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4311,7 +4311,7 @@ GameObject:
   - component: {fileID: 1559724619}
   - component: {fileID: 1559724618}
   m_Layer: 5
-  m_Name: Inventory Slot (4)
+  m_Name: Inventory Slot 4
   m_TagString: InventorySlot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4473,7 +4473,7 @@ GameObject:
   - component: {fileID: 1702427433}
   - component: {fileID: 1702427432}
   m_Layer: 5
-  m_Name: Inventory Slot (2)
+  m_Name: Inventory Slot 2
   m_TagString: InventorySlot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4885,7 +4885,7 @@ GameObject:
   - component: {fileID: 1837549455}
   - component: {fileID: 1837549454}
   m_Layer: 5
-  m_Name: Inventory Slot
+  m_Name: Inventory Slot 0
   m_TagString: InventorySlot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
