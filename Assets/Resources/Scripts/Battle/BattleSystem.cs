@@ -40,6 +40,11 @@ public class BattleSystem : MonoBehaviour
     public GameObject optionButtons;
     public GameObject moveSelect;
 
+    public GameObject inventory;
+    public GameObject backButton;
+    public GameObject background;
+    public GameObject snackButton;
+
     public GameObject move1;
     public GameObject move2;
     public GameObject move3;
@@ -57,6 +62,10 @@ public class BattleSystem : MonoBehaviour
     public Color earthColor;
     public Color electricColor;
     public Color normalColor;
+
+    private bool isSnacksOpen = false;
+
+    public GameObject selectedInventorySlot;
 
     private void Start()
     {
@@ -211,6 +220,14 @@ public class BattleSystem : MonoBehaviour
         StartCoroutine(SetupBattle());
     }
 
+    private void Update()
+    {
+        if (Input.GetButtonDown("Cancel") && isSnacksOpen)
+        {
+            CloseSnacks();
+        }
+    }
+
     IEnumerator SetupBattle()
     {
         string playerAnimName = "Animations/Slime/Battle/" + gameManager.GetComponent<GameManager>().playerSlimeColor + " Slime/slime_" + gameManager.GetComponent<GameManager>().playerSlimeColor.ToLower() + "_battle_con";
@@ -236,6 +253,20 @@ public class BattleSystem : MonoBehaviour
         enemyGO.GetComponent<SpriteRenderer>().flipX = true;
 
         yield return new WaitForSeconds(2.5f);
+
+        #region Inventory Setup
+
+        for (int i = 0; i < gameManager.GetComponent<GameManager>().inventory.Length; i++)
+        {
+            if (gameManager.GetComponent<GameManager>().inventory[i] != null)
+            {
+                inventory.GetComponent<InventoryManager>().inventorySlots[i].GetComponent<Image>().sprite = gameManager.GetComponent<GameManager>().inventory[i].GetComponent<SpriteRenderer>().sprite;
+
+                break;
+            }
+        }
+
+        #endregion
 
         state = BattleState.PlayTurn;
         PlayerTurn();
@@ -543,10 +574,14 @@ public class BattleSystem : MonoBehaviour
         {
             return;
         }
+
+        selectedInventorySlot = inventory.GetComponent<InventoryManager>().inventorySlots[0];
+
+        isSnacksOpen = true;
         optionButtons.GetComponent<Animation>().Play("ui_button_floatOut");
-        dialogueText.GetComponent<Animation>().Play("ui_button_floatIn");
-        StartCoroutine(PlayerHeal());
-        
+        inventory.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeIn");
+        backButton.GetComponent<Animation>().Play("ui_ranch_shopBackButton_floatIn");
+        background.GetComponent<Animation>().Play("ui_ranch_shopBackground_fadeIn");
     }
     public void OnFleeButton()
     {
@@ -554,8 +589,10 @@ public class BattleSystem : MonoBehaviour
         {
             return;
         }
+
         optionButtons.GetComponent<Animation>().Play("ui_button_floatOut");
         dialogueText.GetComponent<Animation>().Play("ui_button_floatIn");
+
         StartCoroutine(Leave());
     }
 
@@ -578,5 +615,17 @@ public class BattleSystem : MonoBehaviour
             state = BattleState.EnTurn;
             StartCoroutine(EnemyTurn());
         }
+    }
+
+    public void CloseSnacks()
+    {
+        isSnacksOpen = false;
+
+        optionButtons.GetComponent<Animation>().Play("ui_button_floatIn");
+        inventory.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeOut");
+        backButton.GetComponent<Animation>().Play("ui_ranch_shopBackButton_floatOut");
+        background.GetComponent<Animation>().Play("ui_ranch_shopBackground_fadeOut");
+
+        EventSystem.current.SetSelectedGameObject(snackButton);
     }
 }

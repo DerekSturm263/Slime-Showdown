@@ -41,16 +41,19 @@ public class AffinityCollector : MonoBehaviour
                 {
                     ReplaceMove(type, gameManager.GetComponent<GameManager>().SeaCount);
                     gameManager.GetComponent<GameManager>().SeaCount++;
+                    Grow(0.025f);
                 }
                 else if (gameManager.GetComponent<GameManager>().playSeafoodAff >= thresholdTwo && gameManager.GetComponent<GameManager>().SeaCount < 2)
                 {
                     ReplaceMove(type, gameManager.GetComponent<GameManager>().SeaCount);
                     gameManager.GetComponent<GameManager>().SeaCount++;
+                    Grow(0.05f);
                 }
                 else if (gameManager.GetComponent<GameManager>().playSeafoodAff >= thresholdThree && gameManager.GetComponent<GameManager>().SeaCount < 3)
                 {
                     ReplaceMove(type, gameManager.GetComponent<GameManager>().SeaCount);
                     gameManager.GetComponent<GameManager>().SeaCount++;
+                    Grow(0.1f);
                 }
                 else
                 {
@@ -64,16 +67,19 @@ public class AffinityCollector : MonoBehaviour
                 {
                     ReplaceMove(type, gameManager.GetComponent<GameManager>().CandyCount);
                     gameManager.GetComponent<GameManager>().CandyCount++;
+                    Grow(0.025f);
                 }
                 else if (gameManager.GetComponent<GameManager>().playCandyAff >= thresholdTwo && gameManager.GetComponent<GameManager>().CandyCount < 2)
                 {
                     ReplaceMove(type, gameManager.GetComponent<GameManager>().CandyCount);
                     gameManager.GetComponent<GameManager>().CandyCount++;
+                    Grow(0.05f);
                 }
                 else if (gameManager.GetComponent<GameManager>().playCandyAff >= thresholdThree && gameManager.GetComponent<GameManager>().CandyCount < 3)
                 {
                     ReplaceMove(type, gameManager.GetComponent<GameManager>().CandyCount);
                     gameManager.GetComponent<GameManager>().CandyCount++;
+                    Grow(0.1f);
                 }
                 else
                 {
@@ -87,16 +93,19 @@ public class AffinityCollector : MonoBehaviour
                 {
                     ReplaceMove(type, gameManager.GetComponent<GameManager>().SpicyCount);
                     gameManager.GetComponent<GameManager>().SpicyCount++;
+                    Grow(0.025f);
                 }
                 else if (gameManager.GetComponent<GameManager>().playSpicyAff >= thresholdTwo && gameManager.GetComponent<GameManager>().SpicyCount < 2)
                 {
                     ReplaceMove(type, gameManager.GetComponent<GameManager>().SpicyCount);
                     gameManager.GetComponent<GameManager>().SpicyCount++;
+                    Grow(0.05f);
                 }
                 else if (gameManager.GetComponent<GameManager>().playSpicyAff >= thresholdThree && gameManager.GetComponent<GameManager>().SpicyCount < 3)
                 {
                     ReplaceMove(type, gameManager.GetComponent<GameManager>().SpicyCount);
                     gameManager.GetComponent<GameManager>().SpicyCount++;
+                    Grow(0.1f);
                 }
                 else
                 {
@@ -110,16 +119,19 @@ public class AffinityCollector : MonoBehaviour
                 {
                     ReplaceMove(type, gameManager.GetComponent<GameManager>().VeggieCount);
                     gameManager.GetComponent<GameManager>().VeggieCount++;
+                    Grow(0.025f);
                 }
                 else if (gameManager.GetComponent<GameManager>().playVeggieAff >= thresholdTwo && gameManager.GetComponent<GameManager>().VeggieCount < 2)
                 {
                     ReplaceMove(type, gameManager.GetComponent<GameManager>().VeggieCount);
                     gameManager.GetComponent<GameManager>().VeggieCount++;
+                    Grow(0.05f);
                 }
                 else if (gameManager.GetComponent<GameManager>().playVeggieAff >= thresholdThree && gameManager.GetComponent<GameManager>().VeggieCount < 3)
                 {
                     ReplaceMove(type, gameManager.GetComponent<GameManager>().VeggieCount);
                     gameManager.GetComponent<GameManager>().VeggieCount++;
+                    Grow(0.1f);
                 }
                 else
                 {
@@ -133,16 +145,19 @@ public class AffinityCollector : MonoBehaviour
                 {
                     ReplaceMove(type, gameManager.GetComponent<GameManager>().SourCount);
                     gameManager.GetComponent<GameManager>().SourCount++;
+                    Grow(0.025f);
                 }
                 else if (gameManager.GetComponent<GameManager>().playSourAff >= thresholdTwo && gameManager.GetComponent<GameManager>().SourCount < 2)
                 {
                     ReplaceMove(type, gameManager.GetComponent<GameManager>().SourCount);
                     gameManager.GetComponent<GameManager>().SourCount++;
+                    Grow(0.05f);
                 }
                 else if (gameManager.GetComponent<GameManager>().playSourAff >= thresholdThree && gameManager.GetComponent<GameManager>().SourCount < 3)
                 {
                     ReplaceMove(type, gameManager.GetComponent<GameManager>().SourCount);
                     gameManager.GetComponent<GameManager>().SourCount++;
+                    Grow(0.1f);
                 }
                 else
                 {
@@ -327,5 +342,11 @@ public class AffinityCollector : MonoBehaviour
         topArea.GetComponent<Animation>().Play("ui_ranch_shopTop_floatOut");
         moveInfo.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeOut");
         moves.GetComponent<Animation>().Play("ui_button_floatOut");
+    }
+
+    private void Grow(float size)
+    {
+        gameManager.GetComponent<GameManager>().playerSize += size;
+        GameObject.FindGameObjectWithTag("RanchBattleSlime").transform.localScale = new Vector2(gameManager.GetComponent<GameManager>().playerSize, gameManager.GetComponent<GameManager>().playerSize);
     }
 }
