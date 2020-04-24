@@ -24,6 +24,7 @@ public class SpawnEnemies : MonoBehaviour
     }
 
     public GameObject enemy;
+    public GameObject gameManager;
     public static List<GameObject> enemies = new List<GameObject>();
 
     public Vector3 playerPosition;
@@ -42,8 +43,8 @@ public class SpawnEnemies : MonoBehaviour
     {
         enemies.Clear();
         listPos = 0;
-
-        playerPosition = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().lastPlayerPos;
+        gameManager = GameObject.FindGameObjectWithTag("GameController");
+        playerPosition = gameManager.GetComponent<GameManager>().lastPlayerPos;
 
         foreach (GameObject pos in GameObject.FindGameObjectsWithTag("SpawnLocation"))
         {
@@ -54,17 +55,41 @@ public class SpawnEnemies : MonoBehaviour
 
         for (int i = 0; i < 6; i++)
         {
+            int sourAff;
+            int spicyAff;
+            int seafoodAff;
+            int candyAff;
+            int veggieAff;
             Color enemyColor = RandomColor();
             Vector3 position = RandomPosition();
             int enemyHP = Random.Range(100, 150);
             int hunger = Random.Range(100, 125);
             int damage = Random.Range(15, 35);
-            int gold = Random.Range(35, 55);
-            int sourAff = Random.Range(1, 5);
-            int spicyAff = Random.Range(1, 5);
-            int seafoodAff = Random.Range(1, 5);
-            int candyAff = Random.Range(1, 5);
-            int veggieAff = Random.Range(1, 5);
+            int gold = Random.Range(35, 55) * gameManager.GetComponent<GameManager>().enemyPWRLV;
+            if (gameManager.GetComponent<GameManager>().enemyPWRLV == 1)
+            {
+                 sourAff = Random.Range(1, 3);
+                 spicyAff = Random.Range(1, 3);
+                 seafoodAff = Random.Range(1, 3);
+                 candyAff = Random.Range(1, 3);
+                 veggieAff = Random.Range(1, 3);
+            }
+            else if (gameManager.GetComponent<GameManager>().enemyPWRLV == 2 )
+            {
+                sourAff = Random.Range(2, 6);
+                spicyAff = Random.Range(2, 6);
+                seafoodAff = Random.Range(2, 6);
+                candyAff = Random.Range(2, 6);
+                veggieAff = Random.Range(2, 6);
+            }
+            else
+            {
+                sourAff = Random.Range(5, 10);
+                spicyAff = Random.Range(5, 10);
+                seafoodAff = Random.Range(5, 10);
+                candyAff = Random.Range(5, 10);
+                veggieAff = Random.Range(5, 10);
+            }
 
             SpawnEnemy(position, enemyColor, enemyHP, hunger, enemyHP, damage, gold, seafoodAff, spicyAff, candyAff, veggieAff, sourAff);
         }

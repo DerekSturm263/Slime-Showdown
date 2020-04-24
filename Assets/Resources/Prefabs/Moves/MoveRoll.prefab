@@ -47,5 +47,5 @@ MonoBehaviour:
   AffType: Normal
   ResAff: NONE
   CritAff: NONE
-  PowerLV: 3
-  HungerCost: 5
+  PowerLV: 5
+  HungerCost: 2

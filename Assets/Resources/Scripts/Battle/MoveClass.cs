@@ -26,17 +26,17 @@ public class MoveClass : MonoBehaviour
     //this method will take the parameters for a move then return the damage for the take damage method the player class has
      public int MoveUse(string ResAffinity, string CritAff, int PowerLV, int userAffOfType, int EnemyAff, string EnemyAffType) //the weakness here is the player needs a check for their move type
      {
-        int damage = 0;
+        int damage;
         //damage equation remember if crit 2(moveaff*powerLV)-enemyAff
         //crit
         if (CritAff == EnemyAffType)//naming convention is only capital first letter no spaces just type ie "Fire"
         {
-            damage = 2*(userAffOfType + PowerLV) - EnemyAff;
+            damage = 2*(userAffOfType + PowerLV);
         }
         //res
         else if(ResAffinity == EnemyAffType)
         {
-            damage = (1/2) * (userAffOfType + PowerLV) - EnemyAff;
+            damage = (1/2) * (userAffOfType + PowerLV);
         }
         //normal
         else
@@ -49,14 +49,14 @@ public class MoveClass : MonoBehaviour
     //overload
     public int MoveUse(MoveClass move, int userAffOfType, int EnemyAff, string EnemyAffType)
     {
-        int damage = 0;
+        int damage;
         if (move.CritAff == EnemyAffType)
         {
-            damage = 2 * (userAffOfType + move.PowerLV) - EnemyAff;
+            damage = 2 * (userAffOfType + move.PowerLV);
         }
         else if (move.ResAff == EnemyAffType)
         {
-            damage = (1 / 2) * (userAffOfType + move.PowerLV) - EnemyAff;
+            damage = (1 / 2) * (userAffOfType + move.PowerLV);
         }
         else
         {

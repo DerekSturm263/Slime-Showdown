@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
     public int enemyCandyAff;
     public int enemyVeggieAff;
     public float enemySize;
-
+    public int enemyPWRLV = 1;
     [Header("MoveList")]
     // Possible moves the slime can learn.
     //public List<MoveClass> PossibleMoves = new List<MoveClass>(16);

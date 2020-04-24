@@ -136,6 +136,7 @@ public class BattleSystem : MonoBehaviour
         enemyPrefab.GetComponent<Player>().veggieAff = (int)gameManager.GetComponent<GameManager>().enemyVeggieAff;
         enemyPrefab.GetComponent<Player>().seafoodAff = (int)gameManager.GetComponent<GameManager>().enemySeafoodAff;
         enemyPrefab.GetComponent<Player>().VicGold = gameManager.GetComponent<GameManager>().enemyVicGold;
+        enemyPowerLevel = gameManager.GetComponent<GameManager>().enemyPWRLV;
         if (enemyPrefab.GetComponent<Player>().candyAff > enemyPrefab.GetComponent<Player>().sourAff && enemyPrefab.GetComponent<Player>().candyAff > enemyPrefab.GetComponent<Player>().spicyAff && enemyPrefab.GetComponent<Player>().candyAff > enemyPrefab.GetComponent<Player>().veggieAff && enemyPrefab.GetComponent<Player>().candyAff > enemyPrefab.GetComponent<Player>().seafoodAff)
         {
             //move table reference Electric>Water>Fire>Air>Earth>Electric example on how it works, Electric crits against water and electric res when hit by water
@@ -182,9 +183,9 @@ public class BattleSystem : MonoBehaviour
             enemyPrefab.GetComponent<Player>().type = "Type: Normal";
             enemyCritType = "NONE";
             enemyResType = "NONE";
-            enemyTypeHigh = (enemyPrefab.GetComponent<Player>().seafoodAff + enemyPrefab.GetComponent<Player>().veggieAff + enemyPrefab.GetComponent<Player>().spicyAff + enemyPrefab.GetComponent<Player>().sourAff + enemyPrefab.GetComponent<Player>().candyAff) / 5;
+            enemyTypeHigh = (enemyPrefab.GetComponent<Player>().seafoodAff + enemyPrefab.GetComponent<Player>().veggieAff + enemyPrefab.GetComponent<Player>().spicyAff + enemyPrefab.GetComponent<Player>().sourAff + enemyPrefab.GetComponent<Player>().candyAff) / 3;
         }
-        enemyPrefab.GetComponent<Player>().health = 30 + playerTypeHigh;
+        enemyPrefab.GetComponent<Player>().health = 40 + enemyTypeHigh;
         enemyPrefab.GetComponent<Player>().currentHP = enemyPrefab.GetComponent<Player>().health;
         #endregion
         state = BattleState.Start;
@@ -462,7 +463,7 @@ public class BattleSystem : MonoBehaviour
         dialogueText.text = enemyUnit.name + " attacks!";
         yield return new WaitForSeconds(2.5f);
 
-        isDead = playerUnit.TakeDamage(gameManager.GetComponent<GameManager>().MoveRoll.MoveUse(enemyResType,enemyCritType,enemyPowerLevel, enemyTypeHigh, playerTypeHigh, playerAffTypeString));
+        isDead = playerUnit.TakeDamage(gameManager.GetComponent<GameManager>().MoveRoll.MoveUse(enemyResType, enemyCritType, enemyPowerLevel, enemyTypeHigh, playerTypeHigh, playerAffTypeString));
         playerHUD.SetHealth(playerUnit.currentHP);
         yield return new WaitForSeconds(2.5f);
 
