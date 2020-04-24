@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
     [Space(10)]
 
     public uint goldCount;
-    public GameObject[] inventory = new GameObject[27];
+    public GameObject[] inventory = new GameObject[12];
     public Vector3 lastPlayerPos = new Vector3(-6.5f, 2, 0);
 
     [Header("Player Affinities")]

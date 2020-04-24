@@ -96,6 +96,14 @@ public class ShopManager : MonoBehaviour
         animName = "Animations/Slime/Ranch/" + gameManager.GetComponent<GameManager>().playerSlimeColor + " Slime/Eating/slime_" + gameManager.GetComponent<GameManager>().playerSlimeColor.ToLower() + "_ranch_eatingController";
         animController.runtimeAnimatorController = Resources.Load(animName) as RuntimeAnimatorController;
 
+        for (int i = 0; i < gameManager.GetComponent<GameManager>().inventory.Length; i++)
+        {
+            if (gameManager.GetComponent<GameManager>().inventory[i] != null)
+            {
+                inventoryManager.inventorySlots[i].GetComponent<Image>().sprite = gameManager.GetComponent<GameManager>().inventory[i].GetComponent<SpriteRenderer>().sprite;
+            }
+        }
+
         GenerateItems();
     }
 
@@ -252,7 +260,18 @@ public class ShopManager : MonoBehaviour
             }
             else
             {
-                if (gameManager.GetComponent<GameManager>().inventory[gameManager.GetComponent<GameManager>().inventory.Length - 1] == null)
+                bool canBuy = false;
+
+                for (int i = 0; i < gameManager.GetComponent<GameManager>().inventory.Length; i++)
+                {
+                    if (gameManager.GetComponent<GameManager>().inventory[i] == null)
+                    {
+                        canBuy = true;
+                        break;
+                    }
+                }
+
+                if (canBuy)
                 {
                     gameManager.GetComponent<GameManager>().goldCount -= selectedItem.GetComponent<Buyable>().price;
                     AddSnackToInventory(selectedItem.GetComponent<Buyable>());

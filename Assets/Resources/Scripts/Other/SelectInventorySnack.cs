@@ -8,6 +8,6 @@ public class SelectInventorySnack : MonoBehaviour
 
     private void Update()
     {
-        transform.position = new Vector2(battleSystem.selectedInventorySlot.transform.position.x, battleSystem.selectedInventorySlot.transform.position.y);
+        transform.position = new Vector2(battleSystem.inventorySlots[battleSystem.selectedInventoryNumber].transform.position.x, battleSystem.inventorySlots[battleSystem.selectedInventoryNumber].transform.position.y);
     }
 }

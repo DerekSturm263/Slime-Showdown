@@ -65,7 +65,15 @@ public class BattleSystem : MonoBehaviour
 
     private bool isSnacksOpen = false;
 
-    public GameObject selectedInventorySlot;
+    private bool usingXAxis = false;
+    private bool usingYAxis = false;
+    private bool canUseSnack = false;
+
+    public int selectedInventoryNumber;
+    public GameObject[] inventorySlots = new GameObject[11];
+    public GameObject selectionInidicator;
+
+    public Sprite defaultSprite;
 
     private void Start()
     {
@@ -198,7 +206,20 @@ public class BattleSystem : MonoBehaviour
         Debug.Log(moveTextList[1].text);
         Debug.Log(moveTextList[2].text);
 
-        
+        #region Inventory Setup
+
+        inventorySlots = GameObject.FindGameObjectsWithTag("InventorySlot");
+
+        for (int i = 0; i < gameManager.GetComponent<GameManager>().inventory.Length; i++)
+        {
+            if (gameManager.GetComponent<GameManager>().inventory[i] != null)
+            {
+                inventorySlots[i].GetComponent<Image>().sprite = gameManager.GetComponent<GameManager>().inventory[i].GetComponent<SpriteRenderer>().sprite;
+            }
+        }
+        selectedInventoryNumber = 0;
+
+        #endregion
         for (int i = 0; i <= 2; i++)
         {
             if (gameManager.GetComponent<GameManager>().PlayerMoves[i].AffType == "Water")
@@ -222,10 +243,66 @@ public class BattleSystem : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Cancel") && isSnacksOpen)
+        if (isSnacksOpen)
         {
-            CloseSnacks();
+            if (Input.GetAxisRaw("Horizontal") < 0 && selectedInventoryNumber >= 1 && !usingXAxis)
+            {
+                selectedInventoryNumber--;
+                usingXAxis = true;
+            }
+            else if (Input.GetAxisRaw("Horizontal") > 0 && selectedInventoryNumber <= 10 && !usingXAxis)
+            {
+                selectedInventoryNumber++;
+                usingXAxis = true;
+            }
+
+            if (Input.GetAxisRaw("Vertical") > 0 && selectedInventoryNumber >= 4 && !usingYAxis)
+            {
+                selectedInventoryNumber -= 4;
+                usingYAxis = true;
+            }
+            else if (Input.GetAxisRaw("Vertical") < 0 && selectedInventoryNumber <= 7 && !usingYAxis)
+            {
+                selectedInventoryNumber += 4;
+                usingYAxis = true;
+            }
+
+            if (Input.GetButtonDown("Cancel"))
+                CloseSnacks();
+
+            if (Input.GetAxisRaw("Horizontal") == 0)
+                usingXAxis = false;
+
+            if (Input.GetAxisRaw("Vertical") == 0)
+                usingYAxis = false;
+
+            if (Input.GetButtonDown("Submit") && gameManager.GetComponent<GameManager>().inventory[selectedInventoryNumber] != null && canUseSnack)
+                StartCoroutine(EatSnack());
         }
+    }
+
+    private IEnumerator EatSnack()
+    {
+        isSnacksOpen = false;
+        canUseSnack = false;
+
+        dialogueText.GetComponent<Animation>().Play("ui_button_floatIn");
+        inventory.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeOut");
+        selectionInidicator.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeOut");
+        backButton.GetComponent<Animation>().Play("ui_ranch_shopBackButton_floatOut");
+        background.GetComponent<Animation>().Play("ui_ranch_shopBackground_fadeOut");
+
+        playerUnit.hunger += (int) gameManager.GetComponent<GameManager>().inventory[selectedInventoryNumber].GetComponent<InventorySnack>().hungerIncrease;
+        playerHUD.SetHunger(playerUnit.hunger);
+
+        dialogueText.text = "You ate a " + gameManager.GetComponent<GameManager>().inventory[selectedInventoryNumber].name + " and regained " + gameManager.GetComponent<GameManager>().inventory[selectedInventoryNumber].GetComponent<InventorySnack>().hungerIncrease + " hunger points!";
+        gameManager.GetComponent<GameManager>().inventory[selectedInventoryNumber] = null;
+        inventorySlots[selectedInventoryNumber].GetComponent<Image>().sprite = defaultSprite;
+
+        yield return new WaitForSeconds(2.5f);
+
+        state = BattleState.EnTurn;
+        StartCoroutine(EnemyTurn());
     }
 
     IEnumerator SetupBattle()
@@ -254,26 +331,11 @@ public class BattleSystem : MonoBehaviour
 
         yield return new WaitForSeconds(2.5f);
 
-        #region Inventory Setup
-
-        for (int i = 0; i < gameManager.GetComponent<GameManager>().inventory.Length; i++)
-        {
-            if (gameManager.GetComponent<GameManager>().inventory[i] != null)
-            {
-                inventory.GetComponent<InventoryManager>().inventorySlots[i].GetComponent<Image>().sprite = gameManager.GetComponent<GameManager>().inventory[i].GetComponent<SpriteRenderer>().sprite;
-
-                break;
-            }
-        }
-
-        #endregion
-
         state = BattleState.PlayTurn;
         PlayerTurn();
     }
     IEnumerator PlayerAttack(MoveClass attack)
     {
-
         if (attack.AffType == "Fire")
         {
             //damage enemy and check if dead
@@ -459,6 +521,7 @@ public class BattleSystem : MonoBehaviour
     }
     void PlayerTurn()
     {
+        canUseSnack = false;
         dialogueText.GetComponent<Animation>().Play("ui_button_floatOut");
         optionButtons.GetComponent<Animation>().Play("ui_button_floatIn");
 
@@ -570,19 +633,30 @@ public class BattleSystem : MonoBehaviour
     }
     public void OnSnackButton()
     {
-        if (state != BattleState.PlayTurn)
+        StartCoroutine(Snack());
+    }
+    private IEnumerator Snack()
+    {
+        if (state == BattleState.PlayTurn)
         {
-            return;
+            selectedInventoryNumber = 0;
+
+            isSnacksOpen = true;
+
+            optionButtons.GetComponent<Animation>().Play("ui_button_floatOut");
+            inventory.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeIn");
+            selectionInidicator.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeIn");
+            backButton.GetComponent<Animation>().Play("ui_ranch_shopBackButton_floatIn");
+            background.GetComponent<Animation>().Play("ui_ranch_shopBackground_fadeIn");
+
+            yield return new WaitForSeconds(0.25f);
+
+            canUseSnack = true;
         }
 
-        selectedInventorySlot = inventory.GetComponent<InventoryManager>().inventorySlots[0];
-
-        isSnacksOpen = true;
-        optionButtons.GetComponent<Animation>().Play("ui_button_floatOut");
-        inventory.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeIn");
-        backButton.GetComponent<Animation>().Play("ui_ranch_shopBackButton_floatIn");
-        background.GetComponent<Animation>().Play("ui_ranch_shopBackground_fadeIn");
+        yield return null;
     }
+
     public void OnFleeButton()
     {
         if (state != BattleState.PlayTurn)
@@ -619,10 +693,12 @@ public class BattleSystem : MonoBehaviour
 
     public void CloseSnacks()
     {
+        canUseSnack = false;
         isSnacksOpen = false;
 
         optionButtons.GetComponent<Animation>().Play("ui_button_floatIn");
         inventory.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeOut");
+        selectionInidicator.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeOut");
         backButton.GetComponent<Animation>().Play("ui_ranch_shopBackButton_floatOut");
         background.GetComponent<Animation>().Play("ui_ranch_shopBackground_fadeOut");
 
