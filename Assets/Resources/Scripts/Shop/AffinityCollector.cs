@@ -29,6 +29,13 @@ public class AffinityCollector : MonoBehaviour
     public MoveClass NewMove;
 
     public int enemyPowerCount = 0;
+
+    public GameObject waterChange;
+    public GameObject airChange;
+    public GameObject fireChange;
+    public GameObject earthChange;
+    public GameObject electricChange;
+
     private void Start()
     {
         gameManager = GameObject.FindGameObjectWithTag("GameController");
@@ -57,6 +64,7 @@ public class AffinityCollector : MonoBehaviour
                 {
                     ReplaceMove(type, gameManager.GetComponent<GameManager>().SeaCount);
                     gameManager.GetComponent<GameManager>().SeaCount++;
+                    gameManager.GetComponent<GameManager>().playerAffinities.Add(waterChange);
                     Grow(0.05f);
                 }
                 else if (gameManager.GetComponent<GameManager>().playSeafoodAff >= thresholdThree && gameManager.GetComponent<GameManager>().SeaCount < 3)
@@ -83,6 +91,7 @@ public class AffinityCollector : MonoBehaviour
                 {
                     ReplaceMove(type, gameManager.GetComponent<GameManager>().CandyCount);
                     gameManager.GetComponent<GameManager>().CandyCount++;
+                    gameManager.GetComponent<GameManager>().playerAffinities.Add(airChange);
                     Grow(0.05f);
                 }
                 else if (gameManager.GetComponent<GameManager>().playCandyAff >= thresholdThree && gameManager.GetComponent<GameManager>().CandyCount < 3)
@@ -109,6 +118,7 @@ public class AffinityCollector : MonoBehaviour
                 {
                     ReplaceMove(type, gameManager.GetComponent<GameManager>().SpicyCount);
                     gameManager.GetComponent<GameManager>().SpicyCount++;
+                    gameManager.GetComponent<GameManager>().playerAffinities.Add(fireChange);
                     Grow(0.05f);
                 }
                 else if (gameManager.GetComponent<GameManager>().playSpicyAff >= thresholdThree && gameManager.GetComponent<GameManager>().SpicyCount < 3)
@@ -135,6 +145,7 @@ public class AffinityCollector : MonoBehaviour
                 {
                     ReplaceMove(type, gameManager.GetComponent<GameManager>().VeggieCount);
                     gameManager.GetComponent<GameManager>().VeggieCount++;
+                    gameManager.GetComponent<GameManager>().playerAffinities.Add(earthChange);
                     Grow(0.05f);
                 }
                 else if (gameManager.GetComponent<GameManager>().playVeggieAff >= thresholdThree && gameManager.GetComponent<GameManager>().VeggieCount < 3)
@@ -161,6 +172,7 @@ public class AffinityCollector : MonoBehaviour
                 {
                     ReplaceMove(type, gameManager.GetComponent<GameManager>().SourCount);
                     gameManager.GetComponent<GameManager>().SourCount++;
+                    gameManager.GetComponent<GameManager>().playerAffinities.Add(electricChange);
                     Grow(0.05f);
                 }
                 else if (gameManager.GetComponent<GameManager>().playSourAff >= thresholdThree && gameManager.GetComponent<GameManager>().SourCount < 3)

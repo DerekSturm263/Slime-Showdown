@@ -2593,7 +2593,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 197048650}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.66666657
+  m_Size: 0.6666667
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4163,6 +4163,16 @@ MonoBehaviour:
   done: 0
   NewMove: {fileID: 0}
   enemyPowerCount: 0
+  waterChange: {fileID: 8917719717731018651, guid: 93f144b3674b96d4d9ed4e7cc9ab4523,
+    type: 3}
+  airChange: {fileID: 4209832570805946515, guid: 7eb4489e5cc45464288f76b477a39800,
+    type: 3}
+  fireChange: {fileID: 2701654882797525718, guid: 0341a8901ad50c14e838839b65355722,
+    type: 3}
+  earthChange: {fileID: 4466681615996645350, guid: 60daf929f286aef4799334c89a054b0c,
+    type: 3}
+  electricChange: {fileID: 4773175011119909816, guid: 6d832b491405db74abca154e2676d94f,
+    type: 3}
   waterColor: {r: 0.09000002, g: 0.6299999, b: 0.9, a: 1}
   fireColor: {r: 0.9, g: 0.29250002, b: 0.09000002, a: 1}
   airColor: {r: 0.9, g: 0.67499995, b: 0.67499995, a: 1}

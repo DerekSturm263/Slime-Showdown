@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     public string playerSlimeColor;
     public string playerSlimeName;
     public float playerSize;
+    public List<GameObject> playerAffinities = new List<GameObject>();
 
     [Space(10)]
 

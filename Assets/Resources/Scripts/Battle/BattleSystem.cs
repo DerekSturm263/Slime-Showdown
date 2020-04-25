@@ -386,6 +386,13 @@ public class BattleSystem : MonoBehaviour
         playerGO.transform.localScale = new Vector2(gameManager.GetComponent<GameManager>().playerSize * 2f, gameManager.GetComponent<GameManager>().playerSize * 2f);
         enemyGO.transform.localScale = new Vector2(gameManager.GetComponent<GameManager>().enemySize * 2f, gameManager.GetComponent<GameManager>().enemySize * 2f);
 
+        foreach (GameObject g in gameManager.GetComponent<GameManager>().playerAffinities)
+        {
+            GameObject affinityChange = Instantiate(g, playerUnit.transform.position, Quaternion.identity);
+            affinityChange.transform.parent = playerUnit.transform;
+            affinityChange.transform.localScale = new Vector2(1f, 1f);
+        }
+
         enemyGO.GetComponent<SpriteRenderer>().flipX = true;
 
         yield return new WaitForSeconds(2.5f);
