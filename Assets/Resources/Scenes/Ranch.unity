@@ -3493,7 +3493,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 5
   foodName: Electric Meal
-  description: This is a meal containing some sour foods.
+  description: PLACEHOLDER
   image: {fileID: 0}
   price: 75
   itemUp: {fileID: 0}
@@ -3514,7 +3514,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 4
   foodName: Earth Meal
-  description: This is a meal containing very healthy vegetals.
+  description: PLACEHOLDER
   image: {fileID: 0}
   price: 75
   itemUp: {fileID: 0}
@@ -3536,7 +3536,7 @@ MonoBehaviour:
   type: 1
   foodName: Fish Dinner
   description: A tasty Fish Dinner will raise your Water Affinity.
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: f68dacccde5e5f3498acb14520520e5c, type: 3}
   price: 75
   itemUp: {fileID: 0}
   itemDown: {fileID: 0}
