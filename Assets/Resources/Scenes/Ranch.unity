@@ -3578,8 +3578,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 5
   foodName: Electric Meal
-  description: A PLACEHOLDER that will raise your Electric Type affinity.
-  image: {fileID: 0}
+  description: A tasty bottle of Gatorate will raise your Electric Type affinity.
+  image: {fileID: 21300000, guid: 7a602a316ccc1534fb7153ac6d80a2a6, type: 3}
   price: 75
   itemUp: {fileID: 0}
   itemDown: {fileID: 0}
