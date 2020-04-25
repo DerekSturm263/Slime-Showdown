@@ -60,10 +60,13 @@ public class MoveClass : MonoBehaviour
         }
         else
         {
-            if(move.name == "Roll")
-            damage = (move.PowerLV);
+            if (move.name == "Roll")
+            {
+                Debug.Log("Roll attacks");
+                damage = (move.PowerLV);
+            }
             else
-            damage = (userAffOfType + move.PowerLV) - (1/2)*EnemyAff;
+                damage = (userAffOfType + move.PowerLV) - (1 / 2) * EnemyAff;
         }
         Debug.Log(damage + "This is the damage");
         return damage;
