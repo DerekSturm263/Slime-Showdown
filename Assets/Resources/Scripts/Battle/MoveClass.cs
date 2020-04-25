@@ -31,14 +31,14 @@ public class MoveClass : MonoBehaviour
         //crit
         if (CritAff == EnemyAffType)//naming convention is only capital first letter no spaces just type ie "Fire"
         {
-            damage = 2*(userAffOfType + PowerLV);
+            damage = 2 * ((userAffOfType * PowerLV) - (1 / 2) * EnemyAff);
         }
         //res
         else if(ResAffinity == EnemyAffType)
         {
-            damage = (1/2) * (userAffOfType + PowerLV);
+            damage = (1/2) * ((userAffOfType * PowerLV) - (1 / 2) * EnemyAff);
         }
-        //normal
+        //standard damage
         else
         {
         damage = (userAffOfType + PowerLV);
@@ -52,15 +52,18 @@ public class MoveClass : MonoBehaviour
         int damage;
         if (move.CritAff == EnemyAffType)
         {
-            damage = 2 * (userAffOfType + move.PowerLV);
+            damage = 2 * ((userAffOfType * move.PowerLV) - (1/2)*EnemyAff);
         }
         else if (move.ResAff == EnemyAffType)
         {
-            damage = (1 / 2) * (userAffOfType + move.PowerLV);
+            damage = (1 / 2) * ((userAffOfType * move.PowerLV) - (1 / 2) * EnemyAff);
         }
         else
         {
-            damage = (userAffOfType + move.PowerLV);
+            if(move.name == "Roll")
+            damage = (move.PowerLV);
+            else
+            damage = (userAffOfType + move.PowerLV) - (1/2)*EnemyAff;
         }
         Debug.Log(damage + "This is the damage");
         return damage;

@@ -226,13 +226,14 @@ public class AffinityCollector : MonoBehaviour
         M0Name.text = gameManager.GetComponent<GameManager>().PlayerMoves[0].Name;
         M1Name.text = gameManager.GetComponent<GameManager>().PlayerMoves[1].Name;
         M2Name.text = gameManager.GetComponent<GameManager>().PlayerMoves[2].Name;
-
+        Debug.Log("TypeCount: " + typeCount + " power count: " + enemyPowerCount);
         //enemy power level inrease as player increases
-       /* if (typeCount > 1 && enemyPowerCount < 3)
+        if (typeCount >= 1 && enemyPowerCount < 3)
         {
             gameManager.GetComponent<GameManager>().enemyPWRLV++;
             enemyPowerCount++;
-        }*/
+            Debug.Log("Enemy power increased, enemy power count = " + enemyPowerCount);
+        }
         topArea.GetComponent<Animation>().Play("ui_ranch_shopTop_floatIn");
         moveInfo.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeIn");
         moves.GetComponent<Animation>().Play("ui_button_floatIn");
