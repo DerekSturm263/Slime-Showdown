@@ -3471,9 +3471,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 2
-  foodName: Candy
-  description: This is a meal containing sweet foods.
-  image: {fileID: 0}
+  foodName: Cotton Candy
+  description: Some sweet Cotton Candy will raise your Air Affinity.
+  image: {fileID: 21300000, guid: 2631f098c57b63840b4b19849309e648, type: 3}
   price: 75
   itemUp: {fileID: 0}
   itemDown: {fileID: 0}
@@ -3492,7 +3492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 5
-  foodName: Sour Food
+  foodName: Electric Meal
   description: This is a meal containing some sour foods.
   image: {fileID: 0}
   price: 75
@@ -3513,7 +3513,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 4
-  foodName: Vegetals
+  foodName: Earth Meal
   description: This is a meal containing very healthy vegetals.
   image: {fileID: 0}
   price: 75
@@ -3534,8 +3534,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
-  foodName: Seafood
-  description: This is a meal containing seafood.
+  foodName: Fish Dinner
+  description: A tasty Fish Dinner will raise your Water Affinity.
   image: {fileID: 0}
   price: 75
   itemUp: {fileID: 0}
@@ -3555,9 +3555,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 3
-  foodName: Spicy Food
-  description: This is a meal containing very spicy food.
-  image: {fileID: 0}
+  foodName: Taco
+  description: A spicy Taco will raise your Fire Affinity.
+  image: {fileID: 21300000, guid: ba41380521d48134b9433983a9a10ddd, type: 3}
   price: 75
   itemUp: {fileID: 0}
   itemDown: {fileID: 0}
@@ -3637,7 +3637,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   foodName: Shrimp
-  description: Something clever.
+  description: A small delight.
   image: {fileID: 21300000, guid: c747dddda2c688c4092eceb414ce703c, type: 3}
   price: 25
   itemUp: {fileID: 0}
@@ -3660,7 +3660,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 2
   foodName: Not Reeses
-  description: Just kidding, unless?
+  description: A ripoff of a popular candy brand.
   image: {fileID: 21300000, guid: 03117f77c6424c94b88af0f69c39ede4, type: 3}
   price: 25
   itemUp: {fileID: 0}
@@ -3683,7 +3683,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 2
   foodName: Candy Corn
-  description: Yum.
+  description: A great Halloween treat.
   image: {fileID: 21300000, guid: eea2fe72dc2343b48820132028272cc4, type: 3}
   price: 10
   itemUp: {fileID: 0}
@@ -3706,7 +3706,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 2
   foodName: Lollipop
-  description: Very very sweet.
+  description: A very sweet piece of candy on a stick.
   image: {fileID: 21300000, guid: 733eb6e99a90af641a27d47e13e740b7, type: 3}
   price: 50
   itemUp: {fileID: 0}
@@ -3729,7 +3729,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 5
   foodName: Sour Juds
-  description: Food.
+  description: A pretty sour snack only for the best slimes.
   image: {fileID: 21300000, guid: 102352b7d5c0fb64d9db83008ccd326b, type: 3}
   price: 50
   itemUp: {fileID: 0}
@@ -3752,7 +3752,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 5
   foodName: Pickle
-  description: I'm pickle slime.
+  description: A very tasty electric snack.
   image: {fileID: 21300000, guid: c6bdeb6c296c2b14ea2e7d4a26a5d448, type: 3}
   price: 25
   itemUp: {fileID: 0}
@@ -3821,7 +3821,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 4
   foodName: Tomato
-  description: I'm pretty sure this is a vegetable.
+  description: Definitely a vegetable and not a fruit.
   image: {fileID: 21300000, guid: 2462a7f09f63e8e458bc5fc802d1f872, type: 3}
   price: 25
   itemUp: {fileID: 0}
@@ -3844,7 +3844,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 4
   foodName: Carrot
-  description: Keep an eye out for this vegetal.
+  description: This veggie is sure to help with your slime's eyesight!
   image: {fileID: 21300000, guid: 74e45b2e555e22a4499233d6f6c746ac, type: 3}
   price: 10
   itemUp: {fileID: 0}
@@ -3867,7 +3867,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 3
   foodName: Ghost Pepper
-  description: I'm seriously running out of things to say.
+  description: The hottest pepper in the world.
   image: {fileID: 21300000, guid: d76e12749e5ac244997b554a633cac8b, type: 3}
   price: 50
   itemUp: {fileID: 0}
@@ -3890,7 +3890,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 3
   foodName: Tabasco Sauce
-  description: Very spicy sauce.
+  description: Very spicy sauce to put on your food.
   image: {fileID: 21300000, guid: 3dceae7b34ef5884590edf0faacc3f54, type: 3}
   price: 25
   itemUp: {fileID: 0}
@@ -3913,7 +3913,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 3
   foodName: Spicy Chootos
-  description: This seems familiar...
+  description: The spicy version of the popular snack Chootos.
   image: {fileID: 21300000, guid: 52fbe31ad08e70e4ea369eacffc257d8, type: 3}
   price: 10
   itemUp: {fileID: 0}

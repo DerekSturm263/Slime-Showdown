@@ -74,12 +74,22 @@ public class BattleSystem : MonoBehaviour
     public GameObject[] inventorySlots = new GameObject[11];
     public GameObject selectionInidicator;
 
+    // For use with mouse selection.
+    private Ray mouseRay;
+    private RaycastHit mouseRayHit;
+
     public Sprite defaultSprite;
+
+    public GameObject selectedItem;
+    public Text selectedItemName;
+    public Image selectedItemSprite;
+    public Text selectedItemStats;
 
     private void Start()
     {
         playHealthBarFill.SetActive(true);
         enemHealthBarFill.SetActive(true);
+
         #region pulling from gm player
         //note from afterwards, I should've assigned them all to variables for shorter calls during the check
         gameManager = GameObject.FindGameObjectWithTag("GameController");
@@ -189,8 +199,8 @@ public class BattleSystem : MonoBehaviour
         enemyPrefab.GetComponent<Player>().health = 40 + enemyTypeHigh;
         enemyPrefab.GetComponent<Player>().currentHP = enemyPrefab.GetComponent<Player>().health;
         #endregion
-        state = BattleState.Start;
 
+        state = BattleState.Start;
 
         moveList.Add(move1);
         moveList.Add(move2);
@@ -254,6 +264,30 @@ public class BattleSystem : MonoBehaviour
     {
         if (isSnacksOpen)
         {
+            /*#region Mouse Selection
+
+            mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+            Debug.Log(mouseRayHit.collider.gameObject);
+            if (Physics.Raycast(mouseRay, out mouseRayHit))
+            {
+                Debug.Log(mouseRay + ", " + mouseRayHit);
+
+                if (mouseRayHit.collider.gameObject.tag.Equals("InventorySlot"))
+                {
+                    Debug.Log(mouseRayHit.collider.gameObject);
+
+                    selectedInventoryNumber = Array.IndexOf(inventorySlots, mouseRayHit.collider.gameObject);
+
+                    if (Input.GetButtonDown("Fire1"))
+                        StartCoroutine(EatSnack());
+                }
+            }
+
+            #endregion*/
+
+            #region Controller/Keyboard Selection
+
             if (Input.GetAxisRaw("Horizontal") < 0 && selectedInventoryNumber >= 1 && !usingXAxis)
             {
                 selectedInventoryNumber--;
@@ -276,6 +310,8 @@ public class BattleSystem : MonoBehaviour
                 usingYAxis = true;
             }
 
+            #endregion
+
             if (Input.GetButtonDown("Cancel"))
                 CloseSnacks();
 
@@ -287,6 +323,19 @@ public class BattleSystem : MonoBehaviour
 
             if (Input.GetButtonDown("Submit") && gameManager.GetComponent<GameManager>().inventory[selectedInventoryNumber] != null && canUseSnack)
                 StartCoroutine(EatSnack());
+
+            try
+            {
+                selectedItemName.text = gameManager.GetComponent<GameManager>().inventory[selectedInventoryNumber].name;
+                selectedItemSprite.sprite = gameManager.GetComponent<GameManager>().inventory[selectedInventoryNumber].GetComponent<SpriteRenderer>().sprite;
+                selectedItemStats.text = "Hunger Increase: " + gameManager.GetComponent<GameManager>().inventory[selectedInventoryNumber].GetComponent<InventorySnack>().hungerIncrease;
+            }
+            catch
+            {
+                selectedItemName.text = "None";
+                selectedItemSprite.sprite = defaultSprite;
+                selectedItemStats.text = "";
+            }
         }
     }
 
@@ -300,6 +349,7 @@ public class BattleSystem : MonoBehaviour
         selectionInidicator.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeOut");
         backButton.GetComponent<Animation>().Play("ui_ranch_shopBackButton_floatOut");
         background.GetComponent<Animation>().Play("ui_ranch_shopBackground_fadeOut");
+        selectedItem.GetComponent<Animation>().Play("ui_ranch_shopBackground_fadeOut");
 
         playerUnit.hunger += (int) gameManager.GetComponent<GameManager>().inventory[selectedInventoryNumber].GetComponent<InventorySnack>().hungerIncrease;
         playerHUD.SetHunger(playerUnit.hunger);
@@ -539,7 +589,9 @@ public class BattleSystem : MonoBehaviour
     
     public void OnAttackButton()
     {
-        if(state != BattleState.PlayTurn)
+        SoundPlayer.Play("sound_ui_select");
+
+        if (state != BattleState.PlayTurn)
         {
             return;
         }
@@ -551,16 +603,22 @@ public class BattleSystem : MonoBehaviour
 
     public void OnMoveOne()
     {
+        SoundPlayer.Play("sound_ui_select");
+
         StartCoroutine(MoveOneCoroutine());
     }
 
     public void OnMoveTwo()
     {
+        SoundPlayer.Play("sound_ui_select");
+
         StartCoroutine(MoveTwoCoroutine());
     }
 
     public void OnMoveThree()
     {
+        SoundPlayer.Play("sound_ui_select");
+
         StartCoroutine(MoveThreeCoroutine());
     }
 
@@ -635,6 +693,8 @@ public class BattleSystem : MonoBehaviour
 
     public void OnReturnButton()
     {
+        SoundPlayer.Play("sound_ui_select");
+
         //this method will be reused for the snack select
         moveSelect.GetComponent<Animation>().Play("ui_button_floatOut");
         optionButtons.GetComponent<Animation>().Play("ui_button_floatIn");
@@ -642,6 +702,8 @@ public class BattleSystem : MonoBehaviour
     }
     public void OnSnackButton()
     {
+        SoundPlayer.Play("sound_ui_select");
+
         StartCoroutine(Snack());
     }
     private IEnumerator Snack()
@@ -657,6 +719,7 @@ public class BattleSystem : MonoBehaviour
             selectionInidicator.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeIn");
             backButton.GetComponent<Animation>().Play("ui_ranch_shopBackButton_floatIn");
             background.GetComponent<Animation>().Play("ui_ranch_shopBackground_fadeIn");
+            selectedItem.GetComponent<Animation>().Play("ui_ranch_shopBackground_fadeIn");
 
             yield return new WaitForSeconds(0.25f);
 
@@ -668,6 +731,8 @@ public class BattleSystem : MonoBehaviour
 
     public void OnFleeButton()
     {
+        SoundPlayer.Play("sound_ui_select");
+
         if (state != BattleState.PlayTurn)
         {
             return;
@@ -702,6 +767,8 @@ public class BattleSystem : MonoBehaviour
 
     public void CloseSnacks()
     {
+        SoundPlayer.Play("sound_ui_select");
+
         canUseSnack = false;
         isSnacksOpen = false;
 
@@ -710,6 +777,7 @@ public class BattleSystem : MonoBehaviour
         selectionInidicator.GetComponent<Animation>().Play("ui_ranch_shopContent_fadeOut");
         backButton.GetComponent<Animation>().Play("ui_ranch_shopBackButton_floatOut");
         background.GetComponent<Animation>().Play("ui_ranch_shopBackground_fadeOut");
+        selectedItem.GetComponent<Animation>().Play("ui_ranch_shopBackground_fadeOut");
 
         EventSystem.current.SetSelectedGameObject(snackButton);
     }

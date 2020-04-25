@@ -219,8 +219,6 @@ public class ShopManager : MonoBehaviour
     {
         if (gameManager.GetComponent<GameManager>().goldCount >= selectedItem.GetComponent<Buyable>().price && !isEating)
         {
-            SoundPlayer.Play("sound_ui_select");
-
             if (selectedItem.GetComponent<Buyable>() is MealData)
             {
                 string affType = selectedItem.GetComponent<MealData>().type.ToString();
@@ -257,6 +255,10 @@ public class ShopManager : MonoBehaviour
                     gameManager.GetComponent<GameManager>().goldCount -= selectedItem.GetComponent<Buyable>().price;
                     EatMeal(selectedItem.GetComponent<Buyable>());
                 }
+                else
+                {
+                    SoundPlayer.Play("sound_ui_select");
+                }
             }
             else
             {
@@ -276,12 +278,22 @@ public class ShopManager : MonoBehaviour
                     gameManager.GetComponent<GameManager>().goldCount -= selectedItem.GetComponent<Buyable>().price;
                     AddSnackToInventory(selectedItem.GetComponent<Buyable>());
                 }
+                else
+                {
+                    SoundPlayer.Play("sound_ui_select");
+                }
             }
+        }
+        else
+        {
+            SoundPlayer.Play("sound_ui_select");
         }
     }
 
     private void EatMeal(Buyable food)
     {
+        SoundPlayer.Play("sound_ui_shop_purchase");
+
         isEating = true;
 
         #region Increase Value
@@ -314,7 +326,7 @@ public class ShopManager : MonoBehaviour
 
     private void AddSnackToInventory(Buyable food)
     {
-        SoundPlayer.Play("sound_ui_select");
+        SoundPlayer.Play("sound_ui_shop_purchase");
 
         for (int i = 0; i < gameManager.GetComponent<GameManager>().inventory.Length; i++)
         {
@@ -383,7 +395,7 @@ public class ShopManager : MonoBehaviour
     // Method called by the shopkeeper slime when the player touches it.
     public void OpenShop()
     {
-        SoundPlayer.Play("sound_ui_select");
+        SoundPlayer.Play("sound_ui_shop_enter");
 
         SwitchToMealsTab();
         isShopOpen = true;
@@ -415,7 +427,7 @@ public class ShopManager : MonoBehaviour
     // Method called by the back button in the shop or the escape button in the shop.
     public void CloseShop()
     {
-        SoundPlayer.Play("sound_ui_select");
+        SoundPlayer.Play("sound_ui_shop_exit");
 
         isShopOpen = false;
         shopScrollBar.value = 1f;

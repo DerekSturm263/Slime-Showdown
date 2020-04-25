@@ -366,6 +366,7 @@ public class AffinityCollector : MonoBehaviour
 
     public void OnM0Replace()
     {
+        SoundPlayer.Play("sound_ui_select");
         gameManager.GetComponent<GameManager>().PlayerMoves[0] = NewMove;
 
         GoAway();
@@ -373,6 +374,7 @@ public class AffinityCollector : MonoBehaviour
 
     public void OnM1Replace()
     {
+        SoundPlayer.Play("sound_ui_select");
         gameManager.GetComponent<GameManager>().PlayerMoves[1] = NewMove;
 
         GoAway();
@@ -380,6 +382,7 @@ public class AffinityCollector : MonoBehaviour
 
     public void OnM2Replace()
     {
+        SoundPlayer.Play("sound_ui_select");
         gameManager.GetComponent<GameManager>().PlayerMoves[2] = NewMove;
 
         GoAway();
@@ -387,6 +390,7 @@ public class AffinityCollector : MonoBehaviour
 
     public void Nevermind()
     {
+        SoundPlayer.Play("sound_ui_select");
         GoAway();
     }
 
