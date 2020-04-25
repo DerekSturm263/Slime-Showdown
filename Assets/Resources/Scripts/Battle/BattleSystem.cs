@@ -194,7 +194,7 @@ public class BattleSystem : MonoBehaviour
             enemyPrefab.GetComponent<Player>().type = "Type: Normal";
             enemyCritType = "NONE";
             enemyResType = "NONE";
-            enemyTypeHigh = (enemyPrefab.GetComponent<Player>().seafoodAff + enemyPrefab.GetComponent<Player>().veggieAff + enemyPrefab.GetComponent<Player>().spicyAff + enemyPrefab.GetComponent<Player>().sourAff + enemyPrefab.GetComponent<Player>().candyAff) / 3;
+            enemyTypeHigh = (enemyPrefab.GetComponent<Player>().seafoodAff + enemyPrefab.GetComponent<Player>().veggieAff + enemyPrefab.GetComponent<Player>().spicyAff + enemyPrefab.GetComponent<Player>().sourAff + enemyPrefab.GetComponent<Player>().candyAff) / 5;
         }
         enemyPrefab.GetComponent<Player>().health = 40 + enemyTypeHigh;
         enemyPrefab.GetComponent<Player>().currentHP = enemyPrefab.GetComponent<Player>().health;
