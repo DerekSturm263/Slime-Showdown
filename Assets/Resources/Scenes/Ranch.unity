@@ -3342,6 +3342,7 @@ GameObject:
   - component: {fileID: 533091438}
   - component: {fileID: 533091437}
   - component: {fileID: 533091439}
+  - component: {fileID: 533091440}
   m_Layer: 5
   m_Name: Slime Icon
   m_TagString: SlimeIcon
@@ -3422,6 +3423,18 @@ Animation:
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &533091440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533091435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d1fa4b3d21815547b18df30eb5bf72e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &544184995
 GameObject:
   m_ObjectHideFlags: 0
@@ -3472,7 +3485,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 2
   foodName: Cotton Candy
-  description: Some sweet Cotton Candy will raise your Air Affinity.
+  description: A sweet piece of Cotton Candy will raise your Air Type affinity.
   image: {fileID: 21300000, guid: 2631f098c57b63840b4b19849309e648, type: 3}
   price: 75
   itemUp: {fileID: 0}
@@ -3493,7 +3506,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 5
   foodName: Electric Meal
-  description: PLACEHOLDER
+  description: A PLACEHOLDER that will raise your Electric Type affinity.
   image: {fileID: 0}
   price: 75
   itemUp: {fileID: 0}
@@ -3514,8 +3527,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 4
   foodName: Earth Meal
-  description: PLACEHOLDER
-  image: {fileID: 0}
+  description: A healthy salad that will raise your Earth Type affinity.
+  image: {fileID: 21300000, guid: 9f0cb43028223f644a9814c5789dfa58, type: 3}
   price: 75
   itemUp: {fileID: 0}
   itemDown: {fileID: 0}
@@ -3535,7 +3548,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   foodName: Fish Dinner
-  description: A tasty Fish Dinner will raise your Water Affinity.
+  description: A tasty Fish Dinner will raise your Water Type affinity.
   image: {fileID: 21300000, guid: f68dacccde5e5f3498acb14520520e5c, type: 3}
   price: 75
   itemUp: {fileID: 0}
@@ -3556,7 +3569,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 3
   foodName: Taco
-  description: A spicy Taco will raise your Fire Affinity.
+  description: A spicy taco will raise your Fire Type affinity.
   image: {fileID: 21300000, guid: ba41380521d48134b9433983a9a10ddd, type: 3}
   price: 75
   itemUp: {fileID: 0}
