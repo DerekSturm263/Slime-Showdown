@@ -2593,7 +2593,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 197048650}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.6666667
+  m_Size: 0.66666657
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -11409,7 +11409,7 @@ MonoBehaviour:
   isShopOpen: 0
   affThresOne: 1
   affThresTwo: 4
-  affThresThree: 9
+  affThresThree: 7
   affMethods: {fileID: 553314489}
 --- !u!95 &1728167304
 Animator:

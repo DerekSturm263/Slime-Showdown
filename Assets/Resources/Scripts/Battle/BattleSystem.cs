@@ -570,7 +570,11 @@ public class BattleSystem : MonoBehaviour
         else if (state == BattleState.Lose)
         {
             dialogueText.text = "You lost against " + enemyUnit.name + "...";
-
+            gameManager.GetComponent<GameManager>().goldCount -= (uint)((1/2)*enemyPrefab.GetComponent<Player>().VicGold);
+            if (gameManager.GetComponent<GameManager>().goldCount < 0)
+            {
+                gameManager.GetComponent<GameManager>().goldCount = 0;
+            }
             yield return new WaitForSeconds(2.5f);
 
             Camera.main.GetComponent<CameraFollow>().enabled = true;
