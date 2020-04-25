@@ -537,7 +537,6 @@ public class BattleSystem : MonoBehaviour
             playHealthBarFill.SetActive(false);
             state = BattleState.Lose;
             StartCoroutine(EndBattle());
-            SceneManager.LoadScene("Ranch");
         }
         else
         {
