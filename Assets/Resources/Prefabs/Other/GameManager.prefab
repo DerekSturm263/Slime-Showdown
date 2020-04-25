@@ -50,7 +50,8 @@ MonoBehaviour:
   playerSlimeColor: 
   playerSlimeName: 
   playerSize: 1
-  goldCount: 1000
+  playerAffinities: []
+  goldCount: 0
   inventory:
   - {fileID: 0}
   - {fileID: 0}
