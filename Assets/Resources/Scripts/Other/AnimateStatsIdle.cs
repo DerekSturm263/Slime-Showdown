@@ -15,7 +15,7 @@ public class AnimateStatsIdle : MonoBehaviour
     {
         gameManager = GameObject.FindGameObjectWithTag("GameController");
 
-        string animName = "Animations/Slime/Choose Slime/" + gameManager.GetComponent<GameManager>().playerSlimeColor + " Slime/Eating/slime_" + gameManager.GetComponent<GameManager>().playerSlimeColor.ToLower() + "_pickSlime";
+        string animName = "Animations/Slime/Choose Slime/" + gameManager.GetComponent<GameManager>().playerSlimeColor + " Slime/slime_" + gameManager.GetComponent<GameManager>().playerSlimeColor.ToLower() + "_pickSlime";
 
         image = GetComponent<Image>();
         sprtRndr = GetComponent<SpriteRenderer>();
